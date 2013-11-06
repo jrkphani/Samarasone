@@ -27,7 +27,7 @@
 	
 </div>
     	<div class="header_top width_1060">   
-      	<h1><a href="#"><img src="http://localhost/samaras/assets/images/logo.png" alt="samaras one logo" title="samaras one"/></a>   </h1>
+      	<h1><a href="#"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
       
       </div>      
     	<div class="header_btm width_1060">   

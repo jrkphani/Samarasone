@@ -1,5 +1,3 @@
-<!--<link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."sss_login.css"); ?>" />-->
-
 <div class="left_form">
 	<div class="left_form_inner">
 		<div class="clearboth"></div>
@@ -97,10 +95,6 @@
 </div>
 </div>
 
-<!--<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'validation.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'validation.js'); ?>"></script>
 <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.cookie.js');?>"></script>
-<script src="<?php echo base_url($this->config->item('path_js_file').'login.js');?>"></script>-->
-<script type="text/javascript" src="http://localhost/samaras/assets/js/validation.js"></script>
-<script src="http://localhost/samaras/assets/js/jquery.cookie.js"></script>
-<script src="http://localhost/samaras/assets/js/login.js"></script>
-	
+<script src="<?php echo base_url($this->config->item('path_js_file').'login.js');?>"></script>

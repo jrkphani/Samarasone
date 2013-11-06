@@ -6,9 +6,9 @@
 <meta name="keywords" content="" />
 <title>Samaras One</title>
 
-<link href="http://localhost/samaras/assets/css/style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."style.css"); ?>" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="http://localhost/samaras/assets/js/jquery.touchslider.min.js"></script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.touchslider.min.js');?>"></script>
 		<script>
 					jQuery(function($) {
 						$(".touchslider").touchSlider({mouseTouch: true, autoplay: true, delay: 3000});
@@ -17,7 +17,7 @@
 </head>
 
 
-<script src="http://localhost/samaras/assets/js/jquery.js"></script>
+<script src="<?php echo base_url($this->config->item('path_js_file').'jquery.js');?>"></script>
 <script type="text/javascript">
   var baseurl = "<?php print base_url(); ?>";
 </script>

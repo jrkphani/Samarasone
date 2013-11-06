@@ -69,4 +69,4 @@
 
 </div>
 
-<script type="text/javascript" src="http://localhost/samaras/assets/js/userList.js"></script>
+<script src="<?php echo base_url($this->config->item('path_js_file').'userList.js');?>"></script>

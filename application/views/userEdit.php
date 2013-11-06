@@ -31,5 +31,5 @@
             <?php echo form_close(); ?>
 	</div>
 </div>
-<script type="text/javascript" src="http://localhost/samaras/assets/js/validation.js"></script>
-<script type="text/javascript" src="http://localhost/samaras/assets/js/userList.js"></script>
+<script src="<?php echo base_url($this->config->item('path_js_file').'validation.js');?>"></script>
+<script src="<?php echo base_url($this->config->item('path_js_file').'userList.js');?>"></script>
