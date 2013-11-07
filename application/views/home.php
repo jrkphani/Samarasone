@@ -36,7 +36,7 @@
         <h2>Welcome to Samaras One, </h2> -->  
       </div>
     </div>
-<!-- end -->      
+<!-- header end -->      
     
     <div class="content_container">
       <?php echo $content; ?>

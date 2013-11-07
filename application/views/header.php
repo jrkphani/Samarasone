@@ -7,6 +7,7 @@
 <title>Samaras One</title>
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."style.css"); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."inner_pages.css"); ?>" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.touchslider.min.js');?>"></script>
 		<script>
