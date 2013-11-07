@@ -14,7 +14,7 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 
 /* ************************* body ******************************** */
 
-p, h1, h2, h6{font:24px HelveNueThin, Arial; color:#000;}
+p, h1, h2, h3, h4, h6{font:24px HelveNueThin, Arial; color:#000;}
 .clearall{clear:both;}
 
 /* ************************* wrapper ******************************** */

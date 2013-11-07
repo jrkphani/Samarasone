@@ -1,12 +1,15 @@
 <body>
 	<div class="wrapper">
  	 <div class="wrapper_bg">
-  	<div class="inner_pheader">
+   	<div class="wrapper_white_bg"></div>
+   	<div class="wrapper_gradient_bg">
+    </div>
+  	<div class="inner_pheader border_img">
       <!-- search box -->
      <div class="search_box">
 			<div class="width_90">
       	<div class="boxex width9">
-        	<p>Search</p>
+        	<p class="color_orange">Search</p>
         </div>
       	<div class="boxex width9">
           	<ul>
@@ -98,18 +101,115 @@
             </ul>
         </div>
       	<div class="boxex width9">
-       	 <p>Search</p>
-        </div>
+       	 <p><a class="serch_box" href="#">Search</a></p>        
       </div>
      </div>	
 		</div>
   </div>
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
+        <h5 class="page_name"><a href="#">COMMERCIAL</a></h5>
       	<a class="inner_pmenu" href="#"></a>
-        <h6><a class="inner_smenu" href="#"></a>
+        <h6><a class="inner_smenu" href="#"></a></h6>
         <a class="inner_search_icon" href="#"><span>Find a Property</span></a>
-      </div>      
+      </div> 
+      
+        <!-- container -->     
+          <div class="container">
+						<p class="color_orange">North Shore <span></span></p>            
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
+                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
+                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
+                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
+                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
+                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
+                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
+                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
+                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
+                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
+                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>          
+          </div>
+ 			  <!-- container -->
+        
+ 			  <!-- Next Menu -->
+        <div class="clearall"></div>
+        <div class="next_menu">
+        	<ul>
+        		<li><a class="previous" href="#">Previous</a></li>
+          	<li><a class="center" href="#">&nbsp;</a></li>
+          	<li><a class="active" href="#">&nbsp;</a></li>
+          	<li><a class="next" href="#">Next</a></li>
+          </ul>
+        </div>
+        
+ 			  <!-- Next end -->
+        
 			<div class="clearall"></div>
+     </div>
     </div>
 <!-- header end --> 
+
