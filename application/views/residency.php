@@ -1,6 +1,26 @@
 <body>
 	<div class="wrapper">
   	<div class="header">
+    <div class="menu_logo">
+    </div>
+    	<div class="mainmenu">
+				
+        <ul class="menu_bg">
+       	  <!--<li class="menu_top_bg"></li>-->
+        	<li class="home"><a href="#">Home</a></li>
+        	<li class="ovalue"><a href="#">Our Value Proposition</a></li>
+        	<li class="oteam"><a href="#">Our Team</a></li>
+        	<li class="contact"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="menu_bg bg_border">
+        	<li class="inner_logo"><a href="#">Samaras One Home</a></li>
+        </ul>
+        <ul class="menu_bg">
+        	<li class="commercial"><a href="#">Commercial</a></li>
+        	<li class="residential"><a href="#">Residential</a></li>
+        	<li class="business"><a href="#">Business</a></li>
+        </ul>
+      </div>
     	  <div class="touchslider">
           <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
           <div>
@@ -36,38 +56,4 @@
         <h2>Welcome to Samaras One, </h2> -->  
       </div>
     </div>
-<!-- header end -->      
-    
-    <div class="content_container">
-      <?php echo $content; ?>
-      <!--<p>Samaras One is a distinct client driven Property Agency dealing exclusively with high end Residential and Commercial Property. Within our eclectic client circle we also offer a Business Broking service, which often ties in with their property interest.</p>
-<p>Expertise, discretion and a high level of professionalism are our key attributes, also being absolutely essential when conducting above mentioned off market property transactions. Independent and unbiased, we specialise in finding these off market 'treasure chests' for our clients with Property and Business interests true to the motto 'who seeks shall find' - even treasure chests.</p>-->
-
-  	</div>
-<!-- end --> 
-<!-- box container -->      
-    <div class="box_conainer">
-    	<div class="width_100">
-        <div class="boxes1">      
-          <div class="boxes1_img_hover">
-            <h1>Residential</h1>
-          </div>
-        </div>
-      </div>
-    	<div class="width_100">
-        <div class="boxes2">      
-          <div class="boxes2_img_hover">
-            <h1>Commercial</h1>
-          </div>
-        </div>
-      </div>
-    	<div class="width_100">
-        <div class="boxes3">      
-          <div class="boxes3_img_hover boxes3_img_hover_1280">
-            <h1>Business</h1>
-          </div>
-        </div>
-      </div>    
-    </div>
-    <div class="clearall"></div>
-<!-- end --> 
+<!-- header end --> 

@@ -21,19 +21,14 @@ p, h1, h2, h6{font:24px HelveNueThin, Arial; color:#000;}
 .wrapper{width:100%; margin:0 auto;}
 .width_1060{width:1060px; margin:0 auto;}
 .header{width:100%; height:900px; margin:0 auto; background-size:cover; position:relative;}
-.header_top{width:100%; height:149px; background:url(../images/top_header.png) no-repeat; background-size: 100% 90%; position:absolute; top:0px;}
+.header_top{width:100%; height:149px; background:url(../images/top_header.png) no-repeat; background-size: 100% 90%; position:absolute; top:0px; z-index: 9996;}
+.header_top a img{margin:20px 0 0px 141px;}
 .header_btm{width:100%; height:375px; background:url(../images/btm_header.png) bottom center no-repeat; background-size:contain; position:absolute; bottom:0px;}
 .header_btm h1{text-align: center; margin: 100px 0 0 0; font-size: 35px; color: #fff;}
-.header_btm h2{text-align: center;
-margin: 0 auto;
-font-size: 35px;
-color: #03324f;
-bottom: 13%;
-position: absolute;
-left: 40%;}
+.header_btm h2{text-align: center; margin: 0 auto; font-size: 35px; color: #03324f; bottom: 13%; position: absolute; left: 40%;}
 .header_btm h6{text-align: center; margin: 11px 0 0 574px; font-size:19px; color: #fff;}
 
-.header_top a img{margin:20px 0 0px 141px;}
+
 .content_container{margin:0 auto; padding:50px 72px;}
 .content_container p{text-align:center; margin:0px 0 20px 0;}
 .box_conainer{width:100%;}
