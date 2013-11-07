@@ -1,12 +1,14 @@
 <body>
 	<div class="wrapper">
+  	<div class="wrapper_bg">
   	<div class="header">
     <div class="menu_logo">
     </div>
     	<div class="mainmenu">
-				
+				<ul>
+       	  <li class="menu_top_bg"></li>
+        </ul>
         <ul class="menu_bg">
-       	  <!--<li class="menu_top_bg"></li>-->
         	<li class="home"><a href="#">Home</a></li>
         	<li class="ovalue"><a href="#">Our Value Proposition</a></li>
         	<li class="oteam"><a href="#">Our Team</a></li>
@@ -45,9 +47,9 @@
         <a class="touchslider-next">next</a>
     </div> -->
 	
-</div>
-    	<div class="header_top width_1060">   
-      	<h1><a href="#"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
+				</div>
+    	<div class="comm_resi_header_top width_1060">   
+      	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
       
       </div>      
     	<div class="header_btm width_1060">   
@@ -56,4 +58,5 @@
         <h2>Welcome to Samaras One, </h2> -->  
       </div>
     </div>
+  </div>
 <!-- header end --> 

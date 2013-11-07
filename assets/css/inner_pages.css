@@ -16,6 +16,8 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 
 p, a, h1, h2, h6{font:24px HelveNueThin, Arial; color:#000;}
 a{text-decoration:none;}
+
+.wrapper_bg{background:#fff url(../images/inner_spage_bg.jpg) no-repeat; height: 895px;}
 /* ************************* header ******************************** */
 .inner_pheader{width:100%; height:280px; margin:0 auto; background-size:cover; position:relative;}
 .comm_resi_header_top{width:100%; height:149px; background:url(../images/top_header_comm_rese.png) no-repeat; background-size: 100% 90%; position:absolute; top:0px; z-index: 9996;}
@@ -24,8 +26,8 @@ a{text-decoration:none;}
 .comm_resi_header_top .inner_smenu{background: url(../images/sprites.png) -151px -9px no-repeat; height: 130px; position: absolute; top:-1px; width: 364px; right: 0px;}
 .comm_resi_header_top .inner_search_icon{background: url(../images/sprites.png) -1190px -479px no-repeat; height: 50px; position: absolute; top: 9px; width: 264px; right: 0px; padding-left: 68px; line-height: 55px;}
 /* ************************* main menu ******************************** */
-.mainmenu{position:absolute; z-index:999; margin:83px 0 0 0;}
-.menu_logo{background:url(../images/sprites.png) -1150px -484px no-repeat; width:90px; height:105px; margin:0 0 0 50px; position:absolute; z-index:9998;}
+.mainmenu{position:absolute; z-index:999; margin:108px 0 0 0; opacity:0.98}
+.menu_logo{background:url(../images/sprites.png) -1150px -607px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998;}
 .mainmenu ul .home{background:url(../images/sprites.png) -1190px -37px no-repeat; height:50px; line-height:52px; padding-left:71px; margin:0 0 0 30px;}
 .mainmenu ul .ovalue{background:url(../images/sprites.png) -1190px -85px no-repeat; height:50px; line-height:52px; padding-left:71px; margin:0 0 0 30px;}
 .mainmenu ul .oteam{background:url(../images/sprites.png) -1190px -135px no-repeat; height:50px; line-height:52px; padding-left:71px; margin:0 0 0 30px;}
@@ -37,14 +39,14 @@ a{text-decoration:none;}
 .mainmenu ul li a{font:24px; color:#2f5973;}
 .mainmenu ul .commercial a{color:#d66f23;}
 .mainmenu ul .residential a{color:#689620;}
-.mainmenu .menu_top_bg{background:url(../images/menu_top.png) 0 0 no-repeat; width:382px; height:21px;}
+.mainmenu .menu_top_bg{background:url(../images/sprites.png) -0px -184px no-repeat; width:380px; height:21px;}
 .mainmenu .menu_bg{width:380px; background:#fff; padding:25px 0px; opacity:0.95;}
 .mainmenu .bg_border{border-bottom:1px solid #aac5d6; border-top:1px solid #aac5d6; padding:15px 0px;}
 
 
 /* ************************* search box ******************************** */
 .search_width{}
-.search_box{position:absolute; z-index:9996; width:100%; background:#fff; padding:144px 0 30px 0;}
+.search_box{position:absolute; z-index:9996; width:100%; padding:144px 0 30px 0;}
 .boxex{float:left; width:14.28%;}
 .boxex ul .bullet{background:url(../images/sprites.png) -1223px 5px no-repeat; padding:0 0 0px 25px; margin:0 0 17px 0;}
 .boxex ul select{border: 1px solid #e3eaee; -moz-appearance: none; -webkit-appearance: none; -o-apperance: none; -ms-apperance:none; padding: 4px 40px 4px 10px;}

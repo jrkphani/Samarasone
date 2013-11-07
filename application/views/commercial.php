@@ -1,5 +1,6 @@
 <body>
 	<div class="wrapper">
+ 	 <div class="wrapper_bg">
   	<div class="inner_pheader">
       <!-- search box -->
      <div class="search_box">
@@ -102,6 +103,7 @@
       </div>
      </div>	
 		</div>
+  </div>
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
       	<a class="inner_pmenu" href="#"></a>
