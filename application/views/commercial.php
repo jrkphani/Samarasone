@@ -199,10 +199,10 @@
         <div class="clearall"></div>
         <div class="next_menu">
         	<ul>
-        		<li><a class="previous" href="#">Previous</a></li>
+        		<li class="previous_img"><a class="previous" href="#">Previous</a></li>
           	<li><a class="center" href="#">&nbsp;</a></li>
           	<li><a class="active" href="#">&nbsp;</a></li>
-          	<li><a class="next" href="#">Next</a></li>
+          	<li class="next_img"><a class="next" href="#">Next</a></li>
           </ul>
         </div>
         
