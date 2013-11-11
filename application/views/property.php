@@ -72,7 +72,7 @@
 	                    	<p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus est, sollicitudin a varius eu, consectetur sed neque.</p>
 	                	</div>
 	                	<a href="<?php echo base_url('contacts'); ?>">Location</a><br/>
-	                	<a href="#">Gallery</a>
+	                	<a href="<?php echo base_url('contacts'); ?>">Gallery</a>
 	              	</div>
 	            </div>
 	            <!-- Image and appointment form -->

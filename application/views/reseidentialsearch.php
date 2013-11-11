@@ -14,8 +14,8 @@
         </div>
       	<div class="boxex width9">
           	<ul>
-            	<li><input type="radio" name="radio-btn" />Buy</li>
-              <li style="margin: 23px 0 0 0;"><input type="radio" name="radio-btn" />Sale</li>
+            	<li><input type="radio" name="radio-btn" <?php if($sale_type=='buy') echo 'checked="checked"'; ?> checked="checked" disabled="true" />Buy</li>
+              <li style="margin: 15px 0 0 0;"><input type="radio" name="radio-btn" <?php if($sale_type=='rent') echo 'checked="checked"'; ?> disabled="true" />Sale</li>
             </ul>
         </div>
       	<div class="boxex">
@@ -86,7 +86,7 @@
       	<div class="boxex width22">
           	<ul>
             	<li>Title</li>
-              <li style="margin: 20px 0 0 0;">
+              <li style="">
           <!--		dropdown menu  -->
               <div class="dropdown w100">
 		<select name="example-list bedroom" multiple="multiple" style="width:232px;">
@@ -112,7 +112,7 @@
             </ul>
         </div>
       	<div class="boxex width9">
-       	 <p><a class="serch_box" href="#">Search</a></p>        
+       	 <p><input class="serch_box" type="submit" name="search" value="Search"></p>        
       </div>
      </div>
      </form>
@@ -129,8 +129,23 @@
       
         <!-- container -->     
           <div class="container">
-						<p class="color_orange">North Shore <span></span></p>            
+						<p class="color_orange">North Shore <span></span></p> 
+              <?php foreach ($result2 as $row2) { ?>        
             	<div class="s_img_boxes_commer">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content_commer">
+                  <h3><?php echo $row2->headline; ?>,</h3>
+                  <h4><?php echo $row2->suburb.'<br />'.$row2->price; ?></h4>
+                  <p class="cnt"><?php echo $row2->description; ?></p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+              <?php } ?>
+              
+     <!--       	<div class="s_img_boxes_commer">
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
                 </div>
@@ -189,22 +204,7 @@
                   <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
                   <a class="fright" href="#">More</a>
                  </div>
-              </div>
-            	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>          
+              </div>   -->       
           </div>
  			  <!-- container -->
         
@@ -237,14 +237,13 @@
 $(function(){
 
 	$("select").multiselect({
-		selectedList: 4
+		selectedList: 2
 	});
 	
 });
 </script>
 
 <script type="text/javascript">
-
 /*
 	Custom checkbox and radio button - Jun 18, 2013
 	(c) 2013 @ElmahdiMahmoud 
@@ -259,6 +258,4 @@ $(".radio-btn").on('click', function () {
     _this.addClass('checkedRadio');
     _this.find('input:radio').attr('checked', true);
 });
-
-
 </script>

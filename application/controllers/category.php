@@ -24,7 +24,6 @@ class Category extends CI_Controller
 	  $this->load->model('basic_model');
 		$fields=array('suburb');
 		$data['result']=$this->basic_model->select($fields,'residential');
-
 		$data['sale_type']=NULL;
 		$data['suburb']=NULL;
 		$data['type']=NULL;
