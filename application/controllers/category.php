@@ -9,17 +9,7 @@ class Category extends CI_Controller
 	
 	function commercial()
 	{
-		$this->load->model('basic_model');
-		$fields=array('suburb');
-		$data['result']=$this->basic_model->select($fields,'residential');
 
-		$data['sale_type']=NULL;
-		$data['suburb']=NULL;
-		$data['type']=NULL;
-		$data['price_from']=NULL;
-		$data['price_to']=NULL;
-		$data['bedroom']=NULL;
-		$data['garage']=NULL;
 
 		$data['view_page']='commercial';
 		$this->load->view('template', $data);
@@ -30,7 +20,18 @@ class Category extends CI_Controller
 		$this->load->view('template', $data);
 	}
 	function reseidentialsearch()
-	{
+	{		
+	  $this->load->model('basic_model');
+		$fields=array('suburb');
+		$data['result']=$this->basic_model->select($fields,'residential');
+
+		$data['sale_type']=NULL;
+		$data['suburb']=NULL;
+		$data['type']=NULL;
+		$data['price_from']=NULL;
+		$data['price_to']=NULL;
+		$data['bedroom']=NULL;
+		$data['garage']=NULL;
 		$data['view_page'] = 'reseidentialsearch';
 		$this->load->view('template', $data);
 	}
@@ -42,11 +43,6 @@ class Category extends CI_Controller
 	function property()
 	{
 		$data['view_page'] = 'property';
-		$this->load->view('template', $data);
-	}
-	function contacts()
-	{
-		$data['view_page'] = 'contacts';
 		$this->load->view('template', $data);
 	}
 }
