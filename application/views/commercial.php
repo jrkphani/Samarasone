@@ -1,245 +1,82 @@
 <body>
 	<div class="wrapper">
- 	 <div class="wrapper_bg">
-   	<div class="wrapper_white_bg"></div>
-   	<div class="wrapper_gradient_bg">
+  	<div class="wrapper_bg">
+  	<div class="header">
+    <div class="menu_logo">
     </div>
-  	<div class="inner_pheader border_img">
-      <!-- search box -->
-     <div class="search_box">
-     <form name="form1" method="post" action="<?php echo base_url('search/result'); ?>">
-			<div class="width_90">
-      	<div class="boxex width9">
-        	<p class="color_orange">Search</p>
-        </div>
-      	<div class="boxex width9">
-          	<ul>
-            	<li class="bullet"><input type="radio" value="buy" name="sale_type"  checked="checked" disabled="true" />Buy</li>
-              <li class="bullet"><input type="radio" value="rent" name="sale_type"  disabled="true" />Rent</li>
-            </ul>
-        </div>
-      	<div class="boxex">
-          	<ul>
-            	<li>Suburb</li>
-              <li>
-          <!--		dropdown menu  -->
-
-
-		<select name="example-list" multiple="multiple" style="width:400px" multiple name="suburb[]" size="8">
-    <option value="" <?php if($suburb[0]==NULL) echo 'selected="selected"'; ?>>Any Suburb</option>
-
-    <?php foreach ($result as $row)
-		{//echo '<option value="'.$row->suburb.'">'.$row->suburb.'</option>';?>
-			<option value="<?php echo $row->suburb; ?>" <?php if(is_array($suburb) && in_array($row->suburb,$suburb)) echo 'selected="selected"'; ?>><?php echo $row->suburb; ?></option>
-		<?php }
-		?>
-		</select>
-
-
-          <!--		dropdown menu end  --> 
-              </li>
-            </ul>
-        </div>
-      	<div class="boxex">
-          	<ul>
-            	<li>Property Type</li>
-              <li>
-          <!--		dropdown menu  -->
-		<select name="example-list type[]" multiple="multiple" style="width:400px" size="10">
-		<option value="" <?php if($type[0]==NULL) echo 'selected="selected"'; ?>>Any Property Type</option>
-		<option value="House" <?php if(is_array($type) && in_array('House',$type)) echo 'selected="selected"'; ?>>House</option>
-		<option value="Unit" <?php if(is_array($type) && in_array('Unit',$type)) echo 'selected="selected"'; ?>>Unit</option>
-		<option value="Townhouse" <?php if(is_array($type) && in_array('Townhouse',$type)) echo 'selected="selected"'; ?>>Townhouse</option>
-		<option value="Villa" <?php if(is_array($type) && in_array('Villa',$type)) echo 'selected="selected"'; ?>>Villa</option>
-		<option value="Apartment" <?php if(is_array($type) && in_array('Apartment',$type)) echo 'selected="selected"'; ?>>Apartment</option>
-		<option value="Flat" <?php if(is_array($type) && in_array('Flat',$type)) echo 'selected="selected"'; ?>>Flat</option>
-		<option value="Studio" <?php if(is_array($type) && in_array('Studio',$type)) echo 'selected="selected"'; ?>>Studio</option>
-		<option value="Warehouse" <?php if(is_array($type) && in_array('Warehouse',$type)) echo 'selected="selected"'; ?>>Warehouse</option>
-		<option value="DuplexSemi" <?php if(is_array($type) && in_array('DuplexSemi',$type)) echo 'selected="selected"'; ?>>DuplexSemi-detached</option>
-		<option value="Alpine" <?php if(is_array($type) && in_array('Alpine',$type)) echo 'selected="selected"'; ?>>Alpine</option>
-		<option value="AcreageSemi-rural" <?php if(is_array($type) && in_array('AcreageSemi-rural',$type)) echo 'selected="selected"'; ?>>AcreageSemi-rural</option>
-		<option value="BlockOfUnits" <?php if(is_array($type) && in_array('BlockOfUnits',$type)) echo 'selected="selected"'; ?>>BlockOfUnits</option>
-		<option value="Terrace" <?php if(is_array($type) && in_array('Terrace',$type)) echo 'selected="selected"'; ?>>Terrace</option>
-		<option value="Retirement" <?php if(is_array($type) && in_array('Retirement',$type)) echo 'selected="selected"'; ?>>Retirement</option>
-		<option value="ServicedApartment" <?php if(is_array($type) && in_array('ServicedApartment',$type)) echo 'selected="selected"'; ?>>ServicedApartment</option>
-		<option value="Other" <?php if(is_array($type) && in_array('Other',$type)) echo 'selected="selected"'; ?>>Other</option>
-		</select>
-          <!--		dropdown menu end  -->  
-              </li>
-            </ul>
-        </div>
-      	<div class="boxex">
-          	<ul>
-            	<li>Price</li>
-              <li>
-          <!--		dropdown menu  -->
-		<select name="example-list price_from" multiple="multiple" style="width:400px">
-    <option value="" <?php if($price_from==NULL) echo 'selected="selected"'; ?>>Price from</option>
-		<option value="100000" <?php if($price_from=='100000') echo 'selected="selected"'; ?>>100000</option>
-		<option value="250000" <?php if($price_from=='250000') echo 'selected="selected"'; ?>>250000</option>
-		<option value="1500000" <?php if($price_from=='1500000') echo 'selected="selected"'; ?>>1500000</option>
-		</select>
-          <!--		dropdown menu end  --> 
-              </li>
-            </ul>
-        </div>
-      	<div class="boxex width22">
-          	<ul>
-            	<li>Title</li>
-              <li>
-          <!--		dropdown menu  -->
-              <div class="dropdown w100">
-		<select name="example-list bedroom" multiple="multiple" style="width:400px">
-		<option value="" <?php if($bedroom==NULL) echo 'selected="selected"'; ?>>Bedroom</option>
-		<?php for($i=0;$i<=5;$i++) { ?>
-		<option value="<?php echo $i; ?>" <?php if($bedroom!=NULL && $bedroom==$i) echo 'selected="selected"'; ?>><?php echo $i; ?></option>
-		<?php } ?>
-		</select>
-              </div>
-          <!--		dropdown menu end  --> 
-          <!--		dropdown menu  -->
-              <div class="dropdown w100">
-                <input class="dropdown-toggle" name="bedroom" type="text">
-                <div class="dropdown-text dd_fonts">Garages</div>
-                <ul class="dropdown-content">
-                  <li value="" <?php echo $garage; if($garage==NULL) echo 'selected="selected"'; ?>><a href="#">Garages</a></li>
-                  <?php for($i=0;$i<=25;$i++) { ?>
-                  <li value="<?php echo $i; ?>" <?php if($garage!=NULL && $garage==$i) echo 'selected="selected"'; ?>><a href="#"><?php echo $i; ?></a></li>
-                  <?php } ?>
-                </ul>
-              </div>
-          <!--		dropdown menu end  --> 
-              </li>
-            </ul>
-        </div>
-      	<div class="boxex width9">
-       	 <p><a class="serch_box" href="#">Search</a></p>        
+    	<div class="mainmenu">
+				<ul>
+       	  <li class="menu_top_bg"></li>
+        </ul>
+        <ul class="menu_bg">
+        	<li class="home"><a href="#">Home</a></li>
+        	<li class="ovalue"><a href="#">Our Value Proposition</a></li>
+        	<li class="oteam"><a href="#">Our Team</a></li>
+        	<li class="contact"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="menu_bg bg_border">
+        	<li class="inner_logo"><a href="#">Samaras One Home</a></li>
+        </ul>
+        <ul class="menu_bg">
+        	<li class="commercial"><a href="<?php echo base_url('category/commercial'); ?>">Commercial</a></li>
+        	<li class="residential"><a href="<?php echo base_url('category/residency'); ?>">Residential</a></li>
+        	<li class="business"><a href="<?php echo base_url('category/business'); ?>">Business</a></li>
+        </ul>
       </div>
-     </div>
-     </form>
-     <!-- search end -->	
-		</div>
-  </div>
+    	  <div class="touchslider">
+          <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
+          <div>
+            <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl2" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl3" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl4" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl5" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl6" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl7" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl8" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
+          </div>
+        </div>
+
+    <!-- <div>
+        <a class="touchslider-prev">prev</a>
+        <a class="touchslider-nav-item touchslider-nav-item-current">1</a>
+        <a class="touchslider-nav-item">2</a>
+        
+        <a class="touchslider-next">next</a>
+    </div> -->
+	
+				</div>
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
-        <h5 class="page_name"><a href="#">COMMERCIAL</a></h5>
-      	<a class="inner_pmenu" href="#"></a>
-        <h6><a class="inner_smenu" href="#"></a></h6>
-        <a class="inner_search_icon" href="#"><span>Find a Property</span></a>
-      </div> 
       
-        <!-- container -->     
-          <div class="container">
-						<p class="color_orange">North Shore <span></span></p>            
-            	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-            	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-            	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-            	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-            	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>          
-          </div>
- 			  <!-- container -->
-        
- 			  <!-- Next Menu -->
-        <div class="clearall"></div>
-        <div class="next_menu">
-        	<ul>
-        		<li class="previous_img"><a class="previous" href="#">Previous</a></li>
-          	<li><a class="center" href="#">&nbsp;</a></li>
-          	<li><a class="active" href="#">&nbsp;</a></li>
-          	<li class="next_img"><a class="next" href="#">Next</a></li>
-          </ul>
-        </div>
-        
- 			  <!-- Next end -->
-        
-			<div class="clearall"></div>
-     </div>
+      </div>      
+    	<div class="header_res_btm width_1060">   
+<!--    	<h1>“ The home should be the treasure chest of living. ”<br /><span>Le Corbusier</span></h1>
+        <h6></h6>-->
+        <h2>Commercial</h2>   
+      </div>
     </div>
+  </div>
 <!-- header end --> 
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-
-
-<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script>
-
-<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script>
-<script type="text/javascript">
-$(function(){
-
-	$("select").multiselect({
-		selectedList: 4
-	});
-	
-});
-</script>
+  <div class="body_cnt">
+  	<p>Samaras one take on the profeciency consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum. Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum. Mauris nec tempus tellus. Cras elit neque, fringilla in metus id, interdum porta sem. Nam a lobortis elit, vitae tincidunt magna. Curabitur eget erat quam. Etiam viverra eros a ultricies tincidunt. Nam posuere purus at lacus tincidunt molestie. Integer quis tortor dapibus, venenatis est in, lacinia arcu. Nullam pulvinar gravida nulla, sed dapibus lorem gravida ac. Curabitur imperdiet felis ut tincidunt dapibus.</p>
+    <p>Aliquam volutpat metus id leo porttitor venenatis vitae vel diam. Aliquam pellentesque malesuada elit, quis ornare urna lacinia vel. Morbi posuere elit quis viverra molestie. Phasellus faucibus malesuada lectus sed aliquet. Etiam tristique erat sem, vitae sodales nisl porttitor sit amet. Sed vel metus nec nunc commodo tempor ac sed lorem. Maecenas gravida non orci sit amet scelerisque. Suspendisse ut nunc ut nunc scelerisque faucibus. Ut pharetra vestibulum ultricies. Etiam sit amet mollis velit.</p>
+    <p>Proin aliquam tincidunt magna, in elementum dolor. Donec auctor ipsum neque. Maecenas laoreet faucibus dolor sed faucibus. Nunc malesuada, nunc a fringilla sagittis, erat ligula malesuada ligula, sollicitudin pulvinar neque orci porttitor ante. Curabitur imperdiet pharetra erat at tincidunt. Mauris massa est, porttitor eget dapibus a, facilisis sed quam. Quisque eget dapibus orci, id sagittis magna. In lectus leo, malesuada ac hendrerit a, lacinia eget augue. Maecenas iaculis dapibus erat, ut luctus tortor dapibus non.</p>
+  </div>
+  <div class="res_img_container">
+    <div class="respage_img"> 
+      <img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" alt="residential" title="residential"/> 
+    </div>
+    <div class="respage_img">  
+      <img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" alt="residential" title="residential"/> 
+    </div>
+    <div class="respage_img">  
+      <img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" alt="residential" title="residential"/> 
+    </div>
+    <div class="respage_img">  
+      <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" alt="residential" title="residential"/> 
+    </div>
+  </div>
+  <div class="clearall"></div>

@@ -18,9 +18,9 @@
         	<li class="inner_logo"><a href="#">Samaras One Home</a></li>
         </ul>
         <ul class="menu_bg">
-        	<li class="commercial"><a href="#">Commercial</a></li>
-        	<li class="residential"><a href="#">Residential</a></li>
-        	<li class="business"><a href="#">Business</a></li>
+        	<li class="commercial"><a href="<?php echo base_url('category/commercial'); ?>">Commercial</a></li>
+        	<li class="residential"><a href="<?php echo base_url('category/residency'); ?>">Residential</a></li>
+        	<li class="business"><a href="<?php echo base_url('category/business'); ?>">Business</a></li>
         </ul>
       </div>
     	  <div class="touchslider">

@@ -60,7 +60,7 @@ a{text-decoration:none;}
 .search_width{}
 .page_name{margin:-56px 0 0 470px; font-size: 10px!important; background:#E6E6E6; width: 78px; padding:10px 33px; background:url(../images/sprites.png) 0px 5px no-repeat; }
 .page_name a{font-size:14px!important;}
-.search_box{position:absolute; z-index:9996; width:100%; padding:20px 0 30px 0; top:157px; border-bottom: 1px solid white;}
+.search_box{position:absolute; z-index:9996; width:100%; padding:20px 0 30px 0; top:148px; border-bottom: 1px solid white;}
 .boxex{float:left; width:14.28%;}
 .boxex ul .bullet{background:url(../images/sprites.png) -1223px 5px no-repeat; padding:0 0 0px 25px; margin:0 0 17px 0;}
 .boxex ul select{border: 1px solid #e3eaee; -moz-appearance: none; -webkit-appearance: none; -o-apperance: none; -ms-apperance:none; padding: 4px 40px 4px 10px;}
