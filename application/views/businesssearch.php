@@ -116,7 +116,7 @@
       
         <!-- container -->     
           <div class="container">
-						<p class="color_orange">North Shore <span></span></p>            
+						<p class="color_orange north_shore">North Shore <span></span></p>            
             	<div class="s_img_boxes">
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>

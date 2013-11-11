@@ -1,7 +1,7 @@
 <body>
 	<div class="wrapper">
-  	<div class="wrapper_bg">
-  	<div class="header">
+  	<div class="contact_page_bg">
+  	<div class="contact_page_header">
     <div class="menu_logo">
     </div>
     	<!--<div class="mainmenu">
@@ -23,7 +23,7 @@
         	<li class="business"><a href="#">Business</a></li>
         </ul>
       </div>-->
-    	  <div class="touchslider">
+<!--    	  <div class="touchslider">
           <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
           <div>
             <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
@@ -37,7 +37,7 @@
             <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
             <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
           </div>
-        </div>
+        </div>-->
 
     <!-- <div>
         <a class="touchslider-prev">prev</a>
@@ -53,52 +53,58 @@
       
       </div>   
       <!-- property page -->   
-				<div class="sr_box">
+			<!--	<div class="sr_box">
       	 	<a href="#" class="backSearch"> Back to search </a>
             <div class="sr_top_bg">
                 
             </div>
         	<div>
         		<!-- Property description and location -->
-	            <div class="sr_left">
-	                <div class="sr_inner">
-	                    <h2>110 Albert Avenue</h2><br />
-	                    <div class="sr_section">
-	                        <h2>Property Description</h2><br />
-	                        <p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae auctor massa. Donec velit massa, adipiscing non porta non, viverra at neque. Cras condimentum ipsum mauris, id laoreet diam laoreet consectetur. Integer lacus est, sollicitudin a varius eu, consectetur sed neque. </p>
-	                    </div>
-	                    <div class="sr_section2">
-	                    	<h2>Property Location</h2><br />
-	                    	<p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus est, sollicitudin a varius eu, consectetur sed neque.</p>
-	                	</div>
-	                	<a href="<?php echo base_url('contacts'); ?>">Location</a><br/>
-	                	<a href="#">Gallery</a>
-	              	</div>
-	            </div>
-	            <!-- Image and appointment form -->
-	            <div class="sr_right">
-	            	<div class="sr_inner">
-	                	<img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/> <br/><br/>
-	                	<div class="apt_form">
-	                  		<h2>Make an appointment</h2>
-	                    	<form>
-	                        	<p>Name</p>
-		                        <input type="text" name="firstname"><br/>
-	    	                    <p>Email Address</p>
-	        	                <input type="text" name="firstname"><br/>
-	            	            <p>Contact Number</p>
-	                	        <input type="text" name="firstname"><br/>
-	                    	    <p>Message</p>
-	                        	<textarea type="text" name="firstname"></textarea><br />
-	                        	<span><button> Submit</button></span>
-	                    	</form>
-	                	</div>
-	            	</div>
-	          	</div>
+      <!-- contact page -->   
+      <div class="contact_pg"> 
+      	<p class="color_orange cont_spr">110 Albert AvenueM</p>
+        <div class="conatct_left">
+  				<h3 class="contct_header">Property Description</h3>
+          <p class="contct_para">Samaras one take on the profeciency consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum. </p>
+          <h3 class="contct_header">Property Location</h3>
+          <p class="contct_para">Samaras one take on the profeciency consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum. </p>
+        	<div class="cont_location">
+          </div>
+        </div>
+         
+      <div class="conatct_center">
+				<h3 class="contct_header">Gallery</h3>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+      </div>
+         
+      <div class="conatct_right">
+				<h3 class="contct_header">Make an appointment</h3>
+         <div class="cont_form">
+              <form>
+                  <p class="contct_form_color">Name</p>
+                  <input type="text" name="firstname"><br/>
+                  <p class="contct_form_color">Email Address</p>
+                  <input type="text" name="firstname"><br/>
+                  <p class="contct_form_color">Contact Number</p>
+                  <input type="text" name="firstname"><br/>
+                  <p class="contct_form_color">Message</p>
+                  <textarea type="text" name="firstname"></textarea><br />
+                  <span><button> Submit</button></span>
+              </form>
+          </div>
+      </div>
+      </div>
+	    <!-- contact page --> 
        		</div>  
-    	</div>
+    	</div> &nbsp;
       
       <!-- property page -->
     </div>
   </div>
 <!-- header end --> 
+<div class="clearall"></div>
