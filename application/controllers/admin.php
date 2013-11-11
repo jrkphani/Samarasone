@@ -5,8 +5,6 @@ function __construct()
 {
 	parent::__construct();
 	$this->current_user=$this->session->userdata('logged_in');
-	if($this->current_user['flag']==1) //check for profile complition
-		redirect('profile', 'refresh');
 	if($this->current_user['role']!='admin')
 		redirect('login', 'refresh');
 }
