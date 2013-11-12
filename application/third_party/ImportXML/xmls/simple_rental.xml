@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertyList SYSTEM "http://reaxml.realestate.com.au/propertyList.dtd">
+<propertyList date="2009-01-01-12:30:00" username="xmluser" password="xmlpassword">
+  <!-- Current listing -->
+  <rental status="leased" modTime="20070329T092200">
+<agentID>XRWBRJ</agentID>
+<uniqueID>XYZ123</uniqueID>
+<listingAgent>
+<name>Kate Dennis</name>
+<telephone type="mobile">0400 488 995</telephone>
+</listingAgent>
+<dateAvailable>20040723</dateAvailable>
+<rent period="weekly" display="yes">230</rent>
+<bond/>
+<address display="no">
+<streetNumber>85</streetNumber>
+<street>Black Road</street>
+<suburb>FLAGSTAFF HILL</suburb>
+<state>SA</state>
+<postcode>5159</postcode>
+<country>AUS</country>
+</address>
+<municipality/>
+<category name="House"/>
+<headline>Great Family Home</headline>
+<description>The main house comprises of 3 large bedrooms, main with built-in robes. Formal lounge, kitchen/meals with dishwasher. Ducted cooling and gas heating. Separate rumpus room with kitchenette and ensuite. Large secure yard and pets neg.</description>
+<features>
+<bedrooms>4</bedrooms>
+<bathrooms>2</bathrooms>
+<garages/>
+<carports>1</carports>
+</features>
+<holiday value="no"/>
+<landDetails>
+<area unit="squareMeter"/>
+</landDetails>
+<externalLink href="http://www.realestate.com.au/onlinetours/VictoriaSt.tour"/>
+<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+<buildingDetails>
+<area unit="squareMeter">0</area>
+<energyRating/>
+</buildingDetails>
+<objects>
+<floorplan id="1"/>
+<floorplan id="2"/>
+</objects>
+</rental>
+
+</propertyList>
