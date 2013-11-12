@@ -89,6 +89,7 @@ class REA_XML {
 		'category',
 		'carSpaces',
 		'commercial',
+		'marketing',
 		'commercialAuthority',
 		'commercialCategory',
 		'commercialListingType',
@@ -170,8 +171,9 @@ class REA_XML {
 		'holidayRental',
 
 		'idealFor',
-		'images',
-		'img',
+		'images' => array(
+			'img'
+		),
 		'isHomeLandPackage',
 		'isMultiple',
 
@@ -189,7 +191,7 @@ class REA_XML {
 		'newConstruction',
 
 
-		'object' => array(
+		'objects' => array(
 			'floorplan',
 			'img',
 			'documents'
@@ -231,7 +233,7 @@ class REA_XML {
 		'soldDetails',
 		'soldPrice',
 		'stage',
-		'modTime',
+		'modtime',
 		'status',
 		'streetDirectory',
 

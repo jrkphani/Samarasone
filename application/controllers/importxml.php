@@ -14,15 +14,280 @@ class ImportXML extends CI_Controller
 		//print_r($properties);die;
 		//echo '<pre>', var_dump($properties), '</pre>';die;
 
-		foreach ($properties["rental"] as $res)
+		foreach ($properties["business"] as $res)
 		{
+			$v=array();
+
+			$listingAgent=$this->getList($res['listingAgent']);
+			$address=$this->getList($res['address']);
+			$businessCategory=$this->getList($res['businessCategory']);
+			$vendorDetails=$this->getList($res['vendorDetails']);
+			$images=$this->getList($res['images']);
+			$objects=$this->getList($res['objects']);
+			$miniweb=$this->getList($res['miniweb']);
+
+			$v['agentID']=(string)$res['agentID'];
+			$v['uniqueID']=(string)$res['uniqueID'];
+			$v['marketing']=(string)$res['marketing'];
+			$v['exclusivity']=$this->getAttribute($res['exclusivity'],'value');
+			$v['commercialListingType']=$this->getAttribute($res['commercialListingType'],'value');
+			$v['underOffer']=$this->getAttribute($res['underOffer'],'value');
+			$v['listingAgent']=serialize($listingAgent);
+			$v['franchise']=$this->getAttribute($res['franchise'],'value');
+			$v['price']=(string)$res['price'];
+			$v['priceView']=(string)$res['priceView'];
+			$v['businessLease']=$this->getValueAndAttribute($res['businessLease']);
+			$v['takings']=(string)$res['takings'];
+			$v['return']=$this->getValueAndAttribute($res['return']);
+			$v['currentLeaseEndDate']=(string)$res['currentLeaseEndDate'];
+			$v['furtherOptions']=(string)$res['furtherOptions'];
+			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
+			$v['municipality']=(string)$res['municipality'];
+			$v['streetDirectory']=(string)$res['streetDirectory'];
+			$v['businessCategory']=serialize($businessCategory);
+			$v['headline']=(string)$res['headline'];
+			$v['description']=(string)$res['description'];
+			$v['terms']=(string)$res['terms'];
+			$v['soldDetails']=(string)$res['soldDetails'];
+			$v['buildingDetails']=(string)$res['buildingDetails'];
+			$v['vendorDetails']=serialize($vendorDetails);
+			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
+			$v['extraFields']=(string)$res['extraFields'];
+			$v['images']=serialize($images);
+			$v['objects']=serialize($objects);
+			$v['miniweb']=serialize($miniweb);
+			$v['purchaseOrder']=(string)$res['purchaseOrder'];
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
+
+			$this->basic_model->insert($v,'business');
+		}
+
+		foreach ($properties["commercialLand"] as $res)
+		{
+			$v=array();
+
+			$listingAgent=$this->getList($res['listingAgent']);
+			$commercialRent=$this->getList($res['commercialRent']);
+			$address=$this->getList($res['address']);
+			$highlight=$this->getList($res['highlight']);
+			$vendorDetails=$this->getList($res['vendorDetails']);
+			$images=$this->getList($res['images']);
+			$objects=$this->getList($res['objects']);
+			$miniweb=$this->getList($res['miniweb']);
+
+			$v['agentID']=(string)$res['agentID'];
+			$v['uniqueID']=(string)$res['uniqueID'];
+			$v['marketing']=(string)$res['marketing'];
+			$v['authority']=$this->getAttribute($res['authority'],'value');
+			$v['commercialListingType']=$this->getAttribute($res['commercialListingType'],'value');
+			$v['underOffer']=$this->getAttribute($res['underOffer'],'value');
+			$v['listingAgent']=serialize($listingAgent);
+			$v['price']=(string)$res['price'];
+			$v['priceView']=(string)$res['priceView'];
+			$v['commercialRent']=serialize($commercialRent);
+			$v['outgoings']=$this->getValueAndAttribute($res['outgoings']);
+			$v['return']=$this->getValueAndAttribute($res['return']);
+			$v['currentLeaseEndDate']=(string)$res['currentLeaseEndDate'];
+			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
+			$v['municipality']=(string)$res['municipality'];
+			$v['estate']=(string)$res['estate'];
+			$v['streetDirectory']=(string)$res['streetDirectory'];
+			$v['headline']=(string)$res['headline'];
+			$v['description']=(string)$res['description'];
+			$v['highlight']=serialize($highlight);
+			$v['soldDetails']=(string)$res['soldDetails'];
+			$v['landDetails']=(string)$res['landDetails'];
+			$v['auction']=$this->getAttribute($res['auction'],'date');
+			$v['vendorDetails']=serialize($vendorDetails);
+			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
+			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
+			$v['extraFields']=(string)$res['extraFields'];
+			$v['images']=serialize($images);
+			$v['objects']=serialize($objects);
+			$v['miniweb']=serialize($miniweb);
+			$v['purchaseOrder']=(string)$res['purchaseOrder'];
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
+
+			$this->basic_model->insert($v,'commercialLand');
+		}
+
+		foreach ($properties["commercial"] as $res)
+		{
+			$v=array();
+
+			$listingAgent=$this->getList($res['listingAgent']);
+			$commercialRent=$this->getList($res['commercialRent']);
+			$address=$this->getList($res['address']);
+			$highlight=$this->getList($res['highlight']);
+			$vendorDetails=$this->getList($res['vendorDetails']);
+			$images=$this->getList($res['images']);
+			$objects=$this->getList($res['objects']);
+			$miniweb=$this->getList($res['miniweb']);
+
+			$v['agentID']=(string)$res['agentID'];
+			$v['uniqueID']=(string)$res['uniqueID'];
+			$v['marketing']=(string)$res['marketing'];
+			$v['commercialAuthority']=$this->getAttribute($res['commercialAuthority'],'value');
+			$v['exclusivity']=$this->getAttribute($res['exclusivity'],'value');
+			$v['commercialListingType']=$this->getAttribute($res['commercialListingType'],'value');
+			$v['underOffer']=$this->getAttribute($res['underOffer'],'value');
+			$v['listingAgent']=serialize($listingAgent);
+			$v['price']=(string)$res['price'];
+			$v['priceView']=(string)$res['priceView'];
+			$v['commercialRent']=serialize($commercialRent);
+			$v['outgoings']=$this->getValueAndAttribute($res['outgoings']);
+			$v['return']=$this->getValueAndAttribute($res['return']);
+			$v['currentLeaseEndDate']=(string)$res['currentLeaseEndDate'];
+			$v['tenancy']=(string)$res['tenancy'];
+			$v['furtherOptions']=(string)$res['furtherOptions'];
+			$v['isMultiple']=$this->getAttribute($res['isMultiple'],'value');
+			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
+			$v['municipality']=(string)$res['municipality'];
+			$v['streetDirectory']=(string)$res['streetDirectory'];
+			$v['commercialCategory']=$this->getAttribute($res['commercialCategory'],'name');
+			$v['headline']=(string)$res['headline'];
+			$v['description']=(string)$res['description'];
+			$v['highlight']=serialize($highlight);
+			$v['soldDetails']=(string)$res['soldDetails'];
+			$v['landDetails']=(string)$res['landDetails'];
+			$v['buildingDetails']=(string)$res['buildingDetails'];
+			$v['propertyExtent']=(string)$res['propertyExtent'];
+			$v['carSpaces']=(string)$res['carSpaces'];
+			$v['parkingComments']=(string)$res['parkingComments'];
+			$v['auction']=$this->getAttribute($res['auction'],'date');
+			$v['vendorDetails']=serialize($vendorDetails);
+			$v['zone']=(string)$res['zone'];
+			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
+			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
+			$v['extraFields']=(string)$res['extraFields'];
+			$v['images']=serialize($images);
+			$v['objects']=serialize($objects);
+			$v['miniweb']=serialize($miniweb);
+			$v['purchaseOrder']=(string)$res['purchaseOrder'];
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
+
+			$this->basic_model->insert($v,'commercial');
+		}
+
+		foreach ($properties["land"] as $res)
+		{
+			$v=array();
+
+			$listingAgent=$this->getList($res['listingAgent']);
+			$address=$this->getList($res['address']);
+			$features=$this->getList($res['features']);
+			$vendorDetails=$this->getList($res['vendorDetails']);
+			$images=$this->getList($res['images']);
+			$views=$this->getList($res['views']);
+			$objects=$this->getList($res['objects']);
+
+
+			$v['agentID']=(string)$res['agentID'];
+			$v['uniqueID']=(string)$res['uniqueID'];
+			$v['authority']=$this->getAttribute($res['authority'],'value');
+			$v['underOffer']=$this->getAttribute($res['underOffer'],'value');
+			$v['listingAgent']=serialize($listingAgent);
+			$v['price']=(string)$res['price'];
+			$v['priceView']=(string)$res['priceView'];
+			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
+			$v['municipality']=(string)$res['municipality'];
+			$v['estate']=(string)$res['estate'];
+			$v['streetDirectory']=(string)$res['streetDirectory'];
+			$v['landCategory']=$this->getAttribute($res['landCategory'],'name');
+			$v['headline']=(string)$res['headline'];
+			$v['description']=(string)$res['description'];
+			$v['features']=serialize($features);
+			$v['soldDetails']=(string)$res['soldDetails'];
+			$v['landDetails']=(string)$res['landDetails'];
+			$v['auction']=$this->getAttribute($res['auction'],'date');
+			$v['vendorDetails']=serialize($vendorDetails);
+			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
+			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
+			$v['extraFields']=(string)$res['extraFields'];
+			$v['images']=serialize($images);
+			$v['views']=serialize($views);
+			$v['objects']=serialize($objects);
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
+			
+
+			$this->basic_model->insert($v,'land');
+		}
+
+		foreach ($properties["rural"] as $res)
+		{
+			$v=array();
+
+			$listingAgent=$this->getList($res['listingAgent']);
+			$address=$this->getList($res['address']);
+			$features=$this->getList($res['features']);
+			$ruralFeatures=$this->getList($res['ruralFeatures']);
+			$inspectionTimes=$this->getList($res['inspectionTimes']);
+			$vendorDetails=$this->getList($res['vendorDetails']);
+			$images=$this->getList($res['images']);
+			$ecoFriendly=$this->getList($res['ecoFriendly']);
+			$idealFor=$this->getList($res['idealFor']);
+			$views=$this->getList($res['views']);
+			$objects=$this->getList($res['objects']);
+
+
+			$v['agentID']=(string)$res['agentID'];
+			$v['uniqueID']=(string)$res['uniqueID'];
+			$v['authority']=$this->getAttribute($res['authority'],'value');
+			$v['underOffer']=$this->getAttribute($res['underOffer'],'value');
+			$v['listingAgent']=serialize($listingAgent);
+			$v['price']=(string)$res['price'];
+			$v['priceView']=(string)$res['priceView'];
+			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
+			$v['municipality']=(string)$res['municipality'];
+			$v['streetDirectory']=(string)$res['streetDirectory'];
+			$v['ruralCategory']=$this->getAttribute($res['ruralCategory'],'name');
+			$v['headline']=(string)$res['headline'];
+			$v['description']=(string)$res['description'];
+			$v['features']=serialize($features);
+			$v['ruralFeatures']=serialize($ruralFeatures);
+			$v['soldDetails']=(string)$res['soldDetails'];
+			$v['landDetails']=(string)$res['landDetails'];
+			$v['buildingDetails']=(string)$res['buildingDetails'];
+			$v['inspectionTimes']=serialize($inspectionTimes);
+			$v['auction']=$this->getAttribute($res['auction'],'date');
+			$v['vendorDetails']=serialize($vendorDetails);
+			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
+			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
+			$v['extraFields']=(string)$res['extraFields'];
+			$v['images']=serialize($images);
+			$v['ecoFriendly']=serialize($ecoFriendly);
+			$v['idealFor']=serialize($idealFor);
+			$v['views']=serialize($views);
+			$v['objects']=serialize($objects);
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
+			
+
+			$this->basic_model->insert($v,'rural');
+		}
+
+		foreach ($properties["holidayRental"] as $res)
+		{
+			$v=array();
+
 			$listingAgent=$this->getList($res['listingAgent']);
 			$address=$this->getList($res['address']);
 			$features=$this->getList($res['features']);
 			$inspectionTimes=$this->getList($res['inspectionTimes']);
+			$images=$this->getList($res['images']);
 			$ecoFriendly=$this->getList($res['ecoFriendly']);
 			$views=$this->getList($res['views']);
 			$allowances=$this->getList($res['allowances']);
+			$objects=$this->getList($res['objects']);
 
 			$v['agentID']=(string)$res['agentID'];
 			$v['uniqueID']=(string)$res['uniqueID'];
@@ -32,6 +297,53 @@ class ImportXML extends CI_Controller
 			$v['priceView']=(string)$res['priceView'];
 			$v['bond']=(string)$res['bond'];
 			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
+			$v['municipality']=(string)$res['municipality'];
+			$v['streetDirectory']=(string)$res['streetDirectory'];
+			$v['holidayCategory']=$this->getAttribute($res['holidayCategory'],'name');
+			$v['headline']=(string)$res['headline'];
+			$v['description']=(string)$res['description'];
+			$v['features']=serialize($features);
+			$v['landDetails']=(string)$res['landDetails'];
+			$v['buildingDetails']=(string)$res['buildingDetails'];
+			$v['inspectionTimes']=serialize($inspectionTimes);
+			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
+			$v['availabilityLink']=$this->getAttribute($res['availabilityLink'],'href');
+			$v['extraFields']=(string)$res['extraFields'];
+			$v['images']=serialize($images);
+			$v['objects']=serialize($objects);
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
+
+			//print_r($v);die;
+
+			$this->basic_model->insert($v,'holidayRental');
+
+		}
+
+		foreach ($properties["rental"] as $res)
+		{
+			$v=array();
+
+			$listingAgent=$this->getList($res['listingAgent']);
+			$address=$this->getList($res['address']);
+			$features=$this->getList($res['features']);
+			$inspectionTimes=$this->getList($res['inspectionTimes']);
+			$images=$this->getList($res['images']);
+			$ecoFriendly=$this->getList($res['ecoFriendly']);
+			$views=$this->getList($res['views']);
+			$allowances=$this->getList($res['allowances']);
+			$objects=$this->getList($res['objects']);
+
+			$v['agentID']=(string)$res['agentID'];
+			$v['uniqueID']=(string)$res['uniqueID'];
+			$v['listingAgent']=serialize($listingAgent);
+			$v['dateAvailable']=(string)$res['dateAvailable'];
+			$v['rent']=$this->getValueAndAttribute($res['rent']);
+			$v['priceView']=(string)$res['priceView'];
+			$v['bond']=(string)$res['bond'];
+			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
 			$v['municipality']=(string)$res['municipality'];
 			$v['streetDirectory']=(string)$res['streetDirectory'];
 			$v['category']=$this->getAttribute($res['category'],'name');
@@ -46,21 +358,20 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($this->getAttribute($res['img']));
-			//$v['objects']=serialize($this->getAttribute($res['objects']));
+			$v['images']=serialize($images);
+			$v['objects']=serialize($objects);
 			$v['ecoFriendly']=serialize($ecoFriendly);
 			$v['views']=serialize($views);
 			$v['allowances']=serialize($allowances);
+			$v['status_sellable']=(string)$res['status'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
 
 			$this->basic_model->insert($v,'rental');
 
 		}
 
-		/*foreach ($properties["residential"] as $res)
+		foreach ($properties["residential"] as $res)
 		{
-			//print_r($res);die;
-			//$this->simplexml_to_array($res['address']);
-
 			$v=array();
 
 			$listingAgent=$this->getList($res['listingAgent']);
@@ -68,9 +379,11 @@ class ImportXML extends CI_Controller
 			$features=$this->getList($res['features']);
 			$inspectionTimes=$this->getList($res['inspectionTimes']);
 			$vendorDetails=$this->getList($res['vendorDetails']);
+			$images=$this->getList($res['images']);
 			$ecoFriendly=$this->getList($res['ecoFriendly']);
 			$idealFor=$this->getList($res['idealFor']);
 			$views=$this->getList($res['views']);
+			$objects=$this->getList($res['objects']);
 
 
 			$v['agentID']=(string)$res['agentID'];
@@ -82,6 +395,7 @@ class ImportXML extends CI_Controller
 			$v['price']=(string)$res['price'];
 			$v['priceView']=(string)$res['priceView'];
 			$v['address']=serialize($address);
+			$v['suburb']=$address['suburb'];
 			$v['municipality']=(string)$res['municipality'];
 			$v['streetDirectory']=(string)$res['streetDirectory'];
 			$v['category']=$this->getAttribute($res['category'],'name');
@@ -97,18 +411,18 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($this->getAttribute($res['img']));
+			$v['images']=serialize($images);
 			$v['newConstruction']=(string)$res['newConstruction'];
 			$v['ecoFriendly']=serialize($ecoFriendly);
 			$v['idealFor']=serialize($idealFor);
 			$v['views']=serialize($views);
-			//$v['objects']=serialize($this->getAttribute($res['objects']));print_r($v['objects']);die;
+			$v['objects']=serialize($objects);
 			$v['status_sellable']=(string)$res['status'];
-			$v['modTime']=(string)$res['modTime'];
+			$v['modTime']=date('Y-m-d-h:i:s', time());
 			
 
 			$this->basic_model->insert($v,'residential');
-		}*/
+		}
 	}
 
 
@@ -125,7 +439,7 @@ class ImportXML extends CI_Controller
 		if($filed)
 			return $arr[$filed];
 		else
-			return $arr;
+			return serialize($arr);
 	}
 
 	function getList($obj)
@@ -136,10 +450,13 @@ class ImportXML extends CI_Controller
 		}
 		foreach ($obj as $key => $value)
 		{
-			/*foreach($value->attributes() as $key2 => $value2)
+			if(is_object($value))
 			{
-	    		$arr[$key2]=(string)$value2;
-			}*/
+				foreach($value->attributes() as $key2 => $value2)
+				{
+		    		$arr[$key2]=(string)$value2;
+				}
+			}
 			$arr[$key]=(string)$value;
 		}
 		return $arr;

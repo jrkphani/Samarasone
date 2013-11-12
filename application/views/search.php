@@ -5,7 +5,7 @@
   
       <!-- search box -->
      <div class="search_box">
-     <form name="form1" method="post" action="<?php echo base_url('search/result'); ?>">
+     <form name="form1" method="post" action="<?php echo base_url('search'); ?>">
 			<div class="width_90">
       	<div class="boxex width9">
         	<p class="color_orange">Search</p>
@@ -78,7 +78,7 @@
           <option value="1500000" <?php if($price_from=='1500000') echo 'selected="selected"'; ?>>1500000</option>
           </select><?php */?>
          
-          <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" /> 
+          <input type="text" id="amount" style="border: 0; color: #285069; font-weight: normal;" /> 
 					<div id="slider-range"></div>
           
           <!--		dropdown menu end  --> 
@@ -131,8 +131,10 @@
       
         <!-- container -->     
           <div class="container">
+            <?php if(isset($result2)) { ?>
 						<p class="color_orange">North Shore <span></span></p> 
-              <?php foreach ($result2 as $row2) { ?>        
+              <?php 
+              foreach ($result2 as $row2) { ?>        
             	<div class="s_img_boxes_commer">
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
@@ -220,8 +222,10 @@
           	<li class="next_img"><a class="next" href="#">Next</a></li>
           </ul>
         </div>
+
         
  			  <!-- Next end -->
+        <?php } ?>
         
 			<div class="clearall"></div>
      </div>
