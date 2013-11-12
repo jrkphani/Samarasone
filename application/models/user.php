@@ -3,7 +3,7 @@ Class User extends CI_Model
 {
  function login($username)
  {
-   $this->db->select('users.id,users.id_encrypt,users.email,user_detail.first_name,user_detail.last_name,user_detail.role,user_detail.limit,user_detail.flag');
+   $this->db->select('users.id,users.id_encrypt,users.email,user_detail.first_name,user_detail.last_name,user_detail.role');
    $this->db->from('users');
    $this->db->where('users.email', $username);
    $this->db->where('users.active', 1);

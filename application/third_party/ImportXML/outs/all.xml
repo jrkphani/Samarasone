@@ -1,0 +1,159 @@
+<!DOCTYPE propertyList SYSTEM "http://reaxml.realestate.com.au/propertyList.dtd">
+
+<propertyList date="20070615T141323" username="test" password="test">
+
+<rental status="leased" modTime="20070329T092200">
+<agentID>XRWBRJ</agentID>
+<uniqueID>401109388</uniqueID>
+<listingAgent>
+<name>Kate Dennis</name>
+<telephone type="mobile">0400 488 995</telephone>
+</listingAgent>
+<dateAvailable>20040723</dateAvailable>
+<rent period="weekly" display="yes">230</rent>
+<bond/>
+<address display="no">
+<streetNumber>85</streetNumber>
+<street>Black Road</street>
+<suburb>FLAGSTAFF HILL</suburb>
+<state>SA</state>
+<postcode>5159</postcode>
+<country>AUS</country>
+</address>
+<municipality/>
+<category name="House"/>
+<headline>Great Family Home</headline>
+<description>The main house comprises of 3 large bedrooms, main with built-in robes. Formal lounge, kitchen/meals with dishwasher. Ducted cooling and gas heating. Separate rumpus room with kitchenette and ensuite. Large secure yard and pets neg.</description>
+<features>
+<bedrooms>4</bedrooms>
+<bathrooms>2</bathrooms>
+<garages/>
+<carports>1</carports>
+</features>
+<holiday value="no"/>
+<landDetails>
+<area unit="squareMeter"/>
+</landDetails>
+<buildingDetails>
+<area unit="squareMeter">0</area>
+<energyRating/>
+</buildingDetails>
+<objects>
+<floorplan id="1"/>
+<floorplan id="2"/>
+</objects>
+</rental>
+
+<residential status="sold" modTime="20070423T160948">
+<agentID>2XRWBRJ</agentID>
+<uniqueID>BRG10026</uniqueID>
+<authority value="sale"/>
+<underOffer value="no"/>
+<listingAgent>
+<name>Wayne Palmer</name>
+<telephone type="mobile">0421 361 751</telephone>
+</listingAgent>
+<price display="no">500000</price>
+<priceView>$450,000 - $500,000</priceView>
+<address display="yes">
+<streetNumber>6</streetNumber>
+<street>Petrel Close</street>
+<suburb>HALLETT COVE</suburb>
+<state>SA</state>
+<postcode>5158</postcode>
+<country>AUS</country>
+</address>
+<municipality/>
+<category name="House"/>
+<headline>Family Entertainer With Views!!</headline>
+<description>If there's no place like home, this is the one your won't want to miss out on. Boasting 4 spacious bedrooms (main with large ensuite, BIR's to most bedrooms), study, formal lounge &amp; dine, large kitchen &amp; adjacent meals, huge rumpus, double garage with auto doors, beautiful gardens, ducted heating &amp; cooling, security system, views from Glenelg and beyond plus more!
+
+This home must sell, don't miss out!!</description>
+<features>
+<bedrooms>4</bedrooms>
+<bathrooms>2</bathrooms>
+<ensuite>0</ensuite>
+<garages>2</garages>
+<carports/>
+<airConditioning>0</airConditioning>
+<alarmSystem>0</alarmSystem>
+<vacuumSystem>0</vacuumSystem>
+<intercom>0</intercom>
+<pool>0</pool>
+<spa>0</spa>
+<tennisCourt>0</tennisCourt>
+<openFirePlace>0</openFirePlace>
+<otherFeatures/>
+</features>
+<soldDetails>
+<price/>
+<date>20060216</date>
+</soldDetails>
+<landDetails>
+<area unit="squareMeter"/>
+</landDetails>
+<buildingDetails>
+<area unit="squareMeter">0</area>
+<energyRating/>
+</buildingDetails>
+<inspectionTimes>
+<inspection>16-Oct-2005 01:00PM to 01:45PM</inspection>
+</inspectionTimes>
+<objects>
+<img id="m" modTime="20060318T105654" url="http://www.realestate.com.au/objects/props/9536/102509536ml1142639814.jpg"/>
+<img id="a" modTime="20060318T105655" url="http://www.realestate.com.au/objects/props/9536/102509536al1142639815.jpg"/>
+<img id="b" modTime="20060318T105657" url="http://www.realestate.com.au/objects/props/9536/102509536bl1142639817.jpg"/>
+<img id="c" modTime="20060318T105658" url="http://www.realestate.com.au/objects/props/9536/102509536cl1142639818.jpg"/>
+<img id="d" modTime="20060318T105700" url="http://www.realestate.com.au/objects/props/9536/102509536dl1142639820.jpg"/>
+<img id="e" modTime="20060318T105701" url="http://www.realestate.com.au/objects/props/9536/102509536el1142639821.jpg"/>
+<floorplan id="1"/>
+<floorplan id="2"/>
+</objects>
+</residential>
+
+<land status="sold" modTime="20070420T172106">
+<agentID>XRWBRJ</agentID>
+<uniqueID>BRG10299</uniqueID>
+<authority value="exclusive"/>
+<underOffer value="no"/>
+<listingAgent>
+<name>Michael Burton</name>
+<telephone type="mobile">0411 500 550</telephone>
+</listingAgent>
+<price display="yes">160000</price>
+<priceView>$160,000 +</priceView>
+<address display="yes">
+<lotNumber/>
+<streetNumber>6</streetNumber>
+<street>Larkdale Avenue</street>
+<suburb>MARION</suburb>
+<state>SA</state>
+<postcode>5043</postcode>
+<country>AUS</country>
+</address>
+<municipality/>
+<estate>
+<name/>
+<stage/>
+</estate>
+<landCategory name="Residential"/>
+<headline>Excellent Courtyard Block</headline>
+<description>Stake your claim as vacant land is very rare around here. A great piece of flat land in a quiet residential suburb close to Westfield Marion, Flinders Hospital, Schools and public transport. With over 400sqm theres plenty of room to build a courtyard home of your choice and have that much wanted low maintenance lifestyle.</description>
+<soldDetails>
+<price>180000</price>
+<date>20070214</date>
+</soldDetails>
+<landDetails>
+<area unit="squareMeter"/>
+<frontage/>
+<depth side="rear"/>
+<depth side="left"/>
+<depth side="right"/>
+</landDetails>
+<objects>
+<img id="m" modTime="20070131T163032" url="http://www.realestate.com.au/objects/props/1826/2371826ml1170221432.jpg"/>
+<floorplan id="1"/>
+<floorplan id="2"/>
+</objects>
+</land>
+</propertyList>
