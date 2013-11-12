@@ -1,6 +1,3 @@
-<body>
-	<div class="wrapper">
- 	 <div class="wrapper_bg">
    	<div class="wrapper_white_bg"></div>
    	<div class="wrapper_gradient_bg">
     </div>
@@ -73,12 +70,16 @@
             	<li>Price</li>
               <li>
           <!--		dropdown menu  -->
-          <select name="example-list price_from" multiple="multiple" style="width:232px;">
+<?php /*?>          <select name="example-list price_from" multiple="multiple" style="width:232px;">
           <option value="" <?php if($price_from==NULL) echo 'selected="selected"'; ?>>Price from</option>
           <option value="100000" <?php if($price_from=='100000') echo 'selected="selected"'; ?>>100000</option>
           <option value="250000" <?php if($price_from=='250000') echo 'selected="selected"'; ?>>250000</option>
           <option value="1500000" <?php if($price_from=='1500000') echo 'selected="selected"'; ?>>1500000</option>
-          </select>
+          </select><?php */?>
+         
+          <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" /> 
+					<div id="slider-range"></div>
+          
           <!--		dropdown menu end  --> 
               </li>
             </ul>
@@ -120,7 +121,7 @@
 		</div>
   </div>
     	<div class="comm_resi_header_top width_1060">   
-      	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
+      	<h1><a href="<?php echo base_url(); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><a href="#">COMMERCIAL</a></h5>
       	<a class="inner_pmenu" href="#"></a>
         <h6><a class="inner_smenu" href="#"></a></h6>
@@ -226,12 +227,7 @@
     </div>
 <!-- header end --> 
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-
-
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script>
-
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script>
 <script type="text/javascript">
 $(function(){
@@ -259,3 +255,23 @@ $(".radio-btn").on('click', function () {
     _this.find('input:radio').attr('checked', true);
 });
 </script>
+
+  <!-- range slider -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery-ui-range-slider.css"); ?>" />
+  
+	<script type="text/javascript">
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "From $" + ui.values[ 0 ] + " to $" + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "From $" + $( "#slider-range" ).slider( "values", 0 ) +
+          " to $" + $( "#slider-range" ).slider( "values", 1 ) );
+      });
+  </script>
+  <!--  end range slider -->

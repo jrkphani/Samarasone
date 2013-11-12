@@ -8,22 +8,73 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."style.css"); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."inner_pages.css"); ?>" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.touchslider.min.js');?>"></script>
-		<script>
-					jQuery(function($) {
-						$(".touchslider").touchSlider({mouseTouch: true, autoplay: true, delay: 3000});
-					});
-				</script>	
+
 </head>
-
-
-<script src="<?php echo base_url($this->config->item('path_js_file').'jquery.js');?>"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript">
   var baseurl = "<?php print base_url(); ?>";
 </script>
+<?php 
+$page = $this->uri->segment(1); 
+$subpage = $this->uri->segment(2); ?>
 
 <body>
+	<div class="wrapper">
+  	<div class="wrapper_bg">
+  	<div class="header">
+    <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo 'home_menu_logo'; } else { echo 'menu_logo'; } ?>">
+    </div>
+    	<div id="mainmenu" class="mainmenu" style="display:none;">
+				<ul>
+       	  <li class="menu_top_bg"></li>
+        </ul>
+        <ul class="menu_bg">
+        	<!--<li class="home"><a href="<?php echo base_url(); ?>">Home</a></li>-->
+        	<li class="ovalue"><a href="#">Our Value Proposition</a></li>
+        	<li class="oteam"><a href="#">Our Team</a></li>
+        	<li class="contact"><a href="<?php echo base_url('contacts'); ?>">Contact</a></li>
+        </ul>
+        <ul class="menu_bg bg_border">
+        	<li class="inner_logo"><a href="<?php echo base_url(); ?>">Samaras One Home</a></li>
+        </ul>
+        <ul class="menu_bg">
+        	<li class="commercial"><a href="<?php echo base_url('category/commercial'); ?>">Commercial</a></li>
+        	<li class="residential"><a href="<?php echo base_url('category/residency'); ?>">Residential</a></li>
+        	<li class="business"><a href="<?php echo base_url('category/business'); ?>">Business</a></li>
+        </ul>
+      </div>
+    	
+    	  <?
+				 if(($page != 'contacts') && ($page != 'search')) 
+				{
+				?>
+        <div class="touchslider">
+          <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
+          <div>
+            <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl2" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl3" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl4" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl5" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl6" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl7" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl8" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
+            <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
+          </div>
+        </div>	
+				</div>
+        <?
+				}
+				?>
+
+
+
+
+
+
+
 <header>
 	<?
 	$menus = array('1' => 'home','2' => 'about', '3' => 'feature');
@@ -37,32 +88,15 @@
 	}
 	 ?>
 		<nav>
-			<?php if($session_data) { ?><?php echo $session_data['firstname']; ?>
-			<?php /* ?><a href="<?php echo base_url('profile'); ?>" <? if($page =="profile") echo 'class="ezcv_header_current"'; ?> ><?php echo $session_data['firstname']; ?></a><?php */ ?>
-
-			<?php if($session_data['role']=='user') { ?>
-			<a href="<?php echo base_url('resume'); ?>" <? if($page =="resume") echo 'class="ezcv_header_current"'; ?> >My Resume</a>
-			<a href="<?php echo base_url('mailresume'); ?>" <? if($page =="mailresume") echo 'class="ezcv_header_current"'; ?> >Mail Your Resume</a>
-			<?php } else if($session_data['role']=='member') { ?>
-			<a href="<?php echo base_url('member/searchresume'); ?>" <? if($page =="member" && $function !="selectedresume") echo 'class="ezcv_header_current"'; ?> >Search Resume</a>
-			<a href="<?php echo base_url('member/selectedresume'); ?>" <? if($function =="selectedresume") echo 'class="ezcv_header_current"'; ?> >Selected Resume</a>
-			<!--<a href="#">My Recommendations</a>
-			<a href="#">Refer Friends</a>
-			<a href="#">My Page</a>
-			<a href="#">My Portfolio Space</a>
-			<a href="#">My Contact List</a>
-			<a href="#">Resume On Mobile</a>-->
-			<?php } else if($session_data['role']=='admin') { ?>
+			<?php if($session_data) { ?><?php echo $session_data['firstname'];
+			if($session_data['role']=='admin') { ?>
 			<a href="<?php echo base_url('admin'); ?>">User List</a>&nbsp&nbsp
 				<?php foreach ($menus as $key => $value) { ?>
 					<a href="<?php echo base_url('admin/dynamics').'/'.$key; ?>"><?php echo $value; ?></a>&nbsp&nbsp
 				<?php } ?>
 			<?php } ?>
 			<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-			<?php } /* else {  ?>
-			<span><a  href="<?php echo base_url('login/index/register'); ?>" <? if($page =="login" && $register == 'yes') echo 'class="ezcv_header_current"'; ?> >Register</a>
-			<a href="<?php echo base_url('login'); ?>" <? if($page =="login" && $register != 'yes') echo 'class="ezcv_header_current"'; ?> >Sign in</a></span>
-			<?php } */ ?>
+			<?php } ?>
 		</nav>
 		
 	</header>

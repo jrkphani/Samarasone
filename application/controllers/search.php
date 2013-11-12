@@ -20,12 +20,12 @@ class Search extends CI_Controller
 		$data['bedroom']=NULL;
 		$data['garage']=NULL;
 
-		$data['view_page']='reseidentialsearch';
+		$data['view_page']='search';
 		$this->load->view('template', $data);
 	}
 
 	function result()
-	{
+	{ 
 		$this->load->model('basic_model');
 		$this->load->model('search_model');
 		$fields=array('suburb');
@@ -41,7 +41,7 @@ class Search extends CI_Controller
 
 		$data['result2']=$this->search_model->search($data['sale_type'],$data['suburb'],$data['type'],$data['price_from'],$data['price_to'],$data['bedroom'],$data['garage']);
 
-		$data['view_page']='reseidentialsearch';
+		$data['view_page']='search';
 		$this->load->view('template', $data);
 	}
 }

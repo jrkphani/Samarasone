@@ -1,56 +1,9 @@
-<body>
-	<div class="wrapper">
+
   	<div class="contact_page_bg">
   	<div class="contact_page_header">
-    <div class="menu_logo">
-    </div>
-    	<!--<div class="mainmenu">
-				<ul>
-       	  <li class="menu_top_bg"></li>
-        </ul>
-        <ul class="menu_bg">
-        	<li class="home"><a href="#">Home</a></li>
-        	<li class="ovalue"><a href="#">Our Value Proposition</a></li>
-        	<li class="oteam"><a href="#">Our Team</a></li>
-        	<li class="contact"><a href="#">Contact</a></li>
-        </ul>
-        <ul class="menu_bg bg_border">
-        	<li class="inner_logo"><a href="#">Samaras One Home</a></li>
-        </ul>
-        <ul class="menu_bg">
-        	<li class="commercial"><a href="#">Commercial</a></li>
-        	<li class="residential"><a href="#">Residential</a></li>
-        	<li class="business"><a href="#">Business</a></li>
-        </ul>
-      </div>-->
-<!--    	  <div class="touchslider">
-          <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
-          <div>
-            <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl2" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl3" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl4" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl5" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl6" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl7" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl8" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
-          </div>
-        </div>-->
-
-    <!-- <div>
-        <a class="touchslider-prev">prev</a>
-        <a class="touchslider-nav-item touchslider-nav-item-current">1</a>
-        <a class="touchslider-nav-item">2</a>
-        
-        <a class="touchslider-next">next</a>
-    </div> -->
-	
 				</div>
     	<div class="comm_resi_header_top width_1060">   
-      	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
-      
+      	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a></h1>   
       </div>   
       <!-- property page -->   
 			<!--	<div class="sr_box">
@@ -72,17 +25,17 @@
           </div>
         </div>
          
-      <div class="conatct_center">
+    		<div class="conatct_center">
 				<h3 class="contct_header">Gallery</h3>
         <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide2.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide4.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide5.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide6.jpg'); ?>"/>
       </div>
          
-      <div class="conatct_right">
+        <div class="conatct_right">
 				<h3 class="contct_header">Make an appointment</h3>
          <div class="cont_form">
               <form>
@@ -100,11 +53,6 @@
       </div>
       </div>
 	    <!-- contact page --> 
-       		</div>  
-    	</div> &nbsp;
       
-      <!-- property page -->
-    </div>
-  </div>
 <!-- header end --> 
 <div class="clearall"></div>

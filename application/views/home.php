@@ -1,31 +1,4 @@
-<body>
-	<div class="wrapper">
-  	<div class="header">
-    	  <div class="touchslider">
-          <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
-          <div>
-            <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl2" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl3" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl4" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl5" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl6" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl7" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl8" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
-          </div>
-        </div>
 
-    <!-- <div>
-        <a class="touchslider-prev">prev</a>
-        <a class="touchslider-nav-item touchslider-nav-item-current">1</a>
-        <a class="touchslider-nav-item">2</a>
-        
-        <a class="touchslider-next">next</a>
-    </div> -->
-	
-</div>
     	<div class="header_top width_1060">   
       	<h1><a href="#"><img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
       
@@ -49,23 +22,29 @@
     <div class="box_conainer">
     	<div class="width_100">
         <div class="boxes1">      
-          <div class="boxes1_img_hover">
-            <h1>Residential</h1>
+          <a href="<?php echo base_url('category/residency'); ?>">
+          	<div class="boxes1_img_hover">            
+            <h1>Residential</h1> 
           </div>
+        </a>
         </div>
       </div>
     	<div class="width_100">
-        <div class="boxes2">      
-          <div class="boxes2_img_hover">
-            <h1>Commercial</h1>
-          </div>
+        <div class="boxes2">   
+        	<a href="<?php echo base_url('category/commercial'); ?>">   
+            <div class="boxes2_img_hover">
+              <h1>Commercial</h1>
+            </div>
+          </a>
         </div>
       </div>
     	<div class="width_100">
-        <div class="boxes3">      
-          <div class="boxes3_img_hover boxes3_img_hover_1280">
-            <h1>Business</h1>
-          </div>
+        <div class="boxes3">   
+        	<a href="<?php echo base_url('category/business'); ?>">   
+            <div class="boxes3_img_hover boxes3_img_hover_1280">
+              <h1>Business</h1>
+            </div>
+          </a>
         </div>
       </div>    
     </div>

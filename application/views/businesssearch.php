@@ -107,7 +107,7 @@
 		</div>
   </div>
     	<div class="comm_resi_header_top width_1060">   
-      	<h1><a href="#"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
+      	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><a href="#">Business</a></h5>
       	<a class="inner_pmenu" href="#"></a>
         <h6><a class="inner_smenu" href="#"></a></h6>
