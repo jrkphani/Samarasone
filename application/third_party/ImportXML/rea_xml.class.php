@@ -75,6 +75,15 @@ class REA_XML {
 				'name'
 			)
 		),
+		'ecoFriendly' => array(
+			'solarPanels',
+			'solarHotWater',
+			'waterTank',
+			'greyWaterSystem'
+		),
+		'inspectionTimes' => array(
+			'inspection'
+		),
 		'businessLease',
 
 		'category',
@@ -222,6 +231,7 @@ class REA_XML {
 		'soldDetails',
 		'soldPrice',
 		'stage',
+		'modTime',
 		'status',
 		'streetDirectory',
 

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertyList SYSTEM "http://reaxml.realestate.com.au/propertyList.dtd">
+<propertyList date="2009-01-01-12:30:00" username="xmluser" password="xmlpassword">
+  <!-- Current listing -->
+   <residential modTime="2007-01-21-12:30:00" status="current">
+    <agentID>007</agentID>
+    <uniqueID>ABC123</uniqueID>
+    <authority value="exclusive"/>
+    <underOffer value="yes" />
+    <isHomeLandPackage value="yes"/>
+    <listingAgent id="1">
+      <name>Mr. Primary Lister</name>
+      <telephone type="BH">05 1234 5678</telephone>
+      <email>pl@somedomain.com.au</email>
+      <twitterURL>http://twitter.com/#!/plAtSomeDomain</twitterURL>
+      <facebookURL>http://www.facebook.com/pages/Some_Domain_Facebook_Page</facebookURL>
+      <linkedInURL>http://au.linkedin.com/pub/primary-lister/37/599/39a</linkedInURL>
+    </listingAgent> 
+    <price>240000</price>
+    <priceView>Between $400,000 and $600,000</priceView>
+    <address display="yes">
+      <subNumber>2</subNumber>
+      <streetNumber>39</streetNumber>
+      <street>Main Road</street>
+      <suburb display="yes">RICHMOND</suburb>
+      <state>vic</state>
+      <postcode>3121</postcode>
+      <country>AUS</country>
+    </address>
+    <municipality>Test Municipality</municipality>
+    <streetDirectory>Test Streetdirectory</streetDirectory>
+    <category name="Residential" />
+    <headline>Location! Location! Location!</headline>
+    <description>Don't pass up an opportunity like this! First to inspect</description>
+    <features>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <carports>1</carports>
+    </features>
+    <soldDetails>Test soldDetails </soldDetails>
+    <landDetails>Test landDetails</landDetails>
+    <buildingDetails>Test buildingDetails</buildingDetails>
+    <inspectionTimes>:
+      <inspection>21-Dec-2006 11:00am to 1:00pm</inspection>
+    </inspectionTimes> 
+    <auction date="13/12/03 1pm" />
+    <vendorDetails>
+      <name>Test Vendar name</name>
+    </vendorDetails>
+    <externalLink href="http://www.realestate.com.au/onlinetours/VictoriaSt.tour"/>
+    <videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+    <img id="m" url="http://realestate.com.au/picsatrea.jpg" format="jpg" />
+    <newConstruction>1</newConstruction>
+    <ecoFriendly>
+      <solarPanels>1</solarPanels>
+      <solarHotWater>0</solarHotWater>
+    </ecoFriendly>
+    <idealFor><couples>yes</couples><students>yes</students></idealFor> 
+    <views><city>yes</city><valley>yes</valley></views> 
+  </residential>
+
+  <residential modTime="2007-01-21-12:30:00" status="current">
+    <agentID>007</agentID>
+    <uniqueID>ABC456</uniqueID>
+    <authority value="exclusive"/>
+    <underOffer value="yes" />
+    <isHomeLandPackage value="yes"/>
+    <listingAgent id="1">
+      <name>Mr. Primary Lister</name>
+      <telephone type="BH">05 1234 5678</telephone>
+      <email>pl@somedomain.com.au</email>
+      <twitterURL>http://twitter.com/#!/plAtSomeDomain</twitterURL>
+      <facebookURL>http://www.facebook.com/pages/Some_Domain_Facebook_Page</facebookURL>
+      <linkedInURL>http://au.linkedin.com/pub/primary-lister/37/599/39a</linkedInURL>
+    </listingAgent> 
+    <price>240000</price>
+    <priceView>Between $400,000 and $600,000</priceView>
+    <address display="yes">
+      <subNumber>2</subNumber>
+      <streetNumber>39</streetNumber>
+      <street>Main Road</street>
+      <suburb display="yes">RICHMOND</suburb>
+      <state>vic</state>
+      <postcode>3121</postcode>
+      <country>AUS</country>
+    </address>
+    <municipality>Test Municipality</municipality>
+    <streetDirectory>Test Streetdirectory</streetDirectory>
+    <category name="Residential" />
+    <headline>Location! Location! Location!</headline>
+    <description>Don't pass up an opportunity like this! First to inspect</description>
+    <features>
+      <bedrooms>4</bedrooms>
+      <bathrooms>2</bathrooms>
+      <carports>1</carports>
+    </features>
+    <soldDetails>Test soldDetails </soldDetails>
+    <landDetails>Test landDetails</landDetails>
+    <buildingDetails>Test buildingDetails</buildingDetails>
+    <inspectionTimes>:
+      <inspection>21-Dec-2006 11:00am to 1:00pm</inspection>
+    </inspectionTimes> 
+    <auction date="13/12/03 1pm" />
+    <vendorDetails>
+      <name>Test Vendar name</name>
+    </vendorDetails>
+    <externalLink href="http://www.realestate.com.au/onlinetours/VictoriaSt.tour"/>
+    <videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+    <img id="m" url="http://realestate.com.au/picsatrea.jpg" format="jpg" />
+    <newConstruction>1</newConstruction>
+    <ecoFriendly>
+      <solarPanels>1</solarPanels>
+      <solarHotWater>0</solarHotWater>
+    </ecoFriendly>
+    <idealFor><couples>yes</couples><students>yes</students></idealFor> 
+    <views><city>yes</city><valley>yes</valley></views> 
+  </residential>
+
+
+</propertyList>
