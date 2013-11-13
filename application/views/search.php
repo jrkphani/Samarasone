@@ -5,15 +5,16 @@
   
       <!-- search box -->
      <div class="search_box">
-     <form name="form1" method="post" action="<?php echo base_url('search'); ?>">
+     <form name="form1" id="form1" method="post" action="<?php echo base_url('search'); ?>">
+      <input type="hidden" id="page" name="page" value="0" />
 			<div class="width_90">
       	<div class="boxex width9">
         	<p class="color_orange">Search</p>
         </div>
       	<div class="boxex width9">
           	<ul>
-            	<li><input type="radio" name="radio-btn" <?php if($sale_type=='buy') echo 'checked="checked"'; ?> checked="checked" disabled="true" />Buy</li>
-              <li style="margin: 15px 0 0 0;"><input type="radio" name="radio-btn" <?php if($sale_type=='rent') echo 'checked="checked"'; ?> disabled="true" />Sale</li>
+            	<li><input type="radio" name="sale_type" <?php if($sale_type=='buy') echo 'checked="checked"'; ?> checked="checked" disabled="true" />Buy</li>
+              <li style="margin: 15px 0 0 0;"><input type="radio" name="sale_type" <?php if($sale_type=='rent') echo 'checked="checked"'; ?> disabled="true" />Sale</li>
             </ul>
         </div>
       	<div class="boxex">
@@ -23,15 +24,16 @@
           <!--		dropdown menu  -->
 
 
-		<select name="example-list" multiple="multiple" style="width:232px;" multiple name="suburb[]" size="8">
+		<select name="suburb[]" class="multi-select" multiple="multiple" style="width:232px;" size="8">
     <option value="" <?php if($suburb[0]==NULL) echo 'selected="selected"'; ?>>Any Suburb</option>
 
-    <?php foreach ($result as $row)
+    <?php while ($row=mysql_fetch_array($result))
 		{//echo '<option value="'.$row->suburb.'">'.$row->suburb.'</option>';?>
-			<option value="<?php echo $row->suburb; ?>" <?php if(is_array($suburb) && in_array($row->suburb,$suburb)) echo 'selected="selected"'; ?>><?php echo $row->suburb; ?></option>
+			<option value="<?php echo $row['suburb']; ?>" <?php if(is_array($suburb) && in_array($row['suburb'],$suburb)) echo 'selected="selected"'; ?>><?php echo $row['suburb']; ?></option>
 		<?php }
 		?>
 		</select>
+
 
 
           <!--		dropdown menu end  --> 
@@ -43,7 +45,7 @@
             	<li>Property Type</li>
               <li>
           <!--		dropdown menu  -->
-		<select name="example-list type[]" multiple="multiple" style="width:232px;" size="10">
+		<select name="type[]" class="multi-select" multiple="multiple" style="width:232px;" size="10">
 		<option value="" <?php if($type[0]==NULL) echo 'selected="selected"'; ?>>Any Property Type</option>
 		<option value="House" <?php if(is_array($type) && in_array('House',$type)) echo 'selected="selected"'; ?>>House</option>
 		<option value="Unit" <?php if(is_array($type) && in_array('Unit',$type)) echo 'selected="selected"'; ?>>Unit</option>
@@ -78,7 +80,7 @@
           <option value="1500000" <?php if($price_from=='1500000') echo 'selected="selected"'; ?>>1500000</option>
           </select><?php */?>
          
-          <input type="text" id="amount" style="border: 0; color: #285069; font-weight: normal;" /> 
+          <input type="text" id="amount" name="amount" style="border: 0; color: #285069; font-weight: normal;" /> 
 					<div id="slider-range"></div>
           
           <!--		dropdown menu end  --> 
@@ -91,7 +93,7 @@
               <li style="">
           <!--		dropdown menu  -->
               <div class="dropdown w100">
-		<select name="example-list bedroom" multiple="multiple" style="width:232px;">
+		<select name="bedroom" style="width:232px;">
 		<option value="" <?php if($bedroom==NULL) echo 'selected="selected"'; ?>>Bedroom</option>
 		<?php for($i=0;$i<=5;$i++) { ?>
 		<option value="<?php echo $i; ?>" <?php if($bedroom!=NULL && $bedroom==$i) echo 'selected="selected"'; ?>><?php echo $i; ?></option>
@@ -214,12 +216,17 @@
         
  			  <!-- Next Menu -->
         <div class="clearall"></div>
+
+        <div class="pagination">
+          <?php echo $this->pagination->create_links(); ?>
+        </div>
+
         <div class="next_menu">
         	<ul>
-        		<li class="previous_img"><a class="previous" href="#">Previous</a></li>
-          	<li><a class="center" href="#">&nbsp;</a></li>
-          	<li><a class="active" href="#">&nbsp;</a></li>
-          	<li class="next_img"><a class="next" href="#">Next</a></li>
+        		<li class="previous_img previous"><a href="#">Previous</a></li>
+          	<li class="center" ><a  href="#">&nbsp;</a></li>
+          	<li class="active"><a  href="#">&nbsp;</a></li>
+          	<li class="next_img next"><a  href="#">Next</a></li>
           </ul>
         </div>
 
@@ -234,10 +241,11 @@
 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'search.js');?>"></script>
 <script type="text/javascript">
 $(function(){
 
-	$("select").multiselect({
+	$(".multi-select").multiselect({
 		selectedList: 2
 	});
 	
@@ -268,9 +276,9 @@ $(".radio-btn").on('click', function () {
       $(function() {
         $( "#slider-range" ).slider({
           range: true,
-          min: 0,
-          max: 500,
-          values: [ 75, 300 ],
+          min: 100000,
+          max: 100000000,
+          values: [ 200000, 20000000 ],
           slide: function( event, ui ) {
             $( "#amount" ).val( "From $" + ui.values[ 0 ] + " to $" + ui.values[ 1 ] );
           }
