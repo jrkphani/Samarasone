@@ -27,12 +27,12 @@
          
     		<div class="conatct_center">
 				<h3 class="contct_header">Gallery</h3>
-        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide2.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide4.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide5.jpg'); ?>"/>
-        <img src="<?php echo base_url('assets/images/slide6.jpg'); ?>"/>
+        <img src="<?php echo base_url('assets/images/slide1.jpg'); ?>" alt="Residential" title="Residential"/>
+        <img src="<?php echo base_url('assets/images/slide2.jpg'); ?>" alt="Commercial" title="Commercial"/>
+        <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" alt="Residential" title="Residential"/>
+        <img src="<?php echo base_url('assets/images/slide4.jpg'); ?>" alt="Commercial" title="Commercial"/>
+        <img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" alt="Residential" title="Residential"/>
+        <img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" alt="Commercial" title="Commercial"/>
       </div>
          
         <div class="conatct_right">

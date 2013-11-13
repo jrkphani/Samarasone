@@ -1,11 +1,10 @@
 <?php
-class Contacts extends CI_Controller
+class View extends CI_Controller
 {
 	function index()
 	{
-		$data['view_page'] = 'contacts';
+		$data['view_page']='view';
 		$this->load->view('template', $data);
-		
 	}
 }
 ?>

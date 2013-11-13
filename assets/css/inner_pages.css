@@ -38,7 +38,7 @@ a{text-decoration:none;}
 .respage_img{width:25%; float:left; background-size: contain;}
 .respage_img img{width:99.8%; height:383px; float:left; background-size: contain; border-left: 1px solid #fff; border-bottom: 1px solid #fff;}
 /* ************************* main menu ******************************** */
-.mainmenu{position:absolute; z-index:999; margin:81px 0 0 0; opacity:0.9}
+.mainmenu{position:absolute; z-index:999; margin:81px 0 0 0; opacity:0.999}
 /*.menu_logo{background:url(../images/sprites.png)-1150px -768px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998;}*/
 .menu_logo{background:url(../images/sprites.png) -1150px -607px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
 .menu_logo:hover{background:url(../images/sprites.png) -1150px -607px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; opacity:0.8}
@@ -96,8 +96,8 @@ a{text-decoration:none;}
 
 .container{/*z-index: 99999;*/ position: relative; margin:30px 83px;}
 .color_orange span{border-bottom: 1px solid #fff; display: inline-block; width: 89%; vertical-align: middle;}
-.search_img{float:left; width:21%; padding:20px;}
-.s_img_boxes_commer{margin:0px 43px 0px 1px; border-bottom:1px solid #d0dfe7; float:left;}
+.search_img{float:left; padding:20px; height: 195px; width: 280px;}
+.s_img_boxes_commer{margin:0px 43px 0px 1px; border-bottom:1px solid #d0dfe7; height: 270px;}
 .s_img_boxes{margin:0px 43px 0px 1px; border-bottom:5px solid #d0dfe7; float:left; background:#043350;}
 .north_shore{margin: 0 0 25px 0;}
 .content{float: left;
@@ -106,16 +106,12 @@ padding: 20px 0 0px 35px;
 background-size: contain;}
 .search_img img{border:1px solid #000; background-size: cover;
 width: 100%;}
-.content_commer{float: left;
-width: 72%;
-padding: 20px 0 0px 30px;
-background-size: contain;}
-.search_img img{border:1px solid #000; background-size: cover;
-width: 100%;}
+.content_commer{float: left; width: 67%; height: 195px; padding: 20px 0 0px 30px; background-size: contain;}
+.search_img img{border:1px solid #000; background-size: cover; height: 195px; width: 280px;}
 
 .s_img_boxes_commer .content_commer h3, h4, .cnt{ color:#285069; font-size:30px; padding:0 0 6px 0;}
 .s_img_boxes_commer .content_commer h4{font-size:26px;}
-.s_img_boxes_commer .content_commer p{font-size:24px; color:#000; font-weight:normal;}
+.s_img_boxes_commer .content_commer p{font-size:24px; color:#000; font-weight:normal; overflow: hidden; height: 55px;}
 .s_img_boxes_commer .content_commer .fleft{float:left; font-size:22px;}
 .s_img_boxes_commer .content_commer .fleft span{color:#285069;}
 .s_img_boxes_commer .content_commer .fright{float:right; padding: 10px 20px; margin-bottom: 10px;
@@ -195,7 +191,7 @@ margin: -50px 37px 0 0px;
 
  /* ************************* conatct page ******************************** */
  .contact_pg{padding:40px 40px;}
- .contact_pg .cont_spr{ width:100%; float:left; border-bottom:1px solid #d66f23; margin-bottom:10px;}
+ .contact_pg .cont_spr{ width:100%; float:left; border-bottom:1px solid #285069; margin-bottom:10px; padding-bottom: 10px;}
 .conatct_left{width: 30%; float: left; position: relative; padding: 1% 2% 1% 0;}
 .conatct_center{width:40%; float: left; position: relative; padding: 1% 0% 1% 2%;}
 .conatct_right{width:26%; float: left; position: relative; padding: 1% 0% 1% 0;}
@@ -221,6 +217,13 @@ line-height: 20px
 	width: 160px; height: 30px; float: right; 
 	border: none; cursor: pointer;
 }
+/* ************************* 404 page ******************************** */
+.wrapper_404{background:#003255;}
+.p404_bg{background:#003255;}
+.p404_content{padding: 161px 0 0 0; text-align: center; margin: 0 0 100px 0;}
+.p404_logo{background: url(../images/logo.png) center top no-repeat; height: 79px; display: inline-block; width: 306px; margin: 50px 0 20px 0;}
+.p404_content h2{border-bottom: 1px solid #fff; border-top: 1px solid #fff; width: 500px; margin: 0 auto; padding: 18px 0; font-size: 62px; color: #fff; font-weight: bold; font-family:Aller, helveNueThin, Arial;}
+.p404_content p{width: 500px; margin: 0 auto; padding: 20px 0; color:#fff;}
 /* ************************* dropdown box ******************************** */
 
 .dropdown select .dd_value span{font-size:15px!important; font-family:HelveNueThin, Arial!important; color:red;}
