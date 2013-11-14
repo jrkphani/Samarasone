@@ -1,5 +1,5 @@
 // bind onclick event to the pagination links
-$('.pagination a').click(function () {
+$('.pagenation a').click(function () {
     var link = $(this).get(0).href; // get the link from the DOM object
     var form = $('#form1'); // get the form you want to submit
     var segments = link.split('/');
