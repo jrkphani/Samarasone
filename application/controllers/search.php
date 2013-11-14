@@ -16,7 +16,7 @@ class Search extends CI_Controller
 		$this->load->model('search_model');
 		$data['result']=$this->search_model->getSuburbs();
 
-		$data['page']='reseidential';
+		$data['page']='residential';
 		$data['sale_type']=NULL;
 		$data['suburb']=NULL;
 		$data['type']=NULL;

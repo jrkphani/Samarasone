@@ -1,11 +1,11 @@
 
 <div class="wrapper_white_bg"></div>
 <div class="wrapper_gradient_bg"> </div>
-<div class="inner_pheader border_img"> 
+<div class="inner_pheader"> 
   
   <!-- search box -->
   <div class="search_box">
-    <form name="form1" id="form1" method="post" action="<?php echo base_url('search'); ?>">
+    <form name="form1" id="form1" method="post" action="<?php echo base_url('search/'.$page); ?>">
       <input type="hidden" id="page" name="page" value="0" />
       <div class="width_90">
         <div class="boxex width9">
@@ -24,8 +24,8 @@
         <div class="boxex">
           <ul>
             <li>Region</li>
-            <li>
-            	<!--		dropdown menu  -->
+            <li> 
+              <!--		dropdown menu  -->
               <div class="dropdown width84">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts">Region</div>
@@ -37,7 +37,7 @@
               </div>
               <!--		dropdown menu end  --> 
             </li>
-            <li style="margin: 52px 0 0 0;">Suburb</li>
+            <li style="margin:63px 0 5px 0;">Suburb</li>
             <li> 
               <!--		dropdown menu  -->
               <select name="suburb[]" class="multi-select" multiple="multiple" style="width:232px;" size="8">
@@ -55,6 +55,20 @@
         <div class="boxex">
           <ul>
             <li>Property Type</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Region</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">Region 1</a></li>
+                  <li><a href="#">Region 2</a></li>
+                  <li><a href="#">Region 3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+            <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
               <select name="type[]" class="multi-select" multiple="multiple" style="width:232px;" size="10">
@@ -91,36 +105,35 @@
           <option value="250000" <?php if($price_from=='250000') echo 'selected="selected"'; ?>>250000</option>
           <option value="1500000" <?php if($price_from=='1500000') echo 'selected="selected"'; ?>>1500000</option>
           </select><?php */?>
-              <input type="text" id="amount" name="amount" style="border: 0; color: #285069; font-weight: normal;" />
-              <div id="slider-range"></div>
-              
-              <!--		dropdown menu end  --> 
-            </li>
-          </ul>
-        </div>
-        <div class="boxex width22">
-          <ul>
-            <li>Title</li>
-            <li> 
-              <!--		dropdown menu  -->
-              <div class="dropdown w100">
-                <?php /*?>                <select name="bedroom">
+              <input type="text" class="amount" name="amount" style="border: 0; color: #285069; font-weight: normal;" />
+              <div class="slider-range"></div>
+              <!--		dropdown menu end  -->
+            <li style="margin:63px 0 5px 0;">Bedroom</li>
+            <li>
+            <!--		dropdown menu  -->
+            <div class="dropdown w100">
+              <?php /*?>                <select name="bedroom">
                 <option value="" <?php if($bedroom==NULL) echo 'selected="selected"'; ?>>Bedroom</option>
                 <?php for($i=0;$i<=5;$i++) { ?>
                 <option value="<?php echo $i; ?>" <?php if($bedroom!=NULL && $bedroom==$i) echo 'selected="selected"'; ?>><?php echo $i; ?></option>
                 <?php } ?>
                 </select><?php */?>
-                <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Bedroom</div>
-                <ul class="dropdown-content">
-                  <li><a href="#">Garages 1</a></li>
-                  <li><a href="#">Garages 2</a></li>
-                  <li><a href="#">Garages 3</a></li>
-                </ul>
-              </div>
-              <!--		dropdown menu end  --> 
-              <!--		dropdown menu  --> 
-              <!--              <div class="dropdown w100">              
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text dd_fonts">Bedroom</div>
+              <ul class="dropdown-content">
+                <li><a href="#">Bedroom 1</a></li>
+                <li><a href="#">Bedroom 2</a></li>
+                <li><a href="#">Bedroom 3</a></li>
+                </li>
+              </ul>
+            </div>
+            <div class="boxex width22">
+              <ul>
+              </ul>
+            </div>
+            <!--		dropdown menu end  --> 
+            <!--		dropdown menu  --> 
+            <!--              <div class="dropdown w100">              
 <?php /*?>                <select name="garage">
                   <option value="" <?php echo $garage; if($garage==NULL) echo 'selected="selected"'; ?>>Garages</option>
                   <?php for($i=0;$i<=25;$i++) { ?>
@@ -137,16 +150,101 @@
                 </ul>
                 
               </div>--> 
-              <!--		dropdown menu end  --> 
+            <!--		dropdown menu end  -->
             </li>
           </ul>
         </div>
         <div class="boxex width9">
-          <p>
+          <p class="serh_box">
             <input class="serch_box" type="submit" name="search" value="Search">
           </p>
+          <p class="more_srh"><a href="#">More Search Option</a></p>
         </div>
       </div>
+      <div class="clearall"></div>
+      <!--		Less Search Option End --> 
+      <!--		More Search Option  -->      
+      <div class="width_90">
+        <div class="boxex width9">
+          <p style="visibility:hidden;" class="color_orange">Search</p>
+        </div>
+        <div class="boxex width9">
+          <ul style="visibility:hidden;">
+            <li style="margin:45px 0 0 0;">
+              <input type="radio" name="sale_type" <?php if($sale_type=='buy') echo 'checked="checked"'; ?> checked="checked" disabled="true" />
+              Buy</li>
+            <li style="margin: 25px 0 0 0;">
+              <input type="radio" name="sale_type" <?php if($sale_type=='rent') echo 'checked="checked"'; ?> disabled="true" />
+              Sale</li>
+          </ul>
+        </div>
+        <div class="boxex width14">
+          <ul>
+            <li>Bathroom</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Bathroom</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width13">
+          <ul>
+            <li>Car Ports</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Car Ports</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width14">
+          <ul>
+            <li>Garages</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown w100">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Garages</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">Garages 1</a></li>
+                  <li><a href="#">Garages 2</a></li>
+                  <li><a href="#">Garages 3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width14">
+          <ul>
+            <li>Area </li>
+            <li> 
+              <!--		dropdown menu  -->
+              <input type="text" class="amount" name="amount" style="border: 0; color: #285069; font-weight: normal;" />
+              <div class="slider-range"></div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+      </div>      
+      <!--		More Search Option End -->
     </form>
     <!-- search end --> 
   </div>
@@ -158,23 +256,24 @@
   <a class="inner_search_icon" href="#"><span>Find a Property</span></a> </div>
 
 <!-- container -->
-<div class="container">
-  <?php if(isset($result2)) { ?>
-  <p class="color_orange">North Shore <span></span></p>
-  <?php 
+<?php if(isset($result2)) { ?>
+<div class="container border_img">
+  <div class="conti_border">
+    <p class="color_orange">North Shore <span></span></p>
+    <?php 
               foreach ($result2 as $row2) { ?>
-  <div class="s_img_boxes_commer">
-    <div class="search_img"> <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/> </div>
-    <div class="content_commer">
-      <h3><?php echo $row2->headline; ?>,</h3>
-      <h4><?php echo $row2->suburb.'<br />'.$row2->price; ?></h4>
-      <p class="cnt"><?php echo $row2->description; ?></p>
-      <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-      <a class="fright" href="#">More</a> </div>
-  </div>
-  <?php } ?>
-  
-  <!--       	<div class="s_img_boxes_commer">
+    <div class="s_img_boxes_commer">
+      <div class="search_img"> <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/> </div>
+      <div class="content_commer">
+        <h3><?php echo $row2->headline; ?>,</h3>
+        <h4><?php echo $row2->suburb.'<br />'.$row2->price; ?></h4>
+        <p class="cnt"><?php echo $row2->description; ?></p>
+        <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+        <a class="fright" href="#">More</a> </div>
+    </div>
+    <?php } ?>
+    
+    <!--       	<div class="s_img_boxes_commer">
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
                 </div>
@@ -192,16 +291,16 @@
       
           </div>
  			  <!-- container --> 
-  
-  <!-- Next Menu -->
-  <div class="clearall"></div>
-  <div class="pagenation">
-    <ul>
-      <?php echo $this->pagination->create_links(); ?>
-    </ul>
-  </div>
-  
-  <!-- <div class="next_menu">
+    
+    <!-- Next Menu -->
+    <div class="clearall"></div>
+    <div class="pagenation">
+      <ul>
+        <?php echo $this->pagination->create_links(); ?>
+      </ul>
+    </div>
+    
+    <!-- <div class="next_menu">
         	<ul>
         		<li class="previous_img previous"><a href="#">Previous</a></li>
           	<li class="center" ><a  href="#">&nbsp;</a></li>
@@ -209,10 +308,11 @@
           	<li class="next_img next"><a  href="#">Next</a></li>
           </ul>
         </div>--> 
-  
-  <!-- Next end -->
-  <?php } ?>
-  <div class="clearall"></div>
+    
+    <!-- Next end -->
+    <?php } ?>
+    <div class="clearall"></div>
+  </div>
 </div>
 </div>
 <!-- header end --> 
@@ -250,17 +350,17 @@ $(".radio-btn").on('click', function () {
 <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery-ui-range-slider.css"); ?>" />
 <script type="text/javascript">
       $(function() {
-        $( "#slider-range" ).slider({
+        $( ".slider-range" ).slider({
           range: true,
           min: 100000,
           max: 100000000,
           values: [ 200000, 20000000 ],
           slide: function( event, ui ) {
-            $( "#amount" ).val( "From $" + ui.values[ 0 ] + " to $" + ui.values[ 1 ] );
+            $( ".amount" ).val( "From $" + ui.values[ 0 ] + " to $" + ui.values[ 1 ] );
           }
         });
-        $( "#amount" ).val( "From $" + $( "#slider-range" ).slider( "values", 0 ) +
-          " to $" + $( "#slider-range" ).slider( "values", 1 ) );
+        $( ".amount" ).val( "From $" + $( ".slider-range" ).slider( "values", 0 ) +
+          " to $" + $( ".slider-range" ).slider( "values", 1 ) );
       });
   </script> 
 <!--  end range slider -->

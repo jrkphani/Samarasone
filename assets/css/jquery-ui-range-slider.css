@@ -623,12 +623,12 @@ button.ui-button::-moz-focus-inner {
 	cursor: default;
 	border-radius: 50%;
 }
-#amount{
+.amount{
 	background: none;
 	position: absolute;
-	width: 11.16%;
+	width: 13.1%;
 	text-align: center;
-	margin: 34px 0 0 0;
+	margin: 27px 0 0 0;
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
@@ -811,8 +811,8 @@ body .ui-tooltip {
 	border: 1px solid #aaaaaa;
 	background: #85a7bc url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
 	color: #222222;
-	width: 11%;
-	margin: 17px 0 0 0;
+	width: 13%;
+	margin: 13px 0 0 0;
 	position: absolute;
 }
 .ui-widget-content a {
