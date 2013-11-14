@@ -218,7 +218,11 @@
         <div class="clearall"></div>
 
         <div class="pagination">
-          <?php echo $this->pagination->create_links(); ?>
+          <div class="next_menu">
+            <ul>
+              <?php echo $this->pagination->create_links(); ?>
+            </ul>
+          </div>
         </div>
 
         <div class="next_menu">

@@ -37,7 +37,26 @@ class Search extends CI_Controller
 			$this->load->library('pagination');
 			$config['base_url'] = base_url('search/index');
 			$config['total_rows'] = $result2['total'];
-			$config['per_page'] = 2;
+			$config['per_page'] = 3;
+
+			//Design
+			$config['first_link'] = 'First';
+			$config['first_tag_open'] = '<li class="next_img next">';
+			$config['first_tag_close'] = '</li>';
+			$config['prev_link'] = 'Previous';
+			$config['prev_tag_open'] = '<li class="previous_img previous">';
+			$config['prev_tag_close'] = '</li>';
+			$config['num_tag_open'] = '<li class="center">';
+			$config['num_tag_close'] = '</li>';
+			$config['cur_tag_open'] = '<li class="active">';
+			$config['cur_tag_close'] = '</li>';
+			$config['next_link'] = 'Next';
+			$config['next_tag_open'] = '<li class="next_img next">';
+			$config['next_tag_close'] = '</li>';
+			$config['last_link'] = 'Last';
+			$config['last_tag_open'] = '<li class="next_img next">';
+			$config['last_tag_close'] = '</li>';
+
 			$this->pagination->initialize($config);
 
 		}

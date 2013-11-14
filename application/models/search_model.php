@@ -42,7 +42,7 @@ class Search_model extends CI_Model
 		$this->db->select('SQL_CALC_FOUND_ROWS null as rows,headline,suburb,price,description',FALSE);
 		$this->db->where($where);
 		$this->db->from('residential');
-		$this->db->limit(2,$limit);
+		$this->db->limit(3,$limit);
 
 		//$result2=mysql_query("select FOUND_ROWS()");
 		//$row2=mysql_fetch_array($result2);
