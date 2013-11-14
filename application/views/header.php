@@ -40,7 +40,7 @@ $subpage = $this->uri->segment(2); ?>
         </ul>
         <ul class="menu_bg">
         	<li class="commercial"><a href="<?php echo base_url('category/commercial'); ?>">Commercial</a></li>
-        	<li class="residential"><a href="<?php echo base_url('category/residency'); ?>">Residential</a></li>
+        	<li class="residential"><a href="<?php echo base_url('category/residential'); ?>">Residential</a></li>
         	<li class="business"><a href="<?php echo base_url('category/business'); ?>">Business</a></li>
         </ul>
       </div>
