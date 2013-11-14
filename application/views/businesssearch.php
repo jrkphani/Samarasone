@@ -1,6 +1,4 @@
-<body>
-	<div class="wrapper">
- 	 <div class="wrapper_bg">
+
    	<div class="wrapper_white_bg"></div>
    	<div class="wrapper_gradient_bg">
     </div>
