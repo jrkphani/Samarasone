@@ -51,6 +51,7 @@ class REA_XML {
 			'street',
 			'suburb',
 			'state',
+			'region',
 			'country',
 			'postcode',
 		),
