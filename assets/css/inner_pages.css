@@ -43,8 +43,8 @@ a{text-decoration:none;}b{font-weight:bold;}i{font-style:italic;}
 .menu_logo{background:url(../images/sprites.png) -1150px -606px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
 .menu_logo:hover{background:url(../images/sprites.png) -1150px -607px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; opacity:0.8}
 
-.home_menu_logo{background:url(../images/sprites.png) -996px -611px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
-.home_menu_logo:hover{background:url(../images/sprites.png) -996px -611px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer; opacity:0.8}
+/*.home_menu_logo{background:url(../images/sprites.png) -996px -611px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
+.home_menu_logo:hover{background:url(../images/sprites.png) -996px -611px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer; opacity:0.8}*/
 
 
 .mainmenu ul .home{background:url(../images/sprites.png) -1190px -37px no-repeat; height:50px; line-height:52px; padding-left:71px; margin:0 0 0 30px;}
@@ -223,6 +223,22 @@ margin: -50px 37px 0 0px;
 .cont_form h5{font-size:22px; margin-bottom: 10px;}
 .contct_cmt_size{font-size:16px;}
 .cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}
+/* ************************* footer page ******************************** */
+.footer_top{background-color:#043350; display:inline-block; width:100%;}
+.footer_section1{width:67%; float:left; border-right:1px solid #5b5b5b; padding:10px 0 10px 72px;}
+.footer_section2{width:17%; float:left;  padding:10px 72px 10px 0;} 
+.footer_header{color:#fff; padding:10px 20px;}
+.footer_section1 .width1_33, .width2_33, .width3_33, .foot_cnt{font-size:16px; color:#fff; line-height: 32px;}
+.footer_section1 .width1_33{width:38%; float:left; padding:0 20px;}
+.footer_section1 .width2_33{ float:left; padding:0 20px;}
+.footer_section1 .width3_33{width:21%; float:left; padding:0 20px;}
+.footer_section1 .foot_phone{background: url(../images/sprites.png) -13px -724px no-repeat; padding-left: 35px;}
+.footer_section1 .foot_fax{background: url(../images/sprites.png) -13px -758px no-repeat; padding-left: 35px;}
+.footer_section1 .foot_mobile{background: url(../images/sprites.png) -13px -799px no-repeat; padding-left: 35px;}
+.footer_section1 .foot_mail{background: url(../images/sprites.png) -13px -688px no-repeat; padding-left: 35px;}
+.footer_section2 .foot_fb{background: url(../images/sprites.png) -2px -942px no-repeat; height: 50px; width: 50px; float: left; margin: 0 10px 0 20px; cursor: pointer;}
+.footer_section2 .foot_tw{background: url(../images/sprites.png) -1px -877px no-repeat; height: 50px; width: 50px; float: left; margin: 0 0px 0 0px; cursor: pointer;}
+.foot_map{color:#3ebaf4; font-size:16px; text-decoration:underline;}
 /* ************************* 404 page ******************************** */
 .wrapper_404{background:#003255;}
 .p404_bg{background:#003255;}

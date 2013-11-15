@@ -251,7 +251,7 @@
 </div>
 <div class="comm_resi_header_top width_1060">
   <h1><a href="<?php echo base_url(); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a> </h1>
-  <h5 class="page_name"><a href="#">Commercial / Residential</a></h5>
+  <h5 class="page_name"><a href="#">RESIDENTIAL</a></h5>
  </div>
 
 <!-- container -->
@@ -293,20 +293,22 @@
     
     <!-- Next Menu -->
     <div class="clearall"></div>
-    <div class="pagenation">
+<!--    <div class="pagenation">
       <ul>
         <?php echo $this->pagination->create_links(); ?>
       </ul>
-    </div>
+    </div>-->
     
-    <!-- <div class="next_menu">
+     <div class="pagenation">
         	<ul>
+        		<li class="previous_img previous_before"><a href="#">Previous</a></li>
         		<li class="previous_img previous"><a href="#">Previous</a></li>
           	<li class="center" ><a  href="#">&nbsp;</a></li>
           	<li class="active"><a  href="#">&nbsp;</a></li>
           	<li class="next_img next"><a  href="#">Next</a></li>
+          	<li class="next_img next_after"><a  href="#">Next</a></li>
           </ul>
-        </div>--> 
+        </div> 
     
     <!-- Next end -->
     <?php } ?>
