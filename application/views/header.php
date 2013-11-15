@@ -23,7 +23,7 @@ $subpage = $this->uri->segment(2); ?>
 	<div class="wrapper">
   	<div class="wrapper_bg">
   	<div class="header">
-    <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo 'home_menu_logo'; } else { echo 'menu_logo'; } ?>">
+    <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo ''; } else { echo 'menu_logo'; } ?>">
     </div>
     	<div id="mainmenu" class="mainmenu" style="display:none;">
 				<ul>
