@@ -5,7 +5,7 @@
   
   <!-- search box -->
   <div class="search_box">
-    <form name="form1" id="form1" method="post" action="<?php echo base_url('search/'.$page); ?>">
+    <form name="form" id="form" method="post" action="">
       <input type="hidden" id="page" name="page" value="0" />
       <div class="width_90">
         <div class="boxex width9">
@@ -14,11 +14,13 @@
         <div class="boxex width9">
           <ul>
             <li style="margin:45px 0 0 0;">
-              <input type="radio" name="sale_type" <?php if($sale_type=='buy') echo 'checked="checked"'; ?> checked="checked" disabled="true" />
-              Buy</li>
+              <input value="buy" class="radio" autocomplete="off" type="radio" name="type" />
+              Buy
+            </li>
             <li style="margin: 25px 0 0 0;">
-              <input type="radio" name="sale_type" <?php if($sale_type=='rent') echo 'checked="checked"'; ?> disabled="true" />
-              Sale</li>
+              <input value="rent" class="radio" autocomplete="off" type="radio" name="type" />
+              Rent
+            </li>
           </ul>
         </div>
         <div class="boxex">
@@ -28,11 +30,9 @@
               <!--		dropdown menu  -->
               <div class="dropdown width84">
                 <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Region</div>
+                <div class="dropdown-text dd_fonts">Select</div>
                 <ul class="dropdown-content">
-                  <li><a href="#">Region 1</a></li>
-                  <li><a href="#">Region 2</a></li>
-                  <li><a href="#">Region 3</a></li>
+                  <li>Region 1</li>
                 </ul>
               </div>
               <!--		dropdown menu end  --> 
@@ -41,11 +41,7 @@
             <li> 
               <!--		dropdown menu  -->
               <select name="suburb[]" class="multi-select" multiple="multiple" style="width:232px;" size="8">
-                <option value="" <?php if($suburb[0]==NULL) echo 'selected="selected"'; ?>>Any Suburb</option>
-                <?php while ($row=mysql_fetch_array($result))
-								{//echo '<option value="'.$row->suburb.'">'.$row->suburb.'</option>';?>
-                <option value="<?php echo $row['suburb']; ?>" <?php if(is_array($suburb) && in_array($row['suburb'],$suburb)) echo 'selected="selected"'; ?>><?php echo $row['suburb']; ?></option>
-                <?php }	?>
+                <option value="">Any Suburb</option>
               </select>
               
               <!--		dropdown menu end  --> 
@@ -59,36 +55,17 @@
               <!--		dropdown menu  -->
               <div class="dropdown width84">
                 <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Region</div>
-                <ul class="dropdown-content">
-                  <li><a href="#">Region 1</a></li>
-                  <li><a href="#">Region 2</a></li>
-                  <li><a href="#">Region 3</a></li>
-                </ul>
+                <div class="dropdown-text dd_fonts">Select</div>
+                <select name="property" id="property" autocomplete="off">
+					<option value="">Select</option>
+                </select>
               </div>
               <!--		dropdown menu end  --> 
             </li>
             <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
-              <select name="type[]" class="multi-select" multiple="multiple" style="width:232px;" size="10">
-                <option value="" <?php if($type[0]==NULL) echo 'selected="selected"'; ?>>Any Property Type</option>
-                <option value="House" <?php if(is_array($type) && in_array('House',$type)) echo 'selected="selected"'; ?>>House</option>
-                <option value="Unit" <?php if(is_array($type) && in_array('Unit',$type)) echo 'selected="selected"'; ?>>Unit</option>
-                <option value="Townhouse" <?php if(is_array($type) && in_array('Townhouse',$type)) echo 'selected="selected"'; ?>>Townhouse</option>
-                <option value="Villa" <?php if(is_array($type) && in_array('Villa',$type)) echo 'selected="selected"'; ?>>Villa</option>
-                <option value="Apartment" <?php if(is_array($type) && in_array('Apartment',$type)) echo 'selected="selected"'; ?>>Apartment</option>
-                <option value="Flat" <?php if(is_array($type) && in_array('Flat',$type)) echo 'selected="selected"'; ?>>Flat</option>
-                <option value="Studio" <?php if(is_array($type) && in_array('Studio',$type)) echo 'selected="selected"'; ?>>Studio</option>
-                <option value="Warehouse" <?php if(is_array($type) && in_array('Warehouse',$type)) echo 'selected="selected"'; ?>>Warehouse</option>
-                <option value="DuplexSemi" <?php if(is_array($type) && in_array('DuplexSemi',$type)) echo 'selected="selected"'; ?>>DuplexSemi-detached</option>
-                <option value="Alpine" <?php if(is_array($type) && in_array('Alpine',$type)) echo 'selected="selected"'; ?>>Alpine</option>
-                <option value="AcreageSemi-rural" <?php if(is_array($type) && in_array('AcreageSemi-rural',$type)) echo 'selected="selected"'; ?>>AcreageSemi-rural</option>
-                <option value="BlockOfUnits" <?php if(is_array($type) && in_array('BlockOfUnits',$type)) echo 'selected="selected"'; ?>>BlockOfUnits</option>
-                <option value="Terrace" <?php if(is_array($type) && in_array('Terrace',$type)) echo 'selected="selected"'; ?>>Terrace</option>
-                <option value="Retirement" <?php if(is_array($type) && in_array('Retirement',$type)) echo 'selected="selected"'; ?>>Retirement</option>
-                <option value="ServicedApartment" <?php if(is_array($type) && in_array('ServicedApartment',$type)) echo 'selected="selected"'; ?>>ServicedApartment</option>
-                <option value="Other" <?php if(is_array($type) && in_array('Other',$type)) echo 'selected="selected"'; ?>>Other</option>
+              <select id="category" name="category[]"  multiple="multiple" style="width:232px;" size="10">
               </select>
               <!--		dropdown menu end  --> 
             </li>
@@ -98,26 +75,13 @@
           <ul>
             <li>Price</li>
             <li> 
-              <!--		dropdown menu  -->
-              <?php /*?>          <select name="example-list price_from" multiple="multiple" style="width:232px;">
-          <option value="" <?php if($price_from==NULL) echo 'selected="selected"'; ?>>Price from</option>
-          <option value="100000" <?php if($price_from=='100000') echo 'selected="selected"'; ?>>100000</option>
-          <option value="250000" <?php if($price_from=='250000') echo 'selected="selected"'; ?>>250000</option>
-          <option value="1500000" <?php if($price_from=='1500000') echo 'selected="selected"'; ?>>1500000</option>
-          </select><?php */?>
-              <input type="text" class="amount" name="amount" style="border: 0; color: #285069; font-weight: normal;" />
-              <div class="slider-range"></div>
+              <input type="text" name="price_min" style="color: #285069; font-weight: normal;" />
+              <input type="text" name="price_max" style="color: #285069; font-weight: normal;" />
               <!--		dropdown menu end  -->
             <li style="margin:63px 0 5px 0;">Bedroom</li>
             <li>
             <!--		dropdown menu  -->
             <div class="dropdown w100">
-              <?php /*?>                <select name="bedroom">
-                <option value="" <?php if($bedroom==NULL) echo 'selected="selected"'; ?>>Bedroom</option>
-                <?php for($i=0;$i<=5;$i++) { ?>
-                <option value="<?php echo $i; ?>" <?php if($bedroom!=NULL && $bedroom==$i) echo 'selected="selected"'; ?>><?php echo $i; ?></option>
-                <?php } ?>
-                </select><?php */?>
               <input class="dropdown-toggle" type="text">
               <div class="dropdown-text dd_fonts">Bedroom</div>
               <ul class="dropdown-content">
@@ -131,32 +95,12 @@
               <ul>
               </ul>
             </div>
-            <!--		dropdown menu end  --> 
-            <!--		dropdown menu  --> 
-            <!--              <div class="dropdown w100">              
-<?php /*?>                <select name="garage">
-                  <option value="" <?php echo $garage; if($garage==NULL) echo 'selected="selected"'; ?>>Garages</option>
-                  <?php for($i=0;$i<=25;$i++) { ?>
-                  <option value="<?php echo $i; ?>" <?php if($garage!=NULL && $garage==$i) echo 'selected="selected"'; ?>><?php echo $i; ?></option>
-                  <?php } ?>
-                </select> <?php */?>
-                
-                <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Garages</div>
-                <ul class="dropdown-content">
-                  <li><a href="#">Garages 1</a></li>
-                  <li><a href="#">Garages 2</a></li>
-                  <li><a href="#">Garages 3</a></li>
-                </ul>
-                
-              </div>--> 
-            <!--		dropdown menu end  -->
             </li>
           </ul>
         </div>
         <div class="boxex width9">
           <p class="serh_box">
-            <input class="serch_box" type="submit" name="search" value="Search">
+            <input id="search" class="serch_box" type="submit" name="search" value="Search">
           </p>
           <p class="more_srh"><a href="#">More Search Option</a></p>
         </div>
@@ -171,10 +115,10 @@
         <div class="boxex width9">
           <ul style="visibility:hidden;">
             <li style="margin:45px 0 0 0;">
-              <input type="radio" name="sale_type" <?php if($sale_type=='buy') echo 'checked="checked"'; ?> checked="checked" disabled="true" />
+              <input type="radio" name="sale_type" checked="checked" disabled="true" />
               Buy</li>
             <li style="margin: 25px 0 0 0;">
-              <input type="radio" name="sale_type" <?php if($sale_type=='rent') echo 'checked="checked"'; ?> disabled="true" />
+              <input type="radio" name="sale_type" disabled="true" />
               Sale</li>
           </ul>
         </div>
@@ -237,7 +181,8 @@
             <li>Area </li>
             <li> 
               <!--		dropdown menu  -->
-              <input type="text" class="amount" name="amount" style="border: 0; color: #285069; font-weight: normal;" />
+              <input type="text" class="amount" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
+              <input type="text" class="amount" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
               <div class="slider-range"></div>
               <!--		dropdown menu end  --> 
             </li>
@@ -318,7 +263,7 @@
 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script> 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script> 
-<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'search.js');?>"></script> 
+<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'searchnew.js');?>"></script> 
 <script type="text/javascript">
 $(function(){
 
@@ -334,7 +279,7 @@ $(function(){
 	(c) 2013 @ElmahdiMahmoud 
 	license: http://www.opensource.org/licenses/mit-license.php
 */   
-$('input[type="radio"]').wrap('<div class="radio-btn"><i></i></div>');
+/*$('input[type="radio"]').wrap('<div class="radio-btn"><i></i></div>');
 $(".radio-btn").on('click', function () {
     var _this = $(this),
         block = _this.parent().parent();
@@ -342,24 +287,5 @@ $(".radio-btn").on('click', function () {
     block.find(".radio-btn").removeClass('checkedRadio');
     _this.addClass('checkedRadio');
     _this.find('input:radio').attr('checked', true);
-});
+});*/
 </script> 
-
-<!-- range slider -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery-ui-range-slider.css"); ?>" />
-<script type="text/javascript">
-      $(function() {
-        $( ".slider-range" ).slider({
-          range: true,
-          min: 100000,
-          max: 100000000,
-          values: [ 200000, 20000000 ],
-          slide: function( event, ui ) {
-            $( ".amount" ).val( "From $" + ui.values[ 0 ] + " to $" + ui.values[ 1 ] );
-          }
-        });
-        $( ".amount" ).val( "From $" + $( ".slider-range" ).slider( "values", 0 ) +
-          " to $" + $( ".slider-range" ).slider( "values", 1 ) );
-      });
-  </script> 
-<!--  end range slider -->

@@ -46,7 +46,7 @@ $subpage = $this->uri->segment(2); ?>
       </div>
     	
     	  <?
-				 if(($page != 'contacts') && ($page != 'search')) 
+				 if(($page != 'contacts') && ($page != 'search') && ($page != 'searchnew')) 
 				{
 				?>
         <div class="touchslider">
