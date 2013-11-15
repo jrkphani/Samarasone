@@ -53,11 +53,11 @@
             <li>Property Type</li>
             <li> 
               <!--		dropdown menu  -->
-              <div class="dropdown width84">
+              <div class="dropdown width84 propert_top">
                 <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Select</div>
-                <select name="property" id="property" autocomplete="off">
-					<option value="">Select</option>
+                <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>
+                <select class="dropdown-text dd_fonts" name="property" id="property" autocomplete="off">
+									<option value="">Select</option>
                 </select>
               </div>
               <!--		dropdown menu end  --> 
@@ -65,7 +65,7 @@
             <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
-              <select id="category" name="category[]"  multiple="multiple" style="width:232px;" size="10">
+              <select id="category" name="category[]"  multiple="multiple" style="width:85%; height:55px;" size="10">
               </select>
               <!--		dropdown menu end  --> 
             </li>
@@ -75,16 +75,16 @@
           <ul>
             <li>Price</li>
             <li> 
-              <input type="text" name="price_min" style="color: #285069; font-weight: normal;" />
-              <input type="text" name="price_max" style="color: #285069; font-weight: normal;" />
+              <input class="txt_width_hieight" type="text" name="price_min" style="color: #285069; font-weight: normal;" />
+              <input class="txt_width_hieight" type="text" name="price_max" style="color: #285069; font-weight: normal;"/>
               <!--		dropdown menu end  -->
-            <li style="margin:63px 0 5px 0;">Bedroom</li>
+            <li style="margin:15px 0 5px 0;">Bedroom</li>
             <li>
             <!--		dropdown menu  -->
-            <div class="dropdown w100">
+            <div class="dropdown w100 propert_top">
               <input class="dropdown-toggle" type="text">
-              <div class="dropdown-text dd_fonts">Bedroom</div>
-              <select name="bedroom">
+              <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
+              <select class="dropdown-text dd_fonts" name="bedroom">
                 <option value="Any">Any</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -115,6 +115,7 @@
       </div>
       <div class="clearall"></div>
       <!--		Less Search Option End --> 
+      
       <!--		More Search Option  -->      
       <div class="width_90">
         <div class="boxex width9">
@@ -135,15 +136,15 @@
             <li>Bathroom</li>
             <li> 
               <!--		dropdown menu  -->
-              <div class="dropdown width84">
+              <div class="dropdown width84 propert_top">
                 <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Bathroom</div>
+                <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bathroom</div>
                 <!--<ul class="dropdown-content">
                   <li><a href="#">1</a></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                 </ul>-->
-                <select name="bathroom">
+                <select class="dropdown-text dd_fonts" name="bathroom">
                 <option value="Any">Any</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -161,15 +162,15 @@
             <li>Car Ports</li>
             <li> 
               <!--		dropdown menu  -->
-              <div class="dropdown width84">
+              <div class="dropdown width84 propert_top">
                 <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Car Ports</div>
+                <div class="dropdown-text dd_fonts" style="visibility:hidden;">Car Ports</div>
                 <!--<ul class="dropdown-content">
                   <li><a href="#">1</a></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                 </ul>-->
-                <select name="carport">
+                <select class="dropdown-text dd_fonts" name="carport">
                   <option value="Any">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -187,15 +188,15 @@
             <li>Garages</li>
             <li> 
               <!--		dropdown menu  -->
-              <div class="dropdown w100">
+              <div class="dropdown w100 propert_top">
                 <input class="dropdown-toggle" type="text">
-                <div class="dropdown-text dd_fonts">Garages</div>
+                <div class="dropdown-text dd_fonts" style="visibility:hidden;">Garages</div>
                 <!--<ul class="dropdown-content">
                   <li><a href="#">Garages 1</a></li>
                   <li><a href="#">Garages 2</a></li>
                   <li><a href="#">Garages 3</a></li>
                 </ul>-->
-                <select name="garage">
+                <select class="dropdown-text dd_fonts" name="garage">
                   <option value="Any">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -213,8 +214,8 @@
             <li>Area </li>
             <li> 
               <!--		dropdown menu  -->
-              <input type="text" class="amount" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
-              <input type="text" class="amount" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
+              <input class="area_txt_width_hieight" type="text" class="amount" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
+              <input class="area_txt_width_hieight"  type="text" class="amount" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
               <div class="slider-range"></div>
               <!--		dropdown menu end  --> 
             </li>
