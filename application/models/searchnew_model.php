@@ -3,8 +3,24 @@ class Searchnew_model extends CI_Model
 {
 	function getresults($data)
 	{
-        $this->db->where($data['where']);
+        $this->db->select($data['select']);
+        if(isset($data['where']))
+            $this->db->where($data['where']);
+        if(isset($data['category']))
+            $this->db->where_in('category',$data['category']);
 		$this->db->from($data['table']);
+        $query = $this->db->get();
+        $total = $query->num_rows();
+        
+        $this->db->select($data['select']);
+        if(isset($data['where']))
+            $this->db->where($data['where']);
+        if(isset($data['category']))
+            $this->db->where_in('category',$data['category']);
+        $this->db->from($data['table']);
+        $this->db->limit(3,$data['limit']);
+        $obj=$this -> db -> get()->result();
+
 		//$this->db->get();
 		//$query = $this->db->last_query();
 		/*$this->db->select("uniqueID");
@@ -32,8 +48,10 @@ class Searchnew_model extends CI_Model
         */
          
         //$data = $query->result();
-        $result=$this -> db -> get()->result();
-        $this->db->last_query();
+        
+        $result['total']=$total;
+        $result['obj']=$obj;
+        //$this->db->last_query();
         return $result;
 	}
 }

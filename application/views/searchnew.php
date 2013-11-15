@@ -85,7 +85,7 @@
               <input class="dropdown-toggle" type="text">
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
               <select class="dropdown-text dd_fonts" name="bedroom">
-                <option value="Any">Any</option>
+                <option value="">Any</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -145,7 +145,7 @@
                   <li><a href="#">3</a></li>
                 </ul>-->
                 <select class="dropdown-text dd_fonts" name="bathroom">
-                <option value="Any">Any</option>
+                <option value="">Any</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -171,7 +171,7 @@
                   <li><a href="#">3</a></li>
                 </ul>-->
                 <select class="dropdown-text dd_fonts" name="carport">
-                  <option value="Any">Any</option>
+                  <option value="">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -197,7 +197,7 @@
                   <li><a href="#">Garages 3</a></li>
                 </ul>-->
                 <select class="dropdown-text dd_fonts" name="garage">
-                  <option value="Any">Any</option>
+                  <option value="">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
