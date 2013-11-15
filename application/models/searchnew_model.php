@@ -3,9 +3,10 @@ class Searchnew_model extends CI_Model
 {
 	function getresults($data)
 	{
+        $this->db->where($data['where']);
 		$this->db->from($data['table']);
-		$this->db->get();
-		$query = $this->db->last_query();
+		//$this->db->get();
+		//$query = $this->db->last_query();
 		/*$this->db->select("uniqueID");
         //$this->db->distinct();
         $this->db->from("commercial");
@@ -30,8 +31,10 @@ class Searchnew_model extends CI_Model
         $query = $this->db->query($query1." UNION ".$query2." UNION ".$query3);
         */
          
-        $data = $query->result();
-		return $data;
+        //$data = $query->result();
+        $result=$this -> db -> get()->result();
+        $this->db->last_query();
+        return $result;
 	}
 }
 ?>

@@ -84,12 +84,20 @@
             <div class="dropdown w100">
               <input class="dropdown-toggle" type="text">
               <div class="dropdown-text dd_fonts">Bedroom</div>
-              <ul class="dropdown-content">
+              <select name="bedroom">
+                <option value="Any">Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <!--<ul class="dropdown-content">
                 <li><a href="#">Bedroom 1</a></li>
                 <li><a href="#">Bedroom 2</a></li>
                 <li><a href="#">Bedroom 3</a></li>
                 </li>
-              </ul>
+              </ul>-->
             </div>
             <div class="boxex width22">
               <ul>
@@ -130,11 +138,19 @@
               <div class="dropdown width84">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts">Bathroom</div>
-                <ul class="dropdown-content">
+                <!--<ul class="dropdown-content">
                   <li><a href="#">1</a></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
-                </ul>
+                </ul>-->
+                <select name="bathroom">
+                <option value="Any">Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
               </div>
               <!--		dropdown menu end  --> 
             </li>
@@ -148,11 +164,19 @@
               <div class="dropdown width84">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts">Car Ports</div>
-                <ul class="dropdown-content">
+                <!--<ul class="dropdown-content">
                   <li><a href="#">1</a></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
-                </ul>
+                </ul>-->
+                <select name="carport">
+                  <option value="Any">Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
               <!--		dropdown menu end  --> 
             </li>
@@ -166,11 +190,19 @@
               <div class="dropdown w100">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts">Garages</div>
-                <ul class="dropdown-content">
+                <!--<ul class="dropdown-content">
                   <li><a href="#">Garages 1</a></li>
                   <li><a href="#">Garages 2</a></li>
                   <li><a href="#">Garages 3</a></li>
-                </ul>
+                </ul>-->
+                <select name="garage">
+                  <option value="Any">Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
               <!--		dropdown menu end  --> 
             </li>
@@ -200,18 +232,18 @@
  </div>
 
 <!-- container -->
-<?php if(isset($result2)) { ?>
+<?php if(isset($result)) { ?>
 <div class="container border_img">
   <div class="conti_border">
     <p class="color_orange">North Shore <span></span></p>
     <?php 
-              foreach ($result2 as $row2) { ?>
+              foreach ($result as $row) { ?>
     <div class="s_img_boxes_commer">
       <div class="search_img"> <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/> </div>
       <div class="content_commer">
-        <h3><?php echo $row2->headline; ?>,</h3>
-        <h4><?php echo $row2->suburb.'<br />'.$row2->price; ?></h4>
-        <p class="cnt"><?php echo $row2->description; ?></p>
+        <h3><?php echo $row->headline; ?>,</h3>
+        <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
+        <p class="cnt"><?php echo $row->description; ?></p>
         <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
         <a class="fright" href="#">More</a> </div>
     </div>
