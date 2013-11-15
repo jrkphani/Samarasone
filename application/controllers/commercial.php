@@ -18,5 +18,10 @@ class Commercial extends CI_Controller
 		$data['view_page'] = 'commercial_ourteam.php';
 		$this->load->view('template', $data);
 	}
+	function contact()
+	{
+		$data['view_page'] = 'commercial_contact.php';
+		$this->load->view('template', $data);
+	}
 }
 ?>
