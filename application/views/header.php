@@ -31,8 +31,8 @@ $subpage = $this->uri->segment(2); ?>
         </ul>
         <ul class="menu_bg">
         	<!--<li class="home"><a href="<?php echo base_url(); ?>">Home</a></li>-->
-        	<li class="ovalue"><a href="#">Our Value Proposition</a></li>
-        	<li class="oteam"><a href="#">Our Team</a></li>
+        	<li class="ovalue"><a href="<?php echo base_url($page.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
+        	<li class="oteam"><a href="<?php echo base_url($page.'/ourteam'); ?>">Our Team</a></li>
         	<li class="contact"><a href="<?php echo base_url('contacts'); ?>">Contact</a></li>
         </ul>
         <ul class="menu_bg bg_border">
@@ -46,7 +46,7 @@ $subpage = $this->uri->segment(2); ?>
       </div>
     	
     	  <?
-				 if(($page != 'contacts') && ($page != 'search') && ($page != 'searchnew')) 
+				 if(($page != 'search') && ($page != 'searchnew')) 
 				{
 				?>
         <div class="touchslider">

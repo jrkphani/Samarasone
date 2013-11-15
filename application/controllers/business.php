@@ -18,5 +18,10 @@ class Business extends CI_Controller
 		$data['view_page'] = 'business_ourteam.php';
 		$this->load->view('template', $data);
 	}
+	function contact()
+	{
+		$data['view_page'] = 'business_contact.php';
+		$this->load->view('template', $data);
+	}
 }
 ?>
