@@ -22,7 +22,7 @@
     <div class="box_conainer">
     	<div class="width_100">
         <div class="boxes1">      
-          <a href="<?php echo base_url('category/residential'); ?>">
+          <a href="<?php echo base_url('residential'); ?>">
           	<div class="boxes1_img_hover">            
             <h1>Residential</h1> 
           </div>
@@ -31,7 +31,7 @@
       </div>
     	<div class="width_100">
         <div class="boxes2">
-        	<a href="<?php echo base_url('category/commercial'); ?>">   
+        	<a href="<?php echo base_url('commercial'); ?>">   
             <div class="boxes2_img_hover">
               <h1>Commercial</h1>
             </div>
@@ -40,7 +40,7 @@
       </div>
     	<div class="width_100">
         <div class="boxes3">   
-        	<a href="<?php echo base_url('category/business'); ?>">   
+        	<a href="<?php echo base_url('business'); ?>">   
             <div class="boxes3_img_hover boxes3_img_hover_1280">
               <h1>Business</h1>
             </div>

@@ -1,0 +1,291 @@
+
+<div class="wrapper_white_bg"></div>
+<div class="wrapper_gradient_bg"> </div>
+<div class="inner_pheader"> 
+  
+  <!-- search box -->
+  <div class="search_box">
+    <form name="form" id="form" method="post" action="">
+      <input type="hidden" id="page" name="page" value="0" />
+      <div class="width_90">
+        <div class="boxex width9">
+          <p class="color_orange">Search</p>
+        </div>
+        <div class="boxex width9">
+          <ul>
+            <li style="margin:45px 0 0 0;">
+              <input value="buy" class="radio" autocomplete="off" type="radio" name="type" />
+              Buy
+            </li>
+            <li style="margin: 25px 0 0 0;">
+              <input value="rent" class="radio" autocomplete="off" type="radio" name="type" />
+              Rent
+            </li>
+          </ul>
+        </div>
+        <div class="boxex">
+          <ul>
+            <li>Region</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Select</div>
+                <ul class="dropdown-content">
+                  <li>Region 1</li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+            <li style="margin:63px 0 5px 0;">Suburb</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <select name="suburb[]" class="multi-select" multiple="multiple" style="width:232px;" size="8">
+                <option value="">Any Suburb</option>
+              </select>
+              
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex">
+          <ul>
+            <li>Property Type</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Select</div>
+                <select name="property" id="property" autocomplete="off">
+					<option value="">Select</option>
+                </select>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+            <li style="margin:63px 0 5px 0;">Category</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <select id="category" name="category[]"  multiple="multiple" style="width:232px;" size="10">
+              </select>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex">
+          <ul>
+            <li>Price</li>
+            <li> 
+              <input type="text" name="price_min" style="color: #285069; font-weight: normal;" />
+              <input type="text" name="price_max" style="color: #285069; font-weight: normal;" />
+              <!--		dropdown menu end  -->
+            <li style="margin:63px 0 5px 0;">Bedroom</li>
+            <li>
+            <!--		dropdown menu  -->
+            <div class="dropdown w100">
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text dd_fonts">Bedroom</div>
+              <ul class="dropdown-content">
+                <li><a href="#">Bedroom 1</a></li>
+                <li><a href="#">Bedroom 2</a></li>
+                <li><a href="#">Bedroom 3</a></li>
+                </li>
+              </ul>
+            </div>
+            <div class="boxex width22">
+              <ul>
+              </ul>
+            </div>
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width9">
+          <p class="serh_box">
+            <input id="search" class="serch_box" type="submit" name="search" value="Search">
+          </p>
+          <p class="more_srh"><a href="#">More Search Option</a></p>
+        </div>
+      </div>
+      <div class="clearall"></div>
+      <!--		Less Search Option End --> 
+      <!--		More Search Option  -->      
+      <div class="width_90">
+        <div class="boxex width9">
+          <p style="visibility:hidden;" class="color_orange">Search</p>
+        </div>
+        <div class="boxex width9">
+          <ul style="visibility:hidden;">
+            <li style="margin:45px 0 0 0;">
+              <input type="radio" name="sale_type" checked="checked" disabled="true" />
+              Buy</li>
+            <li style="margin: 25px 0 0 0;">
+              <input type="radio" name="sale_type" disabled="true" />
+              Sale</li>
+          </ul>
+        </div>
+        <div class="boxex width14">
+          <ul>
+            <li>Bathroom</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Bathroom</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width13">
+          <ul>
+            <li>Car Ports</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown width84">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Car Ports</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width14">
+          <ul>
+            <li>Garages</li>
+            <li> 
+              <!--		dropdown menu  -->
+              <div class="dropdown w100">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts">Garages</div>
+                <ul class="dropdown-content">
+                  <li><a href="#">Garages 1</a></li>
+                  <li><a href="#">Garages 2</a></li>
+                  <li><a href="#">Garages 3</a></li>
+                </ul>
+              </div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width14">
+          <ul>
+            <li>Area </li>
+            <li> 
+              <!--		dropdown menu  -->
+              <input type="text" class="amount" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
+              <input type="text" class="amount" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
+              <div class="slider-range"></div>
+              <!--		dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+      </div>      
+      <!--		More Search Option End -->
+    </form>
+    <!-- search end --> 
+  </div>
+</div>
+<div class="comm_resi_header_top width_1060">
+  <h1><a href="<?php echo base_url(); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a> </h1>
+  <h5 class="page_name"><a href="#">Commercial / Residential</a></h5>
+ </div>
+
+<!-- container -->
+<?php if(isset($result2)) { ?>
+<div class="container border_img">
+  <div class="conti_border">
+    <p class="color_orange">North Shore <span></span></p>
+    <?php 
+              foreach ($result2 as $row2) { ?>
+    <div class="s_img_boxes_commer">
+      <div class="search_img"> <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/> </div>
+      <div class="content_commer">
+        <h3><?php echo $row2->headline; ?>,</h3>
+        <h4><?php echo $row2->suburb.'<br />'.$row2->price; ?></h4>
+        <p class="cnt"><?php echo $row2->description; ?></p>
+        <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+        <a class="fright" href="#">More</a> </div>
+    </div>
+    <?php } ?>
+    
+    <!--       	<div class="s_img_boxes_commer">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content_commer">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
+                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
+                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+      
+          </div>
+ 			  <!-- container --> 
+    
+    <!-- Next Menu -->
+    <div class="clearall"></div>
+    <div class="pagenation">
+      <ul>
+        <?php echo $this->pagination->create_links(); ?>
+      </ul>
+    </div>
+    
+    <!-- <div class="next_menu">
+        	<ul>
+        		<li class="previous_img previous"><a href="#">Previous</a></li>
+          	<li class="center" ><a  href="#">&nbsp;</a></li>
+          	<li class="active"><a  href="#">&nbsp;</a></li>
+          	<li class="next_img next"><a  href="#">Next</a></li>
+          </ul>
+        </div>--> 
+    
+    <!-- Next end -->
+    <?php } ?>
+    <div class="clearall"></div>
+  </div>
+</div>
+</div>
+<!-- header end --> 
+
+<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script> 
+<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script> 
+<script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'searchnew.js');?>"></script> 
+<script type="text/javascript">
+$(function(){
+
+	$(".multi-select").multiselect({
+		selectedList: 2
+	});
+	
+});
+</script> 
+<script type="text/javascript">
+/*
+	Custom checkbox and radio button - Jun 18, 2013
+	(c) 2013 @ElmahdiMahmoud 
+	license: http://www.opensource.org/licenses/mit-license.php
+*/   
+/*$('input[type="radio"]').wrap('<div class="radio-btn"><i></i></div>');
+$(".radio-btn").on('click', function () {
+    var _this = $(this),
+        block = _this.parent().parent();
+    block.find('input:radio').attr('checked', false);
+    block.find(".radio-btn").removeClass('checkedRadio');
+    _this.addClass('checkedRadio');
+    _this.find('input:radio').attr('checked', true);
+});*/
+</script> 
