@@ -1,4 +1,20 @@
 @charset "utf-8";
+/* ************************* fonts ******************************** */
+
+@font-face {
+    font-family: 'HelveNueThin';
+    src: url('../fonts/helvenuethin.eot');
+    src: url('../fonts/helvenuethin.eot') format('embedded-opentype'),
+         url('../fonts/helvenuethin.woff') format('woff'),
+         url('../fonts/helvenuethin.ttf') format('truetype'),
+         url('../fonts/helvenuethin.svg#HelveNueThinNormal') format('svg');
+}
+
+@font-face {
+    font-family: asdads;
+    src:url(../fonts/Aller.ttf) format('truetype');   
+}
+
 /* CSS Document */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
 var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
@@ -12,17 +28,6 @@ blockquote, q {	quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {	content: '';	content: none;}
 table {	border-collapse: collapse;	border-spacing: 0;}
 
-/* ************************* fonts ******************************** */
-
-@font-face {
-    font-family: HelveNueThin, Arial;
-    src:url(../fonts/HelveNueThin.ttf) format('truetype');   
-}
-
-@font-face {
-    font-family: Aller, helveNueThin, Arial;
-    src:url(../fonts/Aller.ttf) format('truetype');   
-}
 
 /* ************************* body ******************************** */
 

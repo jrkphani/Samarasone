@@ -1,4 +1,20 @@
 @charset "utf-8";
+/* ************************* fonts ******************************** */
+@font-face {
+    font-family: 'HelveNueThin';
+    src: url('../fonts/helvenuethin.eot');
+    src: url('../fonts/helvenuethin.eot') format('embedded-opentype'),
+         url('../fonts/helvenuethin.woff') format('woff'),
+         url('../fonts/helvenuethin.ttf') format('truetype'),
+         url('../fonts/helvenuethin.svg#HelveNueThinNormal') format('svg');
+}
+
+
+@font-face {
+    font-family: asdads;
+    src:url(../fonts/Aller.ttf) format('truetype');   
+}
+
 /* CSS Document */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
 var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
@@ -65,7 +81,7 @@ a{text-decoration:none;}b{font-weight:bold;}i{font-style:italic;}
 /* ************************* search box ******************************** */
 .search_width{}
 .page_name{margin:-56px 0 0 470px; font-size: 10px!important; background:#E6E6E6; width: 160px; padding:10px 36px; background:url(../images/sprites.png) 8px -233px no-repeat; }
-.page_name a{font-size:14px!important;}
+.page_name a{font-size:14px!important; line-height: 16px!important;}
 .page_name a:hover{color:#fff;}
 .search_box{position:absolute; /*z-index:9996;*/ z-index:998; width:100%; /*padding:20px 0 30px 0;*/ top:130px; }
 .boxex{float:left;/* width:14.28%;*/width:20%;}
