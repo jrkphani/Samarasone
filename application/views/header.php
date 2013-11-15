@@ -39,9 +39,9 @@ $subpage = $this->uri->segment(2); ?>
         	<li class="inner_logo"><a href="<?php echo base_url(); ?>">Samaras One Home</a></li>
         </ul>
         <ul class="menu_bg">
-        	<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
-        	<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
-        	<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li>
+        	<? if($page!='business') { ?><li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
+        	<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li><? } else {?>
+        	<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? } ?>
         </ul>
       </div>
     	
