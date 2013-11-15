@@ -2,6 +2,7 @@
 <div class="wrapper_white_bg"></div>
 <div class="wrapper_gradient_bg"> </div>
 <div class="inner_pheader"> 
+  
 
   <!-- search box -->
   <div class="search_box">
@@ -14,11 +15,11 @@
         <div class="boxex width9">
           <ul>
             <li style="margin:45px 0 0 0;">
-              <input value="buy" class="radio" autocomplete="off" type="radio" name="type" />
+              <input value="buy" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='buy') echo 'checked="checked"'; ?> />
               Buy
             </li>
             <li style="margin: 25px 0 0 0;">
-              <input value="rent" class="radio" autocomplete="off" type="radio" name="type" />
+              <input value="rent" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='rent') echo 'checked="checked"'; ?> />
               Rent
             </li>
           </ul>
@@ -57,7 +58,7 @@
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>
                 <select class="dropdown-text dd_fonts" name="property" id="property" autocomplete="off">
-									<option value="">Select</option>
+									<option value="<?=$property;?>"><? if($property) echo $property; else echo 'Select'; ?></option>
                 </select>
               </div>
               <!--		dropdown menu end  --> 
@@ -66,6 +67,9 @@
             <li> 
               <!--		dropdown menu  -->
               <select id="category" name="category[]"  multiple="multiple" style="width:85%; height:55px;" size="10">
+                <?php foreach ($category as $key => $value) {
+                  echo '<option selected="selected" value="'.$value.'">'.$value.'</option>';
+                }?>
               </select>
               <!--		dropdown menu end  --> 
             </li>
@@ -75,8 +79,8 @@
           <ul>
             <li>Price</li>
             <li> 
-              <input class="txt_width_hieight" type="text" name="price_min" value=<?php  style="color: #285069; font-weight: normal;" />
-              <input class="txt_width_hieight" type="text" name="price_max" style="color: #285069; font-weight: normal;"/>
+              <input class="txt_width_hieight" type="text" name="price_min" value="<?php echo $price_min; ?>"  style="color: #285069; font-weight: normal;" />
+              <input class="txt_width_hieight" type="text" name="price_max" value="<?php echo $price_max; ?>" style="color: #285069; font-weight: normal;"/>
               <!--		dropdown menu end  -->
             <li style="margin:15px 0 5px 0;">Bedroom</li>
             <li>
@@ -86,11 +90,7 @@
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
               <select class="dropdown-text dd_fonts" name="bedroom">
                 <option value="">Any</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
               </select>
               <!--<ul class="dropdown-content">
                 <li><a href="#">Bedroom 1</a></li>
@@ -146,11 +146,7 @@
                 </ul>-->
                 <select class="dropdown-text dd_fonts" name="bathroom">
                 <option value="">Any</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                  <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $bathroom)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
               </select>
               </div>
               <!--		dropdown menu end  --> 
@@ -172,11 +168,7 @@
                 </ul>-->
                 <select class="dropdown-text dd_fonts" name="carport">
                   <option value="">Any</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $carport)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
                 </select>
               </div>
               <!--		dropdown menu end  --> 
@@ -198,11 +190,7 @@
                 </ul>-->
                 <select class="dropdown-text dd_fonts" name="garage">
                   <option value="">Any</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $garage)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
                 </select>
               </div>
               <!--		dropdown menu end  --> 
@@ -214,8 +202,8 @@
             <li>Area </li>
             <li> 
               <!--		dropdown menu  -->
-              <input class="area_txt_width_hieight" type="text" class="amount" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
-              <input class="area_txt_width_hieight"  type="text" class="amount" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
+              <input class="area_txt_width_hieight" type="text" class="amount" value="<?php echo $area_min; ?>" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
+              <input class="area_txt_width_hieight"  type="text" class="amount" value="<?php echo $area_max; ?>" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
               <div class="slider-range"></div>
               <!--		dropdown menu end  --> 
             </li>

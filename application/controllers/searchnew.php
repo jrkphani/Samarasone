@@ -10,20 +10,21 @@ class Searchnew extends CI_Controller
 	{
 		$pagi_page = $this->input->post('page');
 		$page ='Residential';
-		$type = $this->input->post('type');
-		$property = $this->input->post('property');
-		$category = $this->input->post('category');
-		$price_min = $this->input->post('price_min');
-		$price_max = $this->input->post('price_max');
-		$bedroom = $this->input->post('bedroom');
-		$bathroom = $this->input->post('bathroom');
-		$carport = $this->input->post('carport');
-		$garage = $this->input->post('garage');
-		$area_min = $this->input->post('area_min');
-		$area_max = $this->input->post('area_max');
+		$data['type'] = $this->input->post('type');
+		$data['property'] = $this->input->post('property');
+		$data['category'] = $this->input->post('category');
+		$data['price_min'] = $this->input->post('price_min');
+		$data['price_max'] = $this->input->post('price_max');
+		$data['bedroom'] = $this->input->post('bedroom');
+		$data['bathroom'] = $this->input->post('bathroom');
+		$data['carport'] = $this->input->post('carport');
+		$data['garage'] = $this->input->post('garage');
+		$data['area_min'] = $this->input->post('area_min');
+		$data['area_max'] = $this->input->post('area_max');
 
 
-		//$property = '';
+
+		//$data['property'] = '';
 		
 		$this->load->library('elements');
 		
@@ -31,101 +32,103 @@ class Searchnew extends CI_Controller
 		
 		$data['view_page']='searchnew';
 		//$results['page']=$page;
-		//$results['type']=$type;
+		//$results['type']=$data['type'];
 		//$data['page']='Residential';
 		//$data['type']='buy';
 		if($page === 'Residential')
 		{
-			if($type === 'buy')
+			if($data['type'] === 'buy')
 			{
 				$data['select']=array('headline','price','suburb','description');
 
-				if($price_min>0)
-					$where['price >'] = $price_min;
-				if($price_max>0)
-					$where['price <'] = $price_max;
-				if($area_min>0)
-					$where['area >'] = $area_min;
-				if($area_max>0)
-					$where['area <'] = $area_max;
+				if($data['price_min']>0)
+					$where['price >'] = $data['price_min'];
+				if($data['price_max']>0)
+					$where['price <'] = $data['price_max'];
+				if($data['area_min']>0)
+					$where['area >'] = $data['area_min'];
+				if($data['area_max']>0)
+					$where['area <'] = $data['area_max'];
 
-				if($property === 'Residential')
+				if($data['property'] === 'Residential')
 				{
 					$data['table'] = 'residential';
-					if($bedroom)
-						$where['bedrooms'] = $bedroom;
-					if($bathroom)
-						$where['bathrooms'] = $bathroom;
-					if($carport)
-						$where['carports'] = $carport;
-					if($garage)
-						$where['garages'] = $garage;
-					if($category)
-						$data['category'] = $category;
+					if($data['bedroom'])
+						$where['bedrooms'] = $data['bedroom'];
+					if($data['bathroom'])
+						$where['bathrooms'] = $data['bathroom'];
+					if($data['carport'])
+						$where['carports'] = $data['carport'];
+					if($data['garage'])
+						$where['garages'] = $data['garage'];
+					if($data['category'])
+						$data['category'] = $data['category'];
 					if(isset($where))
 						$data['where'] = $where;
 				}
-				elseif($property === 'Land')
+				elseif($data['property'] === 'Land')
 				{
 					$data['table'] = 'land';
 					if(isset($where))
 						$data['where'] = $where;
 				}
-				elseif($property === 'Rural')
+				elseif($data['property'] === 'Rural')
 				{
 					$data['table'] = 'rural';
-					if($bedroom)
-						$where['bedrooms'] = $bedroom;
-					if($bathroom)
-						$where['bathrooms'] = $bathroom;
-					if($carport)
-						$where['carports'] = $carport;
-					if($garage)
-						$where['garages'] = $garage;
-					if($category)
-						$data['ruralCategory'] = $category;
+					if($data['bedroom'])
+						$where['bedrooms'] = $data['bedroom'];
+					if($data['bathroom'])
+						$where['bathrooms'] = $data['bathroom'];
+					if($data['carport'])
+						$where['carports'] = $data['carport'];
+					if($data['garage'])
+						$where['garages'] = $data['garage'];
+					if($data['category'])
+						$data['ruralCategory'] = $data['category'];
 					if(isset($where))
 						$data['where'] = $where;
+					unset($data['category']);
 				}
 				$data['limit']=$pagi_page;
 				$result = $this->searchnew_model->getresults($data);
 				$data['result'] = $result['obj'];
 				$this->pagination($result['total']);
 			}
-			else if($type === 'rent')
+			else if($data['type'] === 'rent')
 			{
 				$data['select']=array('headline','rent as price','suburb','description');
 
-				if($bedroom)
-					$where['bedrooms'] = $bedroom;
-				if($bathroom)
-					$where['bathrooms'] = $bathroom;
-				if($carport)
-					$where['carports'] = $carport;
-				if($garage)
-					$where['garages'] = $garage;
-				if($price_min>0)
-					$where['rental >'] = $price_min;
-				if($price_max>0)
-					$where['rental <'] = $price_max;
-				if($area_min>0)
-					$where['area >'] = $area_min;
-				if($area_max>0)
-					$where['area <'] = $area_max;
+				if($data['bedroom'])
+					$where['bedrooms'] = $data['bedroom'];
+				if($data['bathroom'])
+					$where['bathrooms'] = $data['bathroom'];
+				if($data['carport'])
+					$where['carports'] = $data['carport'];
+				if($data['garage'])
+					$where['garages'] = $data['garage'];
+				if($data['price_min']>0)
+					$where['rental >'] = $data['price_min'];
+				if($data['price_max']>0)
+					$where['rental <'] = $data['price_max'];
+				if($data['area_min']>0)
+					$where['area >'] = $data['area_min'];
+				if($data['area_max']>0)
+					$where['area <'] = $data['area_max'];
 				if(isset($where))
 						$data['where'] = $where;
 
-				if($property === 'Rental')
+				if($data['property'] === 'Rental')
 				{
 					$data['table'] = 'rental';
-					if($category)
-						$data['category'] = $category;
+					if($data['category'])
+						$data['category'] = $data['category'];
 				}
-				else if($property === 'Holiday')
+				else if($data['property'] === 'Holiday')
 				{
 					$data['table'] = 'holidayRental';
-					if($category)
-						$data['holidayCategory'] = $category;
+					if($data['category'])
+						$data['holidayCategory'] = $data['category'];
+					unset($data['category']);
 				}
 				$data['limit']=$page;
 				$result = $this->searchnew_model->getresults($data);

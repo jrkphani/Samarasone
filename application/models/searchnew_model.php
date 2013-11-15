@@ -6,8 +6,8 @@ class Searchnew_model extends CI_Model
         $this->db->select($data['select']);
         if(isset($data['where']))
             $this->db->where($data['where']);
-        if(isset($data['category']))
-            $this->db->where_in('category',$data['category']);
+        //if(isset($data['category']))
+          //  $this->db->where_in('category',$data['category']);
 		$this->db->from($data['table']);
         $query = $this->db->get();
         $total = $query->num_rows();
@@ -15,8 +15,8 @@ class Searchnew_model extends CI_Model
         $this->db->select($data['select']);
         if(isset($data['where']))
             $this->db->where($data['where']);
-        if(isset($data['category']))
-            $this->db->where_in('category',$data['category']);
+        //if(isset($data['category']))
+          //  $this->db->where_in('category',$data['category']);
         $this->db->from($data['table']);
         $this->db->limit(3,$data['limit']);
         $obj=$this -> db -> get()->result();
