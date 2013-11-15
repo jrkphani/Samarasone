@@ -17,7 +17,7 @@ class Search_model extends CI_Model
 		return $result;
 	}
 
-	function search($limit,$sale_type,$suburb,$type,$price_from,$price_to,$bedroom,$garage)
+	function search($limit,$sale_type,$suburb,$category,$price_from,$price_to,$bedroom,$garage)
 	{
 		$where = array();
 		/*if($sale_type)
@@ -26,17 +26,17 @@ class Search_model extends CI_Model
 		{
 			$this->db->where_in('suburb', $suburb);
 		}
-		if($type[0])
+		if($category[0])
 		{
-			$this->db->where_in('category', $type);
+			$this->db->where_in('category', $category);
 		}
 		if($price_from)
 			$where['price >']=$price_from;
 		if($price_to)
 			$where['price <']=$price_to;
-		if($bedroom!=NULL)
+		if($bedroom!='Any')
 			$where['bedrooms']=$bedroom;
-		if($garage!=NULL)
+		if($garage!='Any')
 			$where['garages']=$garage;
 
 		$this->db->select('SQL_CALC_FOUND_ROWS null as rows,headline,suburb,price,description',FALSE);

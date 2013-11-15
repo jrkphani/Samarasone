@@ -110,7 +110,7 @@ holiday_category =
 	$('.pagenation a').click(function ()
 	{
 	    var link = $(this).get(0).href; // get the link from the DOM object
-	    var form = $('#form1'); // get the form you want to submit
+	    var form = $('#form'); // get the form you want to submit
 	    var segments = link.split('/');
 	    // assume the page number is the fifth parameter of the link
 	    $('#page').val(segments[6]); // set a hidden field with the page number

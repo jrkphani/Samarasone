@@ -2,7 +2,7 @@
 <div class="wrapper_white_bg"></div>
 <div class="wrapper_gradient_bg"> </div>
 <div class="inner_pheader"> 
-  
+
   <!-- search box -->
   <div class="search_box">
     <form name="form" id="form" method="post" action="">
@@ -75,7 +75,7 @@
           <ul>
             <li>Price</li>
             <li> 
-              <input class="txt_width_hieight" type="text" name="price_min" style="color: #285069; font-weight: normal;" />
+              <input class="txt_width_hieight" type="text" name="price_min" value=<?php  style="color: #285069; font-weight: normal;" />
               <input class="txt_width_hieight" type="text" name="price_max" style="color: #285069; font-weight: normal;"/>
               <!--		dropdown menu end  -->
             <li style="margin:15px 0 5px 0;">Bedroom</li>

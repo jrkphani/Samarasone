@@ -8,7 +8,7 @@ class Searchnew extends CI_Controller
 
 	function index()
 	{
-		$page = $this->input->post('page');
+		$pagi_page = $this->input->post('page');
 		$page ='Residential';
 		$type = $this->input->post('type');
 		$property = $this->input->post('property');
@@ -87,7 +87,7 @@ class Searchnew extends CI_Controller
 					if(isset($where))
 						$data['where'] = $where;
 				}
-				$data['limit']=$page;
+				$data['limit']=$pagi_page;
 				$result = $this->searchnew_model->getresults($data);
 				$data['result'] = $result['obj'];
 				$this->pagination($result['total']);
@@ -143,11 +143,11 @@ class Searchnew extends CI_Controller
 	{
 		$this->load->library('pagination');
 		$config['per_page'] = 3;
-		$config['base_url'] = base_url('search/index');
+		$config['base_url'] = base_url('searchnew/index');
 		$config['total_rows'] = $total;
 			
 		//Design
-		$config['first_link'] = 'First';
+		/*$config['first_link'] = 'First';
 		$config['first_tag_open'] = '<li class="next_img next">';
 		$config['first_tag_close'] = '</li>';
 		$config['prev_link'] = 'Previous';
@@ -162,7 +162,7 @@ class Searchnew extends CI_Controller
 		$config['next_tag_close'] = '</li>';
 		$config['last_link'] = 'Last';
 		$config['last_tag_open'] = '<li class="next_img next">';
-		$config['last_tag_close'] = '</li>';
+		$config['last_tag_close'] = '</li>';*/
 
 		$this->pagination->initialize($config);
 	}
