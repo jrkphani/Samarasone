@@ -15,7 +15,7 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 /* ************************* body ******************************** */
 
 p, a, h1, h2, h3, h4, h6{font:24px HelveNueThin, Arial; color:#000;}
-a{text-decoration:none;}
+a{text-decoration:none;}b{font-weight:bold;}i{font-style:italic;}
 .color_orange{color:#285069;}
 .wrapper_bg{background:#fff url(../images/inner_spage_bg.jpg) no-repeat; /*height: 895px; position:relative;*/}
 .contact_page_bg{background:#fff /*url(../images/contact_page_bg.jpg) no-repeat;*/}
@@ -38,9 +38,9 @@ a{text-decoration:none;}
 .respage_img{width:25%; float:left; background-size: contain;}
 .respage_img img{width:99.8%; height:383px; float:left; background-size: contain; border-left: 1px solid #fff; border-bottom: 1px solid #fff;}
 /* ************************* main menu ******************************** */
-.mainmenu{position:absolute; z-index:999; margin:81px 0 0 0; opacity:0.999}
+.mainmenu{position:absolute; z-index:999; margin:105px 0 0 0; opacity:0.999}
 /*.menu_logo{background:url(../images/sprites.png)-1150px -768px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998;}*/
-.menu_logo{background:url(../images/sprites.png) -1150px -607px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
+.menu_logo{background:url(../images/sprites.png) -1150px -606px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
 .menu_logo:hover{background:url(../images/sprites.png) -1150px -607px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; opacity:0.8}
 
 .home_menu_logo{background:url(../images/sprites.png) -996px -611px no-repeat; width:90px; height:120px; margin:0 0 0 50px; position:absolute; z-index:9998; cursor:pointer;}
@@ -64,7 +64,7 @@ a{text-decoration:none;}
 
 /* ************************* search box ******************************** */
 .search_width{}
-.page_name{margin:-56px 0 0 470px; font-size: 10px!important; background:#E6E6E6; width: 160px; padding:10px 26px; background:url(../images/sprites.png) 8px -233px no-repeat; }
+.page_name{margin:-56px 0 0 470px; font-size: 10px!important; background:#E6E6E6; width: 160px; padding:10px 36px; background:url(../images/sprites.png) 8px -233px no-repeat; }
 .page_name a{font-size:14px!important;}
 .page_name a:hover{color:#fff;}
 .search_box{position:absolute; /*z-index:9996;*/ z-index:998; width:100%; /*padding:20px 0 30px 0;*/ top:130px; }
@@ -148,14 +148,6 @@ right: 0px;
 margin: -50px 37px 0 0px; 
 }
 .s_img_boxes .content .fright:hover{opacity:0.94}
-/*.s_img_boxes .content .fright:hover{ border:1px solid #b3b3b3;
- background-color: #cdcdcd; background-image: -webkit-gradient(linear, left top, left bottom, from(#cdcdcd), to(#b3b3b3));
- background-image: -webkit-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -moz-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -ms-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -o-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: linear-gradient(to bottom, #cdcdcd, #b3b3b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cdcdcd, endColorstr=#b3b3b3);}*/
- 
  
  .pagenation li{float:left; /*margin-bottom: 25px!important;*/ cursor:pointer;}
  .pagenation li a{display:block; margin-left: 5px; font:12px Arial, Helvetica, sans-serif;}
@@ -173,24 +165,29 @@ margin: -50px 37px 0 0px;
  background-image: linear-gradient(to bottom, #E6E6E6, #CCCCCC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E6E6E6, endColorstr=#CCCCCC);
 }
  
- .previous_img{}
- .next_img{margin: 0 10px 0 10px!important;} 
- .pagenation .previous{  background: url(../images/sprites.png) -684px -60px no-repeat; width: 31px; height: 34px; text-indent: -9999px; margin: 0 15px 0 0px;}
- .pagenation .next{  background: url(../images/sprites.png) -781px -60px no-repeat; width: 31px; height: 34px; text-indent: -9999px; margin: 0 0 0 15px!important;}
-  .pagenation .next:hover{opacity:0.8;}
-  .pagenation .previous:hover{opacity:0.8;}
+	.previous_img{}
+	.next_img{margin: 0 10px 0 10px!important;} 
+	.pagenation .previous_before{  background: url(../images/sprites.png) -732px -60px no-repeat; width: 31px; height: 34px; text-indent: -9999px; margin: 0 10px 0 0px;}
+	.pagenation .previous{  background: url(../images/sprites.png) -684px -60px no-repeat; width: 31px; height: 34px; text-indent: -9999px; margin: 0 15px 0 0px;}
+	.pagenation .next{  background: url(../images/sprites.png) -781px -60px no-repeat; width: 31px; height: 34px; text-indent: -9999px; margin: 0 0 0 15px!important;}
+	.pagenation .next_after{  background: url(../images/sprites.png) -829px -60px no-repeat; width: 31px; height: 34px; text-indent: -9999px;}
+	.pagenation .next:hover{opacity:0.8;}
+	.pagenation .next_after:hover{opacity:0.8;}
+	.pagenation .previous:hover{opacity:0.8;}
+	.pagenation .previous_before:hover{opacity:0.8;}
 
  /* ************************* conatct page ******************************** */
  .contact_pg{padding:40px 40px;}
  .contact_pg .cont_spr{ width:100%; float:left; border-bottom:1px solid #285069; margin-bottom:10px; padding-bottom: 10px;}
 .conatct_left{width: 30%; float: left; position: relative; padding: 1% 2% 1% 0;}
-.conatct_center{width:40%; float: left; position: relative; padding: 1% 0% 1% 2%;}
-.conatct_right{width:26%; float: left; position: relative; padding: 1% 0% 1% 0;}
+.conatct_right{width:26%; float: left; position: relative; padding: 1% 0% 1% 2%;}
+.conatct_center{width:40%; float: left; position: relative; padding: 1% 0% 1% 0;}
 .contct_header{color:#043350; padding:0 0 10px 0;}
 .contct_para{padding:0 0 15px 0; font-size: 22px;}
-.cont_location{height:378px; width:100%; background:gray;}
-.conatct_center img{height: 202px; float: left; width: 44%; padding: 0 20px 20px 0; background-size: contain;} 
+.cont_location{height:357px; width:100%; margin-top: 109px; border: 1px solid #ddd;}
+.conatct_right img{height: 202px; float: left; width: 44%; padding: 0 20px 20px 0; background-size: contain;} 
 .contct_form_color{color:#043350;}
+.contct_form_size{font-size:20px;}
 .cont_form p{height: 28px; line-height: 20px;}
 
 .cont_form input, .apt_form textarea{
@@ -203,8 +200,29 @@ margin: -50px 37px 0 0px;
 .cont_form span{ width: 100%; display: block; margin:10px 0 0 0 ; }
 .cont_form button{
 	width: 160px; height: 30px; float: right; 
-	border: none; cursor: pointer;
+	border: 1px solid #ddd; cursor: pointer;
 }
+.cont_section1 address p, a{font-size: 20px; line-height: 30px;}
+.cont_section1 .add_left{float:left;}
+.cont_section1 .add_right{float:right;}
+.add_left p{min-height: 31px;}
+.lline{background: url(../images/sprites.png) 0px -485px no-repeat; padding: 0px 0 5px 52px;}
+.fax{background: url(../images/sprites.png) 0px -519px no-repeat; padding: 0px 0 5px 52px;}
+.mobile{background: url(../images/sprites.png) 0px -557px no-repeat; padding: 0px 0 5px 52px;}
+.mail{background: url(../images/sprites.png) 0px -596px no-repeat; padding: 0px 0 5px 52px;}
+.web{background: url(../images/sprites.png) 0px -632px no-repeat; padding: 0px 0 5px 52px;}
+.cont_form form{margin:10px 0 0 0;}
+.cont_form button:hover{background:#DDD; color:#000;}
+.conatct_right a{font-size:20px; color:#DDD;}
+.conatct_right a:hover{color:#fff;}
+.conatct_right .cont_top{margin:73px 0 0 0;}
+.conatct_right .cont_btm{margin-bottom: 15px; }
+.conatct_right .sell_mail1{background: #295169 url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 20px 5px 50px; width: 42%;}
+.conatct_right .sell_mail2{background: #295169 url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 25px 5px 50px; width: 42%;}
+.conatct_right .fb_mail{background: #295169 url(../images/sprites.png)  5px -661px no-repeat; padding: 5px 59px 5px 50px; width: 42%;}
+.cont_form h5{font-size:22px; margin-bottom: 10px;}
+.contct_cmt_size{font-size:16px;}
+.cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}
 /* ************************* 404 page ******************************** */
 .wrapper_404{background:#003255;}
 .p404_bg{background:#003255;}
