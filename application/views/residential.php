@@ -1,6 +1,7 @@
 
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
+        <h5 class="page_name"><p>Residential</p></h5>
         <h6><a class="inner_smenu" href="#"></a></h6>
         <a class="inner_search_icon" href="<?php echo base_url('search/residential'); ?>"><span>Find a Property</span></a>
       
@@ -14,10 +15,14 @@
   </div>
 <!-- header end --> 
   <div class="body_cnt">
-  	<p>Samaras one take on the profeciency consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum. Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum. Mauris nec tempus tellus. Cras elit neque, fringilla in metus id, interdum porta sem. Nam a lobortis elit, vitae tincidunt magna. Curabitur eget erat quam. Etiam viverra eros a ultricies tincidunt. Nam posuere purus at lacus tincidunt molestie. Integer quis tortor dapibus, venenatis est in, lacinia arcu. Nullam pulvinar gravida nulla, sed dapibus lorem gravida ac. Curabitur imperdiet felis ut tincidunt dapibus.</p>
-    <p>Aliquam volutpat metus id leo porttitor venenatis vitae vel diam. Aliquam pellentesque malesuada elit, quis ornare urna lacinia vel. Morbi posuere elit quis viverra molestie. Phasellus faucibus malesuada lectus sed aliquet. Etiam tristique erat sem, vitae sodales nisl porttitor sit amet. Sed vel metus nec nunc commodo tempor ac sed lorem. Maecenas gravida non orci sit amet scelerisque. Suspendisse ut nunc ut nunc scelerisque faucibus. Ut pharetra vestibulum ultricies. Etiam sit amet mollis velit.</p>
-    <p>Proin aliquam tincidunt magna, in elementum dolor. Donec auctor ipsum neque. Maecenas laoreet faucibus dolor sed faucibus. Nunc malesuada, nunc a fringilla sagittis, erat ligula malesuada ligula, sollicitudin pulvinar neque orci porttitor ante. Curabitur imperdiet pharetra erat at tincidunt. Mauris massa est, porttitor eget dapibus a, facilisis sed quam. Quisque eget dapibus orci, id sagittis magna. In lectus leo, malesuada ac hendrerit a, lacinia eget augue. Maecenas iaculis dapibus erat, ut luctus tortor dapibus non.</p>
-  </div>
+      <p>Samaras One specialises in the sales, executive leasing and development of high-end residential properties in Sydney’s CBD and Coastal precincts.</p><br/>
+<h2>From City to Coast</h2><br/>
+<p>We provide luxury residential real estate experience throughout the lifecycle of a properties sales, leasing and development. Exclusivity and exceptional outcomes are our key priorities when acting on behalf of owners, buyers and tenants to arrange the sale and leasing of a vast variety of residential development. </p><br/>
+<h2>Off-Market Property</h2><br/>
+<p>Independent and unbiased, we provide buyers with access to the market place for off market and distinctive High-End Sydney Properties. These opulent properties have in common that they are all connected by the notion of esteemed value. </p>
+<p>Our Portfolio of disconcerted properties is perfect for the discreet property owners and buyers. Largely due to the fact that they are for sale but not openly advertised. As somewhat ‘invaluable’ assets what they all have in common is that they are sincerely distinguished. </p>
+<p>‘Non-circumvention non-disclosure agreement’ as well as proof of funds and a ‘letter of interest’ will be required on application. </p>
+</div>
   <div class="res_img_container">
     <div class="respage_img"> 
       <img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" alt="residential" title="residential"/> 

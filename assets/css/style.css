@@ -378,3 +378,17 @@ p.bjqs-caption{
 		.scrl_cnt p:nth-child(even){color:#999; font-family:Georgia,serif; font-size:17px; font-style:italic;}
 		.scrl_cnt p:nth-child(3n+0){color:#c96;}
 		.scrl_cnt input{border:none; background:#222; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; width:35%; height:30px; margin:10px 10px 20px 0; padding:0 10px; color:#c96;}
+
+
+
+.page_name p{
+    font-size: 14px !important;
+}
+
+.txt_hlt, .body_cnt h2{
+    color: #25638A;    font-size: 1.4em;    font-weight: 600;
+}
+
+.people_names{
+    font-size: 30px !important;
+}
