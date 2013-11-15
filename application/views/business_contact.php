@@ -1,9 +1,10 @@
 
   	<div class="contact_page_bg">
-  	<div class="contact_page_header">
-				</div>
+  	<!-- <div class="contact_page_header">
+				</div> -->
     	<div class="comm_resi_header_top width_1060">   
-      	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a></h1>   
+      	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a></h1>  
+        <h5 class="page_name"><p>Business</p></h5> 
       </div>   
       <!-- property page -->   
 			<!--	<div class="sr_box">
