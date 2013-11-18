@@ -26,6 +26,8 @@ class Searchnew extends CI_Controller
 		$data['area_min'] = $this->input->post('area_min');
 		$data['area_max'] = $this->input->post('area_max');
 		$data['energyRating'] = $this->input->post('energyRating');
+		$data['return'] = $this->input->post('return');
+		$data['businessSubCategory'] = $this->input->post('businessSubCategory');
 
 
 
@@ -173,7 +175,19 @@ class Searchnew extends CI_Controller
 		}
 		else if($data['page_type'] === 'business')
 		{
-			
+			$data['select']=array('headline','price','suburb','description');
+			if($data['price_min']>0)
+				$where['price >'] = $data['price_min'];
+			if($data['price_max']>0)
+				$where['price <'] = $data['price_max'];
+			if($data['type'])
+				$data['sale_type']=array($data['type'],'both');
+			if($data['category'])
+					$data['businessCategory'] = $data['category'];
+			if($data['businessSubCategory']>0)
+				$where['businessSubCategory <'] = $data['businessSubCategory'];
+			$data['table'] = 'business';
+			unset($data['category']);
 		}
 
 		$data['limit']=$pagi_page;

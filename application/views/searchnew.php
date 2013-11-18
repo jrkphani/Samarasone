@@ -69,16 +69,27 @@
               </div>
               <!--		dropdown menu end  --> 
             </li>
-            <?php } else { echo '<input type="hidden" name="property" id="property" value="Business" />'; } ?>
+            <?php } else { echo '<input type="hidden" autocomplete="off" name="property" id="property" value="Business" />'; } ?>
             <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
               <div id="category">
                 <?php
-                if($category)
-                foreach ($category as $key => $value) {	
-				echo '<input type="checkbox" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
+                if($page_type!='business')
+                {
+                  if($category)
+                  foreach ($category as $key => $value) {	
+  				          echo '<input type="checkbox" autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
+                  }
                 }
+                else
+                {
+                  $business_category=array('Accommodation/Tourism','Automotive','Beauty/Health','Education/Training','Food/Hospitality','Franchise','Home/Garden','Import/Export/Whole','Industrial/Manufacturing','Leisure/Entertainment','Professional','Retail','Rural','Services','Transport/Distribution');
+                  foreach ($business_category as $key=>$value) {
+                    echo '<input type="checkbox" classAttr="business_category'.$key.'" autocomplete="off" name="category[]" class="category" value="'.$value.'" /> '.$value.'<br/>';
+                  }
+                }
+
                 ?>
               </div>
               <!--		dropdown menu end  --> 
@@ -92,23 +103,36 @@
               <input class="txt_width_hieight" type="text" name="price_min" value="<?php echo $price_min; ?>"  style="color: #285069; font-weight: normal;" />
               <input class="txt_width_hieight" type="text" name="price_max" value="<?php echo $price_max; ?>" style="color: #285069; font-weight: normal;"/>
               <!--		dropdown menu end  -->
-            <li style="margin:15px 0 5px 0;">Bedroom</li>
+            <? if($page_type == 'business')
+            {
+              $sub_category = array();
+              ?>
+              <li style="margin:15px 0 5px 0;">Sub  Category</li>
+              <!--    dropdown menu  -->
+              <div class="dropdown w100 propert_top" id="sub_category">
+                  <?
+                  /*for($i=1; $i<10; $i++) 
+                    {
+                      echo '<input type"checkbox" value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'<br/>';
+                    }*/
+                  ?>
+              </div>
+            <?
+            }
+            else
+            {?>
+              <li style="margin:15px 0 5px 0;">Bedroom</li>
+              <!--    dropdown menu  -->
+              <div class="dropdown w100 propert_top">
+                <select class="dropdown-text dd_fonts" name="bedroom">
+                  <option value="">Any</option>
+                  <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
+                </select>
+              </div>
+            <?
+            }
+            ?>
             <li>
-            <!--		dropdown menu  -->
-            <div class="dropdown w100 propert_top">
-              <input class="dropdown-toggle" type="text">
-              <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
-              <select class="dropdown-text dd_fonts" name="bedroom">
-                <option value="">Any</option>
-                <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
-              </select>
-              <!--<ul class="dropdown-content">
-                <li><a href="#">Bedroom 1</a></li>
-                <li><a href="#">Bedroom 2</a></li>
-                <li><a href="#">Bedroom 3</a></li>
-                </li>
-              </ul>-->
-            </div>
             <div class="boxex width22">
               <ul>
               </ul>
