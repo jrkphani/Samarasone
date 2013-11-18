@@ -30,22 +30,28 @@
             <li>Region</li>
             <li> 
               <!--		dropdown menu  -->
-              <div class="dropdown width84">
+              <!-- <div class="dropdown width84">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts">Select</div>
                 <ul class="dropdown-content">
                   <li>Region 1</li>
                 </ul>
+              </div>-->
+			  <div class="dropdown width84 propert_top">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>				
+                <select class="dropdown-text dd_fonts" >
+					<option>Select</option>
+                </select>				
               </div>
               <!--		dropdown menu end  --> 
             </li>
             <li style="margin:63px 0 5px 0;">Suburb</li>
             <li> 
               <!--		dropdown menu  -->
-              <select name="suburb[]" class="multi-select" multiple="multiple" style="width:232px;" size="8">
-                <option value="">Any Suburb</option>
-              </select>
-              
+              <div id="" class="width85">
+				
+              </div>
               <!--		dropdown menu end  --> 
             </li>
           </ul>
