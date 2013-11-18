@@ -119,15 +119,21 @@ commercial_category=[
 		});
 		$('#search').click(function(event)
 		{
+			error_msg = "";
 			event.preventDefault();
-			if( ($('#property').val() !='Select') && ($('#property').val()) ) 
+			if($('input:radio[name=type]:checked').val() == undefined)
+			{
+				error_msg = "Please select a type";
+			}
+			else if( ($('#property').val() !='Select') && ($('#property').val()) ) 
 			{
 				$('#form').submit();
 			}
 			else
 			{
-				alert("Please select property type");
+				error_msg = "Please select a property";
 			}
+			$('#error_msg').html(error_msg);
 		});
 
 	$('.pagenation a').click(function ()

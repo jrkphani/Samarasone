@@ -117,6 +117,8 @@
           </ul>
         </div>
         <div class="boxex width9">
+			<p id="error_msg">
+			</p>
           <p class="serh_box">
             <input id="search" class="serch_box" type="submit" name="search" value="Search">
           </p>
