@@ -8,6 +8,7 @@
   <div class="search_box">
     <form name="form" id="form" method="post" action="">
       <input type="hidden" id="page" name="page" value="0" />
+      <input type="hidden" id="page_type" value="<?php echo $page_type; ?>" />
       <div class="width_90">
         <div class="boxex width9">
           <p class="color_orange">Search</p>
@@ -15,12 +16,12 @@
         <div class="boxex width9">
           <ul>
             <li style="margin:45px 0 0 0;">
-              <input value="buy" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='buy') echo 'checked="checked"'; ?> />
+              <input value="sale" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='sale') echo 'checked="checked"'; ?> />
               Buy
             </li>
             <li style="margin: 25px 0 0 0;">
-              <input value="rent" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='rent') echo 'checked="checked"'; ?> />
-              Rent
+              <input value="lease" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='lease') echo 'checked="checked"'; ?> />
+              <?php if($page_type=='residential') echo 'Rent'; else echo 'Lease'; ?>
             </li>
           </ul>
         </div>
@@ -51,6 +52,7 @@
         </div>
         <div class="boxex">
           <ul>
+            <?php if($page_type!='business') { ?>
             <li>Property Type</li>
             <li> 
               <!--		dropdown menu  -->
@@ -59,10 +61,15 @@
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>
                 <select class="dropdown-text dd_fonts" name="property" id="property" autocomplete="off">
 									<option value="<?=$property;?>"><? if($property) echo $property; else echo 'Select'; ?></option>
+                  <?php if($page_type=='commercial') { ?>
+                  <option value="Commercial">Commercial</option>
+                  <option value="commercialLand">Commercial Land</option>
+                  <?php } ?>
                 </select>
               </div>
               <!--		dropdown menu end  --> 
             </li>
+            <?php } else { echo '<input type="hidden" name="property" id="property" value="Business" />'; } ?>
             <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
@@ -155,6 +162,23 @@
         </div>
         <div class="boxex width13">
           <ul>
+            <li>Energy Efficiency</li>
+            <li> 
+              <!--    dropdown menu  -->
+              <div class="dropdown width84 propert_top">
+                <input class="dropdown-toggle" type="text">
+                <div class="dropdown-text dd_fonts" style="visibility:hidden;">Car Ports</div>
+                <select class="dropdown-text dd_fonts" name="energyRating">
+                  <option value="">Any</option>
+                  <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $energyRating)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
+                </select>
+              </div>
+              <!--    dropdown menu end  --> 
+            </li>
+          </ul>
+        </div>
+        <div class="boxex width13">
+          <ul>
             <li>Car Ports</li>
             <li> 
               <!--		dropdown menu  -->
@@ -217,7 +241,7 @@
 </div>
 <div class="comm_resi_header_top width_1060">
   <h1><a href="<?php echo base_url(); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a> </h1>
-  <h5 class="page_name"><a href="#">Commercial / Residential</a></h5>
+  <h5 class="page_name"><a href="#"><?php echo ucwords($page_type); ?></a></h5>
  </div>
 
 <!-- container -->

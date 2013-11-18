@@ -1,25 +1,38 @@
 <?php
 class Searchnew_model extends CI_Model
 {
+    function getTotal($data)
+    {
+        $this->db->select($data['select']);
+        
+        if(isset($data['where']))
+            $this->db->where($data['where']);
+        if($data['category'])
+            $this->db->where_in('category',$data['category']);
+        if(isset($data['sale_type']))
+            $this->db->where_in('commercialListingType',$data['sale_type']);
+
+        $this->db->from($data['table']);
+        $query = $this->db->get();
+        $total = $query->num_rows();
+        return $total;
+    }
+
 	function getresults($data)
 	{
         $this->db->select($data['select']);
+
         if(isset($data['where']))
             $this->db->where($data['where']);
-        //if(isset($data['category']))
-          //  $this->db->where_in('category',$data['category']);
-		$this->db->from($data['table']);
-        $query = $this->db->get();
-        $total = $query->num_rows();
-        
-        $this->db->select($data['select']);
-        if(isset($data['where']))
-            $this->db->where($data['where']);
-        //if(isset($data['category']))
-          //  $this->db->where_in('category',$data['category']);
+        if($data['category'])
+            $this->db->where_in('category',$data['category']);
+        if(isset($data['sale_type']))
+            $this->db->where_in('commercialListingType',$data['sale_type']);
+
         $this->db->from($data['table']);
         $this->db->limit(3,$data['limit']);
-        $obj=$this -> db -> get()->result();
+        echo $this->db->last_query();
+        return $this -> db -> get()->result();
 
 		//$this->db->get();
 		//$query = $this->db->last_query();
@@ -49,10 +62,10 @@ class Searchnew_model extends CI_Model
          
         //$data = $query->result();
         
-        $result['total']=$total;
+        /*$result['total']=$total;
         $result['obj']=$obj;
-        //$this->db->last_query();
-        return $result;
+        $this->db->last_query();
+        return $result;*/
 	}
 }
 ?>

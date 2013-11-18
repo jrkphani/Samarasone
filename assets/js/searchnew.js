@@ -54,24 +54,41 @@ holiday_category =
 		'Unit',
 		'Villa',
 		'Other'];
+commercial_category=[
+		'Commercial Farming',
+		'Land/Development',
+		'Hotel/Leisure',
+		'Industrial/Warehouse',
+		'Medical/Consulting',
+		'Offices',
+		'Retail',
+		'Showrooms/Bulky Goods'];
+
 	$('.radio').click(function() {
-		$('#category').html('');
-		$('#property').html('<option value"">Select</option>');	
-		if($(this).val() == "buy")
+		var page_type=$('#page_type').val();
+		if(page_type=='residential')
 		{
-			property = ['Residential','Rural','Land'];
-			$.each(property, function(key, value) {   
-			 $('#property').append('<option value"'+value+'">'+value+'</option>'); 
-			});
-		}
-		else
-		{
-			property = ['Rental','Holiday'];
-			$.each(property, function(key, value) {   
-			$('#property').append('<option value"'+value+'">'+value+'</option>');
-			});
+			$('#category').html('');
+			$('#property').html('<option value"">Select</option>');
+			var buy_type=$(this).val();
+
+			if(buy_type=="sale")
+			{
+				property = ['Residential','Rural','Land'];
+				$.each(property, function(key, value) {   
+				 $('#property').append('<option value"'+value+'">'+value+'</option>'); 
+				});
+			}
+			else if(buy_type=="lease")
+			{
+				property = ['Rental','Holiday'];
+				$.each(property, function(key, value) {   
+				$('#property').append('<option value"'+value+'">'+value+'</option>');
+				});
+			}
 		}
 		});
+
 		$('#property').change(function()
 		{
 			$('#category').html('');	
@@ -90,6 +107,12 @@ holiday_category =
 			else if($(this).val() == 'Holiday')
 			{
 				$.each(holiday_category, function(key, value) {   
+					$('#category').append('<option value"'+value+'">'+value+'</option>'); 
+				});
+			}
+			else if($(this).val() == 'Commercial')
+			{
+				$.each(commercial_category, function(key, value) {   
 					$('#category').append('<option value"'+value+'">'+value+'</option>'); 
 				});
 			}

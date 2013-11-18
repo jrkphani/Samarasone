@@ -6,10 +6,14 @@ class Searchnew extends CI_Controller
 		parent::__construct();
 	}
 
-	function index()
+	function index($page_type=NULL)
 	{
+		if($page_type!='residential' && $page_type!='commercial' && $page_type!='business')
+			$data['page_type']='residential';
+		else
+			$data['page_type']=$page_type;
 		$pagi_page = $this->input->post('page');
-		$page ='Residential';
+
 		$data['type'] = $this->input->post('type');
 		$data['property'] = $this->input->post('property');
 		$data['category'] = $this->input->post('category');
@@ -21,6 +25,7 @@ class Searchnew extends CI_Controller
 		$data['garage'] = $this->input->post('garage');
 		$data['area_min'] = $this->input->post('area_min');
 		$data['area_max'] = $this->input->post('area_max');
+		$data['energyRating'] = $this->input->post('energyRating');
 
 
 
@@ -35,9 +40,11 @@ class Searchnew extends CI_Controller
 		//$results['type']=$data['type'];
 		//$data['page']='Residential';
 		//$data['type']='buy';
-		if($page === 'Residential')
+		if($data['property'])
 		{
-			if($data['type'] === 'buy')
+		if($data['page_type'] === 'residential')
+		{
+			if($data['type'] === 'sale')
 			{
 				$data['select']=array('headline','price','suburb','description');
 
@@ -50,7 +57,7 @@ class Searchnew extends CI_Controller
 				if($data['area_max']>0)
 					$where['area <'] = $data['area_max'];
 
-				if($data['property'] === 'Residential')
+				if(($data['property'] === 'Residential'))
 				{
 					$data['table'] = 'residential';
 					if($data['bedroom'])
@@ -61,8 +68,6 @@ class Searchnew extends CI_Controller
 						$where['carports'] = $data['carport'];
 					if($data['garage'])
 						$where['garages'] = $data['garage'];
-					if($data['category'])
-						$data['category'] = $data['category'];
 					if(isset($where))
 						$data['where'] = $where;
 				}
@@ -89,12 +94,8 @@ class Searchnew extends CI_Controller
 						$data['where'] = $where;
 					unset($data['category']);
 				}
-				$data['limit']=$pagi_page;
-				$result = $this->searchnew_model->getresults($data);
-				$data['result'] = $result['obj'];
-				$this->pagination($result['total']);
 			}
-			else if($data['type'] === 'rent')
+			else if($data['type'] === 'lease')
 			{
 				$data['select']=array('headline','rent as price','suburb','description');
 
@@ -130,23 +131,65 @@ class Searchnew extends CI_Controller
 						$data['holidayCategory'] = $data['category'];
 					unset($data['category']);
 				}
-				$data['limit']=$page;
-				$result = $this->searchnew_model->getresults($data);
-				$data['result'] = $result['obj'];
-				$this->pagination($data['total']);
 			}
 		}
-		//$data['buy'] = $this->elements->buy['Residential'];
-		//echo "<pre>";
-		//print_r($data); die;
+		else if($data['page_type'] === 'commercial')
+		{
+			$data['select']=array('headline','price','suburb','description');
+			if($data['price_min']>0)
+				$where['price >'] = $data['price_min'];
+			if($data['price_max']>0)
+				$where['price <'] = $data['price_max'];
+			if($data['type'])
+				$data['sale_type']=array($data['type'],'both');
+			if($data['property'] === 'Commercial')
+			{
+				if($data['area_min']>0)
+					$where['area_min >'] = $data['area_min'];
+				if($data['area_max']>0)
+					$where['area_max <'] = $data['area_max'];
+				if($data['energyRating'])
+						$where['energyRating'] = $data['energyRating'];
+				if($data['carport'])
+					$where['carSpaces'] = $data['carport'];
+				if($data['category'])
+					$data['commercialCategory'] = $data['category'];
+				$data['table'] = 'commercial';
+				if(isset($where))
+						$data['where'] = $where;
+				unset($data['category']);
+			}
+			else if($data['property'] === 'commercialLand')
+			{
+				if($data['area_min']>0)
+					$where['area >'] = $data['area_min'];
+				if($data['area_max']>0)
+					$where['area <'] = $data['area_max'];
+				if(isset($where))
+						$data['where'] = $where;
+				$data['table'] = 'commercialLand';
+				unset($data['category']);
+			}
+		}
+		else if($data['page_type'] === 'business')
+		{
+			
+		}
+
+		$data['limit']=$pagi_page;
+		$total= $this->searchnew_model->getTotal($data);
+		$data['result'] = $this->searchnew_model->getresults($data);
+		$this->pagination($data['page_type'],$total);
+		}
 		$this->load->view('template', $data);
 	}
 
-	function pagination($total)
+	function pagination($page,$total)
 	{
 		$this->load->library('pagination');
 		$config['per_page'] = 3;
-		$config['base_url'] = base_url('searchnew/index');
+		$config['uri_segment'] = 4;
+		$config['base_url'] = base_url('searchnew/index/'.$page);
 		$config['total_rows'] = $total;
 			
 		//Design
