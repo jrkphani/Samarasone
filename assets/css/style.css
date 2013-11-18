@@ -31,9 +31,25 @@ table {	border-collapse: collapse;	border-spacing: 0;}
 
 /* ************************* body ******************************** */
 
-p, h1, h2, h3, h4, h6{font:24px HelveNueThin, Arial; color:#000;}
+p, h1, h2, h3, h4, h5, h6{font:24px HelveNueThin, Arial; color:#000;}
 .clearall{clear:both;}
 
+/* ************************* scroll bar css in body ******************************** */
+ body, html{
+scrollbar-face-color: #000066;
+scrollbar-highlight-color: #000066;
+scrollbar-3dlight-color: #000066;
+scrollbar-darkshadow-color: #000066;
+scrollbar-arrow-color: #000066;
+scrollbar-track-color: #c0c0c0;
+	::-webkit-scrollbar { width: 3px; height: 3px;}
+	::-webkit-scrollbar-button {  background-color: #666; }
+	::-webkit-scrollbar-track {  background-color: #999;}
+	::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+	::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+	::-webkit-scrollbar-corner { background-color: #999;}
+	::-webkit-resizer { background-color: #666;}
+}
 /* ************************* wrapper ******************************** */
 .wrapper{width:100%; margin:0 auto;}
 .width_1060{width:1060px; margin:0 auto;}

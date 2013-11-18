@@ -65,9 +65,9 @@
          
       <div class="conatct_right">
      	 <h3 class="contct_header" style="visibility:hidden;">Gallery</h3>
-       <p class="cont_top cont_btm"><a class="sell_mail1"href="#">Find My Home</a></p>
-       <p class="cont_btm"><a class="sell_mail2" href="#">Sell My Home</a></p>
-       <p class="cont_btm"><a class="fb_mail" href="#">Facebook</a></p>
+       <p class="cont_top cont_btm sell_mail1"><a href="#">Find My Home</a></p>
+       <p class="cont_btm sell_mail2"><a href="#">Sell My Home</a></p>
+       <p class="cont_btm fb_mail"><a href="#">Facebook</a></p>
         
      	 </div>
       </div>
