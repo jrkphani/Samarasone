@@ -4,13 +4,17 @@ class Searchnew_model extends CI_Model
     function getTotal($data)
     {
         $this->db->select($data['select']);
-        
+
         if(isset($data['where']))
             $this->db->where($data['where']);
-        if($data['category'])
+        if(isset($data['category']) && $data['category'])
             $this->db->where_in('category',$data['category']);
         if(isset($data['sale_type']))
             $this->db->where_in('commercialListingType',$data['sale_type']);
+        if(isset($data['businessCategory']))
+            $this->db->where_in('businessCategory',$data['businessCategory']);
+        if(isset($data['businessSubCategory']))
+            $this->db->where_in('businessSubCategory',$data['businessSubCategory']);
 
         $this->db->from($data['table']);
         $query = $this->db->get();
@@ -24,14 +28,18 @@ class Searchnew_model extends CI_Model
 
         if(isset($data['where']))
             $this->db->where($data['where']);
-        if($data['category'])
+        if(isset($data['category']) && $data['category'])
             $this->db->where_in('category',$data['category']);
         if(isset($data['sale_type']))
             $this->db->where_in('commercialListingType',$data['sale_type']);
+        if(isset($data['businessCategory']))
+            $this->db->where_in('businessCategory',$data['businessCategory']);
+        if(isset($data['businessSubCategory']))
+            $this->db->where_in('businessSubCategory',$data['businessSubCategory']);
 
         $this->db->from($data['table']);
         $this->db->limit(3,$data['limit']);
-        echo $this->db->last_query();
+        //echo $this->db->last_query();
         return $this -> db -> get()->result();
 
 		//$this->db->get();

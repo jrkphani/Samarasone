@@ -90,7 +90,11 @@
                 {
                   $business_category=array('Accommodation/Tourism','Automotive','Beauty/Health','Education/Training','Food/Hospitality','Franchise','Home/Garden','Import/Export/Whole','Industrial/Manufacturing','Leisure/Entertainment','Professional','Retail','Rural','Services','Transport/Distribution');
                   foreach ($business_category as $key=>$value) {
-                    echo '<input type="checkbox" classAttr="business_category'.$key.'" autocomplete="off" name="category[]" class="category" value="'.$value.'" /> '.$value.'<br/>';
+                    $checked="";
+                    if(isset($businessCategory))
+                    if(in_array($value, $businessCategory))
+                      $checked='checked = "checked"';
+                    echo '<input type="checkbox" '.$checked.' classAttr="business_category'.$key.'" autocomplete="off" name="category[]" class="category" value="'.$value.'" /> '.$value.'<br/>';
                   }
                 }
 
@@ -109,7 +113,6 @@
               <!--		dropdown menu end  -->
             <? if($page_type == 'business')
             {
-              $sub_category = array();
               ?>
               <li style="margin:0px 0 17px 0;">Sub  Category</li>
               <!--    dropdown menu  -->
@@ -118,11 +121,10 @@
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
 			  <div id="sub_category" class="width85">
                   <?
-                  /*for($i=1; $i<10; $i++) 
-                    {
-                      echo '<input type"checkbox" value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'<br/>';
-                    }*/
-                  ?>
+                  if(is_array($sub_category)) {
+                  foreach ($sub_category as $value) {
+                    echo '<span ><input type="checkbox" value="'.$value.'" checked = "checked" />'.$value.'</br></span>';
+                  }} ?>
 				</div>
               </div>
             <?

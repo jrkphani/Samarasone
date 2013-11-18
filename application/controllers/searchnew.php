@@ -27,7 +27,7 @@ class Searchnew extends CI_Controller
 		$data['area_max'] = $this->input->post('area_max');
 		$data['energyRating'] = $this->input->post('energyRating');
 		$data['return'] = $this->input->post('return');
-		$data['businessSubCategory'] = $this->input->post('businessSubCategory');
+		$data['sub_category'] = $this->input->post('sub_category');
 
 
 
@@ -184,8 +184,8 @@ class Searchnew extends CI_Controller
 				$data['sale_type']=array($data['type'],'both');
 			if($data['category'])
 					$data['businessCategory'] = $data['category'];
-			if($data['businessSubCategory']>0)
-				$where['businessSubCategory <'] = $data['businessSubCategory'];
+			if($data['sub_category'])
+				$data['businessSubCategory'] = $data['sub_category'];
 			$data['table'] = 'business';
 			unset($data['category']);
 		}
