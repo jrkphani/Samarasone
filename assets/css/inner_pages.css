@@ -112,7 +112,7 @@ scrollbar-track-color: #c0c0c0;
 .width13{width:13%!important;}
 .width14{width:13.6%!important;}
 .width84{width:84.7%!important;}
-.width85{width: 81%; height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #e3eaee; border-radius: 4px; padding: 5px;}
+.width85{width: 81%; height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #e3eaee; border-radius: 4px; padding: 5px; font-family:HelveNueThin, Arial; }
 .boxex ul li{margin:0px 0 10px 0; font-family:HelveNueThin, Arial; font-size:20px; line-height: 27px;}
 .boxex p{margin:70px 0 0 0;}
 #error_msg{position: absolute; font-size: 14px; color: red; margin:50px 0 0 -7px!important;} 

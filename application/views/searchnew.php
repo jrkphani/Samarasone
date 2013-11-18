@@ -52,13 +52,13 @@
         </div>
         <div class="boxex">
           <ul>
-            <?php if($page_type!='business') { ?>
             <li>Property Type</li>
             <li> 
               <!--		dropdown menu  -->
               <div class="dropdown width84 propert_top">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>
+				<?php if($page_type!='business') { ?>
                 <select class="dropdown-text dd_fonts" name="property" id="property" autocomplete="off">
 									<option value="<?=$property;?>"><? if($property) echo $property; else echo 'Select'; ?></option>
                   <?php if($page_type=='commercial') { ?>
@@ -66,14 +66,18 @@
                   <option value="commercialLand">Commercial Land</option>
                   <?php } ?>
                 </select>
+				 <?php } else {?> 
+				 <select class="dropdown-text dd_fonts" name="property" id="property">
+				 <option value="Business">Business</option>
+				 </select>
+				 <?} ?>
               </div>
               <!--		dropdown menu end  --> 
             </li>
-            <?php } else { echo '<input type="hidden" autocomplete="off" name="property" id="property" value="Business" />'; } ?>
             <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
-              <div id="category">
+              <div id="category" class="width85">
                 <?php
                 if($page_type!='business')
                 {
@@ -107,23 +111,29 @@
             {
               $sub_category = array();
               ?>
-              <li style="margin:15px 0 5px 0;">Sub  Category</li>
+              <li style="margin:0px 0 17px 0;">Sub  Category</li>
               <!--    dropdown menu  -->
-              <div class="dropdown w100 propert_top" id="sub_category">
+              <div class="dropdown w100 propert_top" >
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
+			  <div id="sub_category" class="width85">
                   <?
                   /*for($i=1; $i<10; $i++) 
                     {
                       echo '<input type"checkbox" value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'<br/>';
                     }*/
                   ?>
+				</div>
               </div>
             <?
             }
             else
             {?>
-              <li style="margin:15px 0 5px 0;">Bedroom</li>
+              <li style="margin:0px 0 17px 0;">Bedroom</li>
               <!--    dropdown menu  -->
               <div class="dropdown w100 propert_top">
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
                 <select class="dropdown-text dd_fonts" name="bedroom">
                   <option value="">Any</option>
                   <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $bedroom)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
