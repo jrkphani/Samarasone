@@ -95,25 +95,25 @@ commercial_category=[
 			if($(this).val() == 'Residential' || $(this).val() == 'Rental')
 			{
 				$.each(residential_category, function(key, value) {   
-					$('#category').append('<option value"'+value+'">'+value+'</option>'); 
+					$('#category').append('<input type="checkbox" name="category[]" value="'+value+'" /> '+value+'</br>');
 				});
 			}
 			else if($(this).val() == 'Rural')
 			{
 				$.each(rural_category, function(key, value) {   
-					$('#category').append('<option value"'+value+'">'+value+'</option>'); 
+					$('#category').append('<input type="checkbox" name="category[]" value="'+value+'" /> '+value+'</br>');
 				});
 			}
 			else if($(this).val() == 'Holiday')
 			{
 				$.each(holiday_category, function(key, value) {   
-					$('#category').append('<option value"'+value+'">'+value+'</option>'); 
+					$('#category').append('<input type="checkbox" name="category[]" value="'+value+'" /> '+value+'</br>');
 				});
 			}
 			else if($(this).val() == 'Commercial')
 			{
 				$.each(commercial_category, function(key, value) {   
-					$('#category').append('<option value"'+value+'">'+value+'</option>'); 
+					$('#category').append('<input type="checkbox" name="category[]" value="'+value+'" /> '+value+'</br>');
 				});
 			}
 		});

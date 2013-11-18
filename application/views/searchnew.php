@@ -73,11 +73,14 @@
             <li style="margin:63px 0 5px 0;">Category</li>
             <li> 
               <!--		dropdown menu  -->
-              <select id="category" name="category[]"  multiple="multiple" style="width:85%; height:55px;" size="10">
-                <?php foreach ($category as $key => $value) {
-                  echo '<option selected="selected" value="'.$value.'">'.$value.'</option>';
-                }?>
-              </select>
+              <div id="category">
+                <?php
+                if($category)
+                foreach ($category as $key => $value) {	
+				echo '<input type="checkbox" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
+                }
+                ?>
+              </div>
               <!--		dropdown menu end  --> 
             </li>
           </ul>
