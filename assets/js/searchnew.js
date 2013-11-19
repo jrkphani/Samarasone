@@ -289,7 +289,7 @@ business_category['Transport/Distribution']=[
 		{
 			$('#category').html('');
 			$('#moresearch, .category, .bedroom').show();
-			$('#area').hide();
+			$('#area,.moresearch').hide();
 			if($(this).val() == 'Residential' || $(this).val() == 'Rental')
 			{
 				$.each(residential_category, function(key, value) {   
