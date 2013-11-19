@@ -64,19 +64,31 @@
               <div class="dropdown width84 propert_top">
                 <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>
-				<?php if($page_type!='business') { ?>
                 <select class="dropdown-text dd_fonts" name="property" id="property" autocomplete="off">
-									<option value="<?=$property;?>"><? if($property) echo $property; else echo 'Select'; ?></option>
-                  <?php if($page_type=='commercial') { ?>
-                  <option value="Commercial">Commercial</option>
-                  <option value="commercialLand">Commercial Land</option>
-                  <?php } ?>
-                </select>
+				<?php if($page_type!='business')
+					{ ?>
+					<option value="">Select</option>
+					<?php if($page_type=='commercial') {?>
+						<option value="Commercial" <? if(isset($property) && $property == 'Commercial') echo 'selected="selected"'; ?>>Commercial</option>
+						<option value="CommercialLand" <? if(isset($property) && $property == 'CommercialLand') echo 'selected="selected"'; ?>>Commercial Land</option>
+					<? } else {
+						if($type=='sale')
+						{?>
+							<option value="Residential" <? if(isset($property) && $property == 'Residential') echo 'selected="selected"'; ?>>Residential</option>
+							<option value="Rural" <? if(isset($property) && $property == 'Rural') echo 'selected="selected"'; ?>>Rural</option>
+							<option value="Land" <? if(isset($property) && $property == 'Land') echo 'selected="selected"'; ?>>Land</option>
+						<? }
+						else
+						{?>
+							<option value="Rental" <? if(isset($property) && $property == 'Rental') echo 'selected="selected"'; ?>>Rental</option>
+							<option value="Holiday" <? if(isset($property) && $property == 'Holiday') echo 'selected="selected"'; ?>>Holiday</option>
+						<? }
+					
+					} ?>
 				 <?php } else {?> 
-				 <select class="dropdown-text dd_fonts" name="property" id="property">
-				 <option value="Business">Business</option>
-				 </select>
+				 <option value="Business" selected="selected">Business</option>
 				 <?} ?>
+				 </select>
               </div>
               <!--		dropdown menu end  --> 
             </li>
@@ -87,6 +99,57 @@
                 <?php
                 if($page_type!='business')
                 {
+					
+					if($page_type=='commercial')
+					{	
+						if(isset($commercialCategory) && is_array($commercialCategory)) { } else
+						$commercialCategory=array();
+						if(isset($property) && ($property))
+						foreach ($buy['Commercial'][$property] as $key => $value) {
+							$checked = '';
+							if(in_array($value, $commercialCategory))
+							$checked = 'checked = "checked"';
+								
+  				          echo '<input type="checkbox" '.$checked.'autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
+						}
+					}
+					else
+					{
+						if(isset($category) && is_array($category)) { } else
+						$category=array();
+						if($type=='sale')
+						{
+							if(isset($property))
+							foreach ($buy['Residential'][$property] as $key => $value) {
+							$checked = '';
+							if(in_array($value, $category))
+							$checked = 'checked = "checked"';
+								
+  				          echo '<input type="checkbox" '.$checked.'autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
+							}
+						}
+						else
+						{
+							if(isset($holidayCategory) && is_array($holidayCategory)) { } else
+							$holidayCategory=array();
+							if(isset($property))
+							foreach ($rent['Residential'][$property] as $key => $value) {
+							$checked = '';
+							if($property == 'Holiday')
+							{
+								if(in_array($value, $holidayCategory))
+								$checked = 'checked = "checked"';
+							}
+							else
+							{
+								if(in_array($value, $category))
+								$checked = 'checked = "checked"';
+							}
+								
+							echo '<input type="checkbox" '.$checked.'autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
+							}
+						}
+					}
                   if(isset($category) && is_array($category))
                   foreach ($category as $key => $value) {	
   				          echo '<input type="checkbox" autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
