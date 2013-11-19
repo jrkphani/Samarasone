@@ -24,7 +24,7 @@
 <p>‘Non-circumvention non-disclosure agreement’ as well as proof of funds and a ‘letter of interest’ will be required on application. </p>
 </div>
   <div class="res_img_container">
-    <div class="respage_img"> 
+<!--    <div class="respage_img"> 
       <img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" alt="residential" title="residential"/> 
     </div>
     <div class="respage_img">  
@@ -35,6 +35,18 @@
     </div>
     <div class="respage_img">  
       <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" alt="residential" title="residential"/> 
-    </div>
+    </div> -->
+	<ul id="scroller">
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+	</ul>
   </div>
-  <div class="clearall"></div>
+  <div class="clearall"></div>  
+  <!-- bottom slider js -->
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.js');?>"></script>
