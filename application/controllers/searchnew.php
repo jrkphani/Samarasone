@@ -208,8 +208,8 @@ class Searchnew extends CI_Controller
 		$config['total_rows'] = $total;
 			
 		//Design
-		/*$config['first_link'] = 'First';
-		$config['first_tag_open'] = '<li class="next_img next">';
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="first">';
 		$config['first_tag_close'] = '</li>';
 		$config['prev_link'] = 'Previous';
 		$config['prev_tag_open'] = '<li class="previous_img previous">';
@@ -222,8 +222,8 @@ class Searchnew extends CI_Controller
 		$config['next_tag_open'] = '<li class="next_img next">';
 		$config['next_tag_close'] = '</li>';
 		$config['last_link'] = 'Last';
-		$config['last_tag_open'] = '<li class="next_img next">';
-		$config['last_tag_close'] = '</li>';*/
+		$config['last_tag_open'] = '<li class="last">';
+		$config['last_tag_close'] = '</li>';
 
 		$this->pagination->initialize($config);
 	}

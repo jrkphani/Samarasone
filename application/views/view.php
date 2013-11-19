@@ -22,8 +22,8 @@
 	                    	<h2>Property Location</h2><br />
 	                    	<p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus est, sollicitudin a varius eu, consectetur sed neque.</p>
 	                	</div>
-	                	<a href="<?php echo base_url('contacts'); ?>">Location</a><br/>
-	                	<a href="<?php echo base_url('contacts'); ?>">Gallery</a>
+	                	<a href="#">Location</a><br/>
+	                	<a href="#">Gallery</a>
 	              	</div>
 	            </div>
 	            <!-- Image and appointment form -->

@@ -113,16 +113,42 @@
       </div> 
       
         <!-- container -->     
-          <div class="container">
-						<p class="color_orange north_shore">North Shore <span></span></p>            
+          <div class="container border_img">
+			<div class="conti_border">
+				<p class="color_orange north_shore">North Shore <span></span></p>            
             	<div class="s_img_boxes">
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
                 </div>
-                <div class="content">
+                <div class="content business_srch">
                   <h3>110 Albert Avenue,</h3>
                   <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  <p class="cnt_business">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  justo. Morbi tristique lorem viverra odio feugiat.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content business_srch">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt_business">Lorem ipsum dolor sit amet.</p>
+                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
+                  <a class="fright" href="#">More</a>
+                 </div>
+              </div>
+            	<div class="s_img_boxes">
+              	<div class="search_img">
+               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
+                </div>
+                <div class="content business_srch">
+                  <h3>110 Albert Avenue,</h3>
+                  <h4>Chatswood</h4>
+                  <p class="cnt_business">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
                   justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
                   Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
                   vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
@@ -134,10 +160,10 @@
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
                 </div>
-                <div class="content">
+                <div class="content business_srch">
                   <h3>110 Albert Avenue,</h3>
                   <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  <p class="cnt_business">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
                   justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
                   Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
                   vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
@@ -149,40 +175,10 @@
               	<div class="search_img">
                	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
                 </div>
-                <div class="content">
+                <div class="content business_srch">
                   <h3>110 Albert Avenue,</h3>
                   <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-            	<div class="s_img_boxes">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-            	<div class="s_img_boxes">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
+                  <p class="cnt_business">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
                   justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
                   Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
                   vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
@@ -191,20 +187,21 @@
                  </div>
               </div>          
           </div>
+		 </div>
  			  <!-- container -->
         
- 			  <!-- Next Menu -->
+ 			  <!-- pagenation Menu -->
         <div class="clearall"></div>
-        <div class="next_menu">
+<!--         <div class="next_menu">
         	<ul>
         		<li><a class="previous" href="#">Previous</a></li>
           	<li><a class="center" href="#">&nbsp;</a></li>
           	<li><a class="active" href="#">&nbsp;</a></li>
           	<li><a class="next" href="#">Next</a></li>
           </ul>
-        </div>
+        </div> -->
         
- 			  <!-- Next end -->
+ 			  <!-- pagenation end -->
         
 			<div class="clearall"></div>
      </div>
