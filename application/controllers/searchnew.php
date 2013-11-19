@@ -28,6 +28,7 @@ class Searchnew extends CI_Controller
 		$data['energyRating'] = $this->input->post('energyRating');
 		$data['return'] = $this->input->post('return');
 		$data['sub_category'] = $this->input->post('sub_category');
+		$data['pa'] = $this->input->post('pa');
 
 
 

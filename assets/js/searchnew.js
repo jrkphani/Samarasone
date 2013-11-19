@@ -359,4 +359,8 @@ business_category['Transport/Distribution']=[
 	    form.submit(); // submit the form
 	    return false; // avoid the default behaviour of the link
 	});
+	$('#moresearch').click(function()
+	{
+		$('.moresearch').toggle();
+	});
 });
