@@ -201,7 +201,7 @@
 							  $checked = '';
 							  if(in_array($business_subcategory,$sub_category))
 							  $checked = 'checked = "checked"';
-							  echo '<span class="business_category"'.$i.'><input name="sub_category[]" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
+							  echo '<span class="business_category'.$i.'"><input name="sub_category[]" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
 						  }
 						  $i++;
 					  }
