@@ -36,7 +36,7 @@ a{text-decoration:none;}b{font-weight:bold;}i{font-style:italic;}
 
 /* ************************* scroll bar css in body ******************************** */
  body, html{
-scrollbar-face-color: #000066;
+/* scrollbar-face-color: #000066;
 scrollbar-highlight-color: #000066;
 scrollbar-3dlight-color: #000066;
 scrollbar-darkshadow-color: #000066;
@@ -48,7 +48,7 @@ scrollbar-track-color: #c0c0c0;
 	::-webkit-scrollbar-track-piece { background-color: #ffffff;}
 	::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
 	::-webkit-scrollbar-corner { background-color: #999;}
-	::-webkit-resizer { background-color: #666;}
+	::-webkit-resizer { background-color: #666;} */
 }
 
 /* ************************* wrapper ******************************** */
@@ -132,7 +132,7 @@ scrollbar-track-color: #c0c0c0;
  background-image: linear-gradient(to bottom, #cdcdcd, #b3b3b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cdcdcd, endColorstr=#b3b3b3);}
  .pagenation li{float:left; margin-left: 5px;}
 .serh_box{padding: 0px 0 0 10px;}
-.more_srh{margin: 20px 0 0 0px!important;}
+.more_srh{margin: 20px 0 0 0px!important; font-size: 14px;}
 .more_srh a{font-size: 13px;}
 .more_srh a:hover{text-decoration:underline;}
 .txt_width_hieight{height: 39px; width:22.8%; border-radius: 4px; border: 1px solid #e3eaee!important; padding-left: 15px; font-family: inherit;}
@@ -156,7 +156,7 @@ width: 100%;}
 
 .s_img_boxes_commer .content_commer h3, h4, .cnt{ color:#285069; font-size:30px; padding:0 0 6px 0;}
 .s_img_boxes_commer .content_commer h4{font-size:26px;}
-.s_img_boxes_commer .content_commer p{font-size:20px; color:#000; font-weight:normal; overflow: hidden; height: 65px;}
+.s_img_boxes_commer .content_commer p{font-size:20px; color:#000; font-weight:normal; overflow: hidden; height: 57px;}
 .s_img_boxes_commer .content_commer .fleft{float:left; font-size:24px;}
 .s_img_boxes_commer .content_commer .fleft span{color:#285069;}
 .s_img_boxes_commer .content_commer .fright{float:right; padding: 10px 20px; margin-bottom: 10px;
@@ -169,7 +169,7 @@ border:1px solid #cacaca; font-size:12px; font-family:arial, helvetica, sans-ser
  background-image: linear-gradient(to bottom, #E6E6E6, #CCCCCC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E6E6E6, endColorstr=#CCCCCC);
 }
 
-.s_img_boxes .content h3, h4, .cnt{ color:#285069; font-size:30px; padding:0 0 6px 0; font-weight: bold;}
+.s_img_boxes .content h3, h4, .cnt{ color:#285069; font-size:30px; padding:0 0 6px 0; font-weight: bold; line-height: 29px!important;}
 .s_img_boxes .content .cnt_business{font-size:20px; color:#fff; font-weight: normal; padding: 5px 0; overflow: hidden; height: 68px; margin: 10px 0;}
 .s_img_boxes .content .fleft{color:#fff; float:left; font-size:22px; font-weight: bold; padding: 0 0 20px 0;}
 .s_img_boxes .content .fleft span{color:#fff;}

@@ -22,17 +22,17 @@
 <p><span class="txt_hlt">The solution</span> we believe in is Target Marketing, ensuring to match the right people to the right business.  Whether buying or selling a business, we will be with you every step of the way. </p>
  </div>
   <div class="res_img_container">
-    <div class="respage_img"> 
-      <img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" alt="Business" title="Business"/> 
-    </div>
-    <div class="respage_img">  
-      <img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" alt="Business" title="Business"/> 
-    </div>
-    <div class="respage_img">  
-      <img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" alt="Business" title="Business"/> 
-    </div>
-    <div class="respage_img">  
-      <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" alt="Business" title="Business"/> 
-    </div>
+	<ul id="scroller">
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="Business"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Business" /><span class="some-element">Business 1</span></a></li>
+	</ul>
   </div>
   <div class="clearall"></div>
+  <!-- bottom slider js -->
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.js');?>"></script>
