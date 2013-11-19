@@ -124,7 +124,7 @@
               <!--    dropdown menu  -->
               <div class="dropdown w100 propert_top" >
               <input class="dropdown-toggle" type="text">
-              <div class="dropdown-text dd_fonts" style="visibility:hidden;"></div>
+              <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
 			  <div id="sub_category" class="width85">
                   <?
                   if(is_array($sub_category)) {
