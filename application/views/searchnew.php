@@ -87,7 +87,7 @@
                 <?php
                 if($page_type!='business')
                 {
-                  if(isset($category))
+                  if(isset($category) && is_array($category))
                   foreach ($category as $key => $value) {	
   				          echo '<input type="checkbox" autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
                   }
