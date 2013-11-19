@@ -193,6 +193,7 @@
                   if(isset($businessCategory))
                   {
 					  if(isset($sub_category) && is_array($sub_category)) { } else $sub_category=array();
+					  $i=0;
 					  foreach($businessCategory as $businessvalue)
 					  {
 						  foreach($buy['Business'][$businessvalue] as $business_subcategory)
@@ -200,8 +201,9 @@
 							  $checked = '';
 							  if(in_array($business_subcategory,$sub_category))
 							  $checked = 'checked = "checked"';
-							  echo '<span ><input name="sub_category[]" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
+							  echo '<span class="business_category"'.$i.'><input name="sub_category[]" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
 						  }
+						  $i++;
 					  }
 				  }				  
                    ?>
