@@ -287,7 +287,9 @@ business_category['Transport/Distribution']=[
 
 		$('#property').change(function()
 		{
-			$('#category').html('');	
+			$('#category').html('');
+			$('#moresearch, .category, .bedroom').show();
+			$('#area').hide();
 			if($(this).val() == 'Residential' || $(this).val() == 'Rental')
 			{
 				$.each(residential_category, function(key, value) {   
@@ -299,6 +301,11 @@ business_category['Transport/Distribution']=[
 				$.each(rural_category, function(key, value) {   
 					$('#category').append('<input type="checkbox" name="category[]" value="'+value+'" /> '+value+'</br>');
 				});
+			}
+			else if($(this).val() == 'Land' || $(this).val() == 'commercialLand')
+			{
+				$('#moresearch, .moresearch, .category, .bedroom').hide();
+				$('#area').show();
 			}
 			else if($(this).val() == 'Holiday')
 			{

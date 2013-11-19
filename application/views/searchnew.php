@@ -80,10 +80,10 @@
               </div>
               <!--		dropdown menu end  --> 
             </li>
-            <li style="margin:63px 0 5px 0;">Category</li>
+            <li style="margin:63px 0 5px 0;" class="category">Category</li>
             <li> 
               <!--		dropdown menu  -->
-              <div id="category" class="width85">
+              <div id="category" class="width85 category">
                 <?php
                 if($page_type!='business')
                 {
@@ -124,7 +124,7 @@
               <!--    dropdown menu  -->
               <div class="dropdown w100 propert_top" >
               <input class="dropdown-toggle" type="text">
-              <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
+              <div class="dropdown-text dd_fonts" style="visibility:hidden;"></div>
 			  <div id="sub_category" class="width85">
                   <?
                   if(is_array($sub_category)) {
@@ -142,9 +142,9 @@
             {
 			 if($page_type == 'residential') 
 			{?>
-              <li style="margin:0px 0 17px 0;">Bedroom</li>
+              <li style="margin:0px 0 17px 0;" class="bedroom" >Bedroom</li>
               <!--    dropdown menu  -->
-              <div class="dropdown w100 propert_top">
+              <div class="dropdown w100 propert_top bedroom">
               <input class="dropdown-toggle" type="text">
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
                 <select class="dropdown-text dd_fonts" name="bedroom">
@@ -285,8 +285,10 @@
             </li>
           </ul>
         </div>
-        
-        <div class="boxex moresearch width14">
+        <? } ?>
+        <? if($page_type == 'residential' || $page_type == 'commercial') 
+		{?>
+        <div id="area" class="boxex moresearch width14">
           <ul>
             <li>Area </li>
             <li> 
