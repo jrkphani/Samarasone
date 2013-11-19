@@ -37,8 +37,10 @@ class Searchnew extends CI_Controller
 		$this->load->library('elements');
 		
 		$this->load->model('searchnew_model');
-		
+
 		$data['view_page']='searchnew';
+		$data['buy']=$this->elements->buy;
+		$data['rent']=$this->elements->rent;
 		//$results['page']=$page;
 		//$results['type']=$data['type'];
 		//$data['page']='Residential';
@@ -162,7 +164,7 @@ class Searchnew extends CI_Controller
 						$data['where'] = $where;
 				unset($data['category']);
 			}
-			else if($data['property'] === 'commercialLand')
+			else if($data['property'] === 'CommercialLand')
 			{
 				if($data['area_min']>0)
 					$where['area >'] = $data['area_min'];

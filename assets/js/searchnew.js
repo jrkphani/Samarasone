@@ -265,21 +265,21 @@ business_category['Transport/Distribution']=[
 		if(page_type=='residential')
 		{
 			$('#category').html('');
-			$('#property').html('<option value"">Select</option>');
+			$('#property').html('<option value = "">Select</option>');
 			var buy_type=$(this).val();
 
 			if(buy_type=="sale")
 			{
 				property = ['Residential','Rural','Land'];
 				$.each(property, function(key, value) {   
-				 $('#property').append('<option value"'+value+'">'+value+'</option>'); 
+				 $('#property').append('<option value = "'+value+'">'+value+'</option>'); 
 				});
 			}
 			else if(buy_type=="lease")
 			{
 				property = ['Rental','Holiday'];
 				$.each(property, function(key, value) {   
-				$('#property').append('<option value"'+value+'">'+value+'</option>');
+				$('#property').append('<option value = "'+value+'">'+value+'</option>');
 				});
 			}
 		}
@@ -289,7 +289,7 @@ business_category['Transport/Distribution']=[
 		{
 			$('#category').html('');
 			$('#moresearch, .category, .bedroom').show();
-			$('#area').hide();
+			$('#area,.moresearch').hide();
 			if($(this).val() == 'Residential' || $(this).val() == 'Rental')
 			{
 				$.each(residential_category, function(key, value) {   
@@ -302,7 +302,7 @@ business_category['Transport/Distribution']=[
 					$('#category').append('<input type="checkbox" name="category[]" value="'+value+'" /> '+value+'</br>');
 				});
 			}
-			else if($(this).val() == 'Land' || $(this).val() == 'commercialLand')
+			else if($(this).val() == 'Land' || $(this).val() == 'CommercialLand')
 			{
 				$('#moresearch, .moresearch, .category, .bedroom').hide();
 				$('#area').show();
@@ -370,4 +370,9 @@ business_category['Transport/Distribution']=[
 	{
 		$('.moresearch').toggle();
 	});
+	if($('#property').val() == 'Land' || $('#property').val() == 'CommercialLand')
+			{
+				$('#moresearch, .moresearch, .category, .bedroom').hide();
+				$('#area').show();
+			}
 });

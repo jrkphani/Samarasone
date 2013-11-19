@@ -34,8 +34,8 @@ $this->buy['Residential']['Rural'] = array(
 'MixedFarming',
 'Lifestyle',
 'Other');
-$this->buy['Residential']['Land'] = array();
-$this->rent['Residential']['HolidayRental'] = array(
+$this->buy['Residential']['Land'] = $this->buy['Commercial']['CommercialLand'] = array();
+$this->rent['Residential']['Holiday'] = array(
 'Alpine',
 'Apartment',
 'BackpackerHostel',
@@ -62,7 +62,7 @@ $this->rent['Residential']['HolidayRental'] = array(
 'Villa',
 'Other');
 
-$this->buy['Commercial']['Commercial'] = $Lease['Commercial']['Commercial'] = array(
+$this->buy['Commercial']['Commercial'] = array(
 'Commercial Farming',
 'Land/Development',
 'Hotel/Leisure',
@@ -73,7 +73,7 @@ $this->buy['Commercial']['Commercial'] = $Lease['Commercial']['Commercial'] = ar
 'Showrooms/Bulky Goods'
 );
 
-$this->buy['Business'] = $lease['Business']= array(
+$this->buy['Business'] = array(
 'Accommodation/Tourism' => array(
          'Aged Care',
          'Backpacker/Hostel',
