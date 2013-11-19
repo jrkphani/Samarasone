@@ -133,10 +133,15 @@
                   }} ?>
 				</div>
               </div>
+              <li style="margin:0px 0 17px 0;">% Return (p.a)</li>
+              <!--    dropdown menu  -->
+                    <input type="text" name="pa" value="<? echo (isset($pa))?$pa:''; ?>"/>
             <?
             }
             else
-            {?>
+            {
+			 if($page_type == 'residential') 
+			{?>
               <li style="margin:0px 0 17px 0;">Bedroom</li>
               <!--    dropdown menu  -->
               <div class="dropdown w100 propert_top">
@@ -148,6 +153,7 @@
                 </select>
               </div>
             <?
+			}
             }
             ?>
             <li>
@@ -164,7 +170,10 @@
           <p class="serh_box">
             <input id="search" class="serch_box" type="submit" name="search" value="Search">
           </p>
-          <p class="more_srh"><a href="#">More Search Option</a></p>
+			<? if($page_type != 'business') 
+			{?>
+			  <p class="more_srh" id="moresearch">More Search Option</p>
+			<? } ?>
         </div>
       </div>
       <div class="clearall"></div>
@@ -185,7 +194,9 @@
               Sale</li>
           </ul>
         </div>
-        <div class="boxex width14">
+        <? if($page_type == 'residential') 
+			{?>
+        <div class="boxex moresearch width14">
           <ul>
             <li>Bathroom</li>
             <li> 
@@ -207,7 +218,10 @@
             </li>
           </ul>
         </div>
-        <div class="boxex width13">
+        <? } ?>
+        <? if($page_type != 'residential') 
+        {?>
+        <div class="boxex moresearch width13">
           <ul>
             <li>Energy Efficiency</li>
             <li> 
@@ -224,7 +238,8 @@
             </li>
           </ul>
         </div>
-        <div class="boxex width13">
+        <? } ?>
+        <div class="boxex moresearch width13">
           <ul>
             <li>Car Ports</li>
             <li> 
@@ -246,7 +261,9 @@
             </li>
           </ul>
         </div>
-        <div class="boxex width14">
+        <? if($page_type == 'residential') 
+			{?>
+        <div class="boxex moresearch width14">
           <ul>
             <li>Garages</li>
             <li> 
@@ -268,7 +285,8 @@
             </li>
           </ul>
         </div>
-        <div class="boxex width14">
+        
+        <div class="boxex moresearch width14">
           <ul>
             <li>Area </li>
             <li> 
@@ -280,6 +298,7 @@
             </li>
           </ul>
         </div>
+        <? } ?>
       </div>      
       <!--		More Search Option End -->
     </form>
