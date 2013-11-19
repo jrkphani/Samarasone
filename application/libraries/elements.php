@@ -73,7 +73,7 @@ $this->buy['Commercial']['Commercial'] = array(
 'Showrooms/Bulky Goods'
 );
 
-$this->buy['Business'] = $lease['Business']= array(
+$this->buy['Business'] = array(
 'Accommodation/Tourism' => array(
          'Aged Care',
          'Backpacker/Hostel',

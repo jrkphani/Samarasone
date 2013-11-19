@@ -190,10 +190,21 @@
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
 			  <div id="sub_category" class="width85">
                   <?
-                  if(is_array($sub_category)) {
-                  foreach ($sub_category as $value) {
-                    echo '<span ><input type="checkbox" value="'.$value.'" checked = "checked" />'.$value.'</br></span>';
-                  }} ?>
+                  if(isset($businessCategory))
+                  {
+					  if(isset($sub_category) && is_array($sub_category)) { } else $sub_category=array();
+					  foreach($businessCategory as $businessvalue)
+					  {
+						  foreach($buy['Business'][$businessvalue] as $business_subcategory)
+						  {
+							  $checked = '';
+							  if(in_array($business_subcategory,$sub_category))
+							  $checked = 'checked = "checked"';
+							  echo '<span ><input name="sub_category[]" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
+						  }
+					  }
+				  }				  
+                   ?>
 				</div>
               </div>
               <li style="margin:0px 0 17px 0;">% Return (p.a)</li>
