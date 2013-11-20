@@ -15,6 +15,8 @@ display:none;
 <?}
 ?>
 </style>
+<div class="wrapper_bg">
+<div class="header">
 <div class="wrapper_white_bg"></div>
 <div class="wrapper_gradient_bg"> </div>
 <div class="inner_pheader"> 
@@ -224,7 +226,7 @@ display:none;
               </div>
               <!--    dropdown menu  -->
               <input class="return_bussi" type="text" name="return" value="<? echo (isset($return))?$return:''; ?>"/>
-              <span class="more_srh">% Return (p.a)</span>
+              <span class="return_pa">% Return (p.a)</span>
             <?
             }
             else
@@ -394,7 +396,7 @@ display:none;
 </div>
 <div class="comm_resi_header_top width_1060">
   <h1><a href="<?php echo base_url(); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a> </h1>
-  <h5 class="page_name"><a href="#"><?php echo ucwords($page_type); ?></a></h5>
+  <h5 class="page_name"><p><?php echo ucwords($page_type); ?></p></h5>
  </div>
 
 <!-- container -->
