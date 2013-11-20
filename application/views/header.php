@@ -18,7 +18,7 @@
 </script>
 <?php 
 $page = $this->uri->segment(1); 
-$subpage = $this->uri->segment(2); ?>
+$subpage = $this->uri->segment(2);?>
 
 <body>
 	<div class="wrapper">
@@ -31,7 +31,7 @@ $subpage = $this->uri->segment(2); ?>
        	  <li class="menu_top_bg"></li>
         </ul>
         <ul class="menu_bg">
-        	<!--<li class="home"><a href="<?php echo base_url(); ?>">Home</a></li>-->
+			<? if($page =='searchnew') {$page = ($this->uri->segment(3))?$this->uri->segment(3):'residential';}?>
         	<li class="ovalue"><a href="<?php echo base_url($page.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
         	<li class="oteam"><a href="<?php echo base_url($page.'/ourteam'); ?>">Our Team</a></li>
         	<li class="contact"><a href="<?php echo base_url($page.'/contact'); ?>">Contact</a></li>
