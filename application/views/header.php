@@ -61,7 +61,8 @@ $subpage = $this->uri->segment(2);?>
 					<?
 					foreach($imageslist as $img)
 					{
-						echo '<img src="'.base_url("assets/images/$img").'">';
+						// echo '<img src="'.base_url("assets/images/$img").'">';
+						echo '<div class="slidex" style="background:url('.base_url("assets/images/$img").') no-repeat center center; background-size: cover;"></div>';
 					}
 					?>
 				</div>

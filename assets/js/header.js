@@ -8,7 +8,7 @@ jQuery(function($) {
           auto: true,
           interval: 4000,
           swap: true,
-          pauseOnHover: true,
+          pauseOnHover: false,
           restartDelay: 2500,
           effect: "fade"
         }
