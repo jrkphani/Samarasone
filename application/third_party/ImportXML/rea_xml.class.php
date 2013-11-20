@@ -168,6 +168,7 @@ class REA_XML {
 
 		'headline',
 		'highlight',
+		'holiday',
 		'holidayCategory',
 		'holidayRental',
 
@@ -180,7 +181,12 @@ class REA_XML {
 
 		'land',
 		'landCategory',
-		'landDetails',
+		'landDetails' => array(
+			'area',
+			'frontage',
+			'depth',
+			'crossOver'
+		),
 		'linkedInURL',
 		'listingAgent',
 		'livingAreas',

@@ -1,0 +1,992 @@
+<propertyList date="2009-01-01-12:30:00" username="xmluser" password="xmlpassword">
+	<!-- Current Listing -->
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>1BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">100000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">50</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>2BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">100000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">50</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>3BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">100000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">100</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>4BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">300000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">70</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>5BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">500000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">70</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>6BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">500000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">70</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>7BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">500000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">100</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>8BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">300000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">100</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>9BCD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">700000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">120</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>10CD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">700000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">120</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>11CD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">300000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">120</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>12CD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">1200000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">100</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>13CD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">1200000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">170</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>14CD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">300000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">170</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+
+	<commercialLand modTime="2009-01-01-12:30:00" status="current">
+		<agentID>XNWXNW</agentID>
+		<uniqueID>15CD1234</uniqueID>
+		<authority value="sale"/>
+		<commercialListingType value="both"/>
+		<underOffer value="no"/>
+		<listingAgent>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+			<email>jdoe@somedomain.com.au</email>
+		</listingAgent>
+		<price display="yes" plusSAV="no">300000</price>
+		<priceView>To suit buyers 250K+</priceView>
+		<commercialRent period="annual" plusOutgoings="no">120000</commercialRent>
+		<outgoings period="annual">20000</outgoings>
+		<return period="annual" unit="percent">3.23</return>
+		<currentLeaseEndDate>2009-01-01-12:30:00</currentLeaseEndDate>
+		<address display="yes">
+			<lotNumber>12</lotNumber>
+			<streetNumber>39</streetNumber>
+			<street>Main Road</street>
+			<suburb display="yes">RICHMOND</suburb>
+			<state>vic</state>
+			<postcode>3121</postcode>
+			<country>AUS</country>
+		</address>
+		<municipality>Yarra</municipality>
+		<estate>
+			<name>Richmond Highlights</name>
+			<stage>2</stage>
+		</estate>
+		<streetDirectory type="melways">
+			<page>44</page>
+			<reference>G7</reference>
+		</streetDirectory>
+		<headline>SHOW STOPPER!!!</headline>
+		<description>Just a beautiful opportunity right next to the Yarra. DO NOT miss this gem!</description>
+		<highlight id="1">Street front</highlight>
+		<landDetails>
+			<area unit="square">170</area>
+			<frontage unit="meter">20</frontage>
+			<depth unit="meter" side="rear">50</depth>
+			<crossOver value="right"/>
+		</landDetails>
+		<auction date="2009-01-24-12:30:00"/>
+		<vendorDetails>
+			<name>Mr. John Doe</name>
+			<telephone type="BH">05 1234 5678</telephone>
+		</vendorDetails>
+		<externalLink href="http://www.realestate.com.au/"/>
+		<videoLink href="http://www.realestate.com.au/videos/VictoriaSt.avi"/>
+		<images>
+			<img id="m" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageM.jpg" format="jpg"/>
+			<img id="a" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/imageA.jpg" format="jpg"/>
+		</images>
+		<objects>
+			<floorplan id="1" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan1.gif" format="gif"/>
+			<floorplan id="2" modTime="2009-01-01-12:30:00" url="http://www.realestate.com.au/tmp/floorplan2.gif" format="gif"/>
+		</objects>
+		<miniweb>
+			<uri id="1">http://www.externalclientwebsite.com.au/101LonsdaleStreet.html</uri>
+			<uri id="2">http:://www.externalclientwebsite.com.au/101LonsdaleStreetInterior.html</uri>
+		</miniweb>
+		<purchaseOrder>1234567890</purchaseOrder>
+	</commercialLand>
+</propertyList>
