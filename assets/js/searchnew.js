@@ -262,6 +262,8 @@ business_category['Transport/Distribution']=[
 
 	$('.radio').click(function() {
 		var page_type=$('#page_type').val();
+		$('.moresearch').hide();
+		$('.moreinput').val('');
 		if(page_type=='residential')
 		{
 			$('#category').html('');
@@ -289,7 +291,7 @@ business_category['Transport/Distribution']=[
 		{
 			$('#category').html('');
 			$('#moresearch, .category, .bedroom').show();
-			$('#area,.moresearch').hide();
+			$('.moresearch').hide();
 			if($(this).val() == 'Residential' || $(this).val() == 'Rental')
 			{
 				$.each(residential_category, function(key, value) {   
