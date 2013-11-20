@@ -110,21 +110,9 @@ select::-ms-expand {    display: none;}
 .boxex ul li{margin:0px 0 10px 0; font-family:HelveNueThin, Arial; font-size:20px; line-height: 27px;}
 .boxex p{margin:70px 0 0 0;}
 #error_msg{position: absolute; font-size: 14px; color: red; margin:50px 0 0 -7px!important;} 
-.serch_box{border:1px solid #cacaca; font-size:18px; font-family:HelveNueThin, Arial; padding: 10px 20px; text-decoration:none; display:inline-block; color: #000; cursor:pointer;
- background-color: #E6E6E6; background-image: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#CCCCCC));
- background-image: -webkit-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: -moz-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: -ms-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: -o-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: linear-gradient(to bottom, #E6E6E6, #CCCCCC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E6E6E6, endColorstr=#CCCCCC);}
- .serch_box:hover{ border:1px solid #b3b3b3;
- background-color: #cdcdcd; background-image: -webkit-gradient(linear, left top, left bottom, from(#cdcdcd), to(#b3b3b3));
- background-image: -webkit-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -moz-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -ms-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -o-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: linear-gradient(to bottom, #cdcdcd, #b3b3b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cdcdcd, endColorstr=#b3b3b3);}
- .pagenation li{float:left; margin-left: 5px;}
+.serch_box{ background:url(../images/sprites.png) -428px -236px  no-repeat; width:94px; height:44px; border:0; cursor:pointer; font:20px HelveNueThin, Arial; }
+.serch_box:hover{background:url(../images/sprites.png) -530px -236px  no-repeat; width:94px; height:44px;}
+.pagenation li{float:left; margin-left: 5px;}
 .serh_box{padding: 0px 0 0 10px;}
 .return_pa{margin: 20px 0 0 0px!important; font-size: 14px; font-family:HelveNueThin, Arial; color: #285069!important;}
 .more_srh{margin: 20px 0 0 0px!important; font-size: 14px; font-family:HelveNueThin, Arial; text-decoration:underline; color: #285069!important; cursor:pointer;}
@@ -155,21 +143,8 @@ width: 100%;}
 .s_img_boxes_commer .content_commer p{font-size:20px; color:#000; font-weight:normal; overflow: hidden; height:60px;}
 .s_img_boxes_commer .content_commer .fleft{float:left; font-size:22px; color:#285069;}
 .s_img_boxes_commer .content_commer .fleft span{color:#285069; font-size:20px;}
-.s_img_boxes_commer .content_commer .fright{border:1px solid #cacaca; font-size:18px; font-family:HelveNueThin, Arial; padding: 10px 32px; line-height:normal; text-decoration:none; display:inline-block; color: #000; cursor:pointer; float:right; margin-top: 6px;
- background-color: #E6E6E6; background-image: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#CCCCCC));
- background-image: -webkit-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: -moz-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: -ms-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: -o-linear-gradient(top, #E6E6E6, #CCCCCC);
- background-image: linear-gradient(to bottom, #E6E6E6, #CCCCCC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E6E6E6, endColorstr=#CCCCCC);
-}
-.s_img_boxes_commer .content_commer .fright:hover{ border:1px solid #b3b3b3;
- background-color: #cdcdcd; background-image: -webkit-gradient(linear, left top, left bottom, from(#cdcdcd), to(#b3b3b3));
- background-image: -webkit-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -moz-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -ms-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: -o-linear-gradient(top, #cdcdcd, #b3b3b3);
- background-image: linear-gradient(to bottom, #cdcdcd, #b3b3b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cdcdcd, endColorstr=#b3b3b3);}
+.s_img_boxes_commer .content_commer .fright{background:url(../images/sprites.png) -428px -236px  no-repeat; width:94px; height:44px; border:0; cursor:pointer; float:right; text-align:center; line-height: 44px;}
+.s_img_boxes_commer .content_commer .fright:hover{background:url(../images/sprites.png) -530px -236px  no-repeat; width:94px; height:44px;}
 .s_img_boxes .content h3{font-weight:bold;}
 .s_img_boxes .content h3, h4, .cnt{ color:#285069; font-size:30px; padding:0 0 6px 0; line-height:30px!important;}
 .s_img_boxes .content .cnt_business{font-size:20px; color:#fff; font-weight: normal; overflow: hidden; height:85px; margin: 10px 0; line-height: 30px;}
