@@ -31,10 +31,10 @@ $subpage = $this->uri->segment(2);?>
        	  <li class="menu_top_bg"></li>
         </ul>
         <ul class="menu_bg">
-			<? if($page =='searchnew') {$page = ($this->uri->segment(3))?$this->uri->segment(3):'residential';}?>
-        	<li class="ovalue"><a href="<?php echo base_url($page.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
-        	<li class="oteam"><a href="<?php echo base_url($page.'/ourteam'); ?>">Our Team</a></li>
-        	<li class="contact"><a href="<?php echo base_url($page.'/contact'); ?>">Contact</a></li>
+			<? if($page =='searchnew') {$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';} else {$slidepage =$page;}?>
+        	<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
+        	<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
+        	<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
         </ul>
         <ul class="menu_bg bg_border">
         	<li class="inner_logo"><a href="<?php echo base_url(); ?>">Samaras One Home</a></li>
