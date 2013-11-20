@@ -1,4 +1,8 @@
 
+<div class="wrapper_bg">
+	<div class="header">
+			<div class="wrapper_gradient_bg"> </div>
+			<div class="inner_pheader"> 
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
       
@@ -22,7 +26,7 @@
 	                    	<h2>Property Location</h2><br />
 	                    	<p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus est, sollicitudin a varius eu, consectetur sed neque.</p>
 	                	</div>
-	                	<a href="#">Location</a><br/>
+	                	<a href="https://www.google.co.in/maps?q=220,+Level+2++111+Harrington+St+Sydney+NSW+2000&t=m&hnear=220%2F111+Harrington+St,+Sydney+New+South+Wales+2000,+Australia&z=16" target="_blank">Location</a><br/>
 	                	<a href="#">Gallery</a>
 	              	</div>
 	            </div>
