@@ -36,4 +36,4 @@
   </div>
   <div class="clearall"></div>
   <!-- bottom slider js -->
-  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.js');?>"></script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>
