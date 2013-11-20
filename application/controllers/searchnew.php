@@ -51,7 +51,7 @@ class Searchnew extends CI_Controller
 		{
 			if($data['type'] === 'sale')
 			{
-				$data['select']=array('headline','price','suburb','description');
+				$data['select']=array('uniqueID','headline','price','suburb','description');
 
 				if($data['price_min']>0)
 					$where['price >='] = $data['price_min'];
@@ -102,7 +102,7 @@ class Searchnew extends CI_Controller
 			}
 			else if($data['type'] === 'lease')
 			{
-				$data['select']=array('headline','rent as price','suburb','description');
+				$data['select']=array('uniqueID','headline','rent as price','suburb','description');
 
 				if($data['bedroom'])
 					$where['bedrooms'] = $data['bedroom'];
@@ -140,7 +140,7 @@ class Searchnew extends CI_Controller
 		}
 		else if($data['page_type'] === 'commercial')
 		{
-			$data['select']=array('headline','price','suburb','description');
+			$data['select']=array('uniqueID','headline','price','suburb','description');
 			if($data['price_min']>0)
 				$where['price >='] = $data['price_min'];
 			if($data['price_max']>0)
@@ -178,7 +178,7 @@ class Searchnew extends CI_Controller
 		}
 		else if($data['page_type'] === 'business')
 		{
-			$data['select']=array('headline','price','suburb','description');
+			$data['select']=array('uniqueID','headline','price','suburb','description');
 			if($data['price_min']>0)
 				$where['price >='] = $data['price_min'];
 			if($data['price_max']>0)

@@ -411,7 +411,7 @@ display:none;
         <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
         <p class="cnt"><?php echo $row->description; ?></p>
         <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-        <a class="fright" href="#">More</a> </div>
+        <a class="fright" uniqueID="<?=$row->description;?>" href="#">More</a> </div>
     </div>
     <?php } ?>
     
