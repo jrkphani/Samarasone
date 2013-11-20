@@ -50,21 +50,13 @@ $subpage = $this->uri->segment(2); ?>
 				 if(($page != 'search') && ($page != 'searchnew')) 
 				{
 				?>
-        <div class="touchslider">
-          <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
-          <div>
-            <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl2" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl3" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl4" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl5" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl6" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl7" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl8" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
-          </div>
-        </div>	
+				<div id="slides">
+					<?
+					for($i=1; $i<=10; $i++)
+					{
+						echo '<img src="'.base_url("assets/images/slide$i.jpg").'">';
+					}
+					?>
 				</div>
         <?
 				}

@@ -40,5 +40,5 @@ Sydney NSW 2000, San Francisco, CA 94110</p>
 </html>
 
 
-<script src="<?php echo base_url($this->config->item('path_js_file').'jquery.touchslider.min.js');?>"></script>
+<script src="<?php echo base_url($this->config->item('path_js_file').'jquery.slides.min.js');?>"></script>
 <script src="<?php echo base_url($this->config->item('path_js_file').'header.js');?>"></script>
