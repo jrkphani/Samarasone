@@ -20,3 +20,6 @@ $(document).ready(function(e) {
 		$('#mainmenu').toggle();
 	});
 });
+$(document).ready(function(){
+	$("#scroller").simplyScroll({pauseOnHover: true});
+});
