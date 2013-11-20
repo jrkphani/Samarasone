@@ -49,12 +49,19 @@ $subpage = $this->uri->segment(2); ?>
     	  <?
 				 if(($page != 'search') && ($page != 'searchnew')) 
 				{
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
+					if($page == 'residential')
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
+					if($page == 'commercial')
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
+					if($page == 'business')
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
 				?>
 				<div id="slides">
 					<?
-					for($i=1; $i<=10; $i++)
+					foreach($imageslist as $img)
 					{
-						echo '<img src="'.base_url("assets/images/slide$i.jpg").'">';
+						echo '<img src="'.base_url("assets/images/$img").'">';
 					}
 					?>
 				</div>
