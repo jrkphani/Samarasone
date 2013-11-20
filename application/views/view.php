@@ -5,7 +5,7 @@
       </div>   
       <!-- property page -->   
 				<div class="sr_box">
-      	 	<a href="#" class="backSearch"> Back to search </a>
+      	 	<a href="<? echo (isset($_SERVER['HTTP_REFERER']))?$_SERVER['HTTP_REFERER']:base_url();?>" class="backSearch"> Back to search </a>
             <div class="sr_top_bg">
                 
             </div>
