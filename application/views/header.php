@@ -47,7 +47,7 @@ $subpage = $this->uri->segment(2);?>
       </div>
     	
     	  <?
-				 if(($page != 'search') && ($page != 'searchnew')) 
+				 if(($page != 'view') && ($page != 'searchnew')) 
 				{
 					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
 					if($page == 'residential')

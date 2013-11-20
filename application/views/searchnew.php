@@ -403,15 +403,25 @@ display:none;
   <div class="conti_border">
     <p class="color_orange">North Shore <span></span></p>
     <?php 
-              foreach ($result as $row) { ?>
+              foreach ($result as $row) {
+				  //if((isset($row->images)) && ($row->images))
+				  if(0)
+				  {
+					  $imagelist = unserialize($row->images);
+				  }
+				  else
+				  {
+					  $imagelist['url']= base_url('assets/images/s_img1.jpg');
+				  }
+				   ?>
     <div class="s_img_boxes_commer">
-      <div class="search_img"> <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/> </div>
+      <div class="search_img"> <img class="inner_plogo" src="<?php echo $imagelist['url']; ?>"/> </div>
       <div class="content_commer">
         <h3><?php echo $row->headline; ?>,</h3>
         <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
         <p class="cnt"><?php echo $row->description; ?></p>
         <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-        <a class="fright" uniqueID="<?=$row->description;?>" href="#">More</a> </div>
+        <a class="fright" uniqueID="<?=$row->uniqueID;?>" href='<?=base_url("view/index/$page_type/$type/$property/$row->uniqueID");?>'>More</a> </div>
     </div>
     <?php } ?>
     
