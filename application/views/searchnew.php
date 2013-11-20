@@ -37,7 +37,7 @@ display:none;
             </li>
             <li style="margin: 25px 0 0 0;">
               <input value="lease" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='lease') echo 'checked="checked"'; ?> />
-              <?php if($page_type=='residential') echo 'Rent'; else echo 'Lease'; ?>
+              <?php if($page_type=='residential') echo 'Rent <script>var radio_txt = "Rent"; </script>'; else echo 'Lease<script>var radio_txt = "Lease"; </script>'; ?>
             </li>
           </ul>
         </div>
@@ -223,7 +223,7 @@ display:none;
 				</div>
               </div>
               <!--    dropdown menu  -->
-              <input class="return_bussi" type="text" name="pa" value="<? echo (isset($pa))?$pa:''; ?>"/>
+              <input class="return_bussi" type="text" name="return" value="<? echo (isset($return))?$return:''; ?>"/>
               <span class="more_srh">% Return (p.a)</span>
             <?
             }

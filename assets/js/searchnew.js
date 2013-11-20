@@ -328,7 +328,7 @@ business_category['Transport/Distribution']=[
 			event.preventDefault();
 			if($('input:radio[name=type]:checked').val() == undefined)
 			{
-				error_msg = "Please select a type";
+				error_msg = "Please select Buy or "+radio_txt;
 			}
 			else if( ($('#property').val() !='Select') && ($('#property').val()) ) 
 			{
@@ -336,7 +336,7 @@ business_category['Transport/Distribution']=[
 			}
 			else
 			{
-				error_msg = "Please select a property";
+				error_msg = "Please select a property type";
 			}
 			$('#error_msg').html(error_msg);
 		});

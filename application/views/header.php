@@ -49,22 +49,21 @@ $subpage = $this->uri->segment(2); ?>
     	  <?
 				 if(($page != 'search') && ($page != 'searchnew')) 
 				{
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
+					if($page == 'residential')
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
+					if($page == 'commercial')
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
+					if($page == 'business')
+					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
 				?>
-        <div class="touchslider">
-          <div class="touchslider-viewport" style="width:100%px; height:900px;overflow:hidden;position:relative;">
-          <div>
-            <div class="touchslider-item"><div class="sl1" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl2" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl3" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl4" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl5" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl6" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl7" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl8" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl9" > &nbsp;</div> </div>
-            <div class="touchslider-item"><div class="sl10" > &nbsp;</div> </div>
-          </div>
-        </div>	
+				<div id="slides">
+					<?
+					foreach($imageslist as $img)
+					{
+						echo '<img src="'.base_url("assets/images/$img").'">';
+					}
+					?>
 				</div>
         <?
 				}

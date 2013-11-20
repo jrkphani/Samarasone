@@ -28,7 +28,7 @@ class Searchnew extends CI_Controller
 		$data['energyRating'] = $this->input->post('energyRating');
 		$data['return'] = $this->input->post('return');
 		$data['sub_category'] = $this->input->post('sub_category');
-		$data['pa'] = $this->input->post('pa');
+		$data['return'] = $this->input->post('return');
 
 
 
@@ -54,13 +54,13 @@ class Searchnew extends CI_Controller
 				$data['select']=array('headline','price','suburb','description');
 
 				if($data['price_min']>0)
-					$where['price >'] = $data['price_min'];
+					$where['price >='] = $data['price_min'];
 				if($data['price_max']>0)
-					$where['price <'] = $data['price_max'];
+					$where['price <='] = $data['price_max'];
 				if($data['area_min']>0)
-					$where['area >'] = $data['area_min'];
+					$where['area >='] = $data['area_min'];
 				if($data['area_max']>0)
-					$where['area <'] = $data['area_max'];
+					$where['area <='] = $data['area_max'];
 
 				if(($data['property'] === 'Residential'))
 				{
@@ -113,13 +113,13 @@ class Searchnew extends CI_Controller
 				if($data['garage'])
 					$where['garages'] = $data['garage'];
 				if($data['price_min']>0)
-					$where['rental >'] = $data['price_min'];
+					$where['rental >='] = $data['price_min'];
 				if($data['price_max']>0)
-					$where['rental <'] = $data['price_max'];
+					$where['rental <='] = $data['price_max'];
 				if($data['area_min']>0)
-					$where['area >'] = $data['area_min'];
+					$where['area >='] = $data['area_min'];
 				if($data['area_max']>0)
-					$where['area <'] = $data['area_max'];
+					$where['area <='] = $data['area_max'];
 				if(isset($where))
 						$data['where'] = $where;
 
@@ -142,17 +142,17 @@ class Searchnew extends CI_Controller
 		{
 			$data['select']=array('headline','price','suburb','description');
 			if($data['price_min']>0)
-				$where['price >'] = $data['price_min'];
+				$where['price >='] = $data['price_min'];
 			if($data['price_max']>0)
-				$where['price <'] = $data['price_max'];
+				$where['price <='] = $data['price_max'];
 			if($data['type'])
 				$data['sale_type']=array($data['type'],'both');
 			if($data['property'] === 'Commercial')
 			{
 				if($data['area_min']>0)
-					$where['area_min >'] = $data['area_min'];
+					$where['area_min >='] = $data['area_min'];
 				if($data['area_max']>0)
-					$where['area_max <'] = $data['area_max'];
+					$where['area_max <='] = $data['area_max'];
 				if($data['energyRating'])
 						$where['energyRating'] = $data['energyRating'];
 				if($data['carport'])
@@ -167,9 +167,9 @@ class Searchnew extends CI_Controller
 			else if($data['property'] === 'CommercialLand')
 			{
 				if($data['area_min']>0)
-					$where['area >'] = $data['area_min'];
+					$where['area >='] = $data['area_min'];
 				if($data['area_max']>0)
-					$where['area <'] = $data['area_max'];
+					$where['area <='] = $data['area_max'];
 				if(isset($where))
 						$data['where'] = $where;
 				$data['table'] = 'commercialLand';
@@ -180,15 +180,19 @@ class Searchnew extends CI_Controller
 		{
 			$data['select']=array('headline','price','suburb','description');
 			if($data['price_min']>0)
-				$where['price >'] = $data['price_min'];
+				$where['price >='] = $data['price_min'];
 			if($data['price_max']>0)
-				$where['price <'] = $data['price_max'];
+				$where['price <='] = $data['price_max'];
 			if($data['type'])
 				$data['sale_type']=array($data['type'],'both');
 			if($data['category'])
 					$data['businessCategory'] = $data['category'];
 			if($data['sub_category'])
 				$data['businessSubCategory'] = $data['sub_category'];
+			if($data['return'])
+				$where['return >=']=$data['return'];
+			if(isset($where))
+						$data['where'] = $where;
 			$data['table'] = 'business';
 			unset($data['category']);
 		}
