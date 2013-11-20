@@ -227,7 +227,7 @@ display:none;
               </div>
               <li style="margin:0px 0 17px 0;">% Return (p.a)</li>
               <!--    dropdown menu  -->
-                    <input type="text" name="pa" value="<? echo (isset($pa))?$pa:''; ?>"/>
+                    <input type="text" name="return" value="<? echo (isset($return))?$return:''; ?>"/>
             <?
             }
             else
