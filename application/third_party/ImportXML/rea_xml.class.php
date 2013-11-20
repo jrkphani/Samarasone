@@ -65,10 +65,7 @@ class REA_XML {
 		'availabilityLink',
 
 		'bond',
-		'buildingDetails' => array(
-			'area',
-			'energyRating'
-		),
+		'buildingDetails',
 		'business',
 		'businessCategory' => array(
 			'name',
@@ -173,9 +170,7 @@ class REA_XML {
 		'holidayRental',
 
 		'idealFor',
-		'images' => array(
-			'img'
-		),
+		'images',
 		'isHomeLandPackage',
 		'isMultiple',
 
@@ -343,11 +338,29 @@ class REA_XML {
 						}
 					}
 					else { /* Different handling for Images */
-						if($field == "images") {
+						/*if($field == "images") {
 							foreach($property->images as $img) {
 								$attr = $img->img->attributes();
 								$prop[$field][] = $attr->url;
 							}
+						}
+						else {
+							$prop[$field] = $property->{$field};
+						}*/
+
+						// Different handling for Images
+						$found=0;
+						if($field == "images" && count($property->images) > 0) {
+							foreach($property->images->img as $img) {
+								$found=1;
+								$attr = $img->attributes();
+								$temp_arr[(string)$attr->id]['url'] = (string)$attr->url;
+								$temp_arr[(string)$attr->id]['format'] = (string)$attr->format;
+								$temp_arr[(string)$attr->id]['modTime'] = (string)$attr->modTime;
+							}
+							if($found)
+							$prop[$field] = serialize($temp_arr);
+							$temp_arr = array();
 						}
 						else {
 							$prop[$field] = $property->{$field};

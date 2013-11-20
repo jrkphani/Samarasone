@@ -11,19 +11,22 @@ class ImportXML extends CI_Controller
 		$this->load->model('basic_model');
 
 		$properties = $rea->parse_directory($xml_file_dir, $processed_dir, $failed_dir, $excluded_files=array());
-		//print_r($properties);die;
 		//echo '<pre>', var_dump($properties), '</pre>';die;
+
+		/*foreach ($properties as $key => $value) {
+			$v['agentID']=(string)$value[0]['agentID'];
+		}*/
 
 		foreach ($properties["business"] as $res)
 		{
 			$v=array();
+			//echo '<pre>', var_dump($res), '</pre>';die;
 
 			$listingAgent=$this->getList($res['listingAgent']);
 			$address=$this->getList($res['address']);
 			$businessCategory=$this->getList($res['businessCategory']);
 			$buildingDetails=$this->getList($res['buildingDetails']);
-			$vendorDetails=$this->getList($res['vendorDetails']);
-			$images=$this->getList($res['images']);
+			$vendorDetails=$this->getList($res['vendorDetails']);			
 			$objects=$this->getList($res['objects']);
 			$miniweb=$this->getList($res['miniweb']);
 
@@ -39,7 +42,7 @@ class ImportXML extends CI_Controller
 			$v['priceView']=(string)$res['priceView'];
 			$v['businessLease']=$this->getValueAndAttribute($res['businessLease']);
 			$v['takings']=(string)$res['takings'];
-			$v['return']=$this->getValueAndAttribute($res['return']);
+			$v['return']=(string)$res['return'];
 			$v['currentLeaseEndDate']=(string)$res['currentLeaseEndDate'];
 			$v['furtherOptions']=(string)$res['furtherOptions'];
 			$v['address']=serialize($address);
@@ -56,11 +59,10 @@ class ImportXML extends CI_Controller
 			$v['terms']=(string)$res['terms'];
 			$v['soldDetails']=(string)$res['soldDetails'];
 			$v['buildingDetails']=serialize($buildingDetails);
-			$v['area']=$buildingDetails['area'];
 			$v['vendorDetails']=serialize($vendorDetails);
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['objects']=serialize($objects);
 			$v['miniweb']=serialize($miniweb);
 			$v['purchaseOrder']=(string)$res['purchaseOrder'];
@@ -79,8 +81,7 @@ class ImportXML extends CI_Controller
 			$address=$this->getList($res['address']);
 			$highlight=$this->getList($res['highlight']);
 			$landDetails=$this->getList($res['landDetails']);
-			$vendorDetails=$this->getList($res['vendorDetails']);
-			$images=$this->getList($res['images']);
+			$vendorDetails=$this->getList($res['vendorDetails']);			
 			$objects=$this->getList($res['objects']);
 			$miniweb=$this->getList($res['miniweb']);
 
@@ -95,7 +96,7 @@ class ImportXML extends CI_Controller
 			$v['priceView']=(string)$res['priceView'];
 			$v['commercialRent']=serialize($commercialRent);
 			$v['outgoings']=$this->getValueAndAttribute($res['outgoings']);
-			$v['return']=$this->getValueAndAttribute($res['return']);
+			$v['return']=(string)$res['return'];
 			$v['currentLeaseEndDate']=(string)$res['currentLeaseEndDate'];
 			$v['address']=serialize($address);
 			if($address['state'])
@@ -117,7 +118,7 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['objects']=serialize($objects);
 			$v['miniweb']=serialize($miniweb);
 			$v['purchaseOrder']=(string)$res['purchaseOrder'];
@@ -130,16 +131,14 @@ class ImportXML extends CI_Controller
 		foreach ($properties["commercial"] as $res)
 		{
 			$v=array();
-			//print_r($res);die;
 
 			$listingAgent=$this->getList($res['listingAgent']);
 			$commercialRent=$this->getList($res['commercialRent']);
 			$address=$this->getList($res['address']);
 			$highlight=$this->getList($res['highlight']);
 			$landDetails=$this->getList($res['landDetails']);
-			$buildingDetails=$this->getList($res['buildingDetails']);//print_r($buildingDetails);die;
-			$vendorDetails=$this->getList($res['vendorDetails']);
-			$images=$this->getList($res['images']);
+			$buildingDetails=$this->getList($res['buildingDetails']);
+			$vendorDetails=$this->getList($res['vendorDetails']);			
 			$objects=$this->getList($res['objects']);
 			$miniweb=$this->getList($res['miniweb']);
 
@@ -155,7 +154,7 @@ class ImportXML extends CI_Controller
 			$v['priceView']=(string)$res['priceView'];
 			$v['commercialRent']=serialize($commercialRent);
 			$v['outgoings']=$this->getValueAndAttribute($res['outgoings']);
-			$v['return']=$this->getValueAndAttribute($res['return']);
+			$v['return']=(string)$res['return'];
 			$v['currentLeaseEndDate']=(string)$res['currentLeaseEndDate'];
 			$v['tenancy']=(string)$res['tenancy'];
 			$v['furtherOptions']=(string)$res['furtherOptions'];
@@ -175,6 +174,7 @@ class ImportXML extends CI_Controller
 			$v['soldDetails']=(string)$res['soldDetails'];
 			$v['landDetails']=serialize($landDetails);
 			$v['buildingDetails']=serialize($buildingDetails);
+			$v['energyRating']=$buildingDetails['energyRating'];
 			if($v['isMultiple']=='yes')
 			{
 				$v['area_min']='10';
@@ -194,7 +194,7 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['objects']=serialize($objects);
 			$v['miniweb']=serialize($miniweb);
 			$v['purchaseOrder']=(string)$res['purchaseOrder'];
@@ -212,11 +212,9 @@ class ImportXML extends CI_Controller
 			$address=$this->getList($res['address']);
 			$features=$this->getList($res['features']);
 			$landDetails=$this->getList($res['landDetails']);
-			$vendorDetails=$this->getList($res['vendorDetails']);
-			$images=$this->getList($res['images']);
+			$vendorDetails=$this->getList($res['vendorDetails']);			
 			$views=$this->getList($res['views']);
 			$objects=$this->getList($res['objects']);
-
 
 			$v['agentID']=(string)$res['agentID'];
 			$v['uniqueID']=(string)$res['uniqueID'];
@@ -246,13 +244,12 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['views']=serialize($views);
 			$v['objects']=serialize($objects);
 			$v['status_sellable']=(string)$res['status'];
 			$v['modTime']=date('Y-m-d-h:i:s', time());
 			
-
 			$this->basic_model->insert($v,'land');
 		}
 
@@ -267,13 +264,11 @@ class ImportXML extends CI_Controller
 			$buildingDetails=$this->getList($res['buildingDetails']);
 			$ruralFeatures=$this->getList($res['ruralFeatures']);
 			$inspectionTimes=$this->getList($res['inspectionTimes']);
-			$vendorDetails=$this->getList($res['vendorDetails']);
-			$images=$this->getList($res['images']);
+			$vendorDetails=$this->getList($res['vendorDetails']);			
 			$ecoFriendly=$this->getList($res['ecoFriendly']);
 			$idealFor=$this->getList($res['idealFor']);
 			$views=$this->getList($res['views']);
 			$objects=$this->getList($res['objects']);
-
 
 			$v['agentID']=(string)$res['agentID'];
 			$v['uniqueID']=(string)$res['uniqueID'];
@@ -294,6 +289,10 @@ class ImportXML extends CI_Controller
 			$v['headline']=(string)$res['headline'];
 			$v['description']=(string)$res['description'];
 			$v['features']=serialize($features);
+			$v['bedrooms']=$features['bedrooms'];
+			$v['bathrooms']=$features['bathrooms'];
+			$v['garages']=$features['garages'];
+			$v['carports']=$features['carports'];
 			$v['ruralFeatures']=serialize($ruralFeatures);
 			$v['soldDetails']=(string)$res['soldDetails'];
 			$v['landDetails']=serialize($landDetails);
@@ -305,7 +304,7 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['ecoFriendly']=serialize($ecoFriendly);
 			$v['idealFor']=serialize($idealFor);
 			$v['views']=serialize($views);
@@ -313,7 +312,6 @@ class ImportXML extends CI_Controller
 			$v['status_sellable']=(string)$res['status'];
 			$v['modTime']=date('Y-m-d-h:i:s', time());
 			
-
 			$this->basic_model->insert($v,'rural');
 		}
 
@@ -326,8 +324,7 @@ class ImportXML extends CI_Controller
 			$features=$this->getList($res['features']);
 			$landDetails=$this->getList($res['landDetails']);
 			$buildingDetails=$this->getList($res['buildingDetails']);
-			$inspectionTimes=$this->getList($res['inspectionTimes']);
-			$images=$this->getList($res['images']);
+			$inspectionTimes=$this->getList($res['inspectionTimes']);			
 			$ecoFriendly=$this->getList($res['ecoFriendly']);
 			$views=$this->getList($res['views']);
 			$allowances=$this->getList($res['allowances']);
@@ -338,6 +335,7 @@ class ImportXML extends CI_Controller
 			$v['listingAgent']=serialize($listingAgent);
 			$v['dateAvailable']=(string)$res['dateAvailable'];
 			$v['rent']=$this->getValueAndAttribute($res['rent']);
+			$v['price']=(string)$res['rent'];
 			$v['priceView']=(string)$res['priceView'];
 			$v['bond']=(string)$res['bond'];
 			$v['address']=serialize($address);
@@ -352,6 +350,10 @@ class ImportXML extends CI_Controller
 			$v['headline']=(string)$res['headline'];
 			$v['description']=(string)$res['description'];
 			$v['features']=serialize($features);
+			$v['bedrooms']=$features['bedrooms'];
+			$v['bathrooms']=$features['bathrooms'];
+			$v['garages']=$features['garages'];
+			$v['carports']=$features['carports'];
 			$v['landDetails']=serialize($landDetails);
 			$v['buildingDetails']=serialize($buildingDetails);
 			$v['area']=$buildingDetails['area'];
@@ -359,15 +361,12 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['availabilityLink']=$this->getAttribute($res['availabilityLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['objects']=serialize($objects);
 			$v['status_sellable']=(string)$res['status'];
 			$v['modTime']=date('Y-m-d-h:i:s', time());
 
-			//print_r($v);die;
-
 			$this->basic_model->insert($v,'holidayRental');
-
 		}
 
 		foreach ($properties["rental"] as $res)
@@ -379,8 +378,7 @@ class ImportXML extends CI_Controller
 			$features=$this->getList($res['features']);
 			$landDetails=$this->getList($res['landDetails']);
 			$buildingDetails=$this->getList($res['buildingDetails']);
-			$inspectionTimes=$this->getList($res['inspectionTimes']);
-			$images=$this->getList($res['images']);
+			$inspectionTimes=$this->getList($res['inspectionTimes']);			
 			$ecoFriendly=$this->getList($res['ecoFriendly']);
 			$views=$this->getList($res['views']);
 			$allowances=$this->getList($res['allowances']);
@@ -391,6 +389,7 @@ class ImportXML extends CI_Controller
 			$v['listingAgent']=serialize($listingAgent);
 			$v['dateAvailable']=(string)$res['dateAvailable'];
 			$v['rent']=$this->getValueAndAttribute($res['rent']);
+			$v['price']=(string)$res['rent'];
 			$v['priceView']=(string)$res['priceView'];
 			$v['bond']=(string)$res['bond'];
 			$v['address']=serialize($address);
@@ -405,6 +404,10 @@ class ImportXML extends CI_Controller
 			$v['headline']=(string)$res['headline'];
 			$v['description']=(string)$res['description'];
 			$v['features']=serialize($features);
+			$v['bedrooms']=$features['bedrooms'];
+			$v['bathrooms']=$features['bathrooms'];
+			$v['garages']=$features['garages'];
+			$v['carports']=$features['carports'];
 			$v['holiday']=$this->getAttribute($res['holiday'],'value');
 			$v['landDetails']=serialize($landDetails);
 			$v['newConstruction']=(string)$res['newConstruction'];
@@ -414,7 +417,7 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['objects']=serialize($objects);
 			$v['ecoFriendly']=serialize($ecoFriendly);
 			$v['views']=serialize($views);
@@ -423,7 +426,6 @@ class ImportXML extends CI_Controller
 			$v['modTime']=date('Y-m-d-h:i:s', time());
 
 			$this->basic_model->insert($v,'rental');
-
 		}
 
 		foreach ($properties["residential"] as $res)
@@ -436,13 +438,11 @@ class ImportXML extends CI_Controller
 			$landDetails=$this->getList($res['landDetails']);
 			$buildingDetails=$this->getList($res['buildingDetails']);
 			$inspectionTimes=$this->getList($res['inspectionTimes']);
-			$vendorDetails=$this->getList($res['vendorDetails']);
-			$images=$this->getList($res['images']);
+			$vendorDetails=$this->getList($res['vendorDetails']);			
 			$ecoFriendly=$this->getList($res['ecoFriendly']);
 			$idealFor=$this->getList($res['idealFor']);
 			$views=$this->getList($res['views']);
 			$objects=$this->getList($res['objects']);
-
 
 			$v['agentID']=(string)$res['agentID'];
 			$v['uniqueID']=(string)$res['uniqueID'];
@@ -478,7 +478,7 @@ class ImportXML extends CI_Controller
 			$v['externalLink']=$this->getAttribute($res['externalLink'],'href');
 			$v['videoLink']=$this->getAttribute($res['videoLink'],'href');
 			$v['extraFields']=(string)$res['extraFields'];
-			$v['images']=serialize($images);
+			$v['images']=$res['images'];
 			$v['newConstruction']=(string)$res['newConstruction'];
 			$v['ecoFriendly']=serialize($ecoFriendly);
 			$v['idealFor']=serialize($idealFor);
@@ -487,11 +487,9 @@ class ImportXML extends CI_Controller
 			$v['status_sellable']=(string)$res['status'];
 			$v['modTime']=date('Y-m-d-h:i:s', time());
 			
-
 			$this->basic_model->insert($v,'residential');
 		}
 	}
-
 
 
 
@@ -530,7 +528,7 @@ class ImportXML extends CI_Controller
 	}
 
 	function getValueAndAttribute($obj)
-	{//print_r($obj);
+	{//print_r($obj);die;
 		$arr=array();
 		$arr[0]=(string)$obj[0];
 		foreach($obj->attributes() as $key => $value)
