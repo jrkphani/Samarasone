@@ -1,4 +1,20 @@
-
+<style>
+<?
+if((isset($bathroom) && ($bathroom)) || (isset($energyRating) && ($energyRating)) || (isset($carport) && ($carport)) || (isset($area_min) && ($area_min)) || (isset($area_max) && ($area_max)) )
+{?>
+.moresearch
+{
+}
+<?}
+else
+{?>
+.moresearch
+{
+display:none;
+}
+<?}
+?>
+</style>
 <div class="wrapper_white_bg"></div>
 <div class="wrapper_gradient_bg"> </div>
 <div class="inner_pheader"> 
@@ -76,7 +92,7 @@
 							<option value="Rural" <? if(isset($property) && $property == 'Rural') echo 'selected="selected"'; ?>>Rural</option>
 							<option value="Land" <? if(isset($property) && $property == 'Land') echo 'selected="selected"'; ?>>Land</option>
 						<? }
-						else
+						else if($type=='lease')
 						{?>
 							<option value="Rental" <? if(isset($property) && $property == 'Rental') echo 'selected="selected"'; ?>>Rental</option>
 							<option value="Holiday" <? if(isset($property) && $property == 'Holiday') echo 'selected="selected"'; ?>>Holiday</option>
@@ -126,11 +142,11 @@
   				          echo '<input type="checkbox" '.$checked.'autocomplete="off" name="category[]" value="'.$value.'" /> '.$value.'<br/>';
 							}
 						}
-						else
+						else 
 						{
 							if(isset($holidayCategory) && is_array($holidayCategory)) { } else
 							$holidayCategory=array();
-							if(isset($property))
+							if(isset($property) && ($property))
 							foreach ($rent['Residential'][$property] as $key => $value) {
 							$checked = '';
 							if($property == 'Holiday')
@@ -175,8 +191,8 @@
           <ul>
             <li>Price</li>
             <li> 
-              <input class="txt_width_hieight" type="text" name="price_min" value="<?php echo $price_min; ?>"  style="color: #285069; font-weight: normal;" />
-              <input class="txt_width_hieight" type="text" name="price_max" value="<?php echo $price_max; ?>" style="color: #285069; font-weight: normal;"/>
+              <input class="txt_width_hieight" type="text" placeholder="Min" name="price_min" value="<?php echo $price_min; ?>"  style="color: #285069; font-weight: normal;" />
+              <input class="txt_width_hieight" type="text" placeholder="Max" name="price_max" value="<?php echo $price_max; ?>" style="color: #285069; font-weight: normal;"/>
               <!--		dropdown menu end  -->
             <? if($page_type == 'business')
             {
@@ -190,6 +206,7 @@
                   if(isset($businessCategory))
                   {
 					  if(isset($sub_category) && is_array($sub_category)) { } else $sub_category=array();
+					  $i=0;
 					  foreach($businessCategory as $businessvalue)
 					  {
 						  foreach($buy['Business'][$businessvalue] as $business_subcategory)
@@ -197,8 +214,9 @@
 							  $checked = '';
 							  if(in_array($business_subcategory,$sub_category))
 							  $checked = 'checked = "checked"';
-							  echo '<span ><input name="sub_category[]" '.$checked.'type="checkbox" class="sub_category_margin" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
+							  echo '<span class="business_category'.$i.'"><input name="sub_category[]" class="sub_category_margin" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
 						  }
+						  $i++;
 					  }
 				  }				  
                    ?>
@@ -265,7 +283,8 @@
           </ul>
         </div>
         <? if($page_type == 'residential') 
-			{?>
+			{
+		?>
         <div class="boxex moresearch width14">
           <ul>
             <li>Bathroom</li>
@@ -278,7 +297,7 @@
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                 </ul>-->
-                <select class="dropdown-text dd_fonts" name="bathroom">
+                <select class="dropdown-text dd_fonts moreinput" autocomplete="off" name="bathroom">
                 <option value="">Any</option>
                   <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $bathroom)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
               </select>
@@ -287,8 +306,8 @@
             </li>
           </ul>
         </div>
-        <? } ?>
-        <? if($page_type != 'residential') 
+        <? } 
+        else
         {?>
         <div class="boxex moresearch width13">
           <ul>
@@ -297,7 +316,7 @@
               <!--    dropdown menu  -->
               <div class="dropdown width84 propert_top">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Car Ports</div>
-                <select class="dropdown-text dd_fonts" name="energyRating">
+                <select class="dropdown-text dd_fonts moreinput" autocomplete="off" name="energyRating">
                   <option value="">Any</option>
                   <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $energyRating)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
                 </select>
@@ -319,7 +338,7 @@
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                 </ul>-->
-                <select class="dropdown-text dd_fonts" name="carport">
+                <select class="dropdown-text dd_fonts moreinput" autocomplete="off" name="carport">
                   <option value="">Any</option>
                   <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $carport)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
                 </select>
@@ -342,7 +361,7 @@
                   <li><a href="#">Garages 2</a></li>
                   <li><a href="#">Garages 3</a></li>
                 </ul>-->
-                <select class="dropdown-text dd_fonts" name="garage">
+                <select class="dropdown-text dd_fonts moreinput" name="garage" autocomplete="off">
                   <option value="">Any</option>
                   <? for($i=1; $i<10; $i++) { echo '<option value="'.$i.'"'; if($i == $garage)echo 'selected = "selected"'; echo '>'.$i.'</option>'; ?> <? } ?>
                 </select>
@@ -359,8 +378,8 @@
             <li>Area </li>
             <li> 
               <!--		dropdown menu  -->
-              <input class="area_txt_width_hieight" type="text" class="amount" value="<?php echo $area_min; ?>" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
-              <input class="area_txt_width_hieight"  type="text" class="amount" value="<?php echo $area_max; ?>" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
+              <input class="area_txt_width_hieight moreinput" placeholder="Min" autocomplete="off" type="text" class="amount" value="<?php echo $area_min; ?>" name="area_min" style="border: 0; color: #285069; font-weight: normal;" />
+              <input class="area_txt_width_hieight moreinput" placeholder="Max" autocomplete="off"  type="text" class="amount" value="<?php echo $area_max; ?>" name="area_max" style="border: 0; color: #285069; font-weight: normal;" />
               <div class="slider-range"></div>
               <!--		dropdown menu end  --> 
             </li>
@@ -439,7 +458,6 @@
 </div>
 </div>
 <!-- header end --> 
-
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script> 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script> 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'searchnew.js');?>"></script> 
