@@ -52,7 +52,7 @@ a{text-decoration:none;}b{font-weight:bold;}i{font-style:italic;}
 .comm_resi_header_top .inner_search_icon span:hover{color:#fff;}
 .border_img{/*border-image:url(../images/border_img.png)0 0 5 0;*/ border-top:5px solid rgb(241, 241, 241);}
 /* ************************* residential page ******************************** */
-.body_cnt{padding:3% 9%;}
+.body_cnt{/* padding:3% 9%;  */padding: 50px 72px;}
 .body_cnt p{padding:0 0 15px 0;}
 .res_img_container{width:100%; display:block;}
 .respage_img{width:25%; float:left; background-size: contain;}
