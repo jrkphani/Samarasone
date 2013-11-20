@@ -38,7 +38,6 @@
                 </ul>
               </div>-->
 			  <div class="dropdown width84 propert_top">
-                <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>				
                 <select class="dropdown-text dd_fonts" >
 					<option>Select</option>
@@ -61,8 +60,7 @@
             <li>Property Type</li>
             <li> 
               <!--		dropdown menu  -->
-              <div class="dropdown width84 propert_top">
-                <input class="dropdown-toggle" type="text">
+              <div class="dropdown width84 propert_top">               
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>
                 <select class="dropdown-text dd_fonts" name="property" id="property" autocomplete="off">
 				<?php if($page_type!='business')
@@ -185,10 +183,9 @@
               ?>
               <li style="margin:0px 0 17px 0;">Sub  Category</li>
               <!--    dropdown menu  -->
-              <div class="dropdown w100 propert_top" >
-              <input class="dropdown-toggle" type="text">
+              <div class="dropdown w100 w80 propert_top" >
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
-			  <div id="sub_category" class="width85">
+			  <div id="sub_category" class="width95">
                   <?
                   if(isset($businessCategory))
                   {
@@ -200,16 +197,16 @@
 							  $checked = '';
 							  if(in_array($business_subcategory,$sub_category))
 							  $checked = 'checked = "checked"';
-							  echo '<span ><input name="sub_category[]" '.$checked.'type="checkbox" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
+							  echo '<span ><input name="sub_category[]" '.$checked.'type="checkbox" class="sub_category_margin" value="'.$business_subcategory.'" />'.$business_subcategory.'</br></span>';
 						  }
 					  }
 				  }				  
                    ?>
 				</div>
               </div>
-              <li style="margin:0px 0 17px 0;">% Return (p.a)</li>
               <!--    dropdown menu  -->
-                    <input type="text" name="pa" value="<? echo (isset($pa))?$pa:''; ?>"/>
+              <input class="return_bussi" type="text" name="pa" value="<? echo (isset($pa))?$pa:''; ?>"/>
+              <span class="more_srh">% Return (p.a)</span>
             <?
             }
             else
@@ -218,8 +215,7 @@
 			{?>
               <li style="margin:0px 0 17px 0;" class="bedroom" >Bedroom</li>
               <!--    dropdown menu  -->
-              <div class="dropdown w100 propert_top bedroom">
-              <input class="dropdown-toggle" type="text">
+              <div class="dropdown w100 w59 propert_top bedroom">
               <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bedroom</div>
                 <select class="dropdown-text dd_fonts" name="bedroom">
                   <option value="">Any</option>
@@ -276,7 +272,6 @@
             <li> 
               <!--		dropdown menu  -->
               <div class="dropdown width84 propert_top">
-                <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Bathroom</div>
                 <!--<ul class="dropdown-content">
                   <li><a href="#">1</a></li>
@@ -301,7 +296,6 @@
             <li> 
               <!--    dropdown menu  -->
               <div class="dropdown width84 propert_top">
-                <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Car Ports</div>
                 <select class="dropdown-text dd_fonts" name="energyRating">
                   <option value="">Any</option>
@@ -319,7 +313,6 @@
             <li> 
               <!--		dropdown menu  -->
               <div class="dropdown width84 propert_top">
-                <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Car Ports</div>
                 <!--<ul class="dropdown-content">
                   <li><a href="#">1</a></li>
@@ -343,7 +336,6 @@
             <li> 
               <!--		dropdown menu  -->
               <div class="dropdown w100 propert_top">
-                <input class="dropdown-toggle" type="text">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Garages</div>
                 <!--<ul class="dropdown-content">
                   <li><a href="#">Garages 1</a></li>
@@ -362,7 +354,7 @@
         <? } ?>
         <? if($page_type == 'residential' || $page_type == 'commercial') 
 		{?>
-        <div id="area" class="boxex moresearch width14">
+        <div id="area" class="boxex moresearch width18 ">
           <ul>
             <li>Area </li>
             <li> 
