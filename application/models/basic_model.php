@@ -13,8 +13,8 @@ class Basic_model extends CI_Model
 	function insert($values,$table)
 	{
 		//print_r($values);die;
-		$this->db->insert($table, $values);
-		//echo $this->db->last_query();
+		return $this->db->insert($table, $values);
+		//echo $this->db->last_query();die;
 	}
 }
 ?>

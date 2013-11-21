@@ -16,10 +16,7 @@
 <!-- header end --> 
   <div class="body_cnt">
 
-<p><span class="txt_hlt">Samaras One</span> takes on the proficiency to act on behalf of our professional clientele of owners, buyers and tenants to arrange the sale or lease of a vast variety of commercial property including development sites, office space and commercial/retail investments within the Sydney CBD and city fringe. </p><br />
-<p><span class="txt_hlt">Our mission</span> is to work with our professional clients to deliver property solutions from the initial concept, marketing alternatives and method of sale or leasing through to the successful transaction.</p><br />
-<p><span class="txt_hlt">Our ability</span> to leverage off our extensive communications within our wide-ranging network of clients as well as the fact that we are based in the Sydney CBD allows us to attract a vast variety of buyers and tenants. Balanced with our unparallel marketing campaign our independent circle of clients takes advantage of the exemplified commercial negotiation process we produce through these connections. </p><br />
-<p><span class="txt_hlt">The depths of our relationships, experience and knowledge</span> provide the foundation for endowing our commercial clients with excellent service, wide range of choice and precious commercial properties that hardly appear on the market. </p><br />
+<?php echo $content; ?>
 
  </div>
   <div class="res_img_container">

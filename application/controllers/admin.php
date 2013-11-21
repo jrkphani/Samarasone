@@ -5,13 +5,59 @@ function __construct()
 {
 	parent::__construct();
 	$this->current_user=$this->session->userdata('logged_in');
-	if($this->current_user['role']!='admin')
+	if(!$this->current_user)
 		redirect('login', 'refresh');
 }
 
 function index()
 {
 	$this->userList();
+}
+
+function add()
+{
+	$this->load->helper('form');
+	$this->load->library('form_validation');	
+	$this->load->model('basic_model');
+	$data['msg']=NULL;
+	$data['success']=NULL;
+	$data['view_page'] = 'admin_add';
+	
+	if(isset($_POST['submit']))
+	{
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|max_length[100]');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[100]');
+
+		if ($this->form_validation->run() === FALSE)
+		{
+			$this->load->view('template', $data);
+		}
+		else
+		{
+			$this->load->library('passhash');
+			$email=$this->input->post('email');
+			$password=$this->input->post('password');
+
+			$values=array(
+				'email' => $email,
+				'password' => $this->passhash->hash($password),
+				'active' => '1'
+			);
+			$result=$this->basic_model->insert($values,'users');
+			if($result)
+			{
+				$data['msg']='New admin added successfully.';
+				$data['success']='yes';
+			}
+			else
+			{
+				$data['msg']='Internal error. Please try again later.';
+				$data['success']='no';
+			}
+		}
+	}
+	$this->load->view('template', $data);
+
 }
 
 function userList()	//Load at first time
@@ -148,9 +194,29 @@ function dynamics($id,$msg=NULL)
 	if($id=='1')
 		$file=FCPATH."application/views/dynamics/home.html";
 	else if ($id=='2')
-		$file=FCPATH."application/views/dynamics/about_us.html";
+		$file=FCPATH."application/views/dynamics/residential.html";
 	else if ($id=='3')
-		$file=FCPATH."application/views/dynamics/features.html";
+		$file=FCPATH."application/views/dynamics/commercial.html";
+	else if ($id=='4')
+		$file=FCPATH."application/views/dynamics/business.html";
+	else if ($id=='5')
+		$file=FCPATH."application/views/dynamics/residential_proposition.html";
+	else if ($id=='6')
+		$file=FCPATH."application/views/dynamics/commercial_proposition.html";
+	else if ($id=='7')
+		$file=FCPATH."application/views/dynamics/business_proposition.html";
+	else if ($id=='8')
+		$file=FCPATH."application/views/dynamics/residential_ourteam.html";
+	else if ($id=='9')
+		$file=FCPATH."application/views/dynamics/commercial_ourteam.html";
+	else if ($id=='10')
+		$file=FCPATH."application/views/dynamics/business_ourteam.html";
+	else if ($id=='11')
+		$file=FCPATH."application/views/dynamics/residential_contact.html";
+	else if ($id=='12')
+		$file=FCPATH."application/views/dynamics/commercial_contact.html";
+	else if ($id=='13')
+		$file=FCPATH."application/views/dynamics/business_contact.html";
 	else
 		redirect('my404');
 
@@ -160,11 +226,14 @@ function dynamics($id,$msg=NULL)
 	$data['content']=$file_content;
 	$data['file'] = $file;
 	$data['msg']=$msg;
+
+	$file_name = basename($file, ".html");
+	$data['title']=ucwords(str_replace('_', ' ', $file_name));
 	$data['view_page'] = 'dynamics';
 
 	if(isset($_POST['submit']))
 	{
-		$this->form_validation->set_rules('content', 'Content', 'trim|required|max_length[1000]|min_length[10]');
+		$this->form_validation->set_rules('content', 'Content', 'trim|required|min_length[10]');
 		if(!$this->form_validation->run() === FALSE)
 		{
 			$file_obj=fopen($file, 'w');
