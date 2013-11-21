@@ -83,13 +83,15 @@ $subpage = $this->uri->segment(2);?>
 
 
 
-<header class="admin_header">
+
 	<?
 	$menus = array(1=>'home',2=>'residential',3=>'commercial',4=>'business',5=>'residential_proposition',6=>'commercial_proposition',7=>'business_proposition',8=>'residential_ourteam',9=>'commercial_ourteam',10=>'business_ourteam',11=>'residential_contact',12=>'commercial_contact',13=>'business_contact');
 	$session_data = $this->session->userdata('logged_in');
 	 ?>
-		<nav>
+		
 			<?php if($session_data) { ?><?php echo $session_data['email'];?>
+		<header class="admin_header">
+		<nav>
 			<ul>
 				<li><a href="<?php echo base_url('admin'); ?>">User List</a></li>
 				<li><!-- Edit Page -->
@@ -101,8 +103,8 @@ $subpage = $this->uri->segment(2);?>
 				</li>
 				<li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
 			</ul>
-			<?php } ?>
-		</nav>
-		
+			</nav>
 	</header>
+			<?php } ?>
+		
 
