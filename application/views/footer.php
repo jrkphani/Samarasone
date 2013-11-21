@@ -10,7 +10,7 @@ $subpage = $this->uri->segment(2);
       	 <h3 class="footer_header">Contact</h3>
          <div class="width1_33">
          	<p class="foot_cnt">Suite 220, Level 2, 111 Harringto St
-Sydney NSW 2000, San Francisco, CA 94110</p>
+Sydney NSW 2000</p>
 					<a class="foot_map" href="https://www.google.co.in/maps?q=220,+Level+2++111+Harrington+St+Sydney+NSW+2000&t=m&hnear=220%2F111+Harrington+St,+Sydney+New+South+Wales+2000,+Australia&z=16" target="_blank">Show Map</a>
          </div>
          <div class="width2_33">
