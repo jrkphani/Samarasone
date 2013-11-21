@@ -76,53 +76,24 @@ $subpage = $this->uri->segment(2);?>
 
 <header>
 	<?
-	$menus = array('1' => 'home','2' => 'about', '3' => 'feature');
-	$page = $this->uri->segment(1);
-	$function = $this->uri->segment(2);
-	$register=NULL;
+	$menus = array(1=>'home',2=>'residential',3=>'commercial',4=>'business',5=>'residential_proposition',6=>'commercial_proposition',7=>'business_proposition',8=>'residential_ourteam',9=>'commercial_ourteam',10=>'business_ourteam',11=>'residential_contact',12=>'commercial_contact',13=>'business_contact');
 	$session_data = $this->session->userdata('logged_in');
-	if($this->uri->segment(3)=='register')
-	{
-		$register='yes';
-	}
 	 ?>
 		<nav>
-			<?php if($session_data) { ?><?php echo $session_data['firstname'];
-			if($session_data['role']=='admin') { ?>
-			<a href="<?php echo base_url('admin'); ?>">User List</a>&nbsp&nbsp
-				<?php foreach ($menus as $key => $value) { ?>
-					<a href="<?php echo base_url('admin/dynamics').'/'.$key; ?>"><?php echo $value; ?></a>&nbsp&nbsp
-				<?php } ?>
-			<?php } ?>
-			<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php if($session_data) { ?><?php echo $session_data['email'];?>
+			<ul>
+				<li><a href="<?php echo base_url('admin'); ?>">User List</a></li>
+				<li><!-- Edit Page -->
+					<ul>
+					<?php foreach ($menus as $key => $value) { ?>
+						<li><a href="<?php echo base_url('admin/dynamics').'/'.$key; ?>"><?php echo $value; ?></a></li>
+					<?php } ?>
+					</ul>
+				</li>
+				<li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
+			</ul>
 			<?php } ?>
 		</nav>
 		
 	</header>
-	
-	<!-- login functionality 
-
-			<?php if($session_data = $this->session->userdata('logged_in')) { ?>
-					<div class="span10 headerRight">
-						<p>Howdy! <?php echo $session_data['firstname']; ?>&nbsp|&nbsp
-							<a href="<?php echo base_url('profile'); ?>">Profile</a>&nbsp|&nbsp
-							<?php if($session_data['role']=='user') { ?>
-								<a href="<?php echo base_url('home'); ?>">Resume</a>&nbsp|&nbsp
-							<?php } else if($session_data['role']=='member') { ?>
-								<a href="<?php echo base_url('member/searchresume'); ?>">Search</a>&nbsp|&nbsp
-								<a href="<?php echo base_url('member/selectedResume'); ?>">Selected Resume</a>&nbsp|&nbsp
-							<?php } else if($session_data['role']=='admin') { ?>
-								<a href="<?php echo base_url('admin'); ?>">User List</a>&nbsp|&nbsp
-							<?php } ?>
-							<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-						</p>
-					</div>
-					<?php } else { ?>
-					
-			<?php } ?>
-		</div>
-	</header>-->
-	
-	<!-- login functionality end-->
-
 

@@ -3,11 +3,10 @@ Class User extends CI_Model
 {
  function login($username)
  {
-   $this->db->select('users.id,users.id_encrypt,users.email,user_detail.first_name,user_detail.last_name,user_detail.role');
+   $this->db->select('id,email');
    $this->db->from('users');
-   $this->db->where('users.email', $username);
-   $this->db->where('users.active', 1);
-   $this->db->join('user_detail','users.id=user_detail.user_id');
+   $this->db->where('email', $username);
+   $this->db->where('active', 1);
 
    $query = $this->db->get();
    if($query -> num_rows() == 1)

@@ -20,20 +20,7 @@
         <div class="clearall"></div>
         
         <div class="cont_section1">
-          <h3 class="contct_header">Samaras One</h3>
-          <address class="add_left">
-            <p>Suite 220, Level 2 <br />
-            111 Harrington St<br />
-            Sydney NSW 2000<br />
-            San Francisco, CA 94110</p>
-          </address>
-          
-          <address class="add_left">
-            <p class="lline">+61 2 9251 8826</p>
-            <p class="fax">+61 2 9247 2222</p>
-            <p class="mobile">+61 411 316 303 </p>
-            <p class="mail"><a href="#">nicholas@samarasone.com</a></p>
-          </address>
+          <?php echo $content; ?>
         </div>
         
         

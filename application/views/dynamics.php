@@ -1,9 +1,10 @@
 <div>
 <?php
-	echo validation_errors();
-	if($msg=='suc') echo 'Content updated.';
-	else if($msg=='err') echo 'Content updating failed.';
+	echo '<span class="err_msg"'.validation_errors().'</span>';
+	if($msg=='suc') echo '<span class="err_msg">Content updated.<span>';
+	else if($msg=='err') echo '<span class="suc_msg">Content updating failed.<span>';
 ?>
+<h2><?php echo 'Edit: '.$title; ?></h2>
 <form name="form1" method="post">
 <textarea cols="40" rows="10" name="content">
 <?php echo $content; ?>

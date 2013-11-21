@@ -15,13 +15,7 @@
   </div>
 <!-- header end --> 
   <div class="body_cnt">
-      <p>Samaras One specialises in the sales, executive leasing and development of high-end residential properties in Sydney’s CBD and Coastal precincts.</p><br/>
-<h2>From City to Coast</h2><br/>
-<p>We provide luxury residential real estate experience throughout the lifecycle of a properties sales, leasing and development. Exclusivity and exceptional outcomes are our key priorities when acting on behalf of owners, buyers and tenants to arrange the sale and leasing of a vast variety of residential development. </p><br/>
-<h2>Off-Market Property</h2><br/>
-<p>Independent and unbiased, we provide buyers with access to the market place for off market and distinctive High-End Sydney Properties. These opulent properties have in common that they are all connected by the notion of esteemed value. </p>
-<p>Our Portfolio of disconcerted properties is perfect for the discreet property owners and buyers. Largely due to the fact that they are for sale but not openly advertised. As somewhat ‘invaluable’ assets what they all have in common is that they are sincerely distinguished. </p>
-<p>‘Non-circumvention non-disclosure agreement’ as well as proof of funds and a ‘letter of interest’ will be required on application. </p>
+      <?php echo $content; ?>
 </div>
   <div class="res_img_container">
 <!--    <div class="respage_img"> 
