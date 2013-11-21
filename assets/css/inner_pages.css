@@ -150,7 +150,7 @@ width: 100%;}
 .s_img_boxes .content .cnt_business{font-size:20px; color:#fff; font-weight: normal; overflow: hidden; height:85px; margin: 10px 0; line-height: 30px;}
 .s_img_boxes .content .fleft{color:#fff; float:left; font-size:22px; padding: 0 0 20px 0;}
 .s_img_boxes .content .fleft span{color:#fff; font-size:20px;}
-.s_img_boxes .content .fright{float: right; padding: 0px 30px; background: url(../images/sprites.png) -522px 0px no-repeat; height: 96px; width: 48px; line-height: 93px; position: absolute; right: 0px; margin:-52px 120px 0 0px; text-indent: 8px;}
+.s_img_boxes .content .fright{float: right; padding: 0px 30px; background: url(../images/sprites.png) -522px 0px no-repeat; height: 96px; width: 48px; line-height: 93px; position: absolute; right: 0px; margin:-84px 120px 0 0px; text-indent: 8px;}
 .s_img_boxes .content .fright:hover{opacity:0.94}
 .s_img_boxes  .business_srch h3, .cnt_business{ color:#fff;}
 .s_img_boxes .business_srch h4{color:#fff!important; font-size:26px;}
@@ -229,7 +229,7 @@ width: 100%;}
 .contct_cmt_size{font-size:16px;}
 .cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}
 /* ************************* footer page ******************************** */
-.footer_top{background-color:#043350; display:inline-block; width:100%;}
+.footer_top{background-color:#043350; display:inline-block; width:100%; position:relative;}
 .footer_section1{width:67%; float:left; border-right:1px solid #5b5b5b; padding:10px 0 10px 72px;}
 .footer_section2{width:17%; float:left;  padding:10px 72px 10px 0;} 
 .footer_header{color:#fff; padding:10px 20px;}
