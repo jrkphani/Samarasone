@@ -15,11 +15,22 @@ jQuery(function($) {
       });
 					});
 $(document).ready(function(e) {
+	window.menu = 0;
   $('#menu_logo').click(function()
 	{
 		$('#mainmenu').toggle();
+		window.menu = 1;
 	});
-});
-$(document).ready(function(){
+	$('body').click(function()
+	{
+		if(window.menu == 1)
+		{
+			window.menu=0;
+		}
+		else
+		{
+			$('#mainmenu').hide();
+		} 
+	});
 	$("#scroller").simplyScroll({pauseOnHover: true});
 });

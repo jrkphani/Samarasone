@@ -150,7 +150,7 @@ width: 100%;}
 .s_img_boxes .content .cnt_business{font-size:20px; color:#fff; font-weight: normal; overflow: hidden; height:85px; margin: 10px 0; line-height: 30px;}
 .s_img_boxes .content .fleft{color:#fff; float:left; font-size:22px; padding: 0 0 20px 0;}
 .s_img_boxes .content .fleft span{color:#fff; font-size:20px;}
-.s_img_boxes .content .fright{float: right; padding: 0px 30px; background: url(../images/sprites.png) -522px 0px no-repeat; height: 96px; width: 48px; line-height: 93px; position: absolute; right: 0px; margin:-52px 120px 0 0px; text-indent: 8px;}
+.s_img_boxes .content .fright{float: right; padding: 0px 30px; background: url(../images/sprites.png) -522px 0px no-repeat; height: 96px; width: 48px; line-height: 93px; position: absolute; right: 0px; margin:-84px 120px 0 0px; text-indent: 8px;}
 .s_img_boxes .content .fright:hover{opacity:0.94}
 .s_img_boxes  .business_srch h3, .cnt_business{ color:#fff;}
 .s_img_boxes .business_srch h4{color:#fff!important; font-size:26px;}
@@ -229,7 +229,7 @@ width: 100%;}
 .contct_cmt_size{font-size:16px;}
 .cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}
 /* ************************* footer page ******************************** */
-.footer_top{background-color:#043350; display:inline-block; width:100%;}
+.footer_top{background-color:#043350; display:inline-block; width:100%; position:relative;}
 .footer_section1{width:67%; float:left; border-right:1px solid #5b5b5b; padding:10px 0 10px 72px;}
 .footer_section2{width:17%; float:left;  padding:10px 72px 10px 0;} 
 .footer_header{color:#fff; padding:10px 20px;}
@@ -247,12 +247,12 @@ width: 100%;}
 .footer_section2 .foot_tw:hover{opacity:1;}
 .foot_map{color:#3ebaf4; font-size:16px; text-decoration:underline;}
 /* ************************* 404 page ******************************** */
-.wrapper_404{background:#003255;}
-.p404_bg{background:#003255;}
+/*.wrapper_404{background:#003255;}
+.p404_bg{background:#003255;}*/
 .p404_content{padding: 161px 0 0 0; text-align: center; margin: 0 0 100px 0;}
-.p404_logo{background: url(../images/logo.png) center top no-repeat; height: 79px; display: inline-block; width: 306px; margin: 50px 0 20px 0;}
-.p404_content h2{border-bottom: 1px solid #fff; border-top: 1px solid #fff; width: 500px; margin: 0 auto; padding: 18px 0; font-size: 62px; color: #fff; font-weight: bold; font-family:Aller, helveNueThin, Arial;}
-.p404_content p{width: 500px; margin: 0 auto; padding: 20px 0; color:#fff;}
+.p404_logo{background: url(../images/logo.png)  no-repeat; height: 79px; display: inline-block; width: 317px; margin: 23px 0 0px 121px;}
+.p404_content h2{border-bottom: 1px solid #fff; border-top: 1px solid #fff; width: 500px; margin: 0 auto; padding: 18px 0; font-size: 62px; color: #003255; font-weight: bold; font-family:Aller, helveNueThin, Arial;}
+.p404_content p{width: 500px; margin: 0 auto; padding: 20px 0; color:#003255;}
 /* ************************* dropdown box ******************************** */
 .propert_top{margin: -30px 0 0 0;}
 .dropdown select .dd_value span{font-size:15px!important; font-family:HelveNueThin, Arial!important; color:red;}
@@ -307,3 +307,39 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
 background: url(../images/sprites.png) -1165px -52px no-repeat;
 }
+
+/*********************** login page ******************************/
+.admin_login{width: 1280px;
+margin: 0 auto; text-align: center;}
+.admin_login .admin_h2{padding: 20px 0;
+font-size: 34px;}
+
+.admin_login .addmin_txt{height: 39px;
+width: 23.8%;
+border-radius: 4px;
+border: 1px solid #B1C7D3!important;
+padding-left: 15px;
+font-family: inherit; margin-bottom: 10px;}
+
+.admin_login .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat;
+width: 99px;
+height: 51px;
+border: 0;
+cursor: pointer;
+font: 17px HelveNueThin, Arial;
+font-weight: bold;
+display: block;
+margin: 0 auto;
+line-height: 51px;
+margin-bottom: 10px;
+}
+
+.admin_login .admin_error_msg{ position:;
+margin: 0!important;
+font-size: 14px;
+color: red;}
+.admin_error_msg p{}
+.admin_header{width: 100%; background-color: #043350; height: 60px;}
+.admin_header li{background-color: #043350; display: inline-block; margin: 0 10px;}
+.admin_header li a{font-size: 15px!important; color: #fff; }
+.admin_header a:hover{text-decoration: underline;}

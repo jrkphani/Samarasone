@@ -14,18 +14,18 @@
     
     <div class="wrapper_404">   
      <div class="p404_bg">   
-      <div class="comm_resi_header_top width_1060 header_404">          
+      <div class="comm_resi_header_top width_1060 header_404">     
+        <h1><a class="p404_logo" href="<?php echo base_url(''); ?>"></a></h1> 
       </div>
      	<div class="clearall"></div>
       <div class="p404_content">
-      	<h1><a class="p404_logo" href="<?php echo base_url(''); ?>"></a></h1>
         <h2>PAGE NOT FOUND</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
 elit. Suspendisse sodales, sapien et feugiat blandit, 
 odio justo sollicitudin ipsum, eget aliquam ligula risus</p>
       </div>
-      <div class="footer">
-         <p class="copyr">© Copyright 2013 All rights reserved </p>
+      <div class="footer" style="background:transparent; border-top: 1px solid #003255;">
+         <p class="copyr" style="color:#003255;">© Copyright 2013 All rights reserved </p>
          <p class="powerd">Crafted by <a href="http://www.digitalchakra.in/" target="_blank" title="Digital Chakra"></a></p>      
       </div>  
     </div>  

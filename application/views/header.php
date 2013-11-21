@@ -29,7 +29,16 @@ $subpage = $this->uri->segment(2);?>
        	  <li class="menu_top_bg"></li>
         </ul>
         <ul class="menu_bg">
-			<? if($page =='search') {$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';} else {$slidepage =$page;}?>
+			<? 
+			if($page =='search' || $page =='view') 
+			{
+				$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
+			}
+				 else 
+			{
+				$slidepage =$page;
+			}
+			?>
         	<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
         	<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
         	<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
@@ -74,7 +83,7 @@ $subpage = $this->uri->segment(2);?>
 
 
 
-<header>
+<header class="admin_header">
 	<?
 	$menus = array(1=>'home',2=>'residential',3=>'commercial',4=>'business',5=>'residential_proposition',6=>'commercial_proposition',7=>'business_proposition',8=>'residential_ourteam',9=>'commercial_ourteam',10=>'business_ourteam',11=>'residential_contact',12=>'commercial_contact',13=>'business_contact');
 	$session_data = $this->session->userdata('logged_in');
