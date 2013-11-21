@@ -400,75 +400,14 @@ display:none;
  </div>
 
 <!-- container -->
-<?php if(isset($result)) { ?>
-<div class="container border_img">
-  <div class="conti_border">
-    <p class="color_orange">North Shore <span></span></p>
-    <?php 
-              foreach ($result as $row) {
-				  //if((isset($row->images)) && ($row->images))
-				  if(0)
-				  {
-					  $imagelist = unserialize($row->images);
-				  }
-				  else
-				  {
-					  $imagelist['url']= base_url('assets/images/s_img1.jpg');
-				  }
-				   ?>
-    <div class="s_img_boxes_commer">
-      <div class="search_img"> <img class="inner_plogo" src="<?php echo $imagelist['url']; ?>"/> </div>
-      <div class="content_commer">
-        <h3><?php echo $row->headline; ?>,</h3>
-        <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
-        <p class="cnt"><?php echo $row->description; ?></p>
-        <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-        <a class="fright" uniqueID="<?=$row->uniqueID;?>" href='<?=base_url("view/index/$page_type/$type/$property/$row->uniqueID");?>'>More</a> </div>
-    </div>
-    <?php } ?>
-    
-    <!--       	<div class="s_img_boxes_commer">
-              	<div class="search_img">
-               	 <img class="inner_plogo" src="<?php echo base_url('assets/images/s_img1.jpg'); ?>"/>
-                </div>
-                <div class="content_commer">
-                  <h3>110 Albert Avenue,</h3>
-                  <h4>Chatswood</h4>
-                  <p class="cnt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elementum est, ac accumsan
-                  justo. Morbi tristique lorem viverra odio feugiat, at semper nisi aliquam. Nunc lacinia placerat ipsum.
-                  Proin ac molestie dui. Maecenas lacinia sollicitudin bibendum. Curabitur suscipit quam vitae elit accumsan, 
-                  vel vulputate felis gravida. Curabitur tempor nulla sed venenatis condimentum.</p>
-                  <p class="fleft">Available area from <span>837m2 - 938 m2</span></p>
-                  <a class="fright" href="#">More</a>
-                 </div>
-              </div>
-      
-          </div>
- 			  <!-- container --> 
-    
-    <!-- Next Menu -->
-    <div class="clearall"></div>
-    <div class="pagenation">
-      <ul>
-        <?php echo $this->pagination->create_links(); ?>
-      </ul>
-    </div>
-    
-    <!-- <div class="next_menu">
-        	<ul>
-        		<li class="previous_img previous"><a href="#">Previous</a></li>
-          	<li class="center" ><a  href="#">&nbsp;</a></li>
-          	<li class="active"><a  href="#">&nbsp;</a></li>
-          	<li class="next_img next"><a  href="#">Next</a></li>
-          </ul>
-        </div>--> 
-    
-    <!-- Next end -->
-    <?php } ?>
-    <div class="clearall"></div>
-  </div>
-</div>
-</div>
+<?php 
+if(isset($result)) {
+	if($page_type=='business') 
+	$this->load->view('result_two', $data['result']=$result);
+	else
+	$this->load->view('result_one', $data['result']=$result);
+     } ?>
+
 <!-- header end --> 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'jquery.multiselect.js');?>"></script> 
 <script type="text/javascript" src="<?php echo base_url($this->config->item('path_js_file').'prettify.js');?>"></script> 
@@ -481,20 +420,4 @@ $(function(){
 	});
 	
 });
-</script> 
-<script type="text/javascript">
-/*
-	Custom checkbox and radio button - Jun 18, 2013
-	(c) 2013 @ElmahdiMahmoud 
-	license: http://www.opensource.org/licenses/mit-license.php
-*/   
-/*$('input[type="radio"]').wrap('<div class="radio-btn"><i></i></div>');
-$(".radio-btn").on('click', function () {
-    var _this = $(this),
-        block = _this.parent().parent();
-    block.find('input:radio').attr('checked', false);
-    block.find(".radio-btn").removeClass('checkedRadio');
-    _this.addClass('checkedRadio');
-    _this.find('input:radio').attr('checked', true);
-});*/
 </script> 

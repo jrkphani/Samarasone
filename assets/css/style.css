@@ -92,7 +92,7 @@ p, h1, h2, h3, h4, h5, h6{font:24px HelveNueThin, Arial; color:#000;}
 .sr_box p{ font-size: 18px;}
 .sr_box h2{ font-size: 32px;}
 .sr_box{
-	width: 50%;	height: auto; position: absolute; top: 220px; left: 20px; 
+	width: 50%;	min-width: 873px; height: auto; position: absolute; top: 220px; left: 20px; 
 	background: url(../images/blue_trans_bgbox.png); color: #fff; 
 }
 
@@ -270,7 +270,7 @@ strong {
 /*Custom checkbox*/
 
 /*Custom radio button*/
- .radio-btn {
+/*  .radio-btn {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -291,7 +291,7 @@ strong {
     background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
-}
+} 
 .checkedRadio {
     -moz-box-shadow: inset 0 0 5px 1px #ccc;
     -webkit-box-shadow: inset 0 0 5px 1px #ccc;
@@ -310,7 +310,7 @@ strong {
 }
 .checkedRadio i {
     background-color: #285069;
-}
+}*/
 
 /* slider */
 

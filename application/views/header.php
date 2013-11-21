@@ -29,7 +29,7 @@ $subpage = $this->uri->segment(2);?>
        	  <li class="menu_top_bg"></li>
         </ul>
         <ul class="menu_bg">
-			<? if($page =='searchnew') {$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';} else {$slidepage =$page;}?>
+			<? if($page =='search') {$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';} else {$slidepage =$page;}?>
         	<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
         	<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
         	<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
@@ -45,15 +45,15 @@ $subpage = $this->uri->segment(2);?>
       </div>
     	
     	  <?
-				 if(($page != 'view') && ($page != 'searchnew')) 
+				 if(($page != 'view') && ($page != 'search')) 
 				{
 					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
 					if($page == 'residential')
-					$imageslist = array('slide2.jpg','slide16.jpg','slide19.jpg','slide3.jpg','slide6.jpg','slide21.jpg');
+					$imageslist = array('slide2.jpg','slide16.jpg','slide19.jpg','slide3.jpg','slide6.jpg','slide21.jpg','slide11.jpg');
 					if($page == 'commercial')
-					$imageslist = array('slide14.jpg','slide7.jpg','slide1.jpg','slide15.jpg','slide12.jpg','slide4.jpg');
+					$imageslist = array('slide14.jpg','slide7.jpg','slide22.jpg','slide1.jpg','slide13.jpg','slide15.jpg','slide12.jpg','slide4.jpg');
 					if($page == 'business')
-					$imageslist = array('slide18.jpg','slide20.jpg','slide15.jpg','slide10.jpg','slide17.jpg');
+					$imageslist = array('slide18.jpg','slide22.jpg','slide20.jpg','slide15.jpg','slide10.jpg','slide17.jpg');
 				?>
 				<div id="slides">
 					<?
