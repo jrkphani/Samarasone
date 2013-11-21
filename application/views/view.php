@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery.galleryview-3.0-dev.css"); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."gallery.css"); ?>" />
 <div class="wrapper_bg">
 	<div class="header">
 			<div class="wrapper_gradient_bg"> </div>
@@ -47,31 +48,21 @@
 	                	$addressArr['country'].' '.
 	                	$addressArr['postcode']?>" target="_blank">Location</a><br/>
 	                	<span id="gallery">Gallery</span>
-	                	<?
-						//if((isset($row->images)) && ($row->images))
-						  if(0)
-						  {
-							  $imagelist = unserialize($row->images);
-						  }
-						  else
-						  {
-							  $imagelist['url']= base_url('assets/images/s_img1.jpg');
-						  }
-						$images = unserialize($result[0]->images);
-						?>
-						<div id="galleryTop" style="display:none;">
-							<span id="galleryClose">CLOSE</span>
-							<div id="images">
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-								<li><img src="http://localhost/samaras/assets/images/slide1.jpg"/></li>
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-								<li><img src="<?=$imagelist['url'];?>"/></li>
-							</div>
-	                	</div>
+	                	
+		                	<?
+							//if((isset($row->images)) && ($row->images))
+							  if(0)
+							  {
+								  $imagelist = unserialize($row->images);
+							  }
+							  else
+							  {
+								  $imagelist['url']= base_url('assets/images/s_img1.jpg');
+							  }
+							$images = unserialize($result[0]->images);
+							?>
+						
+
 	              	</div>
 	            </div>
 	            <!-- Image and appointment form -->
@@ -96,10 +87,28 @@
 	          	</div>
        		</div>  
     	</div>
-      
+      					
       <!-- property page -->
     </div>
+
   </div>
+
+
+	<div id="galleryTop" class="gallery_main">
+		<span id="galleryClose">Back</span>
+		<div id="images" class="gallery_inner">
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<li><img src="http://localhost/samaras/assets/images/slide1.jpg"/></li>
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<li><img src="<?=$imagelist['url'];?>"/></li>
+		</div>
+	</div>
+	                	
+
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.easing.1.3.js');?>"></script>
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.timers-1.2.js');?>"></script>
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.galleryview-3.0-dev.js');?>"></script>
