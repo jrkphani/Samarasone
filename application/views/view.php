@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery.galleryview-3.0-dev.css"); ?>" />
 <div class="wrapper_bg">
 	<div class="header">
 			<div class="wrapper_gradient_bg"> </div>
@@ -9,7 +9,16 @@
       </div>   
       <!-- property page -->   
 				<div class="sr_box">
-      	 	<a href="<? echo (isset($_SERVER['HTTP_REFERER']))?$_SERVER['HTTP_REFERER']:base_url();?>" class="backSearch"> Back to search </a>
+					<?
+					if(isset($_SERVER['HTTP_REFERER']))
+					{
+					$onclick = 'onclick="gotosearch()"';
+					echo '<a href="'.$_SERVER['HTTP_REFERER'].'" class="backSearch"> Back to search </a>';
+					}
+					else
+					$onclick = 'onclick="goback()"';
+					?>
+      	 	<!-- <a href="#" <?=$onclick;?> class="backSearch"> Back to search </a> -->
             <div class="sr_top_bg">
                 
             </div>
@@ -17,23 +26,58 @@
         		<!-- Property description and location -->
 	            <div class="sr_left">
 	                <div class="sr_inner">
-	                    <h2>110 Albert Avenue</h2><br />
+	                    <h2><?=$result[0]->headline;?></h2><br />
 	                    <div class="sr_section">
 	                        <h2>Property Description</h2><br />
-	                        <p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae auctor massa. Donec velit massa, adipiscing non porta non, viverra at neque. Cras condimentum ipsum mauris, id laoreet diam laoreet consectetur. Integer lacus est, sollicitudin a varius eu, consectetur sed neque. </p>
+	                        <p><?=$result[0]->description;?></p>
 	                    </div>
 	                    <div class="sr_section2">
 	                    	<h2>Property Location</h2><br />
-	                    	<p> Samaras one take on the profeciency Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus est, sollicitudin a varius eu, consectetur sed neque.</p>
+	                    	<? 
+	                    	$addressArr = unserialize($result[0]->address);
+	                    	echo '<p>'.$addressArr['streetNumber'].' , '.$addressArr['street'].'<br />'.
+								$addressArr['state'].' , '.$addressArr['region'].'<br />'.
+								$addressArr['country'].' - '.$addressArr['postcode'].'</p>';
+							?>
 	                	</div>
-	                	<a href="https://www.google.co.in/maps?q=220,+Level+2++111+Harrington+St+Sydney+NSW+2000&t=m&hnear=220%2F111+Harrington+St,+Sydney+New+South+Wales+2000,+Australia&z=16" target="_blank">Location</a><br/>
-	                	<a href="#">Gallery</a>
+	                	<a href="https://www.google.co.in/maps?q=<? echo $addressArr['streetNumber'].' '.
+	                	$addressArr['street'].' '.
+	                	$addressArr['region'].' '.
+	                	$addressArr['state'].' '.
+	                	$addressArr['country'].' '.
+	                	$addressArr['postcode']?>" target="_blank">Location</a><br/>
+	                	<span id="gallery">Gallery</span>
+	                	<?
+						//if((isset($row->images)) && ($row->images))
+						  if(0)
+						  {
+							  $imagelist = unserialize($row->images);
+						  }
+						  else
+						  {
+							  $imagelist['url']= base_url('assets/images/s_img1.jpg');
+						  }
+						$images = unserialize($result[0]->images);
+						?>
+						<div id="galleryTop" style="display:none;">
+							<span id="galleryClose">CLOSE</span>
+							<div id="images">
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+								<li><img src="http://localhost/samaras/assets/images/slide1.jpg"/></li>
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+								<li><img src="<?=$imagelist['url'];?>"/></li>
+							</div>
+	                	</div>
 	              	</div>
 	            </div>
 	            <!-- Image and appointment form -->
 	            <div class="sr_right">
 	            	<div class="sr_inner">
-	                	<img src="<?php echo base_url('assets/images/slide1.jpg'); ?>"/> <br/><br/>
+	                	<img src="<?=$imagelist['url'];?>"/> <br/><br/>
 	                	<div class="apt_form">
 	                  		<h2>Make an appointment</h2>
 	                    	<form>
@@ -56,4 +100,22 @@
       <!-- property page -->
     </div>
   </div>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.easing.1.3.js');?>"></script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.timers-1.2.js');?>"></script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.galleryview-3.0-dev.js');?>"></script>
+  <script>
+  function gotosearch()
+  {
+	  window.history.back();
+  }
+  function goback()
+  {
+	 window.location.href = baseurl;
+  }
+  $('#images').galleryView({
+	 autoplay: false,
+});
+  $('#galleryClose').click(function() { $('#galleryTop').hide(); });
+  $('#gallery').click(function() { $('#galleryTop').toggle(); });
+  </script>
 <!-- header end --> 
