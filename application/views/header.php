@@ -29,7 +29,16 @@ $subpage = $this->uri->segment(2);?>
        	  <li class="menu_top_bg"></li>
         </ul>
         <ul class="menu_bg">
-			<? if($page =='search') {$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';} else {$slidepage =$page;}?>
+			<? 
+			if($page =='search' || $page =='view') 
+			{
+				$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
+			}
+				 else 
+			{
+				$slidepage =$page;
+			}
+			?>
         	<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
         	<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
         	<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
