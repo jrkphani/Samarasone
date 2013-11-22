@@ -1,5 +1,5 @@
 .gallery_main{
-	display:none;position:absolute; width:100%; height:100%; background:url(../images/bg_black.png); top:0; z-index: 99998;}
+	display:none;position:absolute; width:100%; background:url(../images/bg_black.png); top:0; z-index: 99998;}
 
 	.gallery_inner{
 
@@ -19,24 +19,13 @@
 
 
 #galleryClose:hover {
-background: url(../images/sprites.png) -528px -231px no-repeat;
-width: 99px;
-height: 51px;
+background: url(../images/icon_close.png) no-repeat;
 }
 #galleryClose {
-display: block;
-position: absolute;
-right: 0;
-z-index: 99999;
-background: url(../images/sprites.png) -425px -231px no-repeat;
-line-height: 51px !important;
-text-align: center;
-width: 99px;
-height: 51px;
-border: 0;
-cursor: pointer;
-font: 17px HelveNueThin, Arial;
-font-weight: bold;
+display: block;position: absolute;
+right: 50px; top:50px; z-index: 99999;
+background: url(../images/icon_close.png) no-repeat;
+width: 80px;height: 80px;border: 0;cursor: pointer;text-indent: -999em;
 }
 
 

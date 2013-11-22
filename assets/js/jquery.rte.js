@@ -110,14 +110,14 @@ jQuery.fn.rte = function(css_url, media_url) {
                 </select>\
             </p>\
             <p>\
-                <a href='#' class='bold'><img src='"+media_url+"bold.gif' alt='bold' /></a>\
-                <a href='#' class='italic'><img src='"+media_url+"italic.gif' alt='italic' /></a>\
+                <a href='#' class='bold'><img src='"+baseurl+"assets/images/btn_bold.png' alt='bold' /></a>\
+                <a href='#' class='italic'><img src='"+baseurl+"assets/images/btn_italic.png' alt='italic' /></a>\
             </p>\
             <p>\
-                <a href='#' class='unorderedlist'><img src='"+media_url+"unordered.gif' alt='unordered list' /></a>\
-                <a href='#' class='link'><img src='"+media_url+"link.png' alt='link' /></a>\
-                <a href='#' class='image'><img src='"+media_url+"image.png' alt='image' /></a>\
-                <a href='#' class='disable'><img src='"+media_url+"close.gif' alt='close rte' /></a>\
+                <a href='#' class='unorderedlist'><img src='"+baseurl+"assets/images/btn_list.png' alt='unordered list' /></a>\
+                <a href='#' class='link'><img src='"+baseurl+"assets/images/btn_link.png' alt='link' /></a>\
+                <a href='#' class='image'><img src='"+baseurl+"assets/images/btn_image.png' alt='image' /></a>\
+                <a href='#' class='disable'><img src='"+baseurl+"assets/images/btn_disable.png' alt='close rte' /></a>\
             </p></div></div>");
         $('select', tb).change(function(){
             var index = this.selectedIndex;
@@ -141,7 +141,7 @@ jQuery.fn.rte = function(css_url, media_url) {
             return false; });
         $('.disable', tb).click(function() {
             var txt = disableDesignMode(iframe);
-            var edm = $('<a href="#">Enable design mode</a>');
+            var edm = $('<a href="#" style="color:#FFFFFF;">Enable design mode</a>');
             tb.empty().append(edm);
             edm.click(function(){
                 enableDesignMode(txt);

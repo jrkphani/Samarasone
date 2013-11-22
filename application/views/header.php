@@ -91,7 +91,7 @@ $subpage = $this->uri->segment(2);?>
 	$session_data = $this->session->userdata('logged_in');
 	 ?>
 		
-			<?php if($session_data) { ?><?php echo $session_data['email'];?>
+			<?php if($session_data) { ?><?php echo '<p>Welcome '.$session_data['email'].'</p>';?>
 		<header class="admin_header">
 		<nav>
 			<ul>
