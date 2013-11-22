@@ -248,6 +248,44 @@ function dynamics($id,$msg=NULL)
 	}
 	$this->load->view('template', $data);
 }
+// Change password
+	function changepassword()
+	{
+		$this->load->library('passhash');
+		$this->load->model('user');
+		$data['err']="";
+		if(isset($_POST['submit']))
+		{
+			$session_data = $this->session->userdata('logged_in');
+			$current_password=$this->input->post('current_password');
+			$confirm_password=$this->input->post('confirm_password');
+			$new_password=$this->passhash->hash($this->input->post('new_password'));
+			if($confirm_password != $new_password)
+			{
+				$data['err']="Password mismatch";
+			}
+			else
+			{
+				if($current_password != $this->passhash->hash($current_password))
+				{
+					$data['err']="Current password is wrong";
+				}
+				else
+				{
+					$where=array('id'=>$session_data['id']);
+					$db_password = $this->user->get_password($where);
+					if($this->user->check_user($db_password, $current_password))
+					{
+						$values=array('password'=>$new_password);
+						if($this->user->update_user($values,$where))
+							$data['success']='yes';
+					}
+				}
+			}
+		}
+		$data['view_page'] = 'changepassword';
+		$this->load->view('template', $data);
+	}
 
 }//class end
 ?>
