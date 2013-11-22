@@ -22,7 +22,7 @@ $subpage = $this->uri->segment(2);?>
 
 <body>
 	<div class="wrapper">
-		    <? if($page!= 'admin') { ?>
+		    <? if($page!= 'admin' && $page!= 'login') { ?>
     <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo ''; } else { echo 'menu_logo'; } ?>">
     </div>
     	<div id="mainmenu" class="mainmenu" style="display:none;">
