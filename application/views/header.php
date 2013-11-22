@@ -104,7 +104,7 @@ $subpage = $this->uri->segment(2);?>
 					</ul>
 				</li>
 				<li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
-				<li><a href="<?php echo base_url('admin/changepassword'); ?>">Change Password</a></li>
+				<!--<li><a href="<?php echo base_url('admin/changepassword'); ?>">Change Password</a></li> -->
 			</ul>
 			</nav>
 	</header>
