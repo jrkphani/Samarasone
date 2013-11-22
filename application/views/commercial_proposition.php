@@ -11,8 +11,7 @@
         <h6></h6>-->
         <h2>Our Value Proposition</h2>   
       </div>
-    </div>
-  </div>
+    
 <!-- header end --> 
   <div class="body_cnt">
 <?php echo $content; ?>
@@ -20,3 +19,5 @@
  </div>
 
   <div class="clearall"></div>
+   <div class="push"></div>
+</div>

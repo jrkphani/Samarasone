@@ -8,7 +8,7 @@
         <h6></h6>
         <h2>Welcome to Samaras One, </h2> -->  
       </div>
-    </div>
+
 <!-- header end -->      
     
     <div class="content_container">
@@ -50,3 +50,7 @@
     </div>
     <div class="clearall"></div>
 <!-- end --> 
+     <div class="push" style="height:74px !important;" ></div>
+    </div>
+
+

@@ -11,8 +11,7 @@
         <h6></h6>-->
         <h2>Commercial</h2>   
       </div>
-    </div>
-  </div>
+   
 <!-- header end --> 
   <div class="body_cnt">
 
@@ -31,6 +30,10 @@
 		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
 	</ul>
   </div>
+  <form>
+  </form>
   <div class="clearall"></div>
+<div class="push"></div>
+</div>
   <!-- bottom slider js -->
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>

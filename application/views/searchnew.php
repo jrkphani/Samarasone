@@ -398,7 +398,7 @@ display:none;
   <h1><a href="<?php echo base_url(); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a> </h1>
   <h5 class="page_name"><p><?php echo ucwords($page_type); ?></p></h5>
  </div>
-
+ 
 <!-- container -->
 <?php 
 if(isset($result)) {
@@ -421,3 +421,6 @@ $(function(){
 	
 });
 </script> 
+
+ <div class="push"></div>
+</div>
