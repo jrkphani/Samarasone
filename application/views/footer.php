@@ -42,3 +42,9 @@ $subpage = $this->uri->segment(2);
 
 <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.slides.min.js');?>"></script>
 <script src="<?php echo base_url($this->config->item('path_js_file').'header.js');?>"></script>
+<? if($page =='admin') { ?>
+<script src="<?php echo base_url($this->config->item('path_js_file').'jquery.rte.js');?>"></script>
+<script>
+$('#content').rte("css url", "toolbox images url");
+</script>
+<? } ?>

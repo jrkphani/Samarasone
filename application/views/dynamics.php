@@ -6,7 +6,7 @@
 ?>
 <h2><?php echo 'Edit: '.$title; ?></h2>
 <form name="form1" method="post">
-<textarea cols="40" rows="10" name="content">
+<textarea cols="40" rows="10" id="content" name="content">
 <?php echo $content; ?>
 </textarea>
 <input type="submit" name="submit" value="Submit" />
