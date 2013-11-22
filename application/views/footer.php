@@ -3,9 +3,11 @@
 $page = $this->uri->segment(1); 
 $subpage = $this->uri->segment(2); 
 ?> 
-		<div class="clearall"></div>
-		<? if($page !='' && $page !='home' && $subpage!='contact') { ?>
+		
+     
+		
     <div class="footer_full">
+        <? if($page !='' && $page !='home' && $subpage!='contact') { ?>
         <div class="footer_top">
         	<div class="footer_section1">
           	 <h3 class="footer_header">Contact</h3>
@@ -28,14 +30,15 @@ $subpage = $this->uri->segment(2);
              <a class="foot_tw" href="#"></a>
           </div>      
         </div>
+         <? } ?>
         <div class="clearall"></div>
-        <? } ?>
+       
         <div class="footer">
           	<p class="copyr">© Copyright 2013 All rights reserved </p>
             <p class="powerd">Crafted by <a href="http://digitalchakra.in"  target="_blank"></a></p>
-      </div>  
+        </div>  
     </div>  
-  </div>
+ 
 </body>
 </html>
 

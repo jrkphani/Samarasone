@@ -186,7 +186,7 @@ width: 100%;}
  .contact_pg .cont_spr{ width:100%; float:left; border-bottom:1px solid #285069; margin-bottom:10px; padding-bottom: 10px;}
 .conatct_left{width: 30%; float: left; position: relative; padding: 1% 2% 1% 0;}
 .conatct_right{width:26%; float: left; position: relative; padding: 1% 0% 1% 2%;}
-.conatct_center{width:40%; float: left; position: relative; padding: 1% 0% 1% 0;}
+.conatct_center{width:40%; float: left; position: relative; padding: 1% 0% 1% 0; margin-bottom: 20px;}
 .contct_header{color:#043350; padding:0 0 10px 0;}
 .contct_para{padding:0 0 15px 0; font-size: 22px;}
 .cont_location{height:357px; width:100%; margin-top: 109px; border: 1px solid #ddd;}

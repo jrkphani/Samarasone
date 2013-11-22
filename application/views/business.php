@@ -11,8 +11,7 @@
         <h6></h6>-->
         <h2>Business</h2>   
       </div>
-    </div>
-  </div>
+   
 <!-- header end --> 
   <div class="body_cnt">
 
@@ -31,5 +30,9 @@
 	</ul>
   </div>
   <div class="clearall"></div>
+
+  <div class="push"></div>
+</div>
+
   <!-- bottom slider js -->
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>
