@@ -236,7 +236,7 @@ function dynamics($id,$msg=NULL)
 		$this->form_validation->set_rules('content', 'Content', 'trim|required|min_length[10]');
 		if(!$this->form_validation->run() === FALSE)
 		{
-			$file_obj=fopen($file, 'w');
+			$file_obj=fopen($file, 'w+');
 			$file_content = $_POST['content'];
 			$result=fwrite($file_obj, $file_content);
 			fclose($file_obj);
