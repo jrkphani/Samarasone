@@ -93,7 +93,7 @@ $(document).ready(function()
 				{
 					if(data.resultset.success=='yes')
 					{
-						$('#error_msg').html("<span class='success_msg'>We have sent you an email to reset the password for your EZCV Account. Please check your mail account.</span>");
+						$('#error_msg').html("<span class='success_msg'>We have sent you an email to reset the password. Please check your mail account.</span>");
 						//alert('s');
 						//window.location.reload();
 						//window.location.href="tmplts";
