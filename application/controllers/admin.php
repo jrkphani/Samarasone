@@ -30,10 +30,12 @@ function edit()
 	{
 		 $data['msg'] ="";
 		 $data['page'] =$page;
+		 $data['redirect'] = NULL;
 		$file=FCPATH."application/views/dynamics/".$page.".html";
 		if($content = $this->input->post('content'))
 		{
-			$data['msg'] = 'Updated successfully';
+			$data['msg'] = 'Content Updated Successfully!';
+			$data['redirect'] = TRUE;
 			if ( ! write_file($file, $content))
 			{
 				 $data['msg'] = 'Internal error, please contact Administator';

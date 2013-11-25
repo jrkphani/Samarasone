@@ -11,6 +11,6 @@ echo "</select>";
 function gotpage(page)
 {
 	if(page != 'Select Page')
-	window.location.href = "<?=base_url('admin/edit');?>/"+page;
+		window.location.href = "<?=base_url('admin/edit');?>/"+page;
 }
 </script>
