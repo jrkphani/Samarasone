@@ -44,9 +44,8 @@ class REA_XML {
 	 */
 	private $fields = array (
 		'priceView',
+		'price',
 		'description',
-		'agentID',
-		'uniqueID',
 		'features' => array(
 			'bedrooms',
 			'bathrooms',
@@ -63,9 +62,21 @@ class REA_XML {
 			'suburb',
 			'state',
 			'postcode',
-		),	
-		'images',
+		),
+		'listingAgent'	=> array(
+			'name',
+			'telephone',
+			'email',
+		),
+		'objects',
 		'status',
+		'agentID',
+		'uniqueID',
+		'authority',
+		'underOffer',
+		'category',
+		'isHomeLandPackage',
+		'headline',
 	);
 
 	/* default files exluded when parsing a directory */
@@ -142,33 +153,41 @@ class REA_XML {
 				 */
 				foreach($this->fields as $key => $field) {
 					if(is_array($field)) {
-						$found=0;
-						foreach($field as $sub_field) {
-							if(count($property->{$key}->{$sub_field}) > 0)
+						if($key == 'listingAgent')
+						{
+							foreach($property->{$key} as $listingAgent)
 							{
-							//$prop[$key][$sub_field] = (string)$property->{$key}->{$sub_field};
-							$temp_arr[$sub_field] = (string)$property->{$key}->{$sub_field};
-							$found=1;
+								$temp_arr =array();
+								foreach($field as $sub_field) {
+								$temp_arr[$sub_field] = (string)$listingAgent->{$sub_field};
+								}
+								$prop[$key][] = $temp_arr;
 							}
 						}
-						if($found)
-						$prop[$key] = serialize($temp_arr);
-						$temp_arr = array();
+						else
+						{
+							foreach($field as $sub_field) {
+							$prop[$key][$sub_field] = (string)$property->{$key}->{$sub_field};
+							}
+						}
 					}
 					else { /* Different handling for Images */
-						$found=0;
-						if($field == "images" && count($property->images) > 0) {
-							foreach($property->images->img as $img) {
-								$found=1;
+						if($field == "objects" && count($property->$field) > 0) {
+							foreach($property->$field->img as $img) {
 								$attr = $img->attributes();
-								$temp_arr[(string)$attr->id] = (string)$attr->url;
+								if($attr->url)
+								$prop[$field][] = (string)$attr->url;
 							}
-							if($found)
-							$prop[$field] = serialize($temp_arr);
-							$temp_arr = array();
+						}
+						else if($field == "authority" || $field == "underOffer")
+						{
+							$prop[$field] = (string)$property->$field->attributes()->value;
+						}
+						else if($field == "category")
+						{
+							$prop[$field] = (string)$property->$field->attributes()->name;
 						}
 						else {
-							if(count($property->{$field} > 0))
 							$prop[$field] = (string)$property->{$field};
 						}
 						
