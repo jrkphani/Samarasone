@@ -60,7 +60,7 @@ $(document).ready(function()
 				{
 					if(data.resultset.success=='yes')
 					{
-							window.location.href=baseurl+"admin/userlist";
+							window.location.href=baseurl+"admin";
 					}
 					else
 					{

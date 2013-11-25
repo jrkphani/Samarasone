@@ -5,303 +5,66 @@ function __construct()
 {
 	parent::__construct();
 	$this->current_user=$this->session->userdata('logged_in');
-	if(!$this->current_user)
-		redirect('login', 'refresh');
+	$this->load->helper('form');
+	$this->load->library('form_validation');
+	$this->load->helper('file');
+	$this->pages = array(1=>'home',2=>'residential',3=>'commercial',4=>'business',5=>'residential_proposition',6=>'commercial_proposition',7=>'business_proposition',8=>'residential_ourteam',9=>'commercial_ourteam',10=>'business_ourteam',11=>'residential_contact',12=>'commercial_contact',13=>'business_contact');
 }
 
 function index()
 {
-	$this->userList();
+	if(!$this->current_user)
+		redirect('admin/login', 'refresh');
+	$data['view_page'] = 'admin/pages';
+	$data['email'] = $this->current_user['email'];
+	$data['pages'] = $this->pages;
+	//print_r($data);
+	$this->load->view('template', $data);
 }
-
-function add()
+function edit()
 {
-	$this->load->helper('form');
-	$this->load->library('form_validation');	
-	$this->load->model('basic_model');
-	$data['msg']=NULL;
-	$data['success']=NULL;
-	$data['view_page'] = 'admin_add';
-	
-	if(isset($_POST['submit']))
+	if(!$this->current_user)
+		redirect('admin/login', 'refresh');
+	$page=$this->uri->segment(3);
+	if(in_array($page,$this->pages))
 	{
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|max_length[100]');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[100]');
-
-		if ($this->form_validation->run() === FALSE)
+		 $data['msg'] ="";
+		 $data['page'] =$page;
+		$file=FCPATH."application/views/dynamics/".$page.".html";
+		if($content = $this->input->post('content'))
 		{
-			$this->load->view('template', $data);
-		}
-		else
-		{
-			$this->load->library('passhash');
-			$email=$this->input->post('email');
-			$password=$this->input->post('password');
-
-			$values=array(
-				'email' => $email,
-				'password' => $this->passhash->hash($password),
-				'active' => '1'
-			);
-			$result=$this->basic_model->insert($values,'users');
-			if($result)
+			$data['msg'] = 'Updated successfully';
+			if ( ! write_file($file, $content))
 			{
-				$data['msg']='New admin added successfully.';
-				$data['success']='yes';
-			}
-			else
-			{
-				$data['msg']='Internal error. Please try again later.';
-				$data['success']='no';
+				 $data['msg'] = 'Internal error, please contact Administator';
 			}
 		}
-	}
-	$this->load->view('template', $data);
-
-}
-
-function userList()	//Load at first time
-{
-	$this->load->model('admin_model');
-	$data['userlist']=$this->admin_model->userList($this->current_user['id']);
-	$data['role']=NULL;
-	$data['status']=NULL;
-	$data['pagi']=$this->pagination();
-	$data['view_page'] = 'userList';
-	$this->load->view('template', $data);
-}
-
-function userListAjax()	//Load when pagination or other form submits
-{
-	$from=$this->uri->segment(3);
-	$this->load->model('admin_model');
-	$role=$this->input->post('role');
-	$status=$this->input->post('status');
-	$data['role']=$role;
-	$data['status']=$status;
-	$data['userlist']=$this->admin_model->userList($this->current_user['id'],$role,$status,$from);
-	$data['pagi']=$this->pagination($role,$status);
-	$this->load->view('userList', $data);
-}
-
-function pagination($role=NULL,$status=NULL)
-{
-	$this->load->library('jquery_pagination');
-	$config['div'] = '#ajax-content';
-	$config['additional_param']  = 'serialize_form()';
-	$config['base_url'] = base_url().'admin/userListAjax/';
-	$config['total_rows'] =  $this->admin_model->totalUserRecords($this->current_user['id'],$role,$status);
-	$config['per_page'] = 2;
-	$this->jquery_pagination->initialize($config);
-	return $this->jquery_pagination->create_links();
-}
-
-/*function pendingUsers($msg=NULL)
-{
-	$this->load->model('admin_model');
-	$data['userlist']=$this->admin_model->pendingUsers();
-	$data['view_page'] = 'pendingUsers';
-	$data['msg']=$msg;
-	$this->load->view('template', $data);
-}*/
-
-function activateUser($id,$type,$to_email)
-{
- 	$this->load->model('admin_model');
- 	if($type=='activate')
- 		$result=$this->admin_model->activateUser($id);
- 	else if($type=='block')
- 		$result=$this->admin_model->blockUser($id);
- 	if($result)
- 	{
- 		$data['resultset']['success']=1;
-
- 		$this->load->library('email');
- 		$config['charset'] = 'iso-8859-1';
-		$config['wordwrap'] = TRUE;
-		$config['mailtype']='html';
-		$to_email=urldecode($to_email);
-		$this->email->initialize($config);
-		$this->email->from('resume@digitalchakra.in', 'Digital Chakra');
-		$this->email->to($to_email);
- 		if($type=='activate')
- 		{
- 			$this->email->subject('Your Resume App account successfully activated.');
-			$message= 'Dear user,<br />Your account on Resume App has been activated. Now you can login here: <a href="'.base_url().'">Digitalchakra Resume App</a>.<br />Regards,<br />Resume App Team.';
- 		}
- 		else if($type=='block')
- 		{
- 			$this->email->subject('Your Resume App account was inactivated by admin.');
- 			$message= 'Dear user,<br />Your account on Resume App has been inactivated by admin.';
- 			$msg=$this->input->post('msg');
- 			if($msg)
-				$message.='<br /><br />'.$msg;
-			$message.='<br />Regards,<br />Resume App Team.';
- 		}
- 		$this->email->message($message);
-		if(!$this->email->send())
-			$data['resultset']['mail']='no';
- 	}
- 	else
- 	{
- 		$data['resultset']['success']=-1;
- 	}
-   	$this->load->view('json',$data);
-}
-
-function editUser($id=NULL)
-{
-	$this->load->helper('form');
-	$this->load->library('form_validation');	
-	$this->load->model('admin_model');
-
-	if(!$id)
-		redirect('my404');
-
-	$result=$this->admin_model->userDetails($id);
-	$data=$result[0];
-	$data['view_page'] = 'userEdit';
-	$data['user_id']=$id;
-
-	//Update
-	if(isset($_POST['submit_form1']))
-	{
-		$this->form_validation->set_rules('email', 'Primary Email', 'trim|required|valid_email|max_length[254]');
-		$this->form_validation->set_rules('role', 'Role', 'required');
-		if ($this->form_validation->run() === FALSE)
-		{
-			$this->load->view('template', $data);
-		}
-		else
-		{
-			$this->admin_model->userUpdate($this->input->post('user_id'),$this->input->post('email'),$this->input->post('role'));
-			redirect(base_url('admin/userList'));
-		}
+		$data['content'] = read_file($file);
+		$data['view_page'] = 'admin/edit_page';
+		$this->load->view('template', $data);
 	}
 	else
 	{
-		//View
-		$this->load->view('template', $data);
+		redirect('my404');
 	}
-
 }
-
-function dynamics($id,$msg=NULL)
+function login()
 {
-	$this->load->helper('form');
-	$this->load->library('form_validation');
-
-	switch ($id) {
-		case '1':
-			$file=FCPATH."application/views/dynamics/home.html";
-			break;
-		case '2':
-			$file=FCPATH."application/views/dynamics/residential.html";
-			break;
-		case '3':
-			$file=FCPATH."application/views/dynamics/commercial.html";
-			break;
-		case '4':
-			$file=FCPATH."application/views/dynamics/business.html";
-			break;
-		case '5':
-			$file=FCPATH."application/views/dynamics/residential_proposition.html";
-			break;
-		case '6':
-			$file=FCPATH."application/views/dynamics/commercial_proposition.html";
-			break;
-		case '7':
-			$file=FCPATH."application/views/dynamics/business_proposition.html";
-			break;
-		case '8':
-			$file=FCPATH."application/views/dynamics/residential_ourteam.html";
-			break;
-		case '9':
-			$file=FCPATH."application/views/dynamics/commercial_ourteam.html";
-			break;
-		case '10':
-			$file=FCPATH."application/views/dynamics/business_ourteam.html";
-			break;
-		case '11':
-			$file=FCPATH."application/views/dynamics/residential_contact.html";
-			break;
-		case '12':
-			$file=FCPATH."application/views/dynamics/commercial_contact.html";
-			break;
-		case '13':
-			$file=FCPATH."application/views/dynamics/business_contact.html";
-			break;		
-		default:
-			redirect('my404');
-			break;
-	}
-
-	$file_obj=fopen($file, 'r');
-	$file_content = fread($file_obj, filesize($file));
-	fclose($file_obj);
-	$data['content']=$file_content;
-	$data['file'] = $file;
-	$data['msg']=$msg;
-
-	$file_name = basename($file, ".html");
-	$data['title']=ucwords(str_replace('_', ' ', $file_name));
-	$data['view_page'] = 'dynamics';
-
-	if(isset($_POST['submit']))
-	{
-		$this->form_validation->set_rules('content', 'Content', 'trim|required|min_length[10]');
-		if(!$this->form_validation->run() === FALSE)
+	if($this->current_user)
 		{
-			$file_obj=fopen($file, 'w+');
-			$file_content = $_POST['content'];
-			$result=fwrite($file_obj, $file_content);
-			fclose($file_obj);
-			if($result)
-				redirect('admin/dynamics/'.$id.'/suc');
-			else
-				redirect('admin/dynamics/'.$id.'/err');
+		 		redirect('admin', 'refresh');
 		}
-	}
-	$this->load->view('template', $data);
+		else
+		{
+			$data['view_page'] = 'login_view';
+			$this->load->view('template', $data);
+		}
 }
-// Change password
-	function changepassword()
-	{
-		$this->load->library('passhash');
-		$this->load->model('user');
-		$data['err']="";
-		if(isset($_POST['submit']))
-		{
-			$session_data = $this->session->userdata('logged_in');
-			$current_password=$this->input->post('current_password');
-			$confirm_password=$this->input->post('confirm_password');
-			$new_password=$this->passhash->hash($this->input->post('new_password'));
-			if($confirm_password != $new_password)
-			{
-				$data['err']="Password mismatch";
-			}
-			else
-			{
-				if($current_password != $this->passhash->hash($current_password))
-				{
-					$data['err']="Current password is wrong";
-				}
-				else
-				{
-					$where=array('id'=>$session_data['id']);
-					$db_password = $this->user->get_password($where);
-					if($this->user->check_user($db_password, $current_password))
-					{
-						$values=array('password'=>$new_password);
-						if($this->user->update_user($values,$where))
-							$data['success']='yes';
-					}
-				}
-			}
-		}
-		$data['view_page'] = 'changepassword';
-		$this->load->view('template', $data);
-	}
-
-}//class end
+function logout()
+{
+	$this->session->unset_userdata('logged_in');
+	$this->session->sess_destroy();
+	redirect('admin/login', 'refresh');
+}
+}
 ?>

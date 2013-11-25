@@ -1,6 +1,11 @@
 <?php
 class Residential extends CI_Controller
 {
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('file');
+	}
 	function index()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/residential.html");
@@ -30,10 +35,7 @@ class Residential extends CI_Controller
 
 	function get_content($file)
 	{
-		$file_obj=fopen($file, 'r');
-		$file_content = fread($file_obj, filesize($file));
-		fclose($file_obj);
-		return $file_content;
+		return read_file($file);
 	}
 }
 ?>
