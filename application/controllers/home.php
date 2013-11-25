@@ -20,9 +20,7 @@ class Home extends CI_Controller {
 	function index()
 	{
 		$file=FCPATH."application/views/dynamics/home.html";
-		$file_obj=fopen($file, 'r');
-		$file_content = fread($file_obj, filesize($file));
-		fclose($file_obj);
+		$file_content = read_file($file);
 		$data['content']=$file_content;
 		$data['view_page'] = 'home';
 		$this->load->view('template', $data);

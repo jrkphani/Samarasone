@@ -90,7 +90,8 @@ $subpage = $this->uri->segment(2);?>
 	$session_data = $this->session->userdata('logged_in');
 	if($session_data)
 	{ 
-		echo "Hello ".$session_data['email']." <a href='".base_url('admin/logout')."'>Logout</a></li>";
+		echo "<h1>Hello Admin </h1> <a href='".base_url('admin/logout')."'>Logout</a></li>";
+		//echo "Hello ".$session_data['email']." <a href='".base_url('admin/logout')."'>Logout</a></li>";
 	} ?>
 		
 
