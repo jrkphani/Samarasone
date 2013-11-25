@@ -191,34 +191,50 @@ function dynamics($id,$msg=NULL)
 	$this->load->helper('form');
 	$this->load->library('form_validation');
 
-	if($id=='1')
-		$file=FCPATH."application/views/dynamics/home.html";
-	else if ($id=='2')
-		$file=FCPATH."application/views/dynamics/residential.html";
-	else if ($id=='3')
-		$file=FCPATH."application/views/dynamics/commercial.html";
-	else if ($id=='4')
-		$file=FCPATH."application/views/dynamics/business.html";
-	else if ($id=='5')
-		$file=FCPATH."application/views/dynamics/residential_proposition.html";
-	else if ($id=='6')
-		$file=FCPATH."application/views/dynamics/commercial_proposition.html";
-	else if ($id=='7')
-		$file=FCPATH."application/views/dynamics/business_proposition.html";
-	else if ($id=='8')
-		$file=FCPATH."application/views/dynamics/residential_ourteam.html";
-	else if ($id=='9')
-		$file=FCPATH."application/views/dynamics/commercial_ourteam.html";
-	else if ($id=='10')
-		$file=FCPATH."application/views/dynamics/business_ourteam.html";
-	else if ($id=='11')
-		$file=FCPATH."application/views/dynamics/residential_contact.html";
-	else if ($id=='12')
-		$file=FCPATH."application/views/dynamics/commercial_contact.html";
-	else if ($id=='13')
-		$file=FCPATH."application/views/dynamics/business_contact.html";
-	else
-		redirect('my404');
+	switch ($id) {
+		case '1':
+			$file=FCPATH."application/views/dynamics/home.html";
+			break;
+		case '2':
+			$file=FCPATH."application/views/dynamics/residential.html";
+			break;
+		case '3':
+			$file=FCPATH."application/views/dynamics/commercial.html";
+			break;
+		case '4':
+			$file=FCPATH."application/views/dynamics/business.html";
+			break;
+		case '5':
+			$file=FCPATH."application/views/dynamics/residential_proposition.html";
+			break;
+		case '6':
+			$file=FCPATH."application/views/dynamics/commercial_proposition.html";
+			break;
+		case '7':
+			$file=FCPATH."application/views/dynamics/business_proposition.html";
+			break;
+		case '8':
+			$file=FCPATH."application/views/dynamics/residential_ourteam.html";
+			break;
+		case '9':
+			$file=FCPATH."application/views/dynamics/commercial_ourteam.html";
+			break;
+		case '10':
+			$file=FCPATH."application/views/dynamics/business_ourteam.html";
+			break;
+		case '11':
+			$file=FCPATH."application/views/dynamics/residential_contact.html";
+			break;
+		case '12':
+			$file=FCPATH."application/views/dynamics/commercial_contact.html";
+			break;
+		case '13':
+			$file=FCPATH."application/views/dynamics/business_contact.html";
+			break;		
+		default:
+			redirect('my404');
+			break;
+	}
 
 	$file_obj=fopen($file, 'r');
 	$file_content = fread($file_obj, filesize($file));
