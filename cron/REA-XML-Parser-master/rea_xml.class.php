@@ -46,6 +46,16 @@ class REA_XML {
 		'priceView',
 		'price',
 		'description',
+		'objects',
+		'status',
+		'agentID',
+		'uniqueID',
+		'authority',
+		'underOffer',
+		'category',
+		'isHomeLandPackage',
+		'headline',
+		'municipality',
 		'features' => array(
 			'bedrooms',
 			'bathrooms',
@@ -63,20 +73,29 @@ class REA_XML {
 			'state',
 			'postcode',
 		),
+		'streetDirectory' => array(
+		'page',
+		'reference',
+		),
+		'soldDetails' => array(
+		'price',
+		'date',
+		),
+		'inspectionTimes',
+		'landDetails' => array(
+		'area',
+		'frontage',
+		'depth',
+		),
+		'buildingDetails' => array(
+		'area',
+		'energyRating',
+		),
 		'listingAgent'	=> array(
 			'name',
 			'telephone',
 			'email',
 		),
-		'objects',
-		'status',
-		'agentID',
-		'uniqueID',
-		'authority',
-		'underOffer',
-		'category',
-		'isHomeLandPackage',
-		'headline',
 	);
 
 	/* default files exluded when parsing a directory */
@@ -153,41 +172,51 @@ class REA_XML {
 				 */
 				foreach($this->fields as $key => $field) {
 					if(is_array($field)) {
-						if($key == 'listingAgent')
+						if(count($property->{$key}) > 0)
 						{
-							foreach($property->{$key} as $listingAgent)
+							if($key == 'listingAgent')
 							{
-								$temp_arr =array();
-								foreach($field as $sub_field) {
-								$temp_arr[$sub_field] = (string)$listingAgent->{$sub_field};
+								foreach($property->{$key} as $listingAgent)
+								{
+									$temp_arr =array();
+									foreach($field as $sub_field) {
+									$temp_arr[$sub_field] = (string)$listingAgent->{$sub_field};
+									}
+									$prop[$key][] = $temp_arr;
 								}
-								$prop[$key][] = $temp_arr;
 							}
-						}
-						else
-						{
-							foreach($field as $sub_field) {
-							$prop[$key][$sub_field] = (string)$property->{$key}->{$sub_field};
+							else
+							{
+								foreach($field as $sub_field) {
+								$prop[$key][$sub_field] = (string)$property->{$key}->{$sub_field};
+								}
 							}
 						}
 					}
-					else { /* Different handling for Images */
-						if($field == "objects" && count($property->$field) > 0) {
+					else { /* Different handling for multivalues*/
+						if($field == "objects" && count($property->$field) > 0) 
+						{
 							foreach($property->$field->img as $img) {
 								$attr = $img->attributes();
 								if($attr->url)
 								$prop[$field][] = (string)$attr->url;
 							}
 						}
-						else if($field == "authority" || $field == "underOffer")
+						else if($field == "inspectionTimes" && count($property->$field) > 0) 
+						{
+							foreach($property->$field->inspection as $inspection) {
+								$prop[$field][] = (string)$inspection;
+							}
+						}
+						else if(($field == "authority" || $field == "underOffer") && count($property->$field) > 0)
 						{
 							$prop[$field] = (string)$property->$field->attributes()->value;
 						}
-						else if($field == "category")
+						else if($field == "category" && count($property->$field) > 0)
 						{
 							$prop[$field] = (string)$property->$field->attributes()->name;
 						}
-						else {
+						else if(count($property->$field) > 0){
 							$prop[$field] = (string)$property->{$field};
 						}
 						
