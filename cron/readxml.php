@@ -34,17 +34,44 @@ echo "\n ================== S T A R T ==================\n";
 foreach($urls as $url)
 {
 	$xmlstring = file_get_contents($url);
-	echo "$url <pre>";
+	//echo "$url <pre>";
 	$propertys = $rea->parse_xml($xmlstring);
 	
-			print_r($propertys);
-			continue;
+		//	print_r($propertys);
+		//	continue;
 	foreach($propertys[$table_list[$tablecount]] as $property)
 	{
+		//common for all tables
+		if(isset($property['address']['street']))
+		$property['state'] = $property['address']['street'];
+		
+		if(isset($property['address']['suburb']))
+		$property['suburb'] = $property['address']['suburb'];
+		
+		if(isset($property['buildingDetails']['area']))
+		{
+			$property['area'] = $property['buildingDetails']['area'];
+		}
+		else if(isset($property['landDetails']['area']))
+		{
+			$property['area'] = $property['landDetails']['area'];
+		}
+		foreach($property as $key => $array_chk)
+		{
+			if(is_array($array_chk))
+			{
+				$property[$key] = serialize($array_chk);
+			}
+		}
+		//echo "<pre>";
+		/*if($table_list[$tablecount] == "business")
+		{	
+		}*/
+		//print_r($property);
+		//die;
 		if($property['status'] == 'current')
 		{
-			
-			/*$find=array('agentID'=>$property['agentID'],'uniqueID'=>$property['uniqueID']);
+			$find=array('agentID'=>$property['agentID'],'uniqueID'=>$property['uniqueID']);
 					if($found = $table_list[$tablecount]::find($find))
 					{
 						echo "\n updating table => $table_list[$tablecount] \n";
@@ -55,7 +82,7 @@ foreach($urls as $url)
 						echo "\n inserting table => $table_list[$tablecount] \n";
 						$table_list[$tablecount]::create($property);
 					}
-			*/
+			
 		}
 		elseif($property['status'] == 'withdrawn')
 		{
