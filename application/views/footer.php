@@ -1,11 +1,11 @@
-<!-- footer -->
+<!-- footer --><div class="push"></div>
 <?php 
 $page = $this->uri->segment(1); 
 $subpage = $this->uri->segment(2); 
 ?> 
 		
      
-		
+		</div>
     <div class="footer_full">
         <? if($page !='' && $page !='home' && $subpage!='contact') { ?>
         <div class="footer_top">
