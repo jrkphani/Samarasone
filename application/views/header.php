@@ -32,8 +32,8 @@ $subpage = $this->uri->segment(2);?>
 						  <li class="mainmenu_top_bg"></li>
 						</ul>
 						<ul class="menu_bg">
-							<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
 							<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
+							<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
 							<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li>
 						</ul>
 					</div>
@@ -67,8 +67,8 @@ $subpage = $this->uri->segment(2);?>
 					</ul>
 					<ul class="menu_bg">
 						<?
-						if($page!='business') { ?><li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
-						<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li><? } else {?>
+						if($page!='business') { ?><li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
+						<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li><? } else {?>
 						<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? }?>
 					</ul>
 				  </div>
