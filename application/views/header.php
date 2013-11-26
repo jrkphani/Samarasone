@@ -26,7 +26,7 @@ $subpage = $this->uri->segment(2);?>
     <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo ''; } else { echo 'menu_logo'; } ?>">
     </div>
     	<div id="mainmenu" class="mainmenu" style="display:none;">
-				<ul>
+		<ul>
        	  <li class="menu_top_bg"></li>
         </ul>
         <ul class="menu_bg">
@@ -86,11 +86,14 @@ $subpage = $this->uri->segment(2);?>
 
 
 <!-- admin header -->
+    <div class="comm_resi_header_top width_1060">   
+		<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a></h1>          
+	</div>
 	<?
 	$session_data = $this->session->userdata('logged_in');
 	if($session_data)
 	{ 
-		echo "<h1>Hello Admin </h1> <a href='".base_url('admin/logout')."'>Logout</a></li>";
+		echo "<h1 class='admin_header'>Hello Admin </h1> <p class='admin_calign'><a href='".base_url('admin/logout')."'>Logout</a></p></li>";
 		//echo "Hello ".$session_data['email']." <a href='".base_url('admin/logout')."'>Logout</a></li>";
 	} ?>
 		

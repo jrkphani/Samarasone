@@ -16,14 +16,14 @@ $(document).ready(function()
 	$('#forget').click(function(){
 		$('.login').hide();
 		$('.forget').show();
-		$('#error_msg').html("");
+		$('#admin_error_msg').html("");
 	});
 
 	// Show login option and hide forgotpassword option
 	$('#back_to_login').click(function(){
 		$('.login').show();
 		$('.forget').hide();
-		$('#error_msg').html("");
+		$('#admin_error_msg').html("");
 	});
 
 	// Submit signin when press enter on input fields
@@ -38,11 +38,11 @@ $(document).ready(function()
 	// Submit login form
 	$('#loginsubmit').click(function()
 	{
-		$('#error_msg').html("");
+		$('#admin_error_msg').html("");
 		var email = $.trim($('#username').val());
 		var password = $('#passowrd').val();
-		if(!validate('Email','username',man=true,max=254,min=false,type='email',disp='error_msg')) return false;
-		else if(!validate('Password','passowrd',man=true,max=30,min=6,type='false',disp='error_msg')) return false;
+		if(!validate('Email','username',man=true,max=254,min=false,type='email',disp='admin_error_msg')) return false;
+		else if(!validate('Password','passowrd',man=true,max=30,min=6,type='false',disp='admin_error_msg')) return false;
 		else
 		{
 			if($('#c1').is(':checked'))
@@ -64,12 +64,12 @@ $(document).ready(function()
 					}
 					else
 					{
-						$('#error_msg').html(data.resultset.errors);	
+						$('#admin_error_msg').html(data.resultset.errors);	
 					}
 				},
 				error:function()
 				{
-					$('#error_msg').html('Internal error, try agian...');
+					$('#admin_error_msg').html('Internal error, try agian...');
 				}
 			});
 		}
@@ -78,9 +78,9 @@ $(document).ready(function()
 	// Submit forgot password form
 	$('#forgetsubmit').click(function()
 	{
-		$('#error_msg').html("");
+		$('#admin_error_msg').html("");
 		var email = $.trim($('#fusername').val());
-		if(!validate('Email','fusername',man=true,max=254,min=false,type='email',disp='error_msg')) return false;
+		if(!validate('Email','fusername',man=true,max=254,min=false,type='email',disp='admin_error_msg')) return false;
 		else
 		{
 			$.ajax(
@@ -93,19 +93,19 @@ $(document).ready(function()
 				{
 					if(data.resultset.success=='yes')
 					{
-						$('#error_msg').html("<span class='success_msg'>We have sent you an email to reset the password. Please check your mail account.</span>");
+						$('#admin_error_msg').html("<span class='success_msg'>We have sent you an email to reset the password. Please check your mail account.</span>");
 						//alert('s');
 						//window.location.reload();
 						//window.location.href="tmplts";
 					}
 					else
 					{
-						$('#error_msg').html(data.resultset.errors);	
+						$('#admin_error_msg').html(data.resultset.errors);	
 					}
 				},
 				error:function()
 				{
-					$('#error_msg').html("Internal error, try agian...");
+					$('#admin_error_msg').html("Internal error, try agian...");
 				}
 			});
 		}
