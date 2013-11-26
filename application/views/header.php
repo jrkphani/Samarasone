@@ -23,49 +23,56 @@ $subpage = $this->uri->segment(2);?>
 <body>
 	<div class="wrapper">
 		    <? if($page!= 'admin' && $page!= 'login') { ?>
-    <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo 'home_menu_logo'; } else { echo 'menu_logo'; } ?>">
-    </div>
-    	<div id="mainmenu" class="mainmenu" style="display:none;">
-		<ul>
-       	  <li class="menu_top_bg"></li>
-        </ul>
-        <? if($page !='home' && ($page)){ ?>
-        <ul class="menu_bg">
-			<? 
-			if($page =='search' || $page =='view') 
-			{
-				$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
-			}
-				 else 
-			{
-				$slidepage =$page;
-			}
-			?>
-			
-        	<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
-        	<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
-        	<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
-        </ul>
-        
-        <ul class="menu_bg bg_border">
-        	<li class="inner_logo"><a href="<?php echo base_url(); ?>">Samaras One Home</a></li>
-        </ul>
-        <? } ?>
-        <ul class="menu_bg">
-        	<? 
-        	if($page =='' || $page =='home') 
-        	{?>
-				<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
-				<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
-				<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li>
-			<?} else {
-        	if($page!='business') { ?><li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
-        	<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li><? } else {?>
-        	<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? } }?>
-        </ul>
-      </div>
-    	
-    	  <?
+				
+				<? if($page =='' || $page =='home')
+				{?>
+					<div  id="menu_logo" class="home_menu_logo"></div>
+					<div id="mainmenu" class="mainmenu" style="display:none;">
+						<ul>
+						  <li class="menu_top_bg"></li>
+						</ul>
+						<ul class="menu_bg">
+							<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
+							<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
+							<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li>
+						</ul>
+					</div>
+				<?}
+				else
+				{?>
+					<div  id="menu_logo" class="menu_logo"></div>
+					<div id="mainmenu" class="mainmenu" style="display:none;">
+					<ul>
+					  <li class="menu_top_bg"></li>
+					</ul>
+					<ul class="menu_bg">
+						<? 
+						if($page =='search' || $page =='view') 
+						{
+							$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
+						}
+							 else 
+						{
+							$slidepage =$page;
+						}
+						?>
+						
+						<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
+						<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
+						<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
+					</ul>
+					
+					<ul class="menu_bg bg_border">
+						<li class="inner_logo"><a href="<?php echo base_url(); ?>">Samaras One Home</a></li>
+					</ul>
+					<ul class="menu_bg">
+						<?
+						if($page!='business') { ?><li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
+						<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li><? } else {?>
+						<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? }?>
+					</ul>
+				  </div>
+				<?}
 				 if(($page != 'view') && ($page != 'search')) 
 				{
 					$imageslist = array('slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg','slide6.jpg','slide7.jpg','slide8.jpg','slide9.jpg','slide10.jpg');
