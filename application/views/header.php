@@ -49,7 +49,8 @@ $subpage = $this->uri->segment(2);?>
 						<? 
 						if($page =='search' || $page =='view') 
 						{
-							$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
+							$page = $slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
+							
 						}
 							 else 
 						{
