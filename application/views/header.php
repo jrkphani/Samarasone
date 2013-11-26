@@ -49,7 +49,7 @@ $subpage = $this->uri->segment(2);?>
 						<? 
 						if($page =='search' || $page =='view') 
 						{
-							$page = $slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
+							$slidepage = ($this->uri->segment(3))?$this->uri->segment(3):'residential';
 							
 						}
 							 else 
@@ -68,7 +68,7 @@ $subpage = $this->uri->segment(2);?>
 					</ul>
 					<ul class="menu_bg">
 						<?
-						if($page!='business') { ?><li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
+						if($slidepage!='business') { ?><li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
 						<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li><? } else {?>
 						<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? }?>
 					</ul>
