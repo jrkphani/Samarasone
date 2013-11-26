@@ -27,9 +27,9 @@ $subpage = $this->uri->segment(2);?>
 				<? if($page =='' || $page =='home')
 				{?>
 					<div  id="menu_logo" class="home_menu_logo"></div>
-					<div id="mainmenu" class="mainmenu" style="display:none;">
+					<div id="mainmenu" class="home_mainmenu" style="display:none;">
 						<ul>
-						  <li class="menu_top_bg"></li>
+						  <li class="mainmenu_top_bg"></li>
 						</ul>
 						<ul class="menu_bg">
 							<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
