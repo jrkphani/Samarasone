@@ -23,12 +23,13 @@ $subpage = $this->uri->segment(2);?>
 <body>
 	<div class="wrapper">
 		    <? if($page!= 'admin' && $page!= 'login') { ?>
-    <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo ''; } else { echo 'menu_logo'; } ?>">
+    <div  id="menu_logo" class="<?php if($page =='' || $page =='home') { echo 'home_menu_logo'; } else { echo 'menu_logo'; } ?>">
     </div>
     	<div id="mainmenu" class="mainmenu" style="display:none;">
 		<ul>
        	  <li class="menu_top_bg"></li>
         </ul>
+        <? if($page !='home' && ($page)){ ?>
         <ul class="menu_bg">
 			<? 
 			if($page =='search' || $page =='view') 
@@ -40,17 +41,27 @@ $subpage = $this->uri->segment(2);?>
 				$slidepage =$page;
 			}
 			?>
+			
         	<li class="ovalue"><a href="<?php echo base_url($slidepage.'/ourvalueproposition'); ?>">Our Value Proposition</a></li>
         	<li class="oteam"><a href="<?php echo base_url($slidepage.'/ourteam'); ?>">Our Team</a></li>
         	<li class="contact"><a href="<?php echo base_url($slidepage.'/contact'); ?>">Contact</a></li>
         </ul>
+        
         <ul class="menu_bg bg_border">
         	<li class="inner_logo"><a href="<?php echo base_url(); ?>">Samaras One Home</a></li>
         </ul>
+        <? } ?>
         <ul class="menu_bg">
-        	<? if($page!='business') { ?><li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
+        	<? 
+        	if($page =='' || $page =='home') 
+        	{?>
+				<li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
+				<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li>
+				<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li>
+			<?} else {
+        	if($page!='business') { ?><li class="commercial"><a href="<?php echo base_url('commercial'); ?>">Commercial</a></li>
         	<li class="residential"><a href="<?php echo base_url('residential'); ?>">Residential</a></li><? } else {?>
-        	<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? } ?>
+        	<li class="business"><a href="<?php echo base_url('business'); ?>">Business</a></li><? } }?>
         </ul>
       </div>
     	
@@ -80,16 +91,14 @@ $subpage = $this->uri->segment(2);?>
 				?>
 
 
-
-
-
-
-
-<!-- admin header -->
-    <div class="comm_resi_header_top width_1060">   
-		<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a></h1>          
-	</div>
 	<?
+	if($page == 'admin')
+	{?>
+		<!-- admin header -->
+		<div class="comm_resi_header_top width_1060">   
+			<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a></h1>          
+		</div>
+	<?}
 	$session_data = $this->session->userdata('logged_in');
 	if($session_data)
 	{ 
