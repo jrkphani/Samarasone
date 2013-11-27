@@ -46,6 +46,7 @@ $fields = array (
 		'return',
 		'furtherOptions',
 		'carSpaces',
+		'images',
 		
 		'attrValue' => array(
 		'commercialAuthority',
@@ -58,7 +59,12 @@ $fields = array (
 		'commercialCategory',
 		'category',
 		),
-		
+		'attrhref' => array(
+		'externalLink',
+		),
+		'businessCategory' => array(
+		'name',
+		),
 		'features' => array(
 			'bedrooms',
 			'bathrooms',
@@ -93,6 +99,14 @@ $fields = array (
 		'buildingDetails' => array(
 		'area',
 		'energyRating',
+		),
+		'estate' => array(
+		'name',
+		'stage',
+		),
+		'vendorDetails' => array(
+		'name',
+		'telephone',
 		),
 		'listingAgent'	=> array(
 			'name',

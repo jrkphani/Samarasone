@@ -140,7 +140,7 @@ class REA_XML {
 				 */
 				foreach($this->fields as $key => $field) {
 					if(is_array($field)) {
-						if($key == "attrValue" || $key == "attrName")
+						if($key == "attrValue" || $key == "attrName" || $key == "attrhref")
 						{
 							foreach($field as $sub_field) 
 							{
@@ -149,6 +149,11 @@ class REA_XML {
 									if($key == "attrValue")
 									{
 										$prop[$sub_field] = (string)$property->$sub_field->attributes()->value;
+									}
+									else if($key == "attrhref")
+									{
+										foreach($property->$sub_field as $attrhref)
+										$prop[$sub_field][] = (string)$attrhref->attributes()->href;
 									}
 									else
 									{
@@ -170,6 +175,24 @@ class REA_XML {
 									$prop[$key][] = $temp_arr;
 								}
 							}
+							else if($key == 'businessCategory')
+							{
+								//this will get names from businessCategory and businessSubCategory tags
+								//ref : http://reaxml.realestate.com.au/docs/reaxml1-xml-format.html#businessCategory
+								$temp_str="";
+								$temp_str1="";
+								foreach($property->{$key} as $businessCategory)
+								{
+									//use this http://stackoverflow.com/questions/15736445/mysql-query-to-search-multiple-values-in-comma-separated-list-with-and-clause
+									$temp_str = $temp_str.(string)$businessCategory->{'name'}.",";
+									foreach($businessCategory->{'businessSubCategory'} as $businessSubCategory)
+									{
+										$temp_str1 = $temp_str1.(string)$businessSubCategory->{'name'}.",";
+									}
+								}
+								$prop[$key] = $temp_str;
+								$prop['businessSubCategory'] = $temp_str1;
+							}
 							else
 							{
 								foreach($field as $sub_field) {
@@ -179,7 +202,8 @@ class REA_XML {
 						}
 					}
 					else { /* Different handling for multivalues*/
-						if($field == "objects" && count($property->$field) > 0) 
+						//if(($field == "images" || $field == "objects" ) && count($property->$field) > 0) 
+						if($field == "images" && count($property->$field) > 0) 
 						{
 							foreach($property->$field->img as $img) {
 								$attr = $img->attributes();
