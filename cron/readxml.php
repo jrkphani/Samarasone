@@ -114,11 +114,19 @@ $fields = array (
 			'email',
 		),
 	);
+	$featuresList = array(
+			'bedrooms',
+			'bathrooms',
+			'garages',
+			'carports',
+		);
 $rea = new REA_XML($debug=true,$fields);
 $tablecount = 0;
 echo "\n ================== S T A R T ==================\n";
 foreach($urls as $url)
 {
+	echo "\n Reading url  => $url \n";
+	
 	$xmlstring = file_get_contents($url);
 	//echo "$url <pre>";
 	$propertys = $rea->parse_xml($xmlstring);
@@ -151,6 +159,20 @@ foreach($urls as $url)
 		{
 			$property['area'] = $property['landDetails']['area'];
 		}
+		if(isset($property['features']))
+		{
+			if($table_list[$tablecount] == "holidayRental" || 
+			$table_list[$tablecount] == "rental" || 
+			$table_list[$tablecount] == "residential" || 
+			$table_list[$tablecount] == "rural")
+			{
+				foreach($featuresList as $value)
+				{
+					if(isset($property['features'][$value]))
+						$property[$value] = $property['features'][$value];
+				}
+			}
+		}
 		foreach($property as $key => $array_chk)
 		{
 			if(is_array($array_chk))
@@ -169,12 +191,12 @@ foreach($urls as $url)
 			$find=array('agentID'=>$property['agentID'],'uniqueID'=>$property['uniqueID']);
 					if($found = $table_list[$tablecount]::find($find))
 					{
-						echo "\n updating table => $table_list[$tablecount] \n";
+						echo "\n Updating table => $table_list[$tablecount] \n";
 						$found->update_attributes($property);
 					}
 					else
 					{
-						echo "\n inserting table => $table_list[$tablecount] \n";
+						echo "\n Inserting table => $table_list[$tablecount] \n";
 						$table_list[$tablecount]::create($property);
 					}
 			

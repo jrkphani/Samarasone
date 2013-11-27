@@ -196,7 +196,8 @@ class REA_XML {
 							else
 							{
 								foreach($field as $sub_field) {
-								$prop[$key][$sub_field] = (string)$property->{$key}->{$sub_field};
+									if($property->{$key}->{$sub_field})
+										$prop[$key][$sub_field] = (string)$property->{$key}->{$sub_field};
 								}
 							}
 						}
