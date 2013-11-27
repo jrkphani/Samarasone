@@ -28,7 +28,79 @@ $urls = array(
 //$urls=array('http://reaxml.realestate.com.au/docs/residential_sample.xml');
 
 
-$rea = new REA_XML($debug=true);
+$fields = array (
+		'priceView',
+		'price',
+		'description',
+		'objects',
+		'status',
+		'agentID',
+		'uniqueID',
+		'category',
+		'isHomeLandPackage',
+		'headline',
+		'municipality',
+		'currentLeaseEndDate',
+		'commercialRent',
+		'outgoings',
+		'return',
+		'furtherOptions',
+		'carSpaces',
+		
+		'attrValue' => array(
+		'commercialAuthority',
+		'commercialListingType',
+		'authority',
+		'underOffer',
+		'exclusivity',
+		),
+		'attrName' => array(
+		'commercialCategory',
+		'category',
+		),
+		
+		'features' => array(
+			'bedrooms',
+			'bathrooms',
+			'garages',
+			'carports',
+			'airConditioning',
+			'pool',
+			'alarmSystem',
+			'otherFeatures',
+		),
+		'address' => array(
+			'streetNumber',
+			'street',
+			'suburb',
+			'state',
+			'postcode',
+		),
+		'streetDirectory' => array(
+		'page',
+		'reference',
+		),
+		'soldDetails' => array(
+		'price',
+		'date',
+		),
+		'inspectionTimes',
+		'landDetails' => array(
+		'area',
+		'frontage',
+		'depth',
+		),
+		'buildingDetails' => array(
+		'area',
+		'energyRating',
+		),
+		'listingAgent'	=> array(
+			'name',
+			'telephone',
+			'email',
+		),
+	);
+$rea = new REA_XML($debug=true,$fields);
 $tablecount = 0;
 echo "\n ================== S T A R T ==================\n";
 foreach($urls as $url)
@@ -50,7 +122,16 @@ foreach($urls as $url)
 		
 		if(isset($property['buildingDetails']['area']))
 		{
-			$property['area'] = $property['buildingDetails']['area'];
+			if($table_list[$tablecount] == "commercial")
+			{
+				//print_r($property); die;
+				$property['area_min'] = $property['buildingDetails']['area'];
+				$property['area_max'] = $property['buildingDetails']['area'];
+			}
+			else
+			{
+				$property['area'] = $property['buildingDetails']['area'];
+			}
 		}
 		else if(isset($property['landDetails']['area']))
 		{

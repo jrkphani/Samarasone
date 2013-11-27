@@ -43,60 +43,28 @@ class REA_XML {
 	 * fields int the REA XML standard
 	 */
 	private $fields = array (
-		'priceView',
-		'price',
-		'description',
-		'objects',
-		'status',
-		'agentID',
-		'uniqueID',
-		'authority',
-		'underOffer',
-		'category',
-		'isHomeLandPackage',
-		'headline',
-		'municipality',
-		'features' => array(
-			'bedrooms',
-			'bathrooms',
-			'garages',
-			'carports',
-			'airConditioning',
-			'pool',
-			'alarmSystem',
-			'otherFeatures',
-		),
-		'address' => array(
-			'streetNumber',
-			'street',
-			'suburb',
-			'state',
-			'postcode',
-		),
-		'streetDirectory' => array(
-		'page',
-		'reference',
-		),
-		'soldDetails' => array(
-		'price',
-		'date',
-		),
-		'inspectionTimes',
-		'landDetails' => array(
-		'area',
-		'frontage',
-		'depth',
-		),
-		'buildingDetails' => array(
-		'area',
-		'energyRating',
-		),
-		'listingAgent'	=> array(
-			'name',
-			'telephone',
-			'email',
-		),
-	);
+                'priceView',
+                'description',
+                'features' => array(
+                        'bedrooms',
+                        'bathrooms',
+                        'garages',
+                        'carports',
+                        'airConditioning',
+                        'pool',
+                        'alarmSystem',
+                        'otherFeatures',
+                ),
+                'address' => array(
+                        'streetNumber',
+                        'street',
+                        'suburb',
+                        'state',
+                        'postcode',
+                ),        
+                'images',
+                'status',
+        );
 
 	/* default files exluded when parsing a directory */
 	private $default_excluded_files = array(".", "..");
@@ -172,7 +140,24 @@ class REA_XML {
 				 */
 				foreach($this->fields as $key => $field) {
 					if(is_array($field)) {
-						if(count($property->{$key}) > 0)
+						if($key == "attrValue" || $key == "attrName")
+						{
+							foreach($field as $sub_field) 
+							{
+								if($property->$sub_field)
+								{
+									if($key == "attrValue")
+									{
+										$prop[$sub_field] = (string)$property->$sub_field->attributes()->value;
+									}
+									else
+									{
+										$prop[$sub_field] = (string)$property->$sub_field->attributes()->name;
+									}
+								}
+							}
+						} 
+						else if(count($property->{$key}) > 0)
 						{
 							if($key == 'listingAgent')
 							{
@@ -208,14 +193,6 @@ class REA_XML {
 								$prop[$field][] = (string)$inspection;
 							}
 						}
-						else if(($field == "authority" || $field == "underOffer") && count($property->$field) > 0)
-						{
-							$prop[$field] = (string)$property->$field->attributes()->value;
-						}
-						else if($field == "category" && count($property->$field) > 0)
-						{
-							$prop[$field] = (string)$property->$field->attributes()->name;
-						}
 						else if(count($property->$field) > 0){
 							$prop[$field] = (string)$property->{$field};
 						}
@@ -228,6 +205,7 @@ class REA_XML {
 
 					//save status
 					$prop['status'] = (string)$attr->status;
+					$prop['modTime'] = (string)$attr->modTime;
 				}
 
 				/* Save the property */
