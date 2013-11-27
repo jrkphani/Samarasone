@@ -211,6 +211,11 @@ class REA_XML {
 								if($attr->url)
 								$prop['images'][] = (string)$attr->url;
 							}
+							foreach($property->$field->floorplan as $floorplan) {
+								$attr = $floorplan->attributes();
+								if($attr->url)
+								$prop['objects'][] = (string)$attr->url;
+							}
 						}
 						else if($field == "inspectionTimes" && count($property->$field) > 0) 
 						{
