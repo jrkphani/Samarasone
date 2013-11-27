@@ -19,7 +19,7 @@ $urls = array(
 'http://reaxml.realestate.com.au/docs/commercial_sample.xml',
 'http://reaxml.realestate.com.au/docs/commercialLand_sample.xml',
 'http://reaxml.realestate.com.au/docs/rental_sample.xml',
-'http://reaxml.realestate.com.au/docs/residential_sample.xml',
+'http://localhost/client.xml',
 'http://reaxml.realestate.com.au/docs/land_sample.xml',
 'http://reaxml.realestate.com.au/docs/rural_sample.xml',
 'http://reaxml.realestate.com.au/docs/holiday_rental_sample.xml'

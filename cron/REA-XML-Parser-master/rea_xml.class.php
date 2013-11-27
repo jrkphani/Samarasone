@@ -203,12 +203,12 @@ class REA_XML {
 					}
 					else { /* Different handling for multivalues*/
 						//if(($field == "images" || $field == "objects" ) && count($property->$field) > 0) 
-						if($field == "images" && count($property->$field) > 0) 
+						if(($field == "images" || $field == "objects" ) && count($property->$field) > 0) 
 						{
 							foreach($property->$field->img as $img) {
 								$attr = $img->attributes();
 								if($attr->url)
-								$prop[$field][] = (string)$attr->url;
+								$prop['images'][] = (string)$attr->url;
 							}
 						}
 						else if($field == "inspectionTimes" && count($property->$field) > 0) 
