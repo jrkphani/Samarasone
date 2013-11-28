@@ -60,8 +60,8 @@ tinymce.init({
          "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
          "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
          "save table contextmenu directionality emoticons template paste textcolor"
-   ],
-   content_css: "css/content.css",*/
+   ],*/
+   content_css: "css/content.css?" + new Date().getTime(),
    toolbar: "styleselect | bold italic | bullist numlist", 
    style_formats: [
         {title: 'H1', block: 'h1'},
