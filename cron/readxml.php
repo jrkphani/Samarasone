@@ -14,7 +14,7 @@ class holidayRental extends ActiveRecord\Model{ static $table_name = 'holidayRen
 
 /* Table name and urls list should in same order */
 $table_list = array('business','commercial','commercialLand','rental','residential','land','rural','holidayRental');
-$urls = array(
+/*$urls = array(
 'http://reaxml.realestate.com.au/docs/business_sample.xml',
 'http://reaxml.realestate.com.au/docs/commercial_sample.xml',
 'http://reaxml.realestate.com.au/docs/commercialLand_sample.xml',
@@ -23,9 +23,17 @@ $urls = array(
 'http://reaxml.realestate.com.au/docs/land_sample.xml',
 'http://reaxml.realestate.com.au/docs/rural_sample.xml',
 'http://reaxml.realestate.com.au/docs/holiday_rental_sample.xml'
+);*/
+$urls = array(
+'http://localhost/xml_samples/business_sample.xml',
+'http://localhost/xml_samples/commercial_sample.xml',
+'http://localhost/xml_samples/commercialLand_sample.xml',
+'http://localhost/xml_samples/rental_sample.xml',
+'http://localhost/xml_samples/residential_sample.xml',
+'http://localhost/xml_samples/land_sample.xml',
+'http://localhost/xml_samples/rural_sample.xml',
+'http://localhost/xml_samples/holidayRental_sample.xml'
 );
-//$urls=array('http://localhost/client.xml');
-//$urls=array('http://reaxml.realestate.com.au/docs/residential_sample.xml');
 
 
 $fields = array (
@@ -150,7 +158,7 @@ foreach($urls as $url)
 				$property['area_min'] = $property['buildingDetails']['area'];
 				$property['area_max'] = $property['buildingDetails']['area'];
 			}
-			else
+			else if($table_list[$tablecount] != "business")
 			{
 				$property['area'] = $property['buildingDetails']['area'];
 			}
