@@ -1,11 +1,14 @@
+@charset "utf-8";
+/* ************************* fonts ******************************** */
 @font-face {
     font-family: 'HelveNueThin';
-    src: url('../fonts/helvenuethin.eot');
-    src: url('../fonts/helvenuethin.eot') format('embedded-opentype'),
-         url('../fonts/helvenuethin.woff') format('woff'),
-         url('../fonts/helvenuethin.ttf') format('truetype'),
-         url('../fonts/helvenuethin.svg#HelveNueThinNormal') format('svg');
+    src: url('fonts/helvenuethin.eot');
+    src: url('fonts/helvenuethin.eot') format('embedded-opentype'),
+         url('fonts/helvenuethin.woff') format('woff'),
+         url('fonts/helvenuethin.ttf') format('truetype'),
+         url('fonts/helvenuethin.svg#HelveNueThinNormal') format('svg');
 }
+
 h1{font:34px HelveNueThin, Arial; color:#000;}
 h2{font:32px HelveNueThin, Arial; color:#000;}
 h3{font:30px HelveNueThin, Arial; color:#000;}
