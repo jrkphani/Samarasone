@@ -50,16 +50,19 @@
 	                	<span id="gallery">Gallery</span>
 	                	
 		                	<?
-							//if((isset($row->images)) && ($row->images))
-							  if(0)
-							  {
-								  $imagelist = unserialize($row->images);
-							  }
-							  else
-							  {
-								  $imagelist['url']= base_url('assets/images/s_img1.jpg');
-							  }
-							$images = unserialize($result[0]->images);
+		                	if(0)
+							//if(isset($result[0]->images))
+							{
+								$images_array = unserialize($result[0]->images);
+								if(!count($images_array))
+								{
+									$images_array[0] = base_url('assets/images/s_img1.jpg');
+								}
+							}
+							else
+							{
+								$images_array[0] = base_url('assets/images/s_img1.jpg');
+							}
 							?>
 						
 
@@ -68,7 +71,7 @@
 	            <!-- Image and appointment form -->
 	            <div class="sr_right">
 	            	<div class="sr_inner">
-	                	<img src="<?=$imagelist['url'];?>"/> <br/><br/>
+	                	<img src="<?=$images_array[0];?>"/> <br/><br/>
 	                	<div class="apt_form">
 	                  		<h2>Make an appointment</h2>
 	                    	<form>
@@ -97,14 +100,14 @@
 	<div id="galleryTop" class="gallery_main">
 		<span id="galleryClose">Back</span>
 		<div id="images" class="gallery_inner">
-			<li><img src="<?=$imagelist['url'];?>"/></li>
-			<li><img src="http://localhost/samaras/assets/images/slide1.jpg"/></li>
-			<li><img src="<?=$imagelist['url'];?>"/></li>
-			<li><img src="<?=$imagelist['url'];?>"/></li>
-			<li><img src="<?=$imagelist['url'];?>"/></li>
-			<li><img src="<?=$imagelist['url'];?>"/></li>
-			<li><img src="<?=$imagelist['url'];?>"/></li>
-			<li><img src="<?=$imagelist['url'];?>"/></li>
+			<? foreach($images_array as $singleimage)
+			{
+				echo '<li><img src="'.$singleimage.'" /></li>';
+				//remove bellow 3 lines when real reaxml comes form client  or proper images comes from xml
+				echo '<li><img src="'.$singleimage.'" /></li>';
+				echo '<li><img src="'.$singleimage.'" /></li>';
+				echo '<li><img src="'.$singleimage.'" /></li>';
+			}?>
 		</div>
 	</div>
 	                	

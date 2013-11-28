@@ -3,18 +3,22 @@
     <p class="color_orange">North Shore <span></span></p>
     <?php 
               foreach ($result as $row) {
-				  //if((isset($row->images)) && ($row->images))
+				  //if(isset($row->images))
 				  if(0)
 				  {
-					  $imagelist = unserialize($row->images);
+					 $images_array = unserialize($row->images);
+					 if(!count($images_array))
+					{
+						$images_array[0] = base_url('assets/images/s_img1.jpg');
+					}
 				  }
 				  else
-				  {
-					  $imagelist['url']= base_url('assets/images/s_img1.jpg');
-				  }
+					{
+						$images_array[0] = base_url('assets/images/s_img1.jpg');
+					}
 				   ?>
     <div class="s_img_boxes_commer">
-      <div class="search_img"> <img class="inner_plogo" src="<?php echo $imagelist['url']; ?>"/> </div>
+      <div class="search_img"> <img class="inner_plogo" src="<?php echo $images_array[0]; ?>"/> </div>
       <div class="content_commer">
         <h3><?php echo $row->headline; ?>,</h3>
         <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
