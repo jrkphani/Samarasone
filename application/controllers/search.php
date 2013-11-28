@@ -212,7 +212,7 @@ class Search extends CI_Controller
 		$this->load->library('pagination');
 		$config['per_page'] = 3;
 		$config['uri_segment'] = 4;
-		$config['base_url'] = base_url('searchnew/index/'.$page);
+		$config['base_url'] = base_url('search/index/'.$page);
 		$config['total_rows'] = $total;
 			
 		//Design

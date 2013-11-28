@@ -12,9 +12,29 @@ class Searchnew_model extends CI_Model
         if(isset($data['sale_type']))
             $this->db->where_in('commercialListingType',$data['sale_type']);
         if(isset($data['businessCategory']))
-            $this->db->where_in('businessCategory',$data['businessCategory']);
+        {
+			$count =0;
+			foreach($data['businessCategory'] as $businessCategory)
+			{
+				if(!$count)
+				$this->db->like('businessCategory',$businessCategory);
+				else
+				$this->db->or_like('businessCategory',$businessCategory);
+				$count++;
+			}
+		}
         if(isset($data['businessSubCategory']))
-            $this->db->where_in('businessSubCategory',$data['businessSubCategory']);
+        {
+			$count =0;
+			foreach($data['businessSubCategory'] as $businessSubCategory)
+			{
+				if(!$count)
+				$this->db->like('businessSubCategory',$businessSubCategory);
+				else
+				$this->db->or_like('businessSubCategory',$businessSubCategory);
+				$count++;
+			}
+		}
 
         $this->db->from($data['table']);
         $query = $this->db->get();
@@ -33,9 +53,29 @@ class Searchnew_model extends CI_Model
         if(isset($data['sale_type']))
             $this->db->where_in('commercialListingType',$data['sale_type']);
         if(isset($data['businessCategory']))
-            $this->db->where_in('businessCategory',$data['businessCategory']);
+        {
+			$count =0;
+			foreach($data['businessCategory'] as $businessCategory)
+			{
+				if(!$count)
+				$this->db->like('businessCategory',$businessCategory);
+				else
+				$this->db->or_like('businessCategory',$businessCategory);
+				$count++;
+			}
+		}
         if(isset($data['businessSubCategory']))
-            $this->db->where_in('businessSubCategory',$data['businessSubCategory']);
+        {
+			$count =0;
+			foreach($data['businessSubCategory'] as $businessSubCategory)
+			{
+				if(!$count)
+				$this->db->like('businessSubCategory',$businessSubCategory);
+				else
+				$this->db->or_like('businessSubCategory',$businessSubCategory);
+				$count++;
+			}
+		}
 
         $this->db->from($data['table']);
         $this->db->limit(3,$data['limit']);
