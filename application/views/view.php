@@ -37,13 +37,13 @@
 	                    	<? 
 	                    	$addressArr = unserialize($result[0]->address);
 	                    	echo '<p>'.$addressArr['streetNumber'].' , '.$addressArr['street'].'<br />'.
-								$addressArr['state'].' , '.$addressArr['region'].'<br />'.
+								$addressArr['state'].' , '.$addressArr['suburb'].'<br />'.
 								$addressArr['country'].' - '.$addressArr['postcode'].'</p>';
 							?>
 	                	</div>
 	                	<a href="https://www.google.co.in/maps?q=<? echo $addressArr['streetNumber'].' '.
 	                	$addressArr['street'].' '.
-	                	$addressArr['region'].' '.
+	                	$addressArr['suburb'].' '.
 	                	$addressArr['state'].' '.
 	                	$addressArr['country'].' '.
 	                	$addressArr['postcode']?>" target="_blank">Location</a><br/>

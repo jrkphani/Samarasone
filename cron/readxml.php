@@ -88,6 +88,7 @@ $fields = array (
 			'street',
 			'suburb',
 			'state',
+			'country',
 			'postcode',
 		),
 		'streetDirectory' => array(
@@ -149,6 +150,9 @@ foreach($urls as $url)
 		
 		if(isset($property['address']['suburb']))
 		$property['suburb'] = $property['address']['suburb'];
+		
+		if(isset($property['address']['country']))
+		$property['country'] = $property['address']['country'];
 		
 		if(isset($property['buildingDetails']['area']))
 		{
