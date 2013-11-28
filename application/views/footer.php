@@ -45,3 +45,35 @@ $subpage = $this->uri->segment(2);
 
 <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.slides.min.js');?>"></script>
 <script src="<?php echo base_url($this->config->item('path_js_file').'header.js');?>"></script>
+<? if($page =='admin') { ?>
+	<style>
+		.footer_top { display:none;}
+	</style>
+<script src="<?php echo base_url($this->config->item('path_js_file').'tinymce.min.js');?>"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    //theme: "modern",
+    //width: 300,
+    //height: 300,
+    /*plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ],
+   content_css: "css/content.css",*/
+   toolbar: "styleselect | bold italic | bullist numlist", 
+   style_formats: [
+        {title: 'H1', block: 'h1'},
+        {title: 'H2', block: 'h2'},
+        {title: 'H3', block: 'h3'},
+        {title: 'H4', block: 'h4'},
+        {title: 'H5', block: 'h5'},
+        {title: 'H6', block: 'h6'},
+    ]
+ }); 
+</script>
+<style>
+#mce_7 { display:none;}
+</style>	
+<? } ?>
