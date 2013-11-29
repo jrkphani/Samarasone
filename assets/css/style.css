@@ -115,7 +115,7 @@ html, body {
 .comm_resi_header_top{width:100%; height:149px; background:url(../images/top_header_comm_rese.png) no-repeat; background-size: 100% 90%; position:absolute; top:0px; z-index: 9996;}
 .sr_box h2, h4, p{color: #fff;}
 .sr_box p{ font-size: 18px;}
-.sr_box h2{ font-size: 32px;}
+.sr_box h2{ font-size: 26px;}
 .sr_box{
 	width: 50%;	min-width: 873px; height: auto; position: absolute; top: 220px; left: 20px; 
 	background: url(../images/blue_trans_bgbox.png); color: #fff; 

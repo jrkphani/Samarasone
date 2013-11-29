@@ -14,3 +14,4 @@
 	</form>
 	<p><?=$msg;?></p>
 </div>
+<div class="clearall"></div>

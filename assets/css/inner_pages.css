@@ -358,7 +358,7 @@ display: block; margin: 0 auto; line-height: 51px; margin-bottom:50px; }
 .admin_calign{text-align: center!important;}
 
 /*********************** edit page ******************************/
-.admin_edit{margin: 0 auto; width: 824px;}
+.admin_edit{margin: 0 auto; width: 824px; min-height: 539px;}
 .admin_edit .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; margin: 0 0 20px -2px; line-height: 55px!important; height: 51px; float:left; text-align: center; border: 0; cursor: pointer; font: 17px HelveNueThin, Arial; font-weight: bold; }
 .admin_edit .admin_btn:hover{background:url(../images/sprites.png) -528px -231px  no-repeat; width:99px; height:51px;}
 .admin_edit .edit_area{font: 17px HelveNueThin, Arial; padding: 10px; max-width:818px!important;}
