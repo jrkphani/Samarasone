@@ -50,8 +50,8 @@
 	                	<span id="gallery">Gallery</span>
 	                	
 		                	<?
-		                	if(0)
-							//if(isset($result[0]->images))
+		                	//if(0)
+							if(isset($result[0]->images))
 							{
 								$images_array = unserialize($result[0]->images);
 								if(!count($images_array))
@@ -104,9 +104,9 @@
 			{
 				echo '<li><img src="'.$singleimage.'" /></li>';
 				//remove bellow 3 lines when real reaxml comes form client  or proper images comes from xml
-				echo '<li><img src="'.$singleimage.'" /></li>';
-				echo '<li><img src="'.$singleimage.'" /></li>';
-				echo '<li><img src="'.$singleimage.'" /></li>';
+				//echo '<li><img src="'.$singleimage.'" /></li>';
+				//echo '<li><img src="'.$singleimage.'" /></li>';
+				//echo '<li><img src="'.$singleimage.'" /></li>';
 			}?>
 		</div>
 	</div>

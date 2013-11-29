@@ -29,7 +29,7 @@ $urls = array(
 'http://localhost/xml_samples/commercial_sample.xml',
 'http://localhost/xml_samples/commercialLand_sample.xml',
 'http://localhost/xml_samples/rental_sample.xml',
-'http://localhost/xml_samples/residential_sample.xml',
+'http://localhost/sampleREAXML.xml',
 'http://localhost/xml_samples/land_sample.xml',
 'http://localhost/xml_samples/rural_sample.xml',
 'http://localhost/xml_samples/holidayRental_sample.xml'
@@ -200,7 +200,7 @@ foreach($urls as $url)
 		//die;
 		if($property['status'] == 'current')
 		{
-			$find=array('agentID'=>$property['agentID'],'uniqueID'=>$property['uniqueID']);
+			$find=array('uniqueID'=>$property['uniqueID']);
 					if($found = $table_list[$tablecount]::find($find))
 					{
 						echo "\n Updating table => $table_list[$tablecount] \n";
