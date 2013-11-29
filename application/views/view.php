@@ -125,7 +125,7 @@
   }
   function goback()
   {
-	 window.location.href = baseurl;
+	 window.location.href = "<?=base_url();?>";
   }
   $('#images').galleryView({
 	 autoplay: false,
