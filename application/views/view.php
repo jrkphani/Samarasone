@@ -13,12 +13,11 @@
 					<?
 					if(isset($_SERVER['HTTP_REFERER']))
 					{
-					$onclick = 'onclick="gotosearch()"';
+					echo '<a href="javascript:history.go(-1);" class="backSearch">Back to search</a>';
 					}
 					else
-					$onclick = 'onclick="goback()"';
+					echo '<a href="'.base_url().'" class="backSearch">Back to search</a>';
 					?>
-      	 	 <a href="#" <?=$onclick;?> class="backSearch"> Back to search </a>
             <div class="sr_top_bg">
                 
             </div>
@@ -121,7 +120,8 @@
   <script>
   function gotosearch()
   {
-	  window.history.back();
+	  alert("f");
+	  window.history.go(-1);
   }
   function goback()
   {
