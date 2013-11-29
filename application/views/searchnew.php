@@ -193,8 +193,8 @@ display:none;
           <ul>
             <li>Price</li>
             <li> 
-              <input class="txt_width_hieight" type="text" placeholder="Min" name="price_min" value="<?php echo $price_min; ?>"  style="color: #285069; font-weight: normal;" />
-              <input class="txt_width_hieight" type="text" placeholder="Max" name="price_max" value="<?php echo $price_max; ?>" style="color: #285069; font-weight: normal;"/>
+              <input class="txt_width_hieight" type="text" placeholder="$ Min" name="price_min" value="<?php echo $price_min; ?>"  style="color: #285069; font-weight: normal;" />
+              <input class="txt_width_hieight" type="text" placeholder="$ Max" name="price_max" value="<?php echo $price_max; ?>" style="color: #285069; font-weight: normal;"/>
               <!--		dropdown menu end  -->
             <? if($page_type == 'business')
             {
