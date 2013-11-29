@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."gallery.css"); ?>" />
 <div class="wrapper_bg">
 	<div class="header">
-			<div class="wrapper_gradient_bg"> </div>
+			<!-- <div class="wrapper_gradient_bg"> </div> -->
 			<div class="inner_pheader"> 
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
@@ -96,7 +96,9 @@
 
 
 	<div id="galleryTop" class="gallery_main">
-		<span id="galleryClose">Back</span>
+		<div id="gallery_cls">
+			<span id="galleryClose">Back</span>
+		</div>
 		<div id="images" class="gallery_inner">
 			<? foreach($images_array as $singleimage)
 			{

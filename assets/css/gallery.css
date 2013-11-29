@@ -21,9 +21,13 @@
 #galleryClose:hover {
 background: url(../images/icon_close.png) no-repeat;
 }
+#gallery_cls{width: 800px;
+margin: 0 auto;
+position: relative;
+}
 #galleryClose {
 display: block;position: absolute;
-right: 50px; top:50px; z-index: 99999;
+right: -56px; top:93px; z-index: 99999;
 background: url(../images/icon_close.png) no-repeat;
 width: 47px;height: 47px;border: 0;cursor: pointer;text-indent: -999em;
 }

@@ -129,7 +129,7 @@ html, body {
 	width: 100%;	height: 200px;  border: solid 2px #fff;
 }
 .sr_section{
-	padding-top: 20px; padding-bottom: 20px;	border-top: solid 1px #41647b;	border-bottom: solid 1px #41647b; max-height: 256px; min-height: 140px; overflow-y: scroll;
+	padding-top: 20px; padding-bottom: 20px;	padding-right: 20px; border-top: solid 1px #41647b;	border-bottom: solid 1px #41647b; max-height: 256px; min-height: 140px; overflow-y: scroll;
 }
 
 .sr_section2{ padding-top:20px; padding-bottom: 20px;}
