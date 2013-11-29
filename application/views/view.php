@@ -14,12 +14,11 @@
 					if(isset($_SERVER['HTTP_REFERER']))
 					{
 					$onclick = 'onclick="gotosearch()"';
-					echo '<a href="'.$_SERVER['HTTP_REFERER'].'" class="backSearch"> Back to search </a>';
 					}
 					else
 					$onclick = 'onclick="goback()"';
 					?>
-      	 	<!-- <a href="#" <?=$onclick;?> class="backSearch"> Back to search </a> -->
+      	 	 <a href="#" <?=$onclick;?> class="backSearch"> Back to search </a>
             <div class="sr_top_bg">
                 
             </div>
@@ -111,7 +110,11 @@
 		</div>
 	</div>
 	                	
-
+<style>
+.wrapper_bg {
+    background: url("<?=$images_array[0];?>") no-repeat scroll 0 0 / cover  #FFFFFF;
+}
+</style>
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.easing.1.3.js');?>"></script>
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.timers-1.2.js');?>"></script>
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.galleryview-3.0-dev.js');?>"></script>
