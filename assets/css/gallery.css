@@ -1,5 +1,5 @@
 .gallery_main{
-	display:none;position:absolute; width:100%; background:url(../images/bg_black.png); top:0; z-index: 99998;}
+	display:none;position:absolute; width:100%;  top:0; z-index: 99998;}
 
 	.gallery_inner{
 
@@ -7,7 +7,7 @@
 
 	.gv_galleryWrap{
 		width: 100% !important;
-		height: 800px !important;
+		height: 1205px !important;
 	}
 
 	.gv_gallery{
@@ -25,7 +25,7 @@ background: url(../images/icon_close.png) no-repeat;
 display: block;position: absolute;
 right: 50px; top:50px; z-index: 99999;
 background: url(../images/icon_close.png) no-repeat;
-width: 80px;height: 80px;border: 0;cursor: pointer;text-indent: -999em;
+width: 47px;height: 47px;border: 0;cursor: pointer;text-indent: -999em;
 }
 
 
@@ -54,5 +54,9 @@ background-color: #0c283b;
 }
 
 .gv_galleryWrap{
-	background: transparent !important;
+	/*background: transparent !important;*/ background:url(../images/bg_black.png);
+}
+
+@media (max-width:1280px) { 
+.gv_galleryWrap{height: 1235px!important;}
 }

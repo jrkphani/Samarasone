@@ -129,7 +129,7 @@ html, body {
 	width: 100%;	height: 200px;  border: solid 2px #fff;
 }
 .sr_section{
-	padding-top: 20px; padding-bottom: 20px;	border-top: solid 1px #41647b;	border-bottom: solid 1px #41647b;
+	padding-top: 20px; padding-bottom: 20px;	border-top: solid 1px #41647b;	border-bottom: solid 1px #41647b; max-height: 256px; min-height: 140px; overflow-y: scroll;
 }
 
 .sr_section2{ padding-top:20px; padding-bottom: 20px;}
@@ -178,7 +178,7 @@ html, body {
 .apt_form span{ width: 100%; display: block; margin:10px 0 0 0 ; }
 .apt_form button{
 	width: 160px; height: 30px; float: right; 
-	border: none; cursor: pointer;
+	border: none; cursor: pointer; margin-bottom: 10px;
 }
 /* ************************* property end ******************************** */
 
@@ -198,7 +198,7 @@ html, body {
 /*.boxes1, .boxes2, .boxes3{width: 423px;}*/
 .boxes1_img_hover, .boxes2_img_hover, .boxes3_img_hover{width: 427px;}
 .boxes3_img_hover_1280{width:425px;}
-.wrapper, .footer, .footer_top, .res_img_container, .comm_resi_header_top, .header_res_btm{width:1280px!important;}
+.wrapper, .footer, .footer_top, .res_img_container, .comm_resi_header_top, .header_res_btm, .gallery_main{width:1280px!important;}
 
 }
 
