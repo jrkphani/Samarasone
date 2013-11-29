@@ -4,8 +4,8 @@
 				<p class="color_orange north_shore">North Shore <span></span></p>            
 				<?php 
 					foreach ($result as $row) {
-					  //if(isset($row->images))
-					  if(0)
+					  if(isset($row->images))
+					  //if(0)
 					  {
 						 $images_array = unserialize($row->images);
 						 if(!count($images_array))
