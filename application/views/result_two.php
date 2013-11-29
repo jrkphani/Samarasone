@@ -1,7 +1,7 @@
  <!-- container -->     
           <div class="container border_img">
 			<div class="conti_border">
-				<p class="color_orange north_shore">North Shore <span></span></p>            
+				<!--<p class="color_orange north_shore">North Shore <span></span></p>            -->
 				<?php 
 					foreach ($result as $row) {
 					  if(isset($row->images))
@@ -25,7 +25,7 @@
                	 <img class="inner_plogo" src="<?php echo $images_array[0]; ?>"/>
                 </div>
                 <div class="content business_srch">
-                  <h3><?php echo $row->headline; ?>,</h3>
+                  <h3><?php echo $row->headline; ?></h3>
 				  <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
                   <p class="cnt_business"><?php echo $row->description; ?></p>
                   <a class="fright" href='<?=base_url("view/index/$page_type/$type/$property/$row->uniqueID");?>'>More</a>

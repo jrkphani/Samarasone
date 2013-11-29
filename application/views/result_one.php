@@ -1,6 +1,6 @@
 <div class="container border_img">
   <div class="conti_border">
-    <p class="color_orange">North Shore <span></span></p>
+    <!--<p class="color_orange">North Shore <span></span></p> -->
     <?php 
               foreach ($result as $row) {
 				  if(isset($row->images))
@@ -20,7 +20,7 @@
     <div class="s_img_boxes_commer">
       <div class="search_img"> <img class="inner_plogo" src="<?php echo $images_array[0]; ?>"/> </div>
       <div class="content_commer">
-        <h3><?php echo $row->headline; ?>,</h3>
+        <h3><?php echo $row->headline; ?></h3>
         <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
         <p class="cnt"><?php echo $row->description; ?></p>
         <? if(isset($row->area))
