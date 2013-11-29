@@ -46,9 +46,6 @@ $subpage = $this->uri->segment(2);
 <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.slides.min.js');?>"></script>
 <script src="<?php echo base_url($this->config->item('path_js_file').'header.js');?>"></script>
 <? if($page =='admin') { ?>
-	<style>
-		.footer_top { display:none;}
-	</style>
 <script src="<?php echo base_url($this->config->item('path_js_file').'tinymce.min.js');?>"></script>
 <script type="text/javascript">
 tinymce.init({
