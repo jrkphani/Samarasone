@@ -17,6 +17,7 @@
 						{
 							$images_array[0] = base_url('assets/images/s_img1.jpg');
 						}
+					}
 				   ?> 	
             	
             	<div class="s_img_boxes">
