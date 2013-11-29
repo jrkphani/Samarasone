@@ -131,6 +131,7 @@
   }
   $('#images').galleryView({
 	 autoplay: false,
+	 show_panel_nav: true,
 });
   $('#galleryClose').click(function() { $('#galleryTop').hide(); });
   $('#gallery').click(function() { $('#galleryTop').toggle(); });
