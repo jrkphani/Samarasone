@@ -235,6 +235,14 @@ width: 100%;}
 	width: 160px; height: 30px; float: right; 
 	border: 1px solid #ddd; cursor: pointer;
 }
+#message{margin: 20px 0px 0 10px; font-size: 14px; display: inline-block; font-weight:bold;}
+.admin_edit_pg_section1 .admin_cont_txtarea{height: 105px; max-height: 140px;}
+.admin_lbl{width: 80px; font: 17px HelveNueThin, Arial; display: inline-block; padding: 10px 0; margin: 0 0 0px 0;}
+.admin_edit_pg_section1{width: 30%; float: left; margin: 10px 0 0 0;}
+.admin_edit_pg_section2{width: 50%; float: left; margin: 20px 0 0 0;}
+.admin_edit_pg_section2 input{font: 17px HelveNueThin, Arial; padding: 5px 10px; width: 250px}
+.cont_section1 .address_wrap{width: 240px;}
+.cont_section1 .address_wrap p{line-height: 34px;}
 .cont_section1 address p, a{font-size: 20px; line-height: 30px;}
 .cont_section1 .add_left{float:left;}
 .cont_section1 .add_right{float:right;}

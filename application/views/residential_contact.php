@@ -20,31 +20,33 @@
         <div class="clearall"></div>
         
         <div class="cont_section1">
-          <?php
-          $contact = explode('##',$content);
-          if(strlen($contact[0]) > 0)
-          {
-			  $address = explode("\n",$contact[0]);
-			  foreach($address as $row)
-			  {
-				  echo "<p>$row</p>";
-			  }
-		  } 
-          ?>
-        </div>
-        <div class="cont_section2">
-          <?php
-			if(isset($contact[1]))
-				echo "<p>$contact[1]</p>";
-			if(isset($contact[2]))		
-				echo "<p>$contact[2]</p>";
-			if(isset($contact[3]))
-				echo "<p>$contact[3]</p>";
-			if(isset($contact[4]))
-				echo "<p>$contact[4]</p>";
-          ?>
-        </div>
-        
+          <h3 class="contct_header">Samaras One</h3>
+          <address class="add_left address_wrap">
+            <?php
+            $contact = explode('##',$content);
+            if(strlen($contact[0]) > 0)
+            {
+              $address = explode("\n",$contact[0]);
+              foreach($address as $row)
+              {
+                echo "<p>$row</p>";
+              }
+            } 
+            ?>
+         </address>
+         <address class="add_left">
+            <?php
+            if(isset($contact[1]))
+              echo "<p class='lline'>$contact[1]</p>";
+            if(isset($contact[2]))    
+              echo "<p class='fax'>$contact[2]</p>";
+            if(isset($contact[3]))
+              echo "<p class='mobile'>$contact[3]</p>";
+            if(isset($contact[4]))
+              echo "<p class='mail'>$contact[4]</p>";
+            ?>
+          </address>
+        </div>       
         
          <div class="clearall"></div>
         <div class="cont_section2">
