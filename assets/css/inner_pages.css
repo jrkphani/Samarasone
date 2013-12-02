@@ -257,10 +257,10 @@ width: 100%;}
 .conatct_right a{font-size:20px; color:#DDD;}
 .conatct_right a:hover{color:#fff;}
 .conatct_right .cont_top{margin:73px 0 0 0;}
-.conatct_right .cont_btm{margin-bottom: 15px; }
-.conatct_right .sell_mail1{background: #043350 url(../images/sprites.png)  5px -687px no-repeat; padding: 5px 20px 10px 50px; width: 18%;}
-.conatct_right .sell_mail2{background: #043350 url(../images/sprites.png)  5px -687px no-repeat; padding: 5px 25px 10px 50px; width: 18%;}
-.conatct_right .fb_mail{background: #043350 url(../images/sprites.png)  5px -660px no-repeat; padding: 5px 59px 9px 50px; width: 18%;}
+.conatct_right .cont_btm{margin-bottom: 15px; background: #043350; width: 205px;  height: 33px;}
+.conatct_right .sell_mail1{background:  url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 20px 10px 50px; width: 18%;}
+.conatct_right .sell_mail2{background:  url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 25px 10px 50px; width: 18%;}
+.conatct_right .fb_mail{background:  url(../images/sprites.png)  5px -661px no-repeat; padding: 5px 59px 9px 50px; width: 18%;}
 .cont_form h5{font-size:22px; margin-bottom: 10px;}
 .contct_cmt_size{font-size:16px;}
 .cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}

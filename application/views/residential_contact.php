@@ -43,7 +43,7 @@
             if(isset($contact[3]))
               echo "<p class='mobile'>$contact[3]</p>";
             if(isset($contact[4]))
-              echo "<p class='mail'>$contact[4]</p>";
+              echo "<p class='mail'><a href='mailto:".$contact[4]."'>$contact[4]</a></p>";
             ?>
           </address>
         </div>       
@@ -63,7 +63,7 @@
                   <input type="text" name="firstname"><br/>
                   <p class="contct_form_size"><b>Comments</b></p>
                   <textarea type="text" name="firstname"></textarea><br />
-                  <p class="contct_cmt_size"><i>Note: fileds marked with a <b>bold label</b> are required to submit this form</i></p>
+                  <p class="contct_cmt_size"><i>Note: fields marked with a <b>bold label</b> are required to submit this form</i></p>
                   <span><button> Submit</button></span>
               </form>
           </div>
@@ -77,9 +77,9 @@
          
       <div class="conatct_right">
      	 <h3 class="contct_header" style="visibility:hidden;">Gallery</h3>
-       <p class="cont_top cont_btm"><a class="sell_mail1"href="#">Find My Home</a></p>
-       <p class="cont_btm"><a class="sell_mail2" href="#">Sell My Home</a></p>
-       <p class="cont_btm"><a class="fb_mail" href="#">Facebook</a></p>
+       <p class="cont_top cont_btm"><a class="sell_mail1"href="<?php echo base_url('search/index/residential'); ?>">Find My Home</a></p>
+       <p class="cont_btm"><a class="sell_mail2" href="<?php echo base_url('search/index/residential'); ?>">Sell My Home</a></p>
+       <p class="cont_btm"><a class="fb_mail" target="_blank" href="#">Facebook</a></p>
         
      	 </div>
       </div>

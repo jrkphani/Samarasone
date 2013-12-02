@@ -50,7 +50,7 @@
                   <input type="text" name="firstname"><br/>
                   <p class="contct_form_size"><b>Comments</b></p>
                   <textarea type="text" name="firstname"></textarea><br />
-                  <p class="contct_cmt_size"><i>Note: fileds marked with a <b>bold label</b> are required to submit this form</i></p>
+                  <p class="contct_cmt_size"><i>Note: fields marked with a <b>bold label</b> are required to submit this form</i></p>
                   <span><button> Submit</button></span>
               </form>
           </div>
