@@ -4,7 +4,7 @@
 ?>
 <div class="admin_edit">
 	<h1><?=$page;?></h1>
-	<form name="form" method="post" action="<?=base_url("admin/edit_contact/$page");?>">
+	<form name="form" method="post" id="myform" action="<?=base_url("admin/edit_contact/$page");?>">
 	<div>
 	<label>Address </label>
 	<textarea class="edit_area" rows="10" cols="20" name="address"><? if(isset($content[0])) echo $content[0];?></textarea>
@@ -20,7 +20,7 @@
 	<input type="email" name="email" id="email" value="<? if(isset($content[4])) echo $content[4];?>" />
 	</div>
 	<div class="updated_cancel">
-		<input class="admin_btn" id="submit" type="submit" value="Update" />
+		<input class="admin_btn" id="submitbtn"  type="submit" value="Update" />
 		<a class="admin_btn" href="<?=base_url("admin");?>">Cancel</a>
 	</div>
 	</form>
@@ -29,10 +29,16 @@
 <div class="clearall"></div>
 <script src="<?php echo base_url($this->config->item('path_js_file').'validation.js');?>"></script>
 <script>
-$('#submit').click(function(e)
+$('#submitbtn').click(function(e)
 {
-	//e.preventDefault();
-	//validate('Phone','phone',"","","","","");
-	//alert("dffd");
+	e.preventDefault();
+
+	if(!validate('Phone','phone',false,false,false,type='mobile',disp='message')) return false;
+	if(!validate('Fax','fax',false,false,false,type='mobile',disp='message')) return false;
+	if(!validate('Mobile','mobile',false,false,false,type='mobile',disp='message')) return false;
+	if(!validate('Email','email',false,false,false,type='email',disp='message')) return false;
+	
+	$('#myform').submit();
+
 });
 </script>
