@@ -424,7 +424,8 @@ $(function(){
 
 
 </div>
-
+ <div class="push"></div>
+ 
  <? $contact = explode('##',$contact_str); 
   if(count($contact))
             {
@@ -457,6 +458,3 @@ $(function(){
           </div>      
         </div>
   <? } ?>
-
-
- <div class="push"></div>

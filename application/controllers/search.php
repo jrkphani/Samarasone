@@ -4,6 +4,7 @@ class Search extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('file');
 	}
 
 	function index($page_type=NULL)
@@ -45,6 +46,20 @@ class Search extends CI_Controller
 		//$results['type']=$data['type'];
 		//$data['page']='Residential';
 		//$data['type']='buy';
+		if($data['page_type'] === 'residential')
+		{
+			$data['contact_str']=read_file(FCPATH."application/views/dynamics/residential_contact.html");
+		}
+		else if($data['page_type'] === 'commercial')
+		{
+			$data['contact_str']= read_file(FCPATH."application/views/dynamics/commercial_contact.html");
+		}
+		else if($data['page_type'] === 'business')
+		{
+			$data['contact_str']=read_file(FCPATH."application/views/dynamics/business_contact.html");
+		}
+		
+		
 		if($data['property'])
 		{
 		if($data['page_type'] === 'residential')
@@ -140,7 +155,6 @@ class Search extends CI_Controller
 		}
 		else if($data['page_type'] === 'commercial')
 		{
-			
 			if($data['price_min']>0)
 				$where['price >='] = $data['price_min'];
 			if($data['price_max']>0)
