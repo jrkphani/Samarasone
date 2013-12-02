@@ -5,11 +5,66 @@ class Commercial extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('file');
+		$this->load->model('image_model');
 	}
 	function index()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/commercial.html");
 		$data['view_page'] = 'commercial';
+		$data['image']=array();
+		$data['headline']=array();
+		$images = $this->image_model->getImage('commercial',2);
+		if($images)
+		{
+			$image_array = unserialize($images[0]->images);
+			$data['headline'][]=$images[0]->headline;
+			if(!count($image_array))
+				{
+					//$data['image'][] = base_url('assets/images/s_img1.jpg');
+				}
+			else
+				{
+					$data['image'][] = $image_array[0];
+				}
+				
+			$image_array = unserialize($images[1]->images);
+			$data['headline'][]=$images[1]->headline;
+			if(!count($image_array))
+				{
+					//$data['image'][] = base_url('assets/images/s_img1.jpg');
+				}
+			else
+				{
+					$data['image'][] = $image_array[0];
+				}
+		}
+		
+		$images = $this->image_model->getImage('commercialLand',2);
+		if($images)
+		{
+			$image_array = unserialize($images[0]->images);
+			$data['headline'][]=$images[0]->headline;
+			if(!count($image_array))
+				{
+					//$data['image'][] = base_url('assets/images/s_img1.jpg');
+				}
+			else
+				{
+					$data['image'][] = $image_array[0];
+				}
+				
+			$image_array = unserialize($images[1]->images);
+			$data['headline'][]=$images[1]->headline;
+			if(!count($image_array))
+				{
+					//$data['image'][] = base_url('assets/images/s_img1.jpg');
+				}
+			else
+				{
+					$data['image'][] = $image_array[0];
+				}
+		}
+
 		$this->load->view('template', $data);
 	}
 
