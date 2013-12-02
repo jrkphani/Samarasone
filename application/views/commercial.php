@@ -66,7 +66,8 @@
           </div>      
         </div>
   <? } ?>
-<div class="push"></div>
+
 </div>
+<div class="push"></div>
   <!-- bottom slider js -->
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>
