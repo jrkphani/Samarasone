@@ -3,7 +3,7 @@
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><p>Commercial</p></h5>
         <h6><a class="inner_smenu" href="#"></a></h6>
-        <a class="inner_search_icon" href="<?php echo base_url('search/residential'); ?>"><span>Find a Property</span></a>
+        <a class="inner_search_icon" href="<?php echo base_url('search/index/residential'); ?>"><span>Find a Property</span></a>
       
       </div>      
     	<div class="header_res_btm width_1060">   
