@@ -10,6 +10,7 @@ class Residential extends CI_Controller
 	function index()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/residential.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/residential_contact.html");
 		$data['view_page'] = 'residential';
 		$data['image']=array();
 		$data['headline']=array();
@@ -72,6 +73,7 @@ class Residential extends CI_Controller
 	function ourvalueproposition()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/residential_proposition.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/residential_contact.html");
 		$data['view_page'] = 'residential_proposition.php';
 		$this->load->view('template', $data);
 	}
@@ -79,6 +81,7 @@ class Residential extends CI_Controller
 	function ourteam()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/residential_ourteam.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/residential_contact.html");
 		$data['view_page'] = 'residential_ourteam.php';
 		$this->load->view('template', $data);
 	}

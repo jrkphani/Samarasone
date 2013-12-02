@@ -10,6 +10,7 @@ class Commercial extends CI_Controller
 	function index()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/commercial.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/commercial_contact.html");
 		$data['view_page'] = 'commercial';
 		$data['image']=array();
 		$data['headline']=array();
@@ -71,6 +72,7 @@ class Commercial extends CI_Controller
 	function ourvalueproposition()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/commercial_proposition.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/commercial_contact.html");
 		$data['view_page'] = 'commercial_proposition.php';
 		$this->load->view('template', $data);
 	}
@@ -78,6 +80,7 @@ class Commercial extends CI_Controller
 	function ourteam()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/commercial_ourteam.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/commercial_contact.html");
 		$data['view_page'] = 'commercial_ourteam.php';
 		$this->load->view('template', $data);
 	}

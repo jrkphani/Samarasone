@@ -31,20 +31,29 @@
   </div>
   <div class="clearall"></div>
 
+		 <? $contact = explode('##',$contact_str); 
+  if(count($contact))
+            {
+				if(strlen($contact[0]) > 0)
+				{
+      			  $address_arr = explode("\n",$contact[0]);
+      			  $address = implode(", ",$address_arr);
+				}
+  ?>
 		<div class="footer_top">
         	<div class="footer_section1">
           	 <h3 class="footer_header">Contact</h3>
              <div class="width1_33">
-             	<p class="foot_cnt">Suite 220, Level 2, 111 Harrington St, Sydney, NSW, 2000</p>
+             	<p class="foot_cnt"><? if(isset($address)) echo $address; ?></p>
       				<a class="foot_map" href="https://www.google.co.in/maps?q=220,+Level+2++111+Harrington+St+Sydney+NSW+2000&t=m&hnear=220%2F111+Harrington+St,+Sydney+New+South+Wales+2000,+Australia&z=16" target="_blank">Show Map</a>
              </div>
              <div class="width2_33">
-             	<p class="foot_phone foot_cnt">+61 2 9251 8826</p>
-              <p class="foot_fax foot_cnt">+61 2 9247 2222</p>
+             	<p class="foot_phone foot_cnt"><? if(isset($contact[1])) echo $contact[1]; ?></p>
+              <p class="foot_fax foot_cnt"><? if(isset($contact[2])) echo $contact[2]; ?></p>
              </div>
              <div class="width3_33">
-             	<p class="foot_mobile foot_cnt">+61 0411 316 303</p>
-              <p class="foot_mail"><a class="foot_cnt" href="mailto:#">nicholas@samarasone.com</a></p>
+             	<p class="foot_mobile foot_cnt"> <? if(isset($contact[3])) echo $contact[3]; ?></p>
+              <p class="foot_mail"><a class="foot_cnt" href="mailto:<? if(isset($contact[4])) echo $contact[4]; ?>"> <? if(isset($contact[4])) echo $contact[4]; ?></a></p>
              </div>
           </div>
         	<div class="footer_section2">
@@ -53,6 +62,7 @@
              <a class="foot_tw" href="#"></a>
           </div>      
         </div>
+  <? } ?>
 
   <div class="push"></div>
 </div>
