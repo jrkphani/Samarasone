@@ -20,7 +20,29 @@
         <div class="clearall"></div>
         
         <div class="cont_section1">
-          <?php echo $content; ?>
+          <?php
+          $contact = explode('##',$content);
+          if(strlen($contact[0]) > 0)
+          {
+			  $address = explode("\n",$contact[0]);
+			  foreach($address as $row)
+			  {
+				  echo "<p>$row</p>";
+			  }
+		  } 
+          ?>
+        </div>
+        <div class="cont_section2">
+          <?php
+			if(isset($contact[1]))
+				echo "<p>$contact[1]</p>";
+			if(isset($contact[2]))		
+				echo "<p>$contact[2]</p>";
+			if(isset($contact[3]))
+				echo "<p>$contact[3]</p>";
+			if(isset($contact[4]))
+				echo "<p>$contact[4]</p>";
+          ?>
         </div>
         
         

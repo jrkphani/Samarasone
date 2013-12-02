@@ -49,7 +49,7 @@ $subpage = $this->uri->segment(2);
 <script src="<?php echo base_url($this->config->item('path_js_file').'tinymce.min.js');?>"></script>
 <script type="text/javascript">
 tinymce.init({
-    selector: "textarea",
+    selector: "#content",
     //theme: "modern",
     //width: 300,
     //height: 300,

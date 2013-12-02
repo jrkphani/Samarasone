@@ -14,7 +14,13 @@
 <script>
 function gotpage(page)
 {
-	if(page != 'Select Page')
+	if(page == 'residential_contact' || page == 'commercial_contact' || page == 'business_contact')
+	{
+		window.location.href = "<?=base_url('admin/edit_contact');?>/"+page;
+	}
+	else if(page != 'Select Page')
+	{
 		window.location.href = "<?=base_url('admin/edit');?>/"+page;
+	}
 }
 </script>

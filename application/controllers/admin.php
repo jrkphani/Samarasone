@@ -50,6 +50,44 @@ function edit()
 		redirect('my404');
 	}
 }
+function edit_contact()
+{
+	if(!$this->current_user)
+		redirect('admin/login', 'refresh');
+	$page=$this->uri->segment(3);
+	if(in_array($page,$this->pages))
+	{
+		 $data['msg'] ="";
+		 $data['page'] =$page;
+		 $data['redirect'] = NULL;
+		$file=FCPATH."application/views/dynamics/".$page.".html";
+		$address = $this->input->post('address');
+		$phone = $this->input->post('phone');
+		$fax = $this->input->post('fax');
+		$mobile = $this->input->post('mobile');
+		$email = $this->input->post('email');
+		
+		$content = $address."##".$phone."##".$fax."##".$mobile."##".$email;
+		if(($address) || ($phone) || ($fax) || ($mobile) || ($email))
+		{
+			$data['msg'] = 'Content Updated Successfully!';
+			$data['redirect'] = TRUE;
+			if ( ! write_file($file, $content))
+			{
+				 $data['msg'] = 'Internal error, please contact Administator';
+			}
+		}
+		$content = explode('##',read_file($file));
+		//print_r($content); die;
+		$data['content'] = explode('##',read_file($file));
+		$data['view_page'] = 'admin/edit_contact_page';
+		$this->load->view('template', $data);
+	}
+	else
+	{
+		redirect('my404');
+	}
+}
 function login()
 {
 	if($this->current_user)
