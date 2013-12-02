@@ -10,6 +10,7 @@ class Business extends CI_Controller
 	function index()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/business.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/business_contact.html");
 		$data['view_page'] = 'business';
 		$data['image']=array();
 		$data['headline']=array();
@@ -67,6 +68,7 @@ class Business extends CI_Controller
 	function ourvalueproposition()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/business_proposition.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/business_contact.html");
 		$data['view_page'] = 'business_proposition.php';
 		$this->load->view('template', $data);
 	}
@@ -74,6 +76,7 @@ class Business extends CI_Controller
 	function ourteam()
 	{
 		$data['content']=$this->get_content(FCPATH."application/views/dynamics/business_ourteam.html");
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/business_contact.html");
 		$data['view_page'] = 'business_ourteam.php';
 		$this->load->view('template', $data);
 	}

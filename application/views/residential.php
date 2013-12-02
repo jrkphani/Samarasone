@@ -18,30 +18,54 @@
       <?php echo $content; ?>
 </div>
   <div class="res_img_container">
-<!--    <div class="respage_img"> 
-      <img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" alt="residential" title="residential"/> 
-    </div>
-    <div class="respage_img">  
-      <img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" alt="residential" title="residential"/> 
-    </div>
-    <div class="respage_img">  
-      <img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" alt="residential" title="residential"/> 
-    </div>
-    <div class="respage_img">  
-      <img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" alt="residential" title="residential"/> 
-    </div> -->
 	<ul id="scroller">
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Residential"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Residential" /><span class="some-element">Residential 1</span></a></li>
+		<?
+		$i=0; 
+		foreach($image as $img)
+		{?>
+			<li class="buzzbutton"><a  href="#" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
+		<?
+		$i++;
+		}?>
 	</ul>
   </div>
   <div class="clearall"></div> 
+  
+ <? $contact = explode('##',$contact_str); 
+  if(count($contact))
+            {
+				if(strlen($contact[0]) > 0)
+				{
+      			  $address_arr = explode("\n",$contact[0]);
+      			  $address = implode(", ",$address_arr);
+				}
+  ?>
+		<div class="footer_top">
+        	<div class="footer_section1">
+          	 <h3 class="footer_header">Contact</h3>
+             <div class="width1_33">
+             	<p class="foot_cnt"><? if(isset($address)) echo $address; ?></p>
+      				<a class="foot_map" href="https://www.google.co.in/maps?q=220,+Level+2++111+Harrington+St+Sydney+NSW+2000&t=m&hnear=220%2F111+Harrington+St,+Sydney+New+South+Wales+2000,+Australia&z=16" target="_blank">Show Map</a>
+             </div>
+             <div class="width2_33">
+             	<p class="foot_phone foot_cnt"><? if(isset($contact[1])) echo $contact[1]; ?></p>
+              <p class="foot_fax foot_cnt"><? if(isset($contact[2])) echo $contact[2]; ?></p>
+             </div>
+             <div class="width3_33">
+             	<p class="foot_mobile foot_cnt"> <? if(isset($contact[3])) echo $contact[3]; ?></p>
+              <p class="foot_mail"><a class="foot_cnt" href="mailto:<? if(isset($contact[4])) echo $contact[4]; ?>"> <? if(isset($contact[4])) echo $contact[4]; ?></a></p>
+             </div>
+          </div>
+        	<div class="footer_section2">
+          	 <h3 class="footer_header">Follow us on</h3>
+             <a class="foot_fb" href="#"></a>
+             <a class="foot_tw" href="#"></a>
+          </div>      
+        </div>
+  <? } ?>
+
+
+  
   <div class="push"></div>
   </div>
    
