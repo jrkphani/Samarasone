@@ -20,14 +20,14 @@
  </div>
   <div class="res_img_container">
 	<ul id="scroller">
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide9.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide6.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide5.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="Commercial"><img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" height="383" alt="Commercial" /><span class="some-element">Commercial 1</span></a></li>
+		<?
+		$i=0; 
+		foreach($image as $img)
+		{?>
+			<li class="buzzbutton"><a  href="#" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
+		<?
+		$i++;
+		}?>
 	</ul>
   </div>
   <form>
