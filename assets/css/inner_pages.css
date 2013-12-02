@@ -265,7 +265,7 @@ width: 100%;}
 .contct_cmt_size{font-size:16px;}
 .cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}
 /* ************************* footer page ******************************** */
-.footer_top{background-color:#043350; display:inline-block; width:100%; position:relative; height: 203px;}
+.footer_top{background-color:#043350; display:inline-block; width:100%; position:relative; /*height: 203px;*/ float: left;}
 .footer_section1{width:67%; float:left; border-right:1px solid #5b5b5b; padding:10px 0 10px 72px;}
 .footer_section2{width:17%; float:left;  padding:10px 72px 10px 0;} 
 .footer_header{color:#fff; padding:10px 20px;}
