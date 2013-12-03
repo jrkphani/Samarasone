@@ -237,6 +237,7 @@ width: 100%;}
 }
 #message{margin: 20px 0px 0 10px; font-size: 14px; display: inline-block; font-weight:bold;}
 .admin_edit_pg_section1 .admin_cont_txtarea{height: 105px; max-height: 140px;}
+.admin_contact_container{border: 1px solid #B4B4B4; float: left; padding: 5px 20px; margin: 10px 0;}
 .admin_lbl{width: 80px; font: 17px HelveNueThin, Arial; display: inline-block; padding: 10px 0; margin: 0 0 0px 0;}
 .admin_edit_pg_section1{width: 30%; float: left; margin: 10px 0 0 0;}
 .admin_edit_pg_section2{width: 50%; float: left; margin: 20px 0 0 0;}
@@ -367,10 +368,10 @@ display: block; margin: 0 auto; line-height: 51px; margin-bottom:50px; }
 
 /*********************** edit page ******************************/
 .admin_edit{margin: 0 auto; width: 824px; min-height: 539px;}
-.admin_edit .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; margin: 0 0 20px -2px; line-height: 55px!important; height: 51px; float:left; text-align: center; border: 0; cursor: pointer; font: 17px HelveNueThin, Arial; font-weight: bold; }
+.admin_edit .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; margin:5px 0 8px -2px; line-height: 55px!important; height: 51px; float:left; text-align: center; border: 0; cursor: pointer; font: 17px HelveNueThin, Arial; font-weight: bold; }
 .admin_edit .admin_btn:hover{background:url(../images/sprites.png) -528px -231px  no-repeat; width:99px; height:51px;}
 .admin_edit .edit_area{font: 17px HelveNueThin, Arial; padding: 10px; max-width:818px!important;}
-.admin_edit .updated_cancel{width: 839px; margin: 0 auto;}
+.admin_edit .updated_cancel{width: 839px; margin: 0 auto; float: left;}
 /*********************** select page ******************************/
 .admin_select_page{text-align: center; margin: 20px 0 0 0;}
 .select_page{-moz-appearance: none; -webkit-appearance: none; -o-appearance: none; -ms-appearance: none; padding: 10px 18px 10px 10px; border: 1px solid #B1C7D3; margin: 20px 0;
