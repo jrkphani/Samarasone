@@ -18,49 +18,17 @@ class Business extends CI_Controller
 		
 		if($images)
 		{
-			$image_array = unserialize($images[0]->images);
-			$data['headline'][]=$images[0]->headline;
-			if(!count($image_array))
+			foreach($images as $row)
+			{
+				$image_array = unserialize($row->images);
+			if(count($image_array))
 				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
+					$data['headline'][]=$row->headline;
+					$data['viewLink'][]=base_url('view/index/residential/sale/Business/'.$row->uniqueID);
 					$data['image'][] = $image_array[0];
 				}
-				
-			$image_array = unserialize($images[1]->images);
-			$data['headline'][]=$images[1]->headline;
-			if(!count($image_array))
-				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
-					$data['image'][] = $image_array[0];
-				}
-				
-			$image_array = unserialize($images[2]->images);
-			$data['headline'][]=$images[2]->headline;
-			if(!count($image_array))
-				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
-					$data['image'][] = $image_array[0];
-				}
-				
-			$image_array = unserialize($images[3]->images);
-			$data['headline'][]=$images[3]->headline;
-			if(!count($image_array))
-				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
-					$data['image'][] = $image_array[0];
-				}
+			}
+			
 		}
 		$this->load->view('template', $data);
 	}

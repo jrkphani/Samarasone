@@ -14,60 +14,81 @@ class Residential extends CI_Controller
 		$data['view_page'] = 'residential';
 		$data['image']=array();
 		$data['headline']=array();
-		$images = $this->image_model->getImage('residential',2);
+		$images = $this->image_model->getImage('residential',4);
 		if($images)
 		{
-			$image_array = unserialize($images[0]->images);
-			$data['headline'][]=$images[0]->headline;
-			$data['viewLink'][]=base_url('view/index/residential/sale/Residential/'.$images[0]->uniqueID);
-			if(!count($image_array))
+			foreach($images as $row)
+			{
+				$image_array = unserialize($row->images);
+			if(count($image_array))
 				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
+					$data['headline'][]=$row->headline;
+					$data['viewLink'][]=base_url('view/index/residential/sale/Residential/'.$row->uniqueID);
 					$data['image'][] = $image_array[0];
 				}
-				
-			$image_array = unserialize($images[1]->images);
-			$data['headline'][]=$images[1]->headline;
-			$data['viewLink'][]=base_url('view/index/residential/sale/Residential/'.$images[1]->uniqueID);
-			if(!count($image_array))
-				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
-					$data['image'][] = $image_array[0];
-				}
+			}
+			
 		}
 		
-		$images = $this->image_model->getImage('rental',2);
+		$images = $this->image_model->getImage('land',4);
 		if($images)
 		{
-			$image_array = unserialize($images[0]->images);
-			$data['headline'][]=$images[0]->headline;
-			$data['viewLink'][]=base_url('view/index/residential/lease/Rental/'.$images[0]->uniqueID);
-			if(!count($image_array))
+			foreach($images as $row)
+			{
+				$image_array = unserialize($row->images);
+			if(count($image_array))
 				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
+					$data['headline'][]=$row->headline;
+					$data['viewLink'][]=base_url('view/index/residential/sale/Land/'.$row->uniqueID);
 					$data['image'][] = $image_array[0];
 				}
-				
-			$image_array = unserialize($images[1]->images);
-			$data['headline'][]=$images[1]->headline;
-			$data['viewLink'][]=base_url('view/index/residential/lease/Rental/'.$images[1]->uniqueID);
-			if(!count($image_array))
+			}
+			
+		}
+		$images = $this->image_model->getImage('rural',4);
+		if($images)
+		{
+			foreach($images as $row)
+			{
+				$image_array = unserialize($row->images);
+			if(count($image_array))
 				{
-					//$data['image'][] = base_url('assets/images/s_img1.jpg');
-				}
-			else
-				{
+					$data['headline'][]=$row->headline;
+					$data['viewLink'][]=base_url('view/index/residential/sale/Rural/'.$row->uniqueID);
 					$data['image'][] = $image_array[0];
 				}
+			}
+			
+		}
+		$images = $this->image_model->getImage('rental',4);
+		if($images)
+		{
+			foreach($images as $row)
+			{
+				$image_array = unserialize($row->images);
+			if(count($image_array))
+				{
+					$data['headline'][]=$row->headline;
+					$data['viewLink'][]=base_url('view/index/residential/lease/Rental/'.$row->uniqueID);
+					$data['image'][] = $image_array[0];
+				}
+			}
+			
+		}
+		$images = $this->image_model->getImage('holidayRental',4);
+		if($images)
+		{
+			foreach($images as $row)
+			{
+				$image_array = unserialize($row->images);
+			if(count($image_array))
+				{
+					$data['headline'][]=$row->headline;
+					$data['viewLink'][]=base_url('view/index/residential/lease/Holiday/'.$row->uniqueID);
+					$data['image'][] = $image_array[0];
+				}
+			}
+			
 		}
 		//echo "<pre>";
 		//print_r($data); die;
