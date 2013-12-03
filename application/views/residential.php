@@ -2,22 +2,16 @@
 
 div#wn { 
 	position:relative; 
-	width:100%; height:300px; 
+	width:100%; height:200px; 
 	overflow:hidden;
 	}
     
-div#inner1, div#inner2 {
+div#inner1 {
     white-space:nowrap;
     }
 div#inner1 img {
     padding-right:4px;
     }
-    
-div#wn2	{ 
-	position:relative; 
-	width:304px; height:20px;
-	overflow:hidden;
-	}
 </style>
 
     	<div class="comm_resi_header_top width_1060">   
@@ -47,16 +41,16 @@ div#wn2	{
 		foreach($image as $img)
 		{
 			//$viewLink[$i]  $img  	$headline[$i]
-			echo '<img src="'.$img.'" alt="'.$img.'" />';
+			echo '<img width="383" height="200px" src="'.$img.'" alt="'.$headline[$i].'" />';
 		$i++;
 		}
 		$i=0; 
 		foreach($image as $img)
 		{
 			if($i==0)
-			echo '<img id="rpt1" src="'.$img.'" alt="'.$img.'" />';
+			echo '<img width="383" height="200px" id="rpt1" src="'.$img.'" alt="'.$img.'" />';
 			else
-			echo '<img src="'.$img.'" alt="'.$img.'" />';
+			echo '<img width="383"  height="200px" src="'.$img.'" alt="'.$img.'" />';
 		$i++;
 		}
 		?>
@@ -116,7 +110,7 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
 		// arguments: id of scroll area div, id of content div
 		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
 		// see info online at http://www.dyn-web.com/code/scrollers/continuous/documentation.php
-		wndo.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt1', speed:100, bPauseResume:true} );
+		wndo.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt1', speed:40, bPauseResume:true} );
     
 	});
 }
