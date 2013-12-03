@@ -1,4 +1,25 @@
-<link media="all" rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery.simplyscroll.css"); ?>" />
+<style type="text/css">
+
+div#wn { 
+	position:relative; 
+	width:100%; height:300px; 
+	overflow:hidden;
+	}
+    
+div#inner1, div#inner2 {
+    white-space:nowrap;
+    }
+div#inner1 img {
+    padding-right:4px;
+    }
+    
+div#wn2	{ 
+	position:relative; 
+	width:304px; height:20px;
+	overflow:hidden;
+	}
+</style>
+
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><p>Residential</p></h5>
@@ -18,16 +39,31 @@
       <?php echo $content; ?>
 </div>
   <div class="res_img_container">
-	<ul id="scroller">
+	<div id="wn">
+		<div id="lyr1">
+			<div id="inner1">
 		<?
 		$i=0; 
 		foreach($image as $img)
-		{?>
-			<li class="buzzbutton"><a  href="<?=$viewLink[$i];?>" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
-		<?
+		{
+			//$viewLink[$i]  $img  	$headline[$i]
+			echo '<img src="'.$img.'" alt="'.$img.'" />';
 		$i++;
-		}?>
-	</ul>
+		}
+		$i=0; 
+		foreach($image as $img)
+		{
+			if($i==0)
+			echo '<img id="rpt1" src="'.$img.'" alt="'.$img.'" />';
+			else
+			echo '<img src="'.$img.'" alt="'.$img.'" />';
+		$i++;
+		}
+		?>
+			</div>
+       	</div>
+	</div>
+ <!-- end wn div -->
   </div>
   <div class="clearall"></div> 
   
@@ -70,7 +106,19 @@
   </div>
      <div class="push"></div>
   <!-- bottom slider js -->
-  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>
-  <script>
-  $("#scroller").simplyScroll();
-  </script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'dw_con_scroller.js');?>"></script>
+<script type="text/javascript">
+
+if ( DYN_WEB.Scroll_Div.isSupported() ) {
+	
+	DYN_WEB.Event.domReady( function() {
+		
+		// arguments: id of scroll area div, id of content div
+		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
+		// see info online at http://www.dyn-web.com/code/scrollers/continuous/documentation.php
+		wndo.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt1', speed:100, bPauseResume:true} );
+    
+	});
+}
+
+</script>
