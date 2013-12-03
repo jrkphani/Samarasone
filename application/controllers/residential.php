@@ -19,6 +19,7 @@ class Residential extends CI_Controller
 		{
 			$image_array = unserialize($images[0]->images);
 			$data['headline'][]=$images[0]->headline;
+			$data['viewLink'][]=base_url('view/index/residential/sale/Residential/'.$images[0]->uniqueID);
 			if(!count($image_array))
 				{
 					//$data['image'][] = base_url('assets/images/s_img1.jpg');
@@ -30,6 +31,7 @@ class Residential extends CI_Controller
 				
 			$image_array = unserialize($images[1]->images);
 			$data['headline'][]=$images[1]->headline;
+			$data['viewLink'][]=base_url('view/index/residential/sale/Residential/'.$images[1]->uniqueID);
 			if(!count($image_array))
 				{
 					//$data['image'][] = base_url('assets/images/s_img1.jpg');
@@ -45,6 +47,7 @@ class Residential extends CI_Controller
 		{
 			$image_array = unserialize($images[0]->images);
 			$data['headline'][]=$images[0]->headline;
+			$data['viewLink'][]=base_url('view/index/residential/lease/Rental/'.$images[0]->uniqueID);
 			if(!count($image_array))
 				{
 					//$data['image'][] = base_url('assets/images/s_img1.jpg');
@@ -56,6 +59,7 @@ class Residential extends CI_Controller
 				
 			$image_array = unserialize($images[1]->images);
 			$data['headline'][]=$images[1]->headline;
+			$data['viewLink'][]=base_url('view/index/residential/lease/Rental/'.$images[1]->uniqueID);
 			if(!count($image_array))
 				{
 					//$data['image'][] = base_url('assets/images/s_img1.jpg');

@@ -23,7 +23,7 @@
 		$i=0; 
 		foreach($image as $img)
 		{?>
-			<li class="buzzbutton"><a  href="#" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
+			<li class="buzzbutton"><a  href="<?=$viewLink[$i];?>" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
 		<?
 		$i++;
 		}?>
