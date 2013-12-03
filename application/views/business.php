@@ -1,4 +1,4 @@
-
+<link media="all" rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery.simplyscroll.css"); ?>" />
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><p>Business</p></h5>
@@ -75,3 +75,6 @@
 
   <!-- bottom slider js -->
   <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>
+    <script>
+  $("#scroller").simplyScroll();
+  </script>

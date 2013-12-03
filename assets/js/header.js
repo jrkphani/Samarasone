@@ -32,5 +32,4 @@ $(document).ready(function(e) {
 			$('#mainmenu').hide();
 		} 
 	});
-	$("#scroller").simplyScroll({pauseOnHover: true});
 });

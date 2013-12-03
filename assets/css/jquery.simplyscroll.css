@@ -29,28 +29,6 @@ Note all DIVs are generated and should not be hard-coded
 
 
 */
-.some-element {
-  border-right:1px solid #fff;
-  border-top:1px solid #fff;
-  border-bottom:1px solid #fff;
-  display: none;
-  font-size: 10px;
-  margin-top: 10px;
-  padding: 5px 25px;
-  text-transform: uppercase;
-  background-color:#000;
-  opacity:0.75;
-  text-index:999;
-  position:absolute;
-  color:#fff;
-}
-
-.buzzbutton:hover .some-element {
-  display: block;
-  margin-top:-76px;
-}
-.buzzbutton{border-left:1px solid #fff;}
-
 
 .simply-scroll-container { /* Container DIV - automatically generated */
 	position: relative;
@@ -159,31 +137,81 @@ Note all DIVs are generated and should not be hard-coded
 */
 
 .simply-scroll { /* Customisable base class for style override DIV */
-	/* width: 576px;
-	height: 200px; */
-	
 	width: 100%;
-	height: 378px;
-	border-bottom:1px solid #fff;
+	height: 200px;
+	margin-bottom: 1em;
 }
 
 	.simply-scroll .simply-scroll-clip {
-/* 		width: 576px;
-		height: 200px; */		
 		width: 100%;
-		height: 378px;
+		height: 200px;
 	}
 	
 		.simply-scroll .simply-scroll-list {}
 		
 		.simply-scroll .simply-scroll-list li {
 			float: left;
-		/* 	width: 290px;
-			height: 200px; */
+			width: 290px;
+			height: 200px;
 		}
-
+		.simply-scroll .simply-scroll-list li img {}
+	
+	.simply-scroll .simply-scroll-btn {}
+	
+	.simply-scroll .simply-scroll-btn-left {}
+	.simply-scroll .simply-scroll-btn-left.disabled {}
+	.simply-scroll .simply-scroll-btn-left:hover {}
+	
+	.simply-scroll .simply-scroll-btn-right {}
+	.simply-scroll .simply-scroll-btn-right.disabled {}
+	.simply-scroll .simply-scroll-btn-right:hover {}
+	
+	.simply-scroll .simply-scroll-btn-up {}
+	.simply-scroll .simply-scroll-btn-up.disabled {}
+	.simply-scroll .simply-scroll-btn-up:hover {}
+	
+	.simply-scroll .simply-scroll-btn-down {}
+	.simply-scroll .simply-scroll-btn-down.disabled {}
+	.simply-scroll .simply-scroll-btn-down:hover {}
+	
 
 
 /* Vertical scroller example */
 
+.vert { /* wider than clip to position buttons to side */
+	width: 340px;
+	height: 400px;
+	margin-bottom: 1.5em;
+}
+
+	.vert .simply-scroll-clip {
+		width: 290px;
+		height: 400px;
+	}
+	
+		.vert .simply-scroll-list {}
+		
+		.vert .simply-scroll-list li {
+			width: 290px;
+			height: 200px;
+		}
+		.vert .simply-scroll-list li img {}
+	
+	.vert .simply-scroll-btn {}
+
+	.vert .simply-scroll-btn-up { /* modified btn pos */
+		right: 0;
+		top: 0;
+	}
+	.vert .simply-scroll-btn-up.disabled {}
+	.vert .simply-scroll-btn-up:hover {}
+	
+	.vert .simply-scroll-btn-down { /* modified btn pos */
+		right: 0;
+		top: 52px;
+	}
+	.vert .simply-scroll-btn-down.disabled {}
+	.vert .simply-scroll-btn-down:hover {}
+	
+	/* NOTE left-right classes wouldn't be needed on vertical scroller */
 
