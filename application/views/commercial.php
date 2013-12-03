@@ -1,4 +1,4 @@
-<link media="all" rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."jquery.simplyscroll.css"); ?>" />
+<link media="all" rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."imgslider.css"); ?>" />
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><p>Commercial</p></h5>
@@ -19,22 +19,41 @@
 
  </div>
   <div class="res_img_container">
-	<ul id="scroller">
+	<div id="wn">
+		<div id="lyr1">
+			<div id="inner1">
 		<?
 		/*$i=0; 
 		foreach($image as $img)
-		{?>
-			<li class="buzzbutton"><a  href="#" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
-		<?
+		{
+			//$viewLink[$i]  $img  	$headline[$i]
+			echo '<img class="hreflink" href="'.$viewLink[$i].'" width="383" height="200px" src="'.$img.'" alt="'.$headline[$i].'" />';
 		$i++;
 		}
-		*/ ?>
-		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box1_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box2_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box1_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
-		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box2_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
-
-	</ul>
+		$i=0; 
+		foreach($image as $img)
+		{
+			if($i==0)
+			echo '<img class="hreflink" href="'.$viewLink[$i].'" width="383" height="200px" id="rpt1" src="'.$img.'" alt="'.$img.'" />';
+			else
+			echo '<img class="hreflink" href="'.$viewLink[$i].'" width="383"  height="200px" src="'.$img.'" alt="'.$img.'" />';
+		$i++;
+		}*/
+		?>
+		<img width="383" height="200px" src="<?=base_url('assets/images/box1_img.jpg');?>" alt="" />
+		<img width="383" height="200px" src="<?=base_url('assets/images/box2_img.jpg');?>" alt="" />
+		<img width="383" height="200px" src="<?=base_url('assets/images/box1_img.jpg');?>" alt="" />
+		<img width="383" height="200px" src="<?=base_url('assets/images/box2_img.jpg');?>" alt="" />
+		<img width="383" height="200px" id="rpt1" src="<?=base_url('assets/images/box1_img.jpg');?>" alt="" />
+		<img width="383" height="200px" src="<?=base_url('assets/images/box2_img.jpg');?>" alt="" />
+		<img width="383" height="200px" src="<?=base_url('assets/images/box1_img.jpg');?>" alt="" />
+		<img width="383" height="200px" src="<?=base_url('assets/images/box2_img.jpg');?>" alt="" />
+		
+		
+			</div>
+       	</div>
+	</div>
+ <!-- end wn div -->
   </div>
   <form>
   </form>
@@ -76,7 +95,5 @@
 </div>
 <div class="push"></div>
   <!-- bottom slider js -->
-  <script src="<?php echo base_url($this->config->item('path_js_file').'jquery.simplyscroll.min.js');?>"></script>
-    <script>
-  $("#scroller").simplyScroll();
-  </script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'dw_con_scroller.js');?>"></script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'imgslider.js');?>"></script>

@@ -1,19 +1,4 @@
-<style type="text/css">
-
-div#wn { 
-	position:relative; 
-	width:100%; height:200px; 
-	overflow:hidden;
-	}
-    
-div#inner1 {
-    white-space:nowrap;
-    }
-div#inner1 img {
-    padding-right:4px;
-    }
-</style>
-
+<link media="all" rel="stylesheet" type="text/css" href="<?php echo base_url($this->config->item('path_css_file')."imgslider.css"); ?>" />
     	<div class="comm_resi_header_top width_1060">   
       	<h1><a href="<?php echo base_url(''); ?>"><img class="inner_plogo" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="samaras one logo" title="samaras one"/></a>   </h1>
         <h5 class="page_name"><p>Residential</p></h5>
@@ -41,16 +26,16 @@ div#inner1 img {
 		foreach($image as $img)
 		{
 			//$viewLink[$i]  $img  	$headline[$i]
-			echo '<img width="383" height="200px" src="'.$img.'" alt="'.$headline[$i].'" />';
+			echo '<img class="hreflink" href="'.$viewLink[$i].'" width="383" height="200px" src="'.$img.'" alt="'.$headline[$i].'" />';
 		$i++;
 		}
 		$i=0; 
 		foreach($image as $img)
 		{
 			if($i==0)
-			echo '<img width="383" height="200px" id="rpt1" src="'.$img.'" alt="'.$img.'" />';
+			echo '<img class="hreflink" href="'.$viewLink[$i].'" width="383" height="200px" id="rpt1" src="'.$img.'" alt="'.$img.'" />';
 			else
-			echo '<img width="383"  height="200px" src="'.$img.'" alt="'.$img.'" />';
+			echo '<img class="hreflink" href="'.$viewLink[$i].'" width="383"  height="200px" src="'.$img.'" alt="'.$img.'" />';
 		$i++;
 		}
 		?>
@@ -101,18 +86,4 @@ div#inner1 img {
      <div class="push"></div>
   <!-- bottom slider js -->
   <script src="<?php echo base_url($this->config->item('path_js_file').'dw_con_scroller.js');?>"></script>
-<script type="text/javascript">
-
-if ( DYN_WEB.Scroll_Div.isSupported() ) {
-	
-	DYN_WEB.Event.domReady( function() {
-		
-		// arguments: id of scroll area div, id of content div
-		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
-		// see info online at http://www.dyn-web.com/code/scrollers/continuous/documentation.php
-		wndo.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt1', speed:40, bPauseResume:true} );
-    
-	});
-}
-
-</script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'imgslider.js');?>"></script>
