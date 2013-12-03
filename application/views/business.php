@@ -41,6 +41,7 @@
 				$headline[$countimg] = $headline[$i];
 				$requireimg--;
 				$countimg++;
+				$i++;
 			}
 		}
 		 $i=0; 
