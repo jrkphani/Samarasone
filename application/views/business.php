@@ -22,7 +22,28 @@
 		<div id="lyr1">
 			<div id="inner1">
 		<?
-		/*$i=0; 
+		/*
+		 $i=0;
+		$countimg = count($image);
+		$limit = 6;
+		$requireimg = $limit - count($image);
+		
+		if($requireimg >= 0)
+		{
+			while($requireimg)
+			{
+				if(!isset($image[$i]))
+					{
+						$i=0;
+					}
+				$image[$countimg] = $image[$i];
+				$viewLink[$countimg] = $viewLink[$i];
+				$headline[$countimg] = $headline[$i];
+				$requireimg--;
+				$countimg++;
+			}
+		}
+		 $i=0; 
 		foreach($image as $img)
 		{
 			//$viewLink[$i]  $img  	$headline[$i]
