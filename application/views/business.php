@@ -20,13 +20,19 @@
   <div class="res_img_container">
 	<ul id="scroller">
 		<?
-		$i=0; 
+		/*$i=0; 
 		foreach($image as $img)
 		{?>
 			<li class="buzzbutton"><a  href="#" title="<?=$headline[$i];?>"><img src="<?=$img?>" height="383" alt="<?=$headline[$i];?>" /><span class="some-element"><?=$headline[$i];?></span></a></li>
 		<?
 		$i++;
-		}?>
+		}
+		*/ ?>
+		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box1_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box2_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box1_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
+		<li class="buzzbutton"><a  href="#" title="title"><img src="<?=base_url('assets/images/box2_img.jpg');?>" height="383" alt="title" /><span class="some-element">title</span></a></li>
+		
 	</ul>
   </div>
   <div class="clearall"></div>
