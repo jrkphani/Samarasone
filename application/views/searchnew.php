@@ -34,13 +34,15 @@ display:none;
         <div class="boxex width9">
           <ul>
             <li style="margin:45px 0 0 0;">
-              <input value="sale" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='sale') echo 'checked="checked"'; ?> />
+              <input value="sale" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='sale' || $page_type == 'business') echo 'checked="checked"'; ?> />
               Buy
             </li>
+            <? if($page_type != 'business') { ?>
             <li style="margin: 25px 0 0 0;">
               <input value="lease" class="radio" autocomplete="off" type="radio" name="type" <?php if($type=='lease') echo 'checked="checked"'; ?> />
               <?php if($page_type=='residential') echo 'Rent <script>var radio_txt = "Rent"; </script>'; else echo 'Lease<script>var radio_txt = "Lease"; </script>'; ?>
             </li>
+            <? } ?>
           </ul>
         </div>
         <div class="boxex">
