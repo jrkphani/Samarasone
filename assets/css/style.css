@@ -108,9 +108,9 @@ html, body {
 .boxes3:hover{ opacity:1;}
 
 .footer{padding:30px 0px; height:14px; background-color:#000; color:#fff; position: absolute; width: 100%;}
-.copyr{float:left; margin-left:72px; color:#fff; font-size:16px;}
-.powerd{float:right; margin-right:72px; color:#fff; font-size:16px;}
-.powerd a{width:216px; height:32px; font-size:18px; background:url(../images/digital_chakra.png) 95% 25%  no-repeat; margin-top:-21px; display:block;}
+.copyr{float:left; margin-left:72px; color:#fff; font-size:12px;}
+.powerd{float:right; margin-right:72px; color:#fff; font-size:12px;}
+.powerd a{width:152px; height:32px; font-size:18px; background:url(../images/digital_chakra.png) 95% 25%  no-repeat; margin-top:-21px; display:block;}
 /* ************************* property ******************************** */
 .comm_resi_header_top{width:100%; height:149px; background:url(../images/top_header_comm_rese.png) no-repeat; background-size: 100% 90%; position:absolute; top:0px; z-index: 9996;}
 .sr_box h2, h4, p{color: #fff;}
