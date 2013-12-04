@@ -12,7 +12,7 @@ $subpage = $this->uri->segment(2);
        
         <div class="footer">
           	<p class="copyr">© Copyright 2013 All rights reserved </p>
-            <p class="powerd">Crafted by <a href="http://digitalchakra.in"  target="_blank"></a></p>
+            <p class="powerd">Powered by <a href="http://digitalchakra.in"  target="_blank"></a></p>
         </div>  
     </div>  
  
