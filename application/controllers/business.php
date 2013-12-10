@@ -54,6 +54,12 @@ class Business extends CI_Controller
 		$data['view_page'] = 'business_contact.php';
 		$this->load->view('template', $data);
 	}
+	function sell_your_business()
+	{
+		$data['view_page'] = 'sell_your_business';
+		$data['contact_str']=$this->get_content(FCPATH."application/views/dynamics/business_contact.html");
+		$this->load->view('template', $data);
+	}
 
 	function get_content($file)
 	{

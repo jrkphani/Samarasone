@@ -105,6 +105,28 @@
 
   </div>
      <div class="push"></div>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <div id="subscribe">dddddddddddddddddddd</div>
   <!-- bottom slider js -->
   <script src="<?php echo base_url($this->config->item('path_js_file').'dw_con_scroller.js');?>"></script>
   <script src="<?php echo base_url($this->config->item('path_js_file').'imgslider.js');?>"></script>
+  
+  
+  
+  <script src="<?php echo base_url($this->config->item('path_js_file').'newsletter.js');?>"></script>
+  <script src="<?php echo base_url($this->config->item('path_js_file').'validation.js');?>"></script>

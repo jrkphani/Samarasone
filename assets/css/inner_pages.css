@@ -1,14 +1,23 @@
 @charset "utf-8";
 /* ************************* fonts ******************************** */
+/*@font-face {
+    font-family: 'calibriregular';
+    src: url('../fonts/calibriregular.eot');
+    src: url('../fonts/calibriregular.eot') format('embedded-opentype'),
+         url('../fonts/calibriregular.woff') format('woff'),
+         url('../fonts/calibriregular.ttf') format('truetype'),
+         url('../fonts/calibriregular.svg#calibriregularNormal') format('svg');
+}*/
 @font-face {
-    font-family: 'HelveNueThin';
-    src: url('../fonts/helvenuethin.eot');
-    src: url('../fonts/helvenuethin.eot') format('embedded-opentype'),
-         url('../fonts/helvenuethin.woff') format('woff'),
-         url('../fonts/helvenuethin.ttf') format('truetype'),
-         url('../fonts/helvenuethin.svg#HelveNueThinNormal') format('svg');
+    font-family: 'calibriregular';
+    src: url('calibri.eot');
+    src: url('calibri.eot?#iefix') format('embedded-opentype'),
+         url('calibri.woff') format('woff'),
+         url('calibri.ttf') format('truetype'),
+         url('calibri.svg#calibriregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-
 
 /* CSS Document */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
@@ -24,14 +33,14 @@ blockquote:before, blockquote:after, q:before, q:after {	content: '';	content: n
 table {	border-collapse: collapse;	border-spacing: 0;}
 
 /* ************************* body ******************************** */
-h1{font:34px HelveNueThin, Arial; color:#000;}
-h2{font:32px HelveNueThin, Arial; color:#000;}
-h3{font:30px HelveNueThin, Arial; color:#000;}
-h4{font:28px HelveNueThin, Arial; color:#000;}
-h5{font:26px HelveNueThin, Arial; color:#000;}
-h6{font:24px HelveNueThin, Arial; color:#000;}
-p, a, li{font:24px HelveNueThin, Arial; color:#000;}
-/* p, h1, h2, h3, h4, h5, h6{font:24px HelveNueThin, Arial; color:#000;}*/
+h1{font:34px calibriregular, Arial; color:#000;}
+h2{font:32px calibriregular, Arial; color:#000;}
+h3{font:30px calibriregular, Arial; color:#000;}
+h4{font:28px calibriregular, Arial; color:#000;}
+h5{font:26px calibriregular, Arial; color:#000;}
+h6{font:24px calibriregular, Arial; color:#000;}
+p, a, li{font:24px calibriregular, Arial; color:#000;}
+/* p, h1, h2, h3, h4, h5, h6{font:24px calibriregular, Arial; color:#000;}*/
 a{text-decoration:none;}b{font-weight:bold;}i{font-style:italic;}
 strong {font-weight: bold;}
 em{font-style:italic;}
@@ -129,28 +138,63 @@ select::-ms-expand {    display: none;}
 .width14{width:13.6%!important;}
 .width18{width: 20%!important;}
 .width84{width:87.5%!important;}
-.width85{width: 83%; height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #B1C7D3; border-radius: 4px; padding: 5px; font-family:HelveNueThin, Arial; }
+.width85{width: 83%; height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #B1C7D3; border-radius: 4px; padding: 5px; font-family:calibriregular, Arial; }
 .w100{width: 76%; margin-right:0px;}
 .w80{width:80%!important;}
 .w59{width:79%!important;}
 .width175{width:75%;}
-.width95{height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #B1C7D3; border-radius: 4px; padding: 5px; font-family:HelveNueThin, Arial; }
-.boxex ul li{margin:0px 0 10px 0; font-family:HelveNueThin, Arial; font-size:20px; line-height: 27px; list-style: none;}
+.width95{height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #B1C7D3; border-radius: 4px; padding: 5px; font-family:calibriregular, Arial; }
+.boxex ul li{margin:0px 0 10px 0; font-family:calibriregular, Arial; font-size:20px; line-height: 27px; list-style: none;}
 .boxex p{margin:70px 0 0 0;}
 #error_msg{position: absolute; font-size: 14px; color: red; margin:50px 0 0 -7px!important;} 
-.serch_box{ background:url(../images/sprites.png) -425px -231px  no-repeat; width:99px; height:51px; border:0; cursor:pointer; font:17px HelveNueThin, Arial; font-weight: bold;}
+.serch_box{ background:url(../images/sprites.png) -425px -231px  no-repeat; width:99px; height:51px; border:0; cursor:pointer; font:17px calibriregular, Arial; font-weight: bold;}
 .serch_box:hover{background:url(../images/sprites.png) -528px -231px  no-repeat; width:99px; height:51px;}
 .pagenation li{float:left; margin-left: 5px;}
 .serh_box{padding: 0px 0 0 10px;}
-.return_pa{margin: 20px 0 0 0px!important; font-size: 14px; font-family:HelveNueThin, Arial; color: #285069!important;}
-.more_srh{margin: 20px 0 0 0px!important; font-size: 14px; font-family:HelveNueThin, Arial; text-align: center; text-decoration:underline; color: #285069!important; cursor:pointer; font-weight: bold;}
+.return_pa{margin: 20px 0 0 0px!important; font-size: 14px; font-family:calibriregular, Arial; color: #285069!important;}
+.more_srh{margin: 20px 0 0 0px!important; font-size: 14px; font-family:calibriregular, Arial; text-align: center; text-decoration:underline; color: #285069!important; cursor:pointer; font-weight: bold;}
 .more_srh:hover{text-decoration:none;}
 .return_bussi{border-radius: 4px; border: 1px solid #B1C7D3!important; padding:5px 15px; font-family: inherit; color: #285069; font-weight: normal; width: 44%;margin-top: 5px;}
 .txt_width_hieight{height: 39px; width:32.8%; border-radius: 4px; border: 1px solid #B1C7D3!important; padding-left: 15px; font-family: inherit;}
 .area_txt_width_hieight{height: 39px; width:32.8%; border-radius: 4px; border: 1px solid #B1C7D3!important; padding-left: 15px; font-family: inherit;}
 .option_padding{padding:5px 0 5px 0;}
 .sub_category_margin{margin-right:7px; margin-bottom:10px;}
+/* ************************* sell a business ******************************** */
+.sell_business{}
+.sell_container{display:block;}
+.sell_left{float: left; width: 71%;  min-height: 100px; text-align: left;}
+.sell_right{float: right;
+width: 323px;
 
+text-align: center;
+padding-top: 20px;
+}
+.free_business{border: 1px solid #043350; padding-top: 10px; margin-top: 10px;}
+.sell_buss{padding-left: 30px; font: 24px calibriregular, Arial;
+padding-right: 90px;
+height: 50px;
+line-height: 50px;
+text-align: left;
+border: solid 1px #193f58;
+color: #fff;
+background: #16394f url(../images/sr_arrow_white.png) no-repeat 94% center; cursor: pointer;
+}
+.sell_left p{text-align: left!important;}
+.sell_txt{width: 242px;
+height: 28px;
+margin-bottom: 5px;
+padding: 0 10px;}
+.sell_Subscribe{padding-left: 30px; font: 24px calibriregular, Arial;
+padding-right: 30px;
+height: 50px;
+line-height: 50px;
+text-align: left;
+border: solid 1px #193f58;
+color: #fff;
+background: #16394f; margin-bottom: 20px; cursor: pointer;
+}
+.sell_ul{margin-bottom: 20px;
+margin-left: 100px;}
 /* ************************* container ******************************** */
 
 .container{/*z-index: 99999;*/ position: relative; margin:30px 0px;}
@@ -224,7 +268,7 @@ width: 100%;}
 .cont_form p{height: 28px; line-height: 20px;}
 
 .cont_form input, .apt_form textarea{
-	width: 100%;	height: 24px; line-height: 30px; font:20px HelveNueThin, Arial; margin:0 0 10px 0;
+	width: 100%;	height: 24px; line-height: 30px; font:20px calibriregular, Arial; margin:0 0 10px 0;
 }	
 
 .cont_form textarea{
@@ -238,10 +282,10 @@ width: 100%;}
 #message{margin: 20px 0px 0 10px; font-size: 14px; display: inline-block; font-weight:bold;}
 .admin_edit_pg_section1 .admin_cont_txtarea{height: 105px; max-height: 140px;}
 .admin_contact_container{border: 1px solid #B4B4B4; float: left; padding: 5px 20px; margin: 10px 0;}
-.admin_lbl{width: 80px; font: 17px HelveNueThin, Arial; display: inline-block; padding: 10px 0; margin: 0 0 0px 0;}
+.admin_lbl{width: 80px; font: 17px calibriregular, Arial; display: inline-block; padding: 10px 0; margin: 0 0 0px 0;}
 .admin_edit_pg_section1{width: 30%; float: left; margin: 10px 0 0 0;}
 .admin_edit_pg_section2{width: 50%; float: left; margin: 20px 0 0 0;}
-.admin_edit_pg_section2 input{font: 17px HelveNueThin, Arial; padding: 5px 10px; width: 250px}
+.admin_edit_pg_section2 input{font: 17px calibriregular, Arial; padding: 5px 10px; width: 250px}
 .cont_section1 .address_wrap{width: 240px;}
 .cont_section1 .address_wrap p{line-height: 34px;}
 .cont_section1 address p, a{font-size: 20px; line-height: 30px;}
@@ -259,15 +303,15 @@ width: 100%;}
 .conatct_right a:hover{color:#fff;}
 .conatct_right .cont_top{margin:73px 0 0 0;}
 .conatct_right .cont_btm{margin-bottom: 15px; background: #043350; width: 205px;  height: 33px;}
-.conatct_right .sell_mail1{background:  url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 20px 10px 50px; width: 18%;}
-.conatct_right .sell_mail2{background:  url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 25px 10px 50px; width: 18%;}
-.conatct_right .fb_mail{background:  url(../images/sprites.png)  5px -661px no-repeat; padding: 5px 59px 9px 50px; width: 18%;}
+.conatct_right .sell_mail1{font-size:18px; background:  url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 20px 10px 50px; width: 18%;}
+.conatct_right .sell_mail2{font-size:18px; background:  url(../images/sprites.png)  5px -688px no-repeat; padding: 5px 25px 10px 50px; width: 18%;}
+.conatct_right .fb_mail{font-size:18px; background:  url(../images/sprites.png)  5px -661px no-repeat; padding: 5px 59px 9px 50px; width: 18%;}
 .cont_form h5{font-size:22px; margin-bottom: 10px;}
 .contct_cmt_size{font-size:16px;}
 .cont_section1{border-bottom:1px solid #ECECEC; display: inline-block;padding-bottom: 20px; width: 100%;}
 /* ************************* footer page ******************************** */
 .footer_top{background-color:#043350; display:inline-block; width:100%; position:relative; /*height: 203px;*/ float: left;}
-.footer_section1{width:67%; float:left; border-right:1px solid #5b5b5b; padding:10px 0 10px 72px;}
+.footer_section1{width:67%; float:left; /*border-right:1px solid #5b5b5b;*/ padding:10px 0 10px 72px;}
 .footer_section2{width:17%; float:left;  padding:10px 72px 10px 0;} 
 .footer_header{color:#fff; padding:10px 20px;}
 .footer_section1 .width1_33, .width2_33, .width3_33, .foot_cnt{font-size:16px; color:#fff; line-height: 32px;}
@@ -288,12 +332,12 @@ width: 100%;}
 .p404_bg{background:#003255;}*/
 .p404_content{padding: 161px 0 0 0; text-align: center; margin: 0 0 100px 0;}
 .p404_logo{background: url(../images/logo.png)  no-repeat; height: 79px; display: inline-block; width: 317px; margin: 23px 0 0px 121px;}
-.p404_content h2{border-bottom: 1px solid #fff; border-top: 1px solid #fff; width: 500px; margin: 0 auto; padding: 18px 0; font-size: 62px; color: #003255; font-weight: bold; font-family:Aller, helveNueThin, Arial;}
+.p404_content h2{border-bottom: 1px solid #fff; border-top: 1px solid #fff; width: 500px; margin: 0 auto; padding: 18px 0; font-size: 62px; color: #003255; font-weight: bold; font-family:Aller, calibriregular, Arial;}
 .p404_content p{width: 500px; margin: 0 auto; padding: 20px 0; color:#003255;}
 /* ************************* dropdown box ******************************** */
 .propert_top{margin: -30px 0 0 0;}
-.dropdown select .dd_value span{font-size:15px!important; font-family:HelveNueThin, Arial!important; color:red;}
-.dd_fonts{font-size:15px!important; font-family:HelveNueThin, Arial!important; color:#000;}
+.dropdown select .dd_value span{font-size:15px!important; font-family:calibriregular, Arial!important; color:red;}
+.dd_fonts{font-size:15px!important; font-family:calibriregular, Arial!important; color:#000;}
 .dropdown {  position: relative;  /* display: inline-block; width:152px;*/   text-align: left;   width:146px;	margin-right:10px; float:left; overflow:hidden;} 
 .dropdown-text {  cursor: pointer;  /*position: absolute;*/  text-indent: 10px;   /* font-size:18px;*/  border-radius: 4px; border: 1px solid #d3d3d3;
 font-weight: normal; color: #555555;  /*box-shadow: 0 1px 0 rgba(255,255,255, .9) inset, 0 1px 3px rgba(0,0,0, .1);*/  width: 100%; background: #fff url(../images/dd_arrow1.png) 94% 68% no-repeat;}
@@ -348,13 +392,13 @@ background: url(../images/sprites.png) -1165px -52px no-repeat;
 /*********************** login page ******************************/
 .admin_login{width: 1280px; margin: 0 auto; text-align: center;}
 .admin_login .admin_h2{padding: 20px 0; font-size: 34px; padding-top: 155px;}
-.admin_login .addmin_txt{height: 39px; width: 23.8%; border-radius: 4px; border: 1px solid #B1C7D3!important; padding-left: 15px; font:18px HelveNueThin, Arial; margin-bottom: 10px;}
-.admin_login .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; height: 51px; border: 0; cursor: pointer; font: 17px HelveNueThin, Arial; font-weight: bold; 
+.admin_login .addmin_txt{height: 39px; width: 23.8%; border-radius: 4px; border: 1px solid #B1C7D3!important; padding-left: 15px; font:18px calibriregular, Arial; margin-bottom: 10px;}
+.admin_login .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; height: 51px; border: 0; cursor: pointer; font: 17px calibriregular, Arial; font-weight: bold; 
 display: block; margin: 0 auto; line-height: 51px; margin-bottom:50px; }
 .admin_login .admin_btn:hover{background:url(../images/sprites.png) -528px -231px  no-repeat; width:99px; height:51px;}
 .admin_login .admin_error_msg{font-size: 16px; color: red; line-height: 26px;}
 .form_checkbox{margin-right: 10px;}
-.admin_login, .rem_pad #forget{font:22px HelveNueThin, Arial;}
+.admin_login, .rem_pad #forget{font:22px calibriregular, Arial;}
 #forget{cursor: pointer;}
 #fusername{margin-left: 6px;}
 #admin_error_msg p{font-size: 16px; color: red; line-height: 26px;}
@@ -368,12 +412,12 @@ display: block; margin: 0 auto; line-height: 51px; margin-bottom:50px; }
 
 /*********************** edit page ******************************/
 .admin_edit{margin: 0 auto; width: 824px; min-height: 539px;}
-.admin_edit .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; margin:5px 0 8px -2px; line-height: 55px!important; height: 51px; float:left; text-align: center; border: 0; cursor: pointer; font: 17px HelveNueThin, Arial; font-weight: bold; }
+.admin_edit .admin_btn{background: url(../images/sprites.png) -425px -231px no-repeat; width: 99px; margin:5px 0 8px -2px; line-height: 55px!important; height: 51px; float:left; text-align: center; border: 0; cursor: pointer; font: 17px calibriregular, Arial; font-weight: bold; }
 .admin_edit .admin_btn:hover{background:url(../images/sprites.png) -528px -231px  no-repeat; width:99px; height:51px;}
-.admin_edit .edit_area{font: 17px HelveNueThin, Arial; padding: 10px; max-width:818px!important;}
+.admin_edit .edit_area{font: 17px calibriregular, Arial; padding: 10px; max-width:818px!important;}
 .admin_edit .updated_cancel{width: 839px; margin: 0 auto; float: left;}
 /*********************** select page ******************************/
 .admin_select_page{text-align: center; margin: 20px 0 0 0;}
 .select_page{-moz-appearance: none; -webkit-appearance: none; -o-appearance: none; -ms-appearance: none; padding: 10px 18px 10px 10px; border: 1px solid #B1C7D3; margin: 20px 0;
-background: #fff url(../images/dd_arrow1.png) 92% 50% no-repeat; font-size:24px!important; font-family: HelveNueThin, Arial!important; border-radius: 4px; font-weight: normal; cursor: pointer;}
+background: #fff url(../images/dd_arrow1.png) 92% 50% no-repeat; font-size:24px!important; font-family: calibriregular, Arial!important; border-radius: 4px; font-weight: normal; cursor: pointer;}
 .select_page option{line-height: 35px!important; cursor: pointer; padding: 10px 0px; height: 20px; font-size: 20px;}

@@ -78,7 +78,7 @@
       <div class="conatct_right">
      	 <h3 class="contct_header" style="visibility:hidden;">Gallery</h3>
        <p class="cont_top cont_btm"><a class="sell_mail1"href="<?php echo base_url('search/index/business'); ?>">Buy a Business</a></p>
-       <p class="cont_btm"><a class="sell_mail2" href="<?php echo base_url('search/index/business'); ?>">Sell a Business</a></p>
+       <p class="cont_btm"><a class="sell_mail2" href="<?php echo base_url('business/sell_your_business'); ?>">Sell a Business</a></p>
        <p class="cont_btm"><a class="fb_mail" target="_blank" href="#">Facebook</a></p>
         
      	 </div>
