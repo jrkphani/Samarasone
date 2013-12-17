@@ -42,9 +42,9 @@ class VerifyLogin extends CI_Controller {
    $username = $this->input->post('username');
 
    //query the database
-   $where=array('email' => $username, 'active' => 1);
-   $db_password = $this->user->get_password($where);
-    if ($this->passhash->check_input($db_password, $password)) {
+   $where=array('email' => $username, 'active' => 1 , 'password' => md5($password));
+   //$db_password = $this->user->get_password($where);
+    if ($this->user->get_user($where)) {
       $result = $this->user->login($username);
       if($result){
        $sess_array1 = array();
