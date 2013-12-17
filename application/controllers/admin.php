@@ -104,7 +104,7 @@ function logout()
 {
 	$this->session->unset_userdata('logged_in');
 	$this->session->sess_destroy();
-	redirect('admin/login', 'refresh');
+	redirect(base_url('admin/login'), 'refresh');
 }
 }
 ?>
