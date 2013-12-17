@@ -14,7 +14,7 @@ function __construct()
 function index()
 {
 	if(!$this->current_user)
-		redirect('admin/login', 'refresh');
+		redirect(base_url('admin/login'), 'refresh');
 	$data['view_page'] = 'admin/pages';
 	$data['email'] = $this->current_user['email'];
 	$data['pages'] = $this->pages;
@@ -24,7 +24,7 @@ function index()
 function edit()
 {
 	if(!$this->current_user)
-		redirect('admin/login', 'refresh');
+		redirect(base_url('admin/login'), 'refresh');
 	$page=$this->uri->segment(3);
 	if(in_array($page,$this->pages))
 	{
