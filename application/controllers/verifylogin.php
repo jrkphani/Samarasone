@@ -37,7 +37,7 @@ class VerifyLogin extends CI_Controller {
 
  function check_database($password)
  {
-    $this->load->library('passhash');
+    //$this->load->library('passhash');
    //Field validation succeeded.&nbsp; Validate against database
    $username = $this->input->post('username');
 
