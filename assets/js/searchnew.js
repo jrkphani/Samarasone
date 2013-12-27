@@ -377,4 +377,48 @@ business_category['Transport/Distribution']=[
 				$('#moresearch, .moresearch, .category, .bedroom').hide();
 				$('#area').show();
 			}
+			
+//suburb
+$('#suburbautocomplete').autocomplete({
+	focus: function( event, ui ) {alert("ffF");},
+        source: function(request, response) {
+			$('#suggestions-container').html("");
+			region = 'NSW';
+			str = $('#suburbautocomplete').val();
+            $.ajax({
+                url:  baseurl+'suburb/get_subrub/'+region+'/'+str,
+                dataType: "json",
+                success: function(data) {
+                    //alert(data.resultset.length);
+                    if(data.resultset.length > 0)
+                    $.each(data.resultset, function(key,value){
+						$('#suggestions-container').append('<span class="suburblist" val="'+value+'">'+value+'</span>');
+					});
+                }
+            });
+        },
+        min_length: 3,
+        delay: 300
+    });
+    
+    $('.suburblist').live('click',function()
+    {
+		//alert($(this).attr('val'));
+		suburb_txt = $(this).attr('val');
+		suburb_id = $(this).attr('val').replace(/ /g,'');
+		if($('#suburb'+suburb_id).length == 0)
+		{
+			app_text = '<div id="suburb'+suburb_id+'">';
+			app_text +=		'<input type="hidden" name="suburblist[]" value="'+suburb_txt+'"/> ';
+			app_text +=		suburb_txt;
+			app_text +=		'<span class="removesuburb"> remove</span>';
+			app_text +='</div>';
+			$('#suburblist').append(app_text);
+		}
+	});
+	$('.removesuburb').live('click',function()
+    {
+		$(this).parent().remove();
+	});
+
 });

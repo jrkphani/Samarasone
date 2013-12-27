@@ -4,7 +4,12 @@ class Searchnew_model extends CI_Model
     function getTotal($data)
     {
         $this->db->select($data['select']);
-
+        
+       if(isset($data['suburblist']))
+		{
+			if(count($data['suburblist']) > 0)
+			$this->db->where_in('suburb', $data['suburblist']);
+		}
         if(isset($data['where']))
             $this->db->where($data['where']);
         if(isset($data['category']) && $data['category'])
@@ -45,7 +50,13 @@ class Searchnew_model extends CI_Model
 	function getresults($data)
 	{
         $this->db->select($data['select']);
-
+        
+        if(isset($data['suburblist']))
+		{
+			if(count($data['suburblist']) > 0)
+			$this->db->where_in('suburb', $data['suburblist']);
+		}
+		
         if(isset($data['where']))
             $this->db->where($data['where']);
         if(isset($data['category']) && $data['category'])

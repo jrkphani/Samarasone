@@ -15,6 +15,9 @@ class Search extends CI_Controller
 			$data['page_type']=$page_type;
 		$pagi_page = $this->input->post('page');
 
+		$where['state'] = 'NSW';
+		
+		
 		$data['type'] = $this->input->post('type');
 		$data['property'] = $this->input->post('property');
 		$data['category'] = $this->input->post('category');
@@ -29,6 +32,7 @@ class Search extends CI_Controller
 		$data['energyRating'] = $this->input->post('energyRating');
 		$data['return'] = $this->input->post('return');
 		$data['sub_category'] = $this->input->post('sub_category');
+		$data['suburblist'] = $this->input->post('suburblist');
 		$data['return'] = $this->input->post('return');
 
 

@@ -59,17 +59,32 @@ display:none;
               </div>-->
 			  <div class="dropdown width84 propert_top">
                 <div class="dropdown-text dd_fonts" style="visibility:hidden;">Select</div>				
-                <select class="dropdown-text dd_fonts" >
-					<option>Select</option>
+                <select name="region" class="dropdown-text dd_fonts" >
+					<option>NSW</option>
                 </select>				
               </div>
               <!--		dropdown menu end  --> 
             </li>
             <li style="margin:63px 0 5px 0;">Suburb</li>
+            <li>
+				<input id="suburbautocomplete" />
+				<div id="suggestions-container">
+				</div>
+            </li>
             <li> 
               <!--		dropdown menu  -->
-              <div id="" class="width85">
-				
+              <div id="suburblist" class="width85">
+				<?php
+				if(isset($suburblist) && is_array($suburblist))
+				foreach($suburblist as $singlesuburb)
+				{?>
+					<div id="<?=str_replace(' ','',$singlesuburb);?>">
+						<input type="hidden" value="<?=$singlesuburb;?>" name="suburblist[]">
+						<?=$singlesuburb;?>
+						<span class="removesuburb"> remove</span>
+					</div>
+				<?}
+				?>
               </div>
               <!--		dropdown menu end  --> 
             </li>
