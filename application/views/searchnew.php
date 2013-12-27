@@ -67,7 +67,7 @@ display:none;
             </li>
             <li style="margin:63px 0 5px 0;">Suburb</li>
             <li>
-				<input id="suburbautocomplete" />
+				<input id="suburbautocomplete"/>
 				<div id="suggestions-container">
 				</div>
             </li>

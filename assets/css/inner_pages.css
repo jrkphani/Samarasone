@@ -138,7 +138,7 @@ select::-ms-expand {    display: none;}
 .width14{width:13.6%!important;}
 .width18{width: 20%!important;}
 .width84{width:87.5%!important;}
-.width85{width: 83%; height: 76px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #B1C7D3; border-radius: 4px; padding: 5px; font-family:calibriregular, Arial; }
+.width85{width: 83%; height: 100px; background: white; overflow-y: scroll; font-size: 14px; border: 1px solid #B1C7D3; border-radius: 4px; padding: 5px; font-family:calibriregular, Arial; }
 .w100{width: 76%; margin-right:0px;}
 .w80{width:80%!important;}
 .w59{width:79%!important;}
@@ -159,6 +159,12 @@ select::-ms-expand {    display: none;}
 .area_txt_width_hieight{height: 39px; width:32.8%; border-radius: 4px; border: 1px solid #B1C7D3!important; padding-left: 15px; font-family: inherit;}
 .option_padding{padding:5px 0 5px 0;}
 .sub_category_margin{margin-right:7px; margin-bottom:10px;}
+#suburbautocomplete{width: 74%; border: 1px solid #B1C7D3; padding: 5px 20px; border-radius: 4px;}
+#suggestions-container{width: 74%; height: 100px; overflow-y: scroll; background-color: #fff; padding: 10px 20px; border: 1px solid #B1C7D3; border-radius: 4px; margin-top: 2px;
+    cursor: pointer;}
+#suburblist{height: 70px!important; padding: 0 20px; width: 74%!important; display: block!important;}
+#suggestions-container .suburblist{display: block!important;}
+.removesuburb{background: url(../images/sprites.png) -2px -998px no-repeat; text-indent: -9999px; }
 /* ************************* sell a business ******************************** */
 .sell_business{}
 .sell_container{display:block;}
