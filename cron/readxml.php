@@ -145,8 +145,8 @@ foreach($urls as $url)
 	foreach($propertys[$table_list[$tablecount]] as $property)
 	{
 		//common for all tables
-		if(isset($property['address']['street']))
-		$property['state'] = $property['address']['street'];
+		if(isset($property['address']['state']))
+		$property['state'] = $property['address']['state'];
 		
 		if(isset($property['address']['suburb']))
 		$property['suburb'] = $property['address']['suburb'];
