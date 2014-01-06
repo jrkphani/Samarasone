@@ -20,8 +20,10 @@ class Suburb extends CI_Controller
 				$result[] = $matches[0];
 			}
 		}
-		
+		if(isset($result[0]))
 		$data['resultset'] = $result[0];
+		else
+		$data['resultset'] = null;
 		$this->load->view('json', $data);
 	}
 }

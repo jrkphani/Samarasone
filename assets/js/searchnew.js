@@ -388,24 +388,20 @@ $('#suburbautocomplete').autocomplete({
 	focus: function( event, ui ) {alert("ffF");},
 	minLength:2,
         source: function(request, response) {
-			$('#suggestions-container').html("");
+			$('#suggestions-container').html('No result');
 			region = 'NSW';
 			str = $('#suburbautocomplete').val();
             $.ajax({
                 url:  baseurl+'suburb/get_subrub/'+region+'/'+str,
                 dataType: "json",
                 success: function(data) {
-                    //alert(data.resultset.length);
-                    if(data.resultset.length > 0)
-                    {
+                    $('#suggestions-container').html('');
+                    if(data.resultset == null)
+                    $('#suggestions-container').html('No result').show();
+                    else if(data.resultset.length > 0)
                     $.each(data.resultset, function(key,value){
 						$('#suggestions-container').append('<span class="suburblist" val="'+value+'">'+value+'</span>');
 					});
-					}
-					else
-					{
-						$('#suggestions-container').html('No result');
-					}
 					$('#suggestions-container').show();
                 }
             });
@@ -427,7 +423,7 @@ $('#suburbautocomplete').autocomplete({
 			app_text +='</div>';
 			$('#suburblist').append(app_text);
 		}
-	$('#suggestions-container').html("").hide();
+	$('#suggestions-container').html('No result').hide();
 	$('#suburbautocomplete').val("");
 	});
 	$('.removesuburb').live('click',function()
