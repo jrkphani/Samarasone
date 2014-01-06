@@ -164,7 +164,8 @@ select::-ms-expand {    display: none;}
     cursor: pointer;}
 #suburblist{height: 70px!important; padding: 0 20px; width: 74%!important; display: block!important;}
 #suggestions-container .suburblist{display: block!important;}
-.removesuburb{background: url(../images/sprites.png) -2px -998px no-repeat; text-indent: -9999px; }
+.removesuburb{background: url(../images/sprites.png) -2px -998px no-repeat; text-indent: -9999px; width: 17px; cursor: pointer; opacity: 0.7;}
+.removesuburb:hover{opacity: 1;}
 /* ************************* sell a business ******************************** */
 .sell_business{}
 .sell_container{display:block;}
