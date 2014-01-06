@@ -160,8 +160,8 @@ select::-ms-expand {    display: none;}
 .option_padding{padding:5px 0 5px 0;}
 .sub_category_margin{margin-right:7px; margin-bottom:10px;}
 #suburbautocomplete{width: 74%; border: 1px solid #B1C7D3; padding: 5px 20px; border-radius: 4px;}
-#suggestions-container{width: 74%; height: 100px; overflow-y: scroll; background-color: #fff; padding: 10px 20px; border: 1px solid #B1C7D3; border-radius: 4px; margin-top: 2px;
-    cursor: pointer;}
+#suggestions-container{width: 13.5%; height: 100px; overflow-y: scroll; background-color: #fff; padding: 10px 20px; border: 1px solid #B1C7D3; border-radius: 4px; margin-top: 2px;
+    cursor: pointer; position: absolute; z-index: 99995;}
 #suburblist{height: 70px!important; padding: 0 20px; width: 74%!important; display: block!important;}
 #suggestions-container .suburblist{display: block!important;}
 .removesuburb{background: url(../images/sprites.png) -2px -998px no-repeat; text-indent: -9999px; width: 17px; cursor: pointer; opacity: 0.7;}
