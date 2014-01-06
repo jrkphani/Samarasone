@@ -431,4 +431,5 @@ $('#suburbautocomplete').autocomplete({
 		$(this).parent().remove();
 	});
 
+if(!$('.radiotype').is(':checked')) { $('#radio_one').click();} 
 });
