@@ -422,6 +422,7 @@ $('#suburbautocomplete').autocomplete({
 			$('#suburblist').append(app_text);
 		}
 	$('#suggestions-container').html("").hide();
+	$('#suburbautocomplete').val("");
 	});
 	$('.removesuburb').live('click',function()
     {
