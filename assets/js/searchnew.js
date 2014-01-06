@@ -381,12 +381,12 @@ business_category['Transport/Distribution']=[
 //suburb
 $('#suburbautocomplete').keypress(function(){
 //alert($(this).val().length);
-if($(this).val().length <= 3)
+if($(this).val().length <= 2)
 $('#suggestions-container').hide();
 });
 $('#suburbautocomplete').autocomplete({
 	focus: function( event, ui ) {alert("ffF");},
-	minLength:3,
+	minLength:2,
         source: function(request, response) {
 			$('#suggestions-container').html("");
 			region = 'NSW';
@@ -397,10 +397,16 @@ $('#suburbautocomplete').autocomplete({
                 success: function(data) {
                     //alert(data.resultset.length);
                     if(data.resultset.length > 0)
+                    {
                     $.each(data.resultset, function(key,value){
 						$('#suggestions-container').append('<span class="suburblist" val="'+value+'">'+value+'</span>');
-						$('#suggestions-container').show();
 					});
+					}
+					else
+					{
+						$('#suggestions-container').html('No result');
+					}
+					$('#suggestions-container').show();
                 }
             });
         },
