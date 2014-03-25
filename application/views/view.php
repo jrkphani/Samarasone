@@ -34,9 +34,9 @@
 	                    	<h2>Property Location</h2><br />
 	                    	<? 
 	                    	$addressArr = unserialize($result[0]->address);
-	                    	echo '<p>'.$addressArr['streetNumber'].' , '.$addressArr['street'].'<br />'.
-								$addressArr['state'].' , '.$addressArr['suburb'].'<br />'.
-								$addressArr['country'].' - '.$addressArr['postcode'].'</p>';
+	                    	echo '<p>'.$addressArr['streetNumber'].' '.$addressArr['street'].'<br />'.
+								$addressArr['state'].' '.$addressArr['suburb'].'<br />'.
+								$addressArr['country'].' '.$addressArr['postcode'].'</p>';
 							?>
 	                	</div>
 	                	<a href="https://www.google.co.in/maps?q=<? echo $addressArr['streetNumber'].' '.
