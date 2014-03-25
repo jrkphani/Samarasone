@@ -87,10 +87,11 @@ class Searchnew_model extends CI_Model
 				$count++;
 			}
 		}
-
+//print_r($data); die;
         $this->db->from($data['table']);
         $this->db->limit(3,$data['limit']);
         //echo $this->db->last_query();
+       // echo count($this -> db -> get()->result()); die;
         return $this -> db -> get()->result();
 
 		//$this->db->get();

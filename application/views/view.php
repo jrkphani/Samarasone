@@ -72,17 +72,25 @@
 	                	<img src="<?=$images_array[0];?>"/> <br/><br/>
 	                	<div class="apt_form">
 	                  		<h2>Make an appointment</h2>
-	                    	<form>
+	                    	<form method="POST" action="">
 	                        	<p>Name</p>
-		                        <input type="text" name="firstname"><br/>
+		                        <input type="text" name="name" value="<?php echo set_value('name'); ?>"><br/>
+		                        <?php echo form_error('name'); ?></br>
 	    	                    <p>Email Address</p>
-	        	                <input type="text" name="firstname"><br/>
+	        	                <input type="text" name="email" value="<?php echo set_value('email'); ?>"><br/>
+	        	                <?php echo form_error('email'); ?></br>
 	            	            <p>Contact Number</p>
-	                	        <input type="text" name="firstname"><br/>
+	                	        <input type="text" name="number" value="<?php echo set_value('number'); ?>"><br/>
+	                	        <?php echo form_error('number'); ?></br>
 	                    	    <p>Message</p>
-	                        	<textarea type="text" name="firstname"></textarea><br />
-	                        	<span><button> Submit</button></span>
+	                        	<textarea style="height:100%"cols="5" rows="3" type="text" name="message"><?php echo set_value('message'); ?></textarea><br />
+	                        	<?php echo form_error('message'); ?></br>
+	                        	<span><input type="submit" value="Submit" /></span>
 	                    	</form>
+	                    	<?if($appointSuccess =='yes')
+	                    	{?>
+	                    	<p>Thank you, will get back to you !.</p>
+	                    	<? } ?>
 	                	</div>
 	            	</div>
 	          	</div>
