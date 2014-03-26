@@ -21,7 +21,7 @@
       <div class="search_img"> <img class="inner_plogo" src="<?php echo $images_array[0]; ?>"/> </div>
       <div class="content_commer">
         <h3><?php echo $row->headline; ?></h3>
-        <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
+        <h4><?php echo $row->suburb.'<br /> $'.$row->price; ?></h4>
         <p class="cnt"><?php echo $row->description; ?></p>
         <? if(isset($row->area))
         {?>

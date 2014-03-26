@@ -25,7 +25,7 @@
                 </div>
                 <div class="content business_srch">
                   <h3><?php echo $row->headline; ?></h3>
-				  <h4><?php echo $row->suburb.'<br />'.$row->price; ?></h4>
+				  <h4><?php echo $row->suburb.'<br /> $'.$row->price; ?></h4>
                   <p class="cnt_business"><?php echo $row->description; ?></p>
                   <a class="fright" href='<?=base_url("view/index/$page_type/$type/$property/$row->uniqueID");?>'>More</a>
                  </div>
