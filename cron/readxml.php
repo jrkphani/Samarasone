@@ -14,6 +14,7 @@ class holidayRental extends ActiveRecord\Model{ static $table_name = 'holidayRen
 
 /* Table name and urls list should in same order */
 $table_list = array('business','commercial','commercialLand','rental','residential','land','rural','holidayRental');
+//$table_list = array('business');
 /*$urls = array(
 'http://reaxml.realestate.com.au/docs/business_sample.xml',
 'http://reaxml.realestate.com.au/docs/commercial_sample.xml',
@@ -25,14 +26,7 @@ $table_list = array('business','commercial','commercialLand','rental','residenti
 'http://reaxml.realestate.com.au/docs/holiday_rental_sample.xml'
 );*/
 $urls = array(
-'http://localhost/xml_samples/business_sample.xml',
-'http://localhost/xml_samples/commercial_sample.xml',
-'http://localhost/xml_samples/commercialLand_sample.xml',
-'http://localhost/xml_samples/rental_sample.xml',
-'http://localhost/sampleREAXML.xml',
-'http://localhost/xml_samples/land_sample.xml',
-'http://localhost/xml_samples/rural_sample.xml',
-'http://localhost/xml_samples/holidayRental_sample.xml'
+'xml/AB001_2014-03-26-01-40-01.xml'
 );
 
 
@@ -130,7 +124,6 @@ $fields = array (
 			'carports',
 		);
 $rea = new REA_XML($debug=true,$fields);
-$tablecount = 0;
 echo "\n ================== S T A R T ==================\n";
 foreach($urls as $url)
 {
@@ -140,89 +133,103 @@ foreach($urls as $url)
 	//echo "$url <pre>";
 	$propertys = $rea->parse_xml($xmlstring);
 	
-		//	print_r($propertys);
+			/*print_r($propertys);
+			die;*/
 		//	continue;
-	foreach($propertys[$table_list[$tablecount]] as $property)
+	foreach($table_list as $list)
 	{
-		//common for all tables
-		if(isset($property['address']['state']))
-		$property['state'] = $property['address']['state'];
-		
-		if(isset($property['address']['suburb']))
-		$property['suburb'] = $property['address']['suburb'];
-		
-		if(isset($property['address']['country']))
-		$property['country'] = $property['address']['country'];
-		
-		if(isset($property['buildingDetails']['area']))
+		if(isset($propertys[$list]))
 		{
-			if($table_list[$tablecount] == "commercial")
+			foreach($propertys[$list] as $property)
 			{
-				//print_r($property); die;
-				$property['area_min'] = $property['buildingDetails']['area'];
-				$property['area_max'] = $property['buildingDetails']['area'];
-			}
-			else if($table_list[$tablecount] != "business")
-			{
-				$property['area'] = $property['buildingDetails']['area'];
-			}
-		}
-		else if(isset($property['landDetails']['area']))
-		{
-			$property['area'] = $property['landDetails']['area'];
-		}
-		if(isset($property['features']))
-		{
-			if($table_list[$tablecount] == "holidayRental" || 
-			$table_list[$tablecount] == "rental" || 
-			$table_list[$tablecount] == "residential" || 
-			$table_list[$tablecount] == "rural")
-			{
-				foreach($featuresList as $value)
+				//common for all tables
+				if(isset($property['address']['state']))
+				$property['state'] = $property['address']['state'];
+				
+				if(isset($property['address']['suburb']))
+				$property['suburb'] = $property['address']['suburb'];
+				
+				if(isset($property['address']['country']))
+				$property['country'] = $property['address']['country'];
+				
+				if(isset($property['buildingDetails']['area']))
 				{
-					if(isset($property['features'][$value]))
-						$property[$value] = $property['features'][$value];
-				}
-			}
-		}
-		foreach($property as $key => $array_chk)
-		{
-			if(is_array($array_chk))
-			{
-				$property[$key] = serialize($array_chk);
-			}
-		}
-		//echo "<pre>";
-		/*if($table_list[$tablecount] == "business")
-		{	
-		}*/
-		//print_r($property);
-		//die;
-		if($property['status'] == 'current')
-		{
-			$find=array('uniqueID'=>$property['uniqueID']);
-					if($found = $table_list[$tablecount]::find($find))
+					if($list == "commercial")
 					{
-						echo "\n Updating table => $table_list[$tablecount] \n";
+						//print_r($property); die;
+						$property['area_min'] = $property['buildingDetails']['area'];
+						$property['area_max'] = $property['buildingDetails']['area'];
+					}
+					else if($list != "business")
+					{
+						$property['area'] = $property['buildingDetails']['area'];
+					}
+				}
+				else if(isset($property['landDetails']['area']))
+				{
+					$property['area'] = $property['landDetails']['area'];
+				}
+				if(isset($property['features']))
+				{
+					if($list == "holidayRental" || 
+					$list == "rental" || 
+					$list == "residential" || 
+					$list == "rural")
+					{
+						foreach($featuresList as $value)
+						{
+							if(isset($property['features'][$value]))
+								$property[$value] = $property['features'][$value];
+						}
+					}
+				}
+				foreach($property as $key => $array_chk)
+				{
+					if(is_array($array_chk))
+					{
+						$property[$key] = serialize($array_chk);
+					}
+				}
+				if($property['status'] == 'current')
+				{
+					$find=array('uniqueID'=>$property['uniqueID']);
+							if($found = $list::find($find))
+							{
+								echo "\n Updating table => $list \n";
+								$found->update_attributes($property);
+							}
+							else
+							{
+								echo "\n Inserting table => $list \n";
+								$list::create($property);
+							}
+					
+				}
+				elseif($property['status'] == 'withdrawn')
+				{
+					/* update */
+					$find=array('uniqueID'=>$property['uniqueID']);
+					if($found = $list::find($find))
+					{
+						echo "\n Updating table => $list \n";
 						$found->update_attributes($property);
 					}
-					else
+				}
+				elseif($property['status'] == 'sold')
+				{
+					/* update */
+					$find=array('uniqueID'=>$property['uniqueID']);
+					if($found = $list::find($find))
 					{
-						echo "\n Inserting table => $table_list[$tablecount] \n";
-						$table_list[$tablecount]::create($property);
+						echo "\n Updating table => $list \n";
+						$found->update_attributes($property);
 					}
-			
+				}
+
+			}
 		}
-		elseif($property['status'] == 'withdrawn')
-		{
-			/* update */
-		}
-		elseif($property['status'] == 'sold')
-		{
-			/* delete */
-		}
+
 	}
-	$tablecount++;
 }
 
 echo "\n ================== E N D ==================\n";
