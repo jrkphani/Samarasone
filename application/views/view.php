@@ -27,11 +27,11 @@
 	                <div class="sr_inner">
 	                    <h2><?=$result[0]->headline;?></h2><br />
 	                    <div class="sr_section">
-	                        <h2>Property Description</h2><br />
+	                        <h2><? if($page =='business') { echo 'Business Description'; } else { echo 'Business Description'; } ?></h2><br />
 	                        <p><?=$result[0]->description;?></p>
 	                    </div>
 	                    <div class="sr_section2">
-	                    	<h2>Property Location</h2><br />
+	                    	<h2><? if($page =='business') { echo 'Business Location'; } else { echo 'Business Location'; } ?></h2><br />
 	                    	<? 
 	                    	$addressArr = unserialize($result[0]->address);
 	                    	echo '<p>'.$addressArr['streetNumber'].' '.$addressArr['street'].'<br />'.

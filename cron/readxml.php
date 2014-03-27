@@ -14,21 +14,7 @@ class holidayRental extends ActiveRecord\Model{ static $table_name = 'holidayRen
 
 /* Table name and urls list should in same order */
 $table_list = array('business','commercial','commercialLand','rental','residential','land','rural','holidayRental');
-//$table_list = array('business');
-/*$urls = array(
-'http://reaxml.realestate.com.au/docs/business_sample.xml',
-'http://reaxml.realestate.com.au/docs/commercial_sample.xml',
-'http://reaxml.realestate.com.au/docs/commercialLand_sample.xml',
-'http://reaxml.realestate.com.au/docs/rental_sample.xml',
-'http://reaxml.realestate.com.au/docs/residential_sample.xml',
-'http://reaxml.realestate.com.au/docs/land_sample.xml',
-'http://reaxml.realestate.com.au/docs/rural_sample.xml',
-'http://reaxml.realestate.com.au/docs/holiday_rental_sample.xml'
-);*/
-$urls = array(
-'xml/AB001_2014-03-26-01-40-01.xml'
-);
-
+$urls =glob("xml/*xml");
 
 $fields = array (
 		'priceView',

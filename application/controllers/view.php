@@ -83,6 +83,7 @@ class View extends CI_Controller
 			$tables['business']['sale']['Business'] = $tables['business']['lease']['Business'] = 'business';
 			$this->load->model('view_model');
 			$data['result']= $this->view_model->getRow($tables[$page[0]][$page[1]][$page[2]],$page[3]);
+			$data['page']=$page[0];
 			//echo "<pre>"; print_r($data); die;
 			if($data['result'])
 			{

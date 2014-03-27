@@ -11,7 +11,7 @@ $subpage = $this->uri->segment(2);
         <div class="clearall"></div>
        
         <div class="footer">
-          	<p class="copyr">© Copyright 2013 All rights reserved </p>
+          	<p class="copyr">© Copyright <?=date("Y");?> All rights reserved </p>
             <p class="powerd">Powered by <a href="http://digitalchakra.in"  target="_blank"></a></p>
         </div>  
     </div>  
